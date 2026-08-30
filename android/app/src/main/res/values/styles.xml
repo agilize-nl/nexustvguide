@@ -5,6 +5,21 @@
         <item name="android:colorPrimary">@color/accent_blue</item>
         <item name="android:colorPrimaryDark">@color/dark_background</item>
         <item name="android:colorAccent">@color/accent_focused</item>
+
+        <!-- Theme.Leanback is geen AppCompat-thema, dus androidx.appcompat.app.AlertDialog
+             vindt anders geen alertDialogTheme (resolve naar 0) en crasht bij het inflaten
+             van de keuzelijst. De dag- en dagdeelfilters van de programmagids gebruiken die
+             dialog, dus wijzen we hier expliciet een AppCompat-dialogthema aan. -->
+        <item name="alertDialogTheme">@style/Theme.NexusTVGuide.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.NexusTVGuide.Dialog</item>
+    </style>
+
+    <!-- Donkere AppCompat-dialoog die past bij de rest van de gids. -->
+    <style name="Theme.NexusTVGuide.Dialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@color/card_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="colorAccent">@color/accent_focused</item>
     </style>
 
     <!-- Onzichtbare relay voor de NLZIET koude-startretry. Blijft in de voorgrondtaak
