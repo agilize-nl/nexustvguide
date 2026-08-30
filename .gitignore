@@ -1,0 +1,36 @@
+# --- Android build output ---
+android/.gradle/
+android/app/build/
+android/build/
+android/captures/
+android/local.properties
+android/.idea/caches/
+android/.idea/libraries/
+android/.idea/modules.xml
+android/.idea/workspace.xml
+android/.idea/navEditor.xml
+android/.idea/assetWizardSettings.xml
+android/.idea/deploymentTargetDropDown.xml
+android/app/release/
+android/app/debug/
+*.aab
+*.iml
+
+# apks/ bevat bewust bewaarde NLZIET-referentiebuilds voor deeplinkonderzoek
+# en blijft getrackt; alleen onze eigen buildoutput hierboven wordt genegeerd.
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Secrets / lokale omgeving ---
+.env
+.env.local
+.env.*.local
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
