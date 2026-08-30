@@ -166,24 +166,18 @@ NLZiet-deeplinks onderzoeken.
 Tot NLZiet is uitgezocht: laat het aanklikken van een programma een NLZiet-launch-intent
 zijn, zonder deeplink. Dan is de app al bruikbaar en is de deeplink puur een verbetering.
 
-### Fase 3 — later, nog open
+### Fase 3 — NLZIET-koppeling (in validatie)
 
-De NLZiet-koppeling bepaalt hoe goed het eindresultaat wordt, maar blokkeert fase 1 en 2
-niet. Als het zover is:
+De huidige APK-analyse van NLZIET Android TV v5.15.3 (build `740504`) bevestigt
+`nlziet://open/vod/<contentId>` als de VOD-route. De Android-app gebruikt precies die route
+en valt terug op een normale launch-intent als er geen geldig content-ID bestaat of de
+deeplink faalt. `nlziet://watchnext/<id>` is geen geregistreerde NLZIET-route.
 
-```bash
-adb shell pm dump nl.nlziet | grep -A5 "android.intent.action.VIEW"
-adb shell dumpsys package nl.nlziet | grep -i "filter\|scheme"
-```
-
-Handelt NLZiet App Links op `nlziet.nl/...` af, dan kun je rechtstreeks een programma of
-live-zender openen. Zo niet, dan blijft het bij "app openen en zelf zoeken" — nog steeds
-beter dan hun eigen gids.
-
-Let op de terugkoppeling naar de architectuur: valt de deeplink tegen, dan wordt route 3
-(PWA als tweede scherm, zenderstart via ADB) alsnog aantrekkelijker dan route 2. De
-backend uit fase 1 blijft in beide gevallen ongewijzigd bruikbaar — dat is precies waarom
-deze volgorde klopt.
+De backend verrijkt de gids voorlopig op titel/alias met een VOD-content-ID. Dat kan een
+bijpassend catalogusitem openen, maar is nog geen garantie voor exact dezelfde aflevering of
+live-uitzending. Daarvoor is een betrouwbare NLZIET-EPG-ID plus zender- en tijdmapping nodig.
+De volledige technische status en de Shield-acceptatietest staan in
+[`docs/PLAN.md`](docs/PLAN.md#fase-3--nlziet-koppeling--verrijkingslaag-in-validatie).
 
 ## Scope
 

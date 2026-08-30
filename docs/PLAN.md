@@ -698,14 +698,17 @@ private fun launchNlziet() {
 
 ---
 
-## Fase 3 — NLZiet-koppeling & Verrijkingslaag (Afgerond)
+## Fase 3 — NLZiet-koppeling & Verrijkingslaag (in validatie)
 
 ### Geanalyseerde APK & Intent Filters
 - **Appversie & Build:** NLZIET Android TV v5.15.3 (build `740504`, package `nl.nlziet`).
 - **Main Leanback Launch Activity:** `nl.nlziet.tv.app.di.tv.InjectActivity`
   (`android.intent.action.MAIN` + `android.intent.category.LEANBACK_LAUNCHER`).
-- **Deeplink URL Scheme:** `nlziet://watchnext/<nlzietId>` voor rechtstreekse afspeel- en VOD-doorschakeling.
-- **Web App / Dynamic Links:** `https://nlzietshare.page.link` en `https://app.nlziet.nl/vod/<id>`.
+- **VOD-deeplink:** `nlziet://open/vod/<contentId>`. Dit is de route die de APK via een
+  `UriMatcher` registreert als `APP_PLAYER_VOD`; `nlziet://watchnext/<id>` is **geen**
+  geregistreerde route en mag niet worden gebruikt.
+- **Web/App Link:** `https://app.nlziet.nl/vod/<id>` is eveneens geregistreerd. Dynamic Links
+  op `https://nlzietshare.page.link` bestaan ook, maar zijn geen stabiel contract voor de app.
 - **Package Visibility:** Geconfigureerd in `AndroidManifest.xml` via `<queries>` voor `nl.nlziet`, `nlziet://` en `nlzietshare.page.link`.
 
 ### Verrijkingsarchitectuur (`tvguide-api/src/enrichment/nlziet/`)
@@ -713,6 +716,12 @@ private fun launchNlziet() {
 2. **Nederlandse Titelnourmalisatie (`normalizer.ts`):** Stript accenten, broadcast-labels (`(herhaling)`, `(live)`), timestamps (`20:00`), normaliseert ampersands (`&` -> `en`) en genereert veilige slugs.
 3. **Gelaagde Matcher Engine (`matcher.ts`):** Resolutie via regex/overrides (`config/nlziet_overrides.json`), exacte slugs, aliassen en hoofdtitel/ondertitel splitsing.
 4. **Verrijking in Refresh Pipeline (`store/refresh.ts`):** Vult `programme.nlzietId` automatisch in tijdens periodieke gidsverversingen en levert verrijkte data via `/api/v1/guide`.
+
+`nlzietId` is een afspeelbare NLZIET-VOD-content-ID, geen `tvgids.nl`-programma-ID. De huidige
+matcher gebruikt titel/alias en kan daarom alleen een bijpassende NLZIET-titel of catalogusitem
+openen; hij bewijst nog niet dat het exact dezelfde aflevering of live-uitzending is. Exacte
+EPG-doorschakeling vereist een betrouwbare NLZIET-EPG-ID plus zender- en tijdmapping. Maak een
+match zonder zo'n bron niet sterker in de UI of documentatie dan hij is.
 
 ---
 
@@ -756,9 +765,11 @@ De architectuur is voorbereid op uitwijk:
 - [ ] Een klik op een programma opent betrouwbaar de NLZiet-app (of toont een nette melding indien niet aanwezig).
 
 ### Fase 3 is klaar wanneer:
-- [x] De geteste NLZiet-appversie en ondersteunde deeplink-URI's zijn vastgelegd.
+- [x] De geteste NLZiet-appversie en de ondersteunde VOD-deeplink-URI zijn vastgelegd.
 - [x] Deeplinks vallen automatisch terug op de launch-intent bij falen.
 - [x] NLZIET-matcher en verrijkingslaag in `tvguide-api` verrijkt gidsdata met `nlzietId`.
+- [ ] Op de Shield is bevestigd dat een geselecteerd, verrijkt programma de verwachte
+      NLZIET-VOD opent; voor exact-afleveringgedrag is EPG-mapping nog nodig.
 
 ---
 

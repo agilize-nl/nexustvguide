@@ -145,6 +145,12 @@ describe('NLZIET Matcher Engine', () => {
     expect(id).toBe('pDNA4tFqJU6JzlVKbBLGtQ');
   });
 
+  it('rejects IDs that the Android VOD deeplink cannot open', () => {
+    const prog = createProg('Onbekend Programma');
+    prog.nlzietId = 'A1234567890123456789'; // 20 characters; Android requires exactly 22
+    expect(matcher.matchProgramme(prog)).toBeNull();
+  });
+
   it('enriches a batch of programmes and produces correct statistics', () => {
     const programmes = [
       createProg('Wie is de Mol?', 'npo1', '1'),

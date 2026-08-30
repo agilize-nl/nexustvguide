@@ -7,7 +7,10 @@ function isRealNlzietId(id) {
         return false;
     if (id.includes('latest') || id.includes('-latest'))
         return false;
-    return /^[a-zA-Z0-9_-]{20,24}$/.test(id) && /[A-Z0-9]/.test(id);
+    // Android accepteert alleen de 22-karakter base64url-content-ID die de NLZIET VOD-route
+    // gebruikt. Houd de backend en client exact gelijk, zodat een verrijkte gidsentry altijd
+    // daadwerkelijk doorgestuurd kan worden.
+    return /^[a-zA-Z0-9_-]{22}$/.test(id) && /[A-Z0-9]/.test(id);
 }
 export class NlzietMatcher {
     catalogStore;

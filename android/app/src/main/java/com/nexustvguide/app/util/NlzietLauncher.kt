@@ -18,7 +18,7 @@ import com.nexustvguide.app.data.model.ProgrammeDto
  * - Package name: nl.nlziet
  * - Leanback Activity: nl.nlziet.tv.app.di.tv.InjectActivity
  * - Intent filter: android.intent.action.MAIN + android.intent.category.LEANBACK_LAUNCHER
- * - URL Scheme: nlziet://
+ * - VOD deep link: nlziet://open/vod/<contentId>
  * - Dynamic Links: https://nlzietshare.page.link
  */
 object NlzietLauncher {
@@ -28,6 +28,8 @@ object NlzietLauncher {
     const val PACKAGE_NAME = "nl.nlziet"
     const val LEANBACK_ACTIVITY_NAME = "nl.nlziet.tv.app.di.tv.InjectActivity"
     const val SCHEME = "nlziet"
+    const val DEEPLINK_AUTHORITY = "open"
+    const val VOD_PATH = "vod"
     const val PLAY_STORE_MARKET_URI = "market://details?id=nl.nlziet"
     const val PLAY_STORE_WEB_URL = "https://play.google.com/store/apps/details?id=nl.nlziet"
 
@@ -68,10 +70,22 @@ object NlzietLauncher {
     }
 
     /**
-     * Bouwt een Deeplink Intent voor het nlziet:// schema gericht aan de Leanback inject activity.
+     * Bouwt de door de NLZIET TV-app ondersteunde VOD-deeplink.
+     *
+     * De app registreert `nlziet://open/vod/<contentId>`; `watchnext` is geen geregistreerde
+     * route en wordt door NLZIET als onbekende deeplink genegeerd.
      */
-    fun createDeeplinkIntent(uriString: String): Intent {
-        return Intent(Intent.ACTION_VIEW, Uri.parse(uriString)).apply {
+    fun createVodDeeplinkIntent(nlzietId: String): Intent {
+        require(isValidNlzietId(nlzietId)) { "Invalid NLZIET VOD content ID" }
+
+        val uri = Uri.Builder()
+            .scheme(SCHEME)
+            .authority(DEEPLINK_AUTHORITY)
+            .appendPath(VOD_PATH)
+            .appendPath(nlzietId)
+            .build()
+
+        return Intent(Intent.ACTION_VIEW, uri).apply {
             setPackage(PACKAGE_NAME)
             component = ComponentName(PACKAGE_NAME, LEANBACK_ACTIVITY_NAME)
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -145,7 +159,7 @@ object NlzietLauncher {
 
     /**
      * Start NLZIET voor een specifiek gids-programma.
-     * Als er een geverifieerd NLZIET content-ID (nlzietId) aanwezig is, wordt direct de 'watchnext' deeplink aangeroepen.
+     * Als er een geverifieerd NLZIET content-ID (nlzietId) aanwezig is, wordt de VOD-deeplink aangeroepen.
      * Zonder geldig VOD-ID wordt de hoofd-app geopend zonder foutmelding te triggeren.
      */
     fun launchProgramme(context: Context, programme: ProgrammeDto?): Boolean {
@@ -160,13 +174,12 @@ object NlzietLauncher {
                         Toast.LENGTH_SHORT
                     ).show()
                 } catch (ignored: Exception) {}
-                val deeplinkUri = "nlziet://watchnext/$nlzietId"
-                val intent = createDeeplinkIntent(deeplinkUri)
+                val intent = createVodDeeplinkIntent(nlzietId)
                 return try {
                     context.startActivity(intent)
                     true
                 } catch (e: Exception) {
-                    Log.e(TAG, "Failed to launch deeplink $deeplinkUri, falling back to main app", e)
+                    Log.e(TAG, "Failed to launch VOD deeplink for $nlzietId, falling back to main app", e)
                     launchApp(context)
                 }
             } else {

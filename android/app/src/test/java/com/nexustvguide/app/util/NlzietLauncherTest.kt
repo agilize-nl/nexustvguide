@@ -24,6 +24,8 @@ class NlzietLauncherTest {
         assertEquals("nl.nlziet", NlzietLauncher.PACKAGE_NAME)
         assertEquals("nl.nlziet.tv.app.di.tv.InjectActivity", NlzietLauncher.LEANBACK_ACTIVITY_NAME)
         assertEquals("nlziet", NlzietLauncher.SCHEME)
+        assertEquals("open", NlzietLauncher.DEEPLINK_AUTHORITY)
+        assertEquals("vod", NlzietLauncher.VOD_PATH)
         assertEquals("market://details?id=nl.nlziet", NlzietLauncher.PLAY_STORE_MARKET_URI)
         assertEquals("https://play.google.com/store/apps/details?id=nl.nlziet", NlzietLauncher.PLAY_STORE_WEB_URL)
     }
@@ -54,12 +56,12 @@ class NlzietLauncherTest {
     }
 
     @Test
-    fun testCreateDeeplinkIntent() {
-        val testUri = "nlziet://watchnext/pDNA4tFqJU6JzlVKbBLGtQ"
-        val intent = NlzietLauncher.createDeeplinkIntent(testUri)
+    fun testCreateVodDeeplinkIntent() {
+        val nlzietId = "pDNA4tFqJU6JzlVKbBLGtQ"
+        val intent = NlzietLauncher.createVodDeeplinkIntent(nlzietId)
         assertNotNull(intent)
         assertEquals(Intent.ACTION_VIEW, intent.action)
-        assertEquals(testUri, intent.dataString)
+        assertEquals("nlziet://open/vod/$nlzietId", intent.dataString)
         assertEquals("nl.nlziet", intent.`package`)
         assertEquals(ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"), intent.component)
         val expectedFlags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -77,7 +79,7 @@ class NlzietLauncherTest {
     }
 
     @Test
-    fun testLaunchProgrammeWithValidNlzietIdTriggersDeeplink() {
+    fun testLaunchProgrammeWithValidNlzietIdTriggersVodDeeplink() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val progWithValidNlzietId = ProgrammeDto(
             id = "123",
@@ -100,8 +102,12 @@ class NlzietLauncherTest {
         val nextStartedIntent = shadowApp.nextStartedActivity
         assertNotNull(nextStartedIntent)
         assertEquals(Intent.ACTION_VIEW, nextStartedIntent.action)
-        assertEquals("nlziet://watchnext/pDNA4tFqJU6JzlVKbBLGtQ", nextStartedIntent.dataString)
+        assertEquals("nlziet://open/vod/pDNA4tFqJU6JzlVKbBLGtQ", nextStartedIntent.dataString)
         assertEquals("nl.nlziet", nextStartedIntent.`package`)
+        assertEquals(
+            ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"),
+            nextStartedIntent.component
+        )
     }
 
     @Test

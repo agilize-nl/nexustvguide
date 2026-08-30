@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-29T22:00:00Z",
   "to": "2026-08-30T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T00:32:08.724Z",
-  "publishedAt": "2026-08-30T00:32:08.724Z",
+  "sourceFetchedAt": "2026-08-30T11:32:08.502Z",
+  "publishedAt": "2026-08-30T11:32:08.502Z",
   "channels": [
     {
       "id": "npo1",
@@ -461,7 +461,7 @@
       "start": "2026-08-30T14:00:00.000Z",
       "end": "2026-08-30T15:35:00.000Z",
       "description": "Verslag van het WK hockey in Nederland en België.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-live-wk-hockey-m-finale-758816212.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/duitslandwkhockeyevenementnossport.jpg",
       "genre": "Rechtstreeks verslag/Verslag",
       "isLive": true,
       "isRerun": false,
