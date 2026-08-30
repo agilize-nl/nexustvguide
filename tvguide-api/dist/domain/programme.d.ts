@@ -11,4 +11,5 @@ export interface Programme {
     isRerun: boolean;
     isPremiere: boolean;
     ageRating: string | null;
+    nlzietId?: string | null;
 }

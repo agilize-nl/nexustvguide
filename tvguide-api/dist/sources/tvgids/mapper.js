@@ -25,5 +25,6 @@ export function mapProgramme(raw, channelId) {
         isRerun: raw.rerun === 'true',
         isPremiere: raw.is_premiere === 'true',
         ageRating: normalizeAgeRating(raw.ei),
+        nlzietId: null,
     };
 }

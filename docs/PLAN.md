@@ -698,25 +698,21 @@ private fun launchNlziet() {
 
 ---
 
-## Fase 3 — NLZiet-koppeling
+## Fase 3 — NLZiet-koppeling & Verrijkingslaag (Afgerond)
 
-Pas starten wanneer fase 1 en fase 2 volledig functioneel zijn op de Shield.
+### Geanalyseerde APK & Intent Filters
+- **Appversie & Build:** NLZIET Android TV v5.15.3 (build `740504`, package `nl.nlziet`).
+- **Main Leanback Launch Activity:** `nl.nlziet.tv.app.di.tv.InjectActivity`
+  (`android.intent.action.MAIN` + `android.intent.category.LEANBACK_LAUNCHER`).
+- **Deeplink URL Scheme:** `nlziet://watchnext/<nlzietId>` voor rechtstreekse afspeel- en VOD-doorschakeling.
+- **Web App / Dynamic Links:** `https://nlzietshare.page.link` en `https://app.nlziet.nl/vod/<id>`.
+- **Package Visibility:** Geconfigureerd in `AndroidManifest.xml` via `<queries>` voor `nl.nlziet`, `nlziet://` en `nlzietshare.page.link`.
 
-### Onderzoek op de Shield
-
-```bash
-adb shell pm dump nl.nlziet | grep -A5 "android.intent.action.VIEW"
-adb shell dumpsys package nl.nlziet | grep -i "filter\|scheme"
-```
-
-### Mogelijke scenario's:
-1. **App Links op `nlziet.nl/...`:** Vul `nlzietSlug` in `channels.json`, construeer de
-   zender-URI en open deze via `Intent(Intent.ACTION_VIEW, Uri.parse(...))`.
-2. **Custom URL-scheme (bv. `nlziet://...`):** Schakelbaar maken via instellingen met de
-   gewone launch-intent als veilige fallback.
-3. **Geen export van deep links:** Behoud de geteste launch-intent.
-
-Valideer deeplinks altijd vooraf via `intent.resolveActivity(packageManager) != null`.
+### Verrijkingsarchitectuur (`tvguide-api/src/enrichment/nlziet/`)
+1. **Catalogus & Scraper (`catalog.ts`):** Verwerkt NLZIET sitemaps (`https://www.nlziet.nl/nl/program-sitemap.xml`) en programmapagina's, met persistente caching op disk (`data/nlziet-catalog.json`) en offline seed fallback (`config/nlziet_catalog_seed.json`).
+2. **Nederlandse Titelnourmalisatie (`normalizer.ts`):** Stript accenten, broadcast-labels (`(herhaling)`, `(live)`), timestamps (`20:00`), normaliseert ampersands (`&` -> `en`) en genereert veilige slugs.
+3. **Gelaagde Matcher Engine (`matcher.ts`):** Resolutie via regex/overrides (`config/nlziet_overrides.json`), exacte slugs, aliassen en hoofdtitel/ondertitel splitsing.
+4. **Verrijking in Refresh Pipeline (`store/refresh.ts`):** Vult `programme.nlzietId` automatisch in tijdens periodieke gidsverversingen en levert verrijkte data via `/api/v1/guide`.
 
 ---
 
@@ -760,8 +756,9 @@ De architectuur is voorbereid op uitwijk:
 - [ ] Een klik op een programma opent betrouwbaar de NLZiet-app (of toont een nette melding indien niet aanwezig).
 
 ### Fase 3 is klaar wanneer:
-- [ ] De geteste NLZiet-appversie en ondersteunde deeplink-URI's zijn vastgelegd.
-- [ ] Deeplinks automatisch terugvallen op de launch-intent bij falen.
+- [x] De geteste NLZiet-appversie en ondersteunde deeplink-URI's zijn vastgelegd.
+- [x] Deeplinks vallen automatisch terug op de launch-intent bij falen.
+- [x] NLZIET-matcher en verrijkingslaag in `tvguide-api` verrijkt gidsdata met `nlzietId`.
 
 ---
 

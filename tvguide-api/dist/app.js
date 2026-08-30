@@ -7,6 +7,8 @@ import { RefreshEngine } from './store/refresh.js';
 import { registerRestRoutes } from './output/rest.js';
 import { registerXmltvRoutes } from './output/xmltv.js';
 import { registerHealthRoutes } from './output/health.js';
+import { NlzietCatalogStore } from './enrichment/nlziet/catalog.js';
+import { NlzietMatcher } from './enrichment/nlziet/matcher.js';
 export function buildApp(options = {}) {
     const app = fastify({
         logger: false,
@@ -18,9 +20,18 @@ export function buildApp(options = {}) {
     }
     const dataDir = options.dataDir || path.resolve(process.cwd(), 'data/snapshots');
     const channelsConfigPath = options.channelsConfigPath || path.resolve(process.cwd(), 'config/channels.json');
+    const catalogStore = new NlzietCatalogStore({
+        seedFilePath: options.nlzietSeedFilePath,
+        cacheFilePath: options.nlzietCacheFilePath,
+    });
+    const matcher = options.nlzietMatcher ||
+        new NlzietMatcher({
+            catalogStore,
+            overridesFilePath: options.nlzietOverridesFilePath,
+        });
     const store = new SnapshotStore(dataDir);
     const client = new TvgidsClient({ baseUrl: options.tvgidsBaseUrl });
-    const engine = new RefreshEngine(client, store, channelsConfigPath);
+    const engine = new RefreshEngine(client, store, channelsConfigPath, matcher);
     // Standaard foutafhandeling
     app.setErrorHandler((error, request, reply) => {
         const statusCode = error.statusCode || 500;
@@ -36,5 +47,5 @@ export function buildApp(options = {}) {
     registerHealthRoutes(app, engine);
     registerRestRoutes(app, store, engine);
     registerXmltvRoutes(app, store);
-    return { app, store, engine, client };
+    return { app, store, engine, client, matcher };
 }

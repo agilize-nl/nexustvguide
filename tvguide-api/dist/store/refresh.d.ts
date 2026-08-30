@@ -1,7 +1,9 @@
-import { TvgidsClient } from '../sources/tvgids/client.js';
-import { SnapshotStore } from './cache.js';
+import type { TvgidsClient } from '../sources/tvgids/client.js';
+import type { SnapshotStore } from './cache.js';
 import type { Channel } from '../domain/channel.js';
 import type { DaySnapshot } from '../domain/guide.js';
+import { NlzietMatcher } from '../enrichment/nlziet/matcher.js';
+import type { EnrichmentStats } from '../enrichment/nlziet/types.js';
 export declare const MIN_PROVIDER_OFFSET = -2;
 export declare const MAX_PROVIDER_OFFSET = 13;
 export interface RefreshStats {
@@ -13,19 +15,23 @@ export interface RefreshStats {
     loadedChannelCount: number;
     availableSnapshotDates: string[];
     lastError: string | null;
+    lastEnrichmentStats?: EnrichmentStats | null;
 }
 export declare class RefreshEngine {
     private client;
     private store;
     private channelsConfigPath;
+    private nlzietMatcher;
+    private isRefreshing;
+    private refreshIntervalTimer;
+    private lastSuccessfulRefresh;
+    private lastRefreshAttempt;
+    private lastError;
     private startTime;
     private validationStats;
-    private lastRefreshAttempt;
-    private lastSuccessfulRefresh;
-    private lastError;
-    private refreshIntervalTimer;
-    private isRefreshing;
-    constructor(client: TvgidsClient, store: SnapshotStore, channelsConfigPath: string);
+    private lastEnrichmentStats;
+    constructor(client: TvgidsClient, store: SnapshotStore, channelsConfigPath: string, nlzietMatcher?: NlzietMatcher);
+    getNlzietMatcher(): NlzietMatcher;
     loadChannelsConfig(): Channel[];
     getStats(): RefreshStats;
     isReady(): boolean;

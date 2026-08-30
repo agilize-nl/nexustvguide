@@ -2,24 +2,31 @@ import fs from 'node:fs';
 import { Temporal } from '@js-temporal/polyfill';
 import { parseProgramsEnvelope } from '../sources/tvgids/schema.js';
 import { mapProgramme } from '../sources/tvgids/mapper.js';
-import { getLocalDayUtcWindow, getTodayAmsterdam, TIME_ZONE } from './time.js';
+import { getTodayAmsterdam, getLocalDayUtcWindow, TIME_ZONE } from './time.js';
+import { NlzietMatcher } from '../enrichment/nlziet/matcher.js';
 export const MIN_PROVIDER_OFFSET = -2;
 export const MAX_PROVIDER_OFFSET = 13;
 export class RefreshEngine {
     client;
     store;
     channelsConfigPath;
+    nlzietMatcher;
+    isRefreshing = false;
+    refreshIntervalTimer = null;
+    lastSuccessfulRefresh = null;
+    lastRefreshAttempt = null;
+    lastError = null;
     startTime = Date.now();
     validationStats = { skippedMalformedProgrammesCount: 0 };
-    lastRefreshAttempt = null;
-    lastSuccessfulRefresh = null;
-    lastError = null;
-    refreshIntervalTimer = null;
-    isRefreshing = false;
-    constructor(client, store, channelsConfigPath) {
+    lastEnrichmentStats = null;
+    constructor(client, store, channelsConfigPath, nlzietMatcher) {
         this.client = client;
         this.store = store;
         this.channelsConfigPath = channelsConfigPath;
+        this.nlzietMatcher = nlzietMatcher || new NlzietMatcher();
+    }
+    getNlzietMatcher() {
+        return this.nlzietMatcher;
     }
     loadChannelsConfig() {
         const raw = fs.readFileSync(this.channelsConfigPath, 'utf-8');
@@ -41,6 +48,7 @@ export class RefreshEngine {
             loadedChannelCount: this.store.getChannels().length,
             availableSnapshotDates: dates,
             lastError: this.lastError,
+            lastEnrichmentStats: this.lastEnrichmentStats,
         };
     }
     isReady() {
@@ -109,6 +117,8 @@ export class RefreshEngine {
                 datesToProcess.push(this.addDays(today, d));
             }
             let successfulDaysCount = 0;
+            let totalEnrichedCount = 0;
+            let totalProcessedProgs = 0;
             // 2. Verdeel programma's over lokale kalenderdagen en voer sanity-checks uit
             for (const date of datesToProcess) {
                 const { from, to } = getLocalDayUtcWindow(date);
@@ -153,6 +163,10 @@ export class RefreshEngine {
                     }
                 }
                 if (dayProgrammes.length > 0) {
+                    // NLZIET Verrijking: vul nlzietId voor gematchte programma's
+                    const enrichmentStats = this.nlzietMatcher.enrichProgrammes(dayProgrammes, activeChannels);
+                    totalEnrichedCount += enrichmentStats.enrichedProgrammes;
+                    totalProcessedProgs += enrichmentStats.totalProgrammes;
                     const snapshot = {
                         date,
                         timeZone: TIME_ZONE,
@@ -170,11 +184,17 @@ export class RefreshEngine {
             if (successfulDaysCount > 0) {
                 this.lastSuccessfulRefresh = nowUtcIso;
                 this.lastError = null;
+                this.lastEnrichmentStats = {
+                    totalProgrammes: totalProcessedProgs,
+                    enrichedProgrammes: totalEnrichedCount,
+                    enrichmentRate: totalProcessedProgs > 0 ? totalEnrichedCount / totalProcessedProgs : 0,
+                    matchedSlugs: {},
+                };
             }
             // Verwijder snapshots ouder dan vandaag - 3 dagen
             const purgeThreshold = this.addDays(today, -3);
             await this.store.cleanOldSnapshots(purgeThreshold);
-            console.log(`Refresh cycle completed. Successfully updated ${successfulDaysCount} days.`);
+            console.log(`Refresh cycle completed. Successfully updated ${successfulDaysCount} days. Enriched ${totalEnrichedCount}/${totalProcessedProgs} programmes with NLZIET IDs.`);
         }
         catch (err) {
             const errorMsg = err instanceof Error ? err.message : String(err);

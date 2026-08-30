@@ -1,0 +1,89 @@
+{
+  "aliases": {
+    "journaal": "nos-journaal",
+    "nos-journaal-in-makkelijke-taal": "nos-journaal",
+    "nos-journaal-met-gebarentaal": "nos-journaal",
+    "nos-jeugdjournaal-met-gebarentaal": "nos-jeugdjournaal",
+    "jeugdjournaal": "nos-jeugdjournaal",
+    "studio-sport": "nos-studio-sport-gemist",
+    "nos-studio-sport": "nos-studio-sport-gemist",
+    "nos-studio-sport-eredivisie": "nos-studio-sport-gemist",
+    "rtl-nieuws": "rtl-nieuws",
+    "hart-van-nederland": "hart-van-nederland",
+    "een-huis-vol": "een-huis-vol",
+    "b-en-b-vol-liefde": "b-en-b-vol-liefde",
+    "wie-is-de-mol": "wie-is-de-mol",
+    "de-slimste-mens": "de-slimste-mens",
+    "flikken-maastricht": "flikken-maastricht",
+    "vandaag-inside": "vandaag-inside",
+    "de-bondgenoten": "de-bondgenoten",
+    "kopen-of-slopen": "kopen-of-slopen",
+    "max-vakantieman": "max-vakantieman",
+    "we-zijn-er-bijna": "we-zijn-er-bijna-gemist",
+    "ik-vertrek": "ik-vertrek",
+    "even-tot-hier": "even-tot-hier",
+    "nieuwsuur": "nieuwsuur",
+    "dit-was-het-nieuws": "dit-was-het-nieuws",
+    "first-dates": "first-dates",
+    "chateau-meiland": "chateau-meiland",
+    "expeditie-robinson": "expeditie-robinson",
+    "de-verraders": "de-verraders",
+    "heel-holland-bakt": "heel-holland-bakt",
+    "oogappels": "oogappels",
+    "radar": "radar",
+    "kassa": "kassa",
+    "bar-laat": "bar-laat",
+    "renze": "renze",
+    "beau": "beau",
+    "humberto": "humberto",
+    "eva": "eva",
+    "steenrijk-straatarm": "steenrijk-straatarm",
+    "silent-witness": "silent-witness-gemist",
+    "call-the-midwife": "call-the-midwife-kijken",
+    "unforgotten": "unforgotten-gemist",
+    "keuringsdienst-van-waarde": "keuringsdienst-van-waarde",
+    "het-perfecte-plaatje": "het-perfecte-plaatje",
+    "bed-en-breakfast": "bed-en-breakfast",
+    "binnenstebuiten": "binnenstebuiten",
+    "hunt-down": "hunted",
+    "hunted": "hunted",
+    "vroege-vogels": "vroege-vogels"
+  },
+  "rules": [
+    {
+      "pattern": "^(?:nos\\s+)?journaal",
+      "isRegex": true,
+      "targetSlug": "nos-journaal"
+    },
+    {
+      "pattern": "^(?:nos\\s+)?jeugdjournaal",
+      "isRegex": true,
+      "targetSlug": "nos-jeugdjournaal"
+    },
+    {
+      "pattern": "^(?:nos\\s+)?studio sport",
+      "isRegex": true,
+      "targetSlug": "nos-studio-sport-gemist"
+    },
+    {
+      "pattern": "^rtl nieuws",
+      "isRegex": true,
+      "targetSlug": "rtl-nieuws"
+    },
+    {
+      "pattern": "^hart van nederland",
+      "isRegex": true,
+      "targetSlug": "hart-van-nederland"
+    },
+    {
+      "pattern": "^shownieuws",
+      "isRegex": true,
+      "targetSlug": "shownieuws"
+    },
+    {
+      "pattern": "^editie nl",
+      "isRegex": true,
+      "targetSlug": "editie-nl"
+    }
+  ]
+}

@@ -7,12 +7,18 @@ import { RefreshEngine } from './store/refresh.js';
 import { registerRestRoutes } from './output/rest.js';
 import { registerXmltvRoutes } from './output/xmltv.js';
 import { registerHealthRoutes } from './output/health.js';
+import { NlzietCatalogStore } from './enrichment/nlziet/catalog.js';
+import { NlzietMatcher } from './enrichment/nlziet/matcher.js';
 
 export interface AppOptions {
   dataDir?: string;
   channelsConfigPath?: string;
   tvgidsBaseUrl?: string;
   enableCors?: boolean;
+  nlzietSeedFilePath?: string;
+  nlzietCacheFilePath?: string;
+  nlzietOverridesFilePath?: string;
+  nlzietMatcher?: NlzietMatcher;
 }
 
 export function buildApp(options: AppOptions = {}): {
@@ -20,6 +26,7 @@ export function buildApp(options: AppOptions = {}): {
   store: SnapshotStore;
   engine: RefreshEngine;
   client: TvgidsClient;
+  matcher: NlzietMatcher;
 } {
   const app = fastify({
     logger: false,
@@ -34,9 +41,21 @@ export function buildApp(options: AppOptions = {}): {
   const dataDir = options.dataDir || path.resolve(process.cwd(), 'data/snapshots');
   const channelsConfigPath = options.channelsConfigPath || path.resolve(process.cwd(), 'config/channels.json');
 
+  const catalogStore = new NlzietCatalogStore({
+    seedFilePath: options.nlzietSeedFilePath,
+    cacheFilePath: options.nlzietCacheFilePath,
+  });
+
+  const matcher =
+    options.nlzietMatcher ||
+    new NlzietMatcher({
+      catalogStore,
+      overridesFilePath: options.nlzietOverridesFilePath,
+    });
+
   const store = new SnapshotStore(dataDir);
   const client = new TvgidsClient({ baseUrl: options.tvgidsBaseUrl });
-  const engine = new RefreshEngine(client, store, channelsConfigPath);
+  const engine = new RefreshEngine(client, store, channelsConfigPath, matcher);
 
   // Standaard foutafhandeling
   app.setErrorHandler((error, request, reply) => {
@@ -56,5 +75,5 @@ export function buildApp(options: AppOptions = {}): {
   registerRestRoutes(app, store, engine);
   registerXmltvRoutes(app, store);
 
-  return { app, store, engine, client };
+  return { app, store, engine, client, matcher };
 }

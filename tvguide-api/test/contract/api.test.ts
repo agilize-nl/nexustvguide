@@ -58,7 +58,7 @@ describe('API Contract Tests', () => {
     expect(channels[1].id).toBe('npo2');
   });
 
-  it('GET /api/v1/guide?date=YYYY-MM-DD returns guide and handles ETag/304', async () => {
+  it('GET /api/v1/guide?date=YYYY-MM-DD returns guide with nlzietId and handles ETag/304', async () => {
     const { app, store, engine } = buildApp({
       dataDir: tempDir,
       channelsConfigPath: channelsPath,
@@ -77,16 +77,17 @@ describe('API Contract Tests', () => {
         {
           id: '218748382',
           channelId: 'npo1',
-          title: 'Nederland in beweging & fit',
-          start: '2026-08-30T04:55:00.000Z',
-          end: '2026-08-30T05:15:00.000Z',
-          description: 'Gym',
+          title: 'Wie is de Mol?',
+          start: '2026-08-30T18:30:00.000Z',
+          end: '2026-08-30T19:30:00.000Z',
+          description: 'Spelshow',
           imageUrl: null,
-          genre: 'Gymnastiek',
+          genre: 'Amusement',
           isLive: false,
-          isRerun: true,
-          isPremiere: false,
-          ageRating: 'AL',
+          isRerun: false,
+          isPremiere: true,
+          ageRating: '12',
+          nlzietId: 'pDNA4tFqJU6JzlVKbBLGtQ',
         },
       ],
     };
@@ -99,7 +100,8 @@ describe('API Contract Tests', () => {
     expect(body.meta.timeZone).toBe('Europe/Amsterdam');
     expect(body.meta.date).toBe('2026-08-30');
     expect(body.programmes.length).toBe(1);
-    expect(body.programmes[0].title).toBe('Nederland in beweging & fit');
+    expect(body.programmes[0].title).toBe('Wie is de Mol?');
+    expect(body.programmes[0].nlzietId).toBe('pDNA4tFqJU6JzlVKbBLGtQ');
 
     const etag = res.headers['etag'];
     expect(etag).toBeDefined();
