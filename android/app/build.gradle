@@ -2,6 +2,20 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
+// Signing-gegevens komen uit android/keystore.properties, dat buiten versiebeheer
+// blijft. Ontbreekt dat bestand (bijv. op een schone checkout of CI zonder secrets),
+// dan valt de release-build terug op niet-ondertekend in plaats van te falen.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+def hasReleaseSigning = false
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+    hasReleaseSigning = file(keystoreProperties['storeFile'] as String).exists()
+    if (!hasReleaseSigning) {
+        logger.warn("keystore.properties gevonden, maar storeFile ontbreekt: ${keystoreProperties['storeFile']}")
+    }
+}
+
 android {
     namespace "com.nexustvguide.app"
 
@@ -33,6 +47,22 @@ android {
         unitTests.returnDefaultValues = true
     }
 
+    signingConfigs {
+        release {
+            if (hasReleaseSigning) {
+                storeFile file(keystoreProperties['storeFile'] as String)
+                storePassword keystoreProperties['storePassword'] as String
+                keyAlias keystoreProperties['keyAlias'] as String
+                keyPassword keystoreProperties['keyPassword'] as String
+                // v1+v2 zijn nodig voor minSdk 21; v3 geeft extra
+                // integriteitsbescherming op Android 9+ (o.a. de Shield).
+                enableV1Signing true
+                enableV2Signing true
+                enableV3Signing true
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
@@ -42,6 +72,9 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
