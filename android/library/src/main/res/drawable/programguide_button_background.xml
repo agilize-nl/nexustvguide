@@ -18,6 +18,13 @@
 <ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#80FFFFFF">
     <item>
         <selector>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/programguide_button_corner_radius" />
+                    <solid android:color="#1AFFFFFF" />
+                </shape>
+            </item>
+
             <item android:state_focused="true">
                 <shape android:shape="rectangle">
                     <corners android:radius="@dimen/programguide_button_corner_radius" />

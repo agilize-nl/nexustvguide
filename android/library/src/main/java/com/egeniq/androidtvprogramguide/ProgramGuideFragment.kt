@@ -245,75 +245,41 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * The selectable days and their displays can be changed by the config parameters.
      * Also you can change the display values by overriding the string resources.
      */
-    private fun setupFilters(view: View) {
-        // Day filter
+    protected fun getDayFilterOptions(): List<FilterOption> {
         val now = FixedZonedDateTime.now().withZoneSameInstant(DISPLAY_TIMEZONE)
-        val dayFilterOptions =
-            (-SELECTABLE_DAYS_IN_PAST until SELECTABLE_DAYS_IN_FUTURE).map { dayIndex ->
-                val indexLong = dayIndex.toLong()
-                when {
-                    USE_HUMAN_DATES && dayIndex == -1 -> FilterOption(
-                        getString(R.string.programguide_day_yesterday),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                    USE_HUMAN_DATES && dayIndex == 0 -> FilterOption(
-                        getString(R.string.programguide_day_today),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        true
-                    )
-                    USE_HUMAN_DATES && dayIndex == 1 -> FilterOption(
-                        getString(R.string.programguide_day_tomorrow),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                    else -> FilterOption(
-                        DATE_WITH_DAY_FORMATTER.format(now.plusDays(indexLong)),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                }
+        return (-SELECTABLE_DAYS_IN_PAST until SELECTABLE_DAYS_IN_FUTURE).map { dayIndex ->
+            val indexLong = dayIndex.toLong()
+            when {
+                USE_HUMAN_DATES && dayIndex == -1 -> FilterOption(
+                    getString(R.string.programguide_day_yesterday),
+                    FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                    false
+                )
+                USE_HUMAN_DATES && dayIndex == 0 -> FilterOption(
+                    getString(R.string.programguide_day_today),
+                    FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                    true
+                )
+                USE_HUMAN_DATES && dayIndex == 1 -> FilterOption(
+                    getString(R.string.programguide_day_tomorrow),
+                    FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                    false
+                )
+                else -> FilterOption(
+                    DATE_WITH_DAY_FORMATTER.format(now.plusDays(indexLong)),
+                    FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                    false
+                )
             }
-        val matchingIndex = dayFilterOptions.indexOfFirst {
-            it.value == FILTER_DATE_FORMATTER.format(currentDate)
         }
-        if (matchingIndex != -1) {
-            currentlySelectedFilterIndex = matchingIndex
-        } else {
-            currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST.coerceIn(dayFilterOptions.indices)
-        }
-        val dayFilter = view.findViewById<View>(R.id.programguide_day_filter)
-        dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
-            dayFilterOptions[currentlySelectedFilterIndex].displayTitle
-        dayFilter.setOnClickListener { filterView ->
-            AlertDialog.Builder(filterView.context)
-                .setTitle(R.string.programguide_day_selector_title)
-                .setSingleChoiceItems(
-                    dayFilterOptions.map { it.displayTitle }.toTypedArray(),
-                    currentlySelectedFilterIndex
-                ) { dialogInterface, position ->
-                    currentlySelectedFilterIndex = position
-                    dialogInterface.dismiss()
+    }
 
-                    dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
-                        dayFilterOptions[currentlySelectedFilterIndex].displayTitle
-                    didScrollToBestProgramme = false
-                    setJumpToLiveButtonVisible(false)
-                    currentDate =
-                        LocalDate.parse(dayFilterOptions[position].value, FILTER_DATE_FORMATTER)
-                    updateGuideDateDisplay()
-                    requestingProgramGuideFor(currentDate)
-                }
-                .show()
-
-        }
-
-        // Time of day filter
+    protected fun getTimeOfDayFilterOptions(): List<FilterOption> {
+        val now = FixedZonedDateTime.now().withZoneSameInstant(DISPLAY_TIMEZONE)
         val isItMorning = now.hour < MORNING_UNTIL_HOUR
         val isItAfternoon = !isItMorning && now.hour < AFTERNOON_UNTIL_HOUR
         val isItEvening = !isItMorning && !isItAfternoon
-
-        val timeOfDayFilterOptions = listOf(
+        return listOf(
             FilterOption(
                 getString(R.string.programguide_part_of_day_morning),
                 TIME_OF_DAY_MORNING,
@@ -330,11 +296,62 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 isItEvening
             )
         )
+    }
 
+    /**
+     * We call the day and daytime switchers filters here.
+     * The selectable days and their displays can be changed by the config parameters.
+     * Also you can change the display values by overriding the string resources.
+     */
+    private fun setupFilters(view: View) {
+        // Day filter
+        val dayFilterOptions = getDayFilterOptions()
+        val matchingIndex = dayFilterOptions.indexOfFirst {
+            it.value == FILTER_DATE_FORMATTER.format(currentDate)
+        }
+        if (matchingIndex != -1) {
+            currentlySelectedFilterIndex = matchingIndex
+        } else {
+            currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST.coerceIn(dayFilterOptions.indices)
+        }
+        val dayFilter = view.findViewById<View>(R.id.programguide_day_filter)
+        dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
+            dayFilterOptions[currentlySelectedFilterIndex].displayTitle
+        dayFilter.setOnClickListener { filterView ->
+            val currentOptions = getDayFilterOptions()
+            val currentMatchingIndex = currentOptions.indexOfFirst {
+                it.value == FILTER_DATE_FORMATTER.format(currentDate)
+            }
+            if (currentMatchingIndex != -1) {
+                currentlySelectedFilterIndex = currentMatchingIndex
+            }
+            AlertDialog.Builder(filterView.context)
+                .setTitle(R.string.programguide_day_selector_title)
+                .setSingleChoiceItems(
+                    currentOptions.map { it.displayTitle }.toTypedArray(),
+                    currentlySelectedFilterIndex
+                ) { dialogInterface, position ->
+                    currentlySelectedFilterIndex = position
+                    dialogInterface.dismiss()
+
+                    dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
+                        currentOptions[currentlySelectedFilterIndex].displayTitle
+                    didScrollToBestProgramme = false
+                    setJumpToLiveButtonEnabled(false)
+                    currentDate =
+                        LocalDate.parse(currentOptions[position].value, FILTER_DATE_FORMATTER)
+                    updateGuideDateDisplay()
+                    requestingProgramGuideFor(currentDate)
+                }
+                .show()
+        }
+
+        // Time of day filter
+        val timeOfDayFilterOptions = getTimeOfDayFilterOptions()
         if (currentlySelectedTimeOfDayFilterIndex == -1) {
             currentlySelectedTimeOfDayFilterIndex = when {
-                isItMorning -> 0
-                isItAfternoon -> 1
+                timeOfDayFilterOptions[0].isDefaultValue -> 0
+                timeOfDayFilterOptions[1].isDefaultValue -> 1
                 else -> 2
             }
         }
@@ -342,15 +359,16 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         timeOfDayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
             timeOfDayFilterOptions[currentlySelectedTimeOfDayFilterIndex].displayTitle
         timeOfDayFilter?.setOnClickListener {
+            val currentOptions = getTimeOfDayFilterOptions()
             AlertDialog.Builder(it.context)
                 .setTitle(R.string.programguide_day_time_selector_title)
                 .setSingleChoiceItems(
-                    timeOfDayFilterOptions.map { option -> option.displayTitle }.toTypedArray(),
+                    currentOptions.map { option -> option.displayTitle }.toTypedArray(),
                     currentlySelectedTimeOfDayFilterIndex
                 ) { dialogInterface, position ->
                     currentlySelectedTimeOfDayFilterIndex = position
                     timeOfDayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
-                        timeOfDayFilterOptions[currentlySelectedTimeOfDayFilterIndex].displayTitle
+                        currentOptions[currentlySelectedTimeOfDayFilterIndex].displayTitle
                     dialogInterface.dismiss()
                     autoScrollToBestProgramme(useTimeOfDayFilter = true)
                 }
@@ -359,12 +377,17 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     }
 
     /**
-     * The 'jump to live' button visibility can be set here.
-     * It should only be visible if the date is today, and the current scroll range does not show
-     * the current timestamp.
+     * The 'jump to live' button enabled state can be set here.
+     * It should be enabled if we are viewing a day other than today, or if we are on today and
+     * the current scroll range does not show the current live timestamp.
      */
-    private fun setJumpToLiveButtonVisible(visible: Boolean) {
-        jumpToLive?.visibility = if (visible) View.VISIBLE else View.GONE
+    protected fun setJumpToLiveButtonEnabled(enabled: Boolean) {
+        jumpToLive?.apply {
+            isEnabled = enabled
+            isClickable = enabled
+            isFocusable = enabled
+            alpha = if (enabled) 1.0f else 0.35f
+        }
     }
 
 
@@ -489,9 +512,23 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         jumpToLive.setOnClickListener {
             jumpToLive(focus = true)
         }
+        setJumpToLiveButtonEnabled(false)
         updateHeaderAppTitle()
         updateGuideDateDisplay()
         updateCurrentLiveDateTimeDisplay()
+        updateAppVersionDisplay(view)
+    }
+
+    private fun updateAppVersionDisplay(rootView: View? = this.view) {
+        val versionView = rootView?.findViewById<TextView>(R.id.programguide_version_name) ?: return
+        val ctx = context ?: rootView.context ?: return
+        val versionName = try {
+            val pInfo = ctx.packageManager.getPackageInfo(ctx.packageName, 0)
+            "v${pInfo.versionName}"
+        } catch (e: Exception) {
+            ""
+        }
+        versionView.text = versionName
     }
 
     /**
@@ -502,6 +539,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         updateHeaderAppTitle()
         updateGuideDateDisplay()
         updateCurrentLiveDateTimeDisplay()
+        updateAppVersionDisplay(view)
         if ((savedInstanceState == null && !created) || currentState !is State.Content) {
             created = true
             // Only get data when fragment is created first time, not recreated from backstack.
@@ -576,9 +614,13 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * If the currently visible time range does not contain the live timestamp, it should be hidden.
      */
     protected fun updateCurrentTimeIndicator(now: Long = System.currentTimeMillis()) {
-        // No content, of feature is disabled -> hide
-        if (currentState != State.Content || !DISPLAY_CURRENT_TIME_INDICATOR) {
+        val today = FixedLocalDateTime.now().toLocalDate()
+        val isToday = currentDate == today
+
+        // No content, feature is disabled, or not today -> hide indicator and enable Jump to Live if not today
+        if (currentState != State.Content || !DISPLAY_CURRENT_TIME_INDICATOR || !isToday) {
             currentTimeIndicator?.visibility = View.GONE
+            setJumpToLiveButtonEnabled(currentState is State.Content && !isToday)
             return
         }
 
@@ -588,7 +630,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         ) - (timeRow?.currentScrollOffset ?: 0) - timelineAdjustmentPixels
         if (offset < 0) {
             currentTimeIndicator?.visibility = View.GONE
-            setJumpToLiveButtonVisible(currentState != State.Loading && (programGuideManager.getStartTime() <= now && now <= programGuideManager.getEndTime()))
+            setJumpToLiveButtonEnabled(currentState is State.Content && (programGuideManager.getStartTime() <= now && now <= programGuideManager.getEndTime()))
         } else {
             if (currentTimeIndicatorWidth == 0) {
                 currentTimeIndicator?.measure(
@@ -603,7 +645,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 currentTimeIndicator?.translationX = -offset - currentTimeIndicatorWidth / 2f
             }
             currentTimeIndicator?.visibility = View.VISIBLE
-            setJumpToLiveButtonVisible(currentState != State.Loading && offset > gridWidth)
+            setJumpToLiveButtonEnabled(currentState is State.Content && offset > gridWidth)
         }
     }
 
@@ -632,33 +674,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * Updates the day filter label to match currentlySelectedFilterIndex.
      */
     fun updateDayFilterText() {
-        val now = FixedZonedDateTime.now().withZoneSameInstant(DISPLAY_TIMEZONE)
-        val dayFilterOptions =
-            (-SELECTABLE_DAYS_IN_PAST until SELECTABLE_DAYS_IN_FUTURE).map { dayIndex ->
-                val indexLong = dayIndex.toLong()
-                when {
-                    USE_HUMAN_DATES && dayIndex == -1 -> FilterOption(
-                        getString(R.string.programguide_day_yesterday),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                    USE_HUMAN_DATES && dayIndex == 0 -> FilterOption(
-                        getString(R.string.programguide_day_today),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        true
-                    )
-                    USE_HUMAN_DATES && dayIndex == 1 -> FilterOption(
-                        getString(R.string.programguide_day_tomorrow),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                    else -> FilterOption(
-                        DATE_WITH_DAY_FORMATTER.format(now.plusDays(indexLong)),
-                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
-                        false
-                    )
-                }
-            }
+        val dayFilterOptions = getDayFilterOptions()
         val matchingIndex = dayFilterOptions.indexOfFirst {
             it.value == FILTER_DATE_FORMATTER.format(currentDate)
         }
@@ -682,7 +698,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         updateDayFilterText()
         updateGuideDateDisplay()
         didScrollToBestProgramme = false
-        setJumpToLiveButtonVisible(false)
+        isJumpingGridInTime = true
+        updateCurrentTimeIndicator()
         requestingProgramGuideFor(today)
     }
 
@@ -696,23 +713,16 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             return
         }
 
-        val currentChannelId: String?
-        if (programGuideGrid.hasFocus()) {
-            val focusedView = programGuideGrid.findFocus() as? ProgramGuideItemView<*>
-            val rowView = focusedView?.parent as? ProgramGuideRowGridView
-            val channel = rowView?.channel
-            currentChannelId = channel?.id
-            isJumpingGridInTime = true
-        } else {
-            currentChannelId = null
-        }
-
         ProgramGuideUtil.lastClickedSchedule = null
         programGuideGrid.clearLastFocusedView()
         didScrollToBestProgramme = false
-        autoScrollToBestProgramme(useTimeOfDayFilter = false, specificChannelId = currentChannelId)
+        isJumpingGridInTime = true
+        val firstChannelId = programGuideManager.getChannel(0)?.id
+        autoScrollToBestProgramme(useTimeOfDayFilter = false, specificChannelId = firstChannelId)
         if (focus) {
-            programGuideGrid.focusCurrentProgram()
+            programGuideGrid.postDelayed({
+                programGuideGrid.focusCurrentProgram(0)
+            }, 100)
         }
         updateCurrentTimeIndicator()
     }
@@ -780,7 +790,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             timeRow?.post {
                 timeRow?.scrollTo(scrollOffset, false)
                 if (currentDate == FixedLocalDateTime.now().toLocalDate()) {
-                    programGuideGrid.focusCurrentProgram()
+                    programGuideGrid.focusCurrentProgram(0)
                 }
                 updateCurrentTimeIndicator()
             }
@@ -788,7 +798,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             if (!programGuideGrid.hasFocus() || isJumpingGridInTime) {
                 // We will temporarily catch the focus, so that the program guide does not focus on all the views while it is scrolling.
                 // This is better for performance, and also avoids a bug where the focused view would be out of scope.
-                val shouldFocusCurrent = isJumpingGridInTime || currentDate == FixedLocalDateTime.now().toLocalDate()
+                val shouldFocusCurrent = isJumpingGridInTime
                 isJumpingGridInTime = false
                 focusEnabledScrollListener?.let {
                     timeRow?.removeOnScrollListener(it)
@@ -801,7 +811,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     programGuideGrid.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
                     focusEnabledScrollListener = null
                     if (shouldFocusCurrent) {
-                        programGuideGrid.focusCurrentProgram()
+                        programGuideGrid.focusCurrentProgram(0)
                     } else {
                         programGuideGrid.requestFocus()
                     }
@@ -1051,7 +1061,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     "Scrolling to ${currentProgram.displayTitle}, started at ${currentProgram.startsAtMillis}"
                 )
                 if (!programGuideManager.jumpTo(currentProgram.startsAtMillis)) {
-                    programGuideGrid.focusCurrentProgram()
+                    programGuideGrid.focusCurrentProgram(0)
                     updateCurrentTimeIndicator()
                 }
             }

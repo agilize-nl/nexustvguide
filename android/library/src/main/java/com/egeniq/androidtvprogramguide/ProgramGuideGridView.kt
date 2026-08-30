@@ -308,7 +308,23 @@ class ProgramGuideGridView<T>(context: Context, attrs: AttributeSet?, defStyle: 
                 return nextFocus
             }
         }
-        return super.focusSearch(focused, direction)
+        val target = super.focusSearch(focused, direction)
+        if (direction == View.FOCUS_UP && target == null && selectedPosition == 0) {
+            val root = rootView
+            val jumpToLive = root.findViewById<View>(R.id.programguide_jump_to_live)
+            if (jumpToLive != null && jumpToLive.isEnabled && jumpToLive.isFocusable && jumpToLive.isShown) {
+                return jumpToLive
+            }
+            val timeFilter = root.findViewById<View>(R.id.programguide_time_of_day_filter)
+            if (timeFilter != null && timeFilter.isFocusable && timeFilter.isShown) {
+                return timeFilter
+            }
+            val dayFilter = root.findViewById<View>(R.id.programguide_day_filter)
+            if (dayFilter != null && dayFilter.isFocusable && dayFilter.isShown) {
+                return dayFilter
+            }
+        }
+        return target
     }
 
     override fun requestChildFocus(child: View, focused: View) {
@@ -328,9 +344,46 @@ class ProgramGuideGridView<T>(context: Context, attrs: AttributeSet?, defStyle: 
         return super.onRequestFocusInDescendants(direction, previouslyFocusedRect)
     }
 
-    fun focusCurrentProgram() {
+    fun focusCurrentProgram(channelPosition: Int = 0) {
         lastFocusedView = null
         internalKeepCurrentProgramFocused = true
+        if (selectedPosition != channelPosition) {
+            selectedPosition = channelPosition
+        }
+        val rowViewHolder = findViewHolderForAdapterPosition(channelPosition)
+        val rowView = rowViewHolder?.itemView ?: getChildAt(channelPosition)
+        if (rowView != null) {
+            val liveProgramView = ProgramGuideUtil.findNextFocusedProgram(
+                rowView,
+                focusRangeLeft,
+                focusRangeRight,
+                keepCurrentProgramFocused = true
+            )
+            if (liveProgramView != null && liveProgramView.requestFocus()) {
+                return
+            }
+            if (rowView.requestFocus()) {
+                return
+            }
+        } else {
+            post {
+                if (internalKeepCurrentProgramFocused) {
+                    val deferredRow = findViewHolderForAdapterPosition(channelPosition)?.itemView ?: getChildAt(channelPosition)
+                    if (deferredRow != null) {
+                        val liveView = ProgramGuideUtil.findNextFocusedProgram(
+                            deferredRow,
+                            focusRangeLeft,
+                            focusRangeRight,
+                            keepCurrentProgramFocused = true
+                        )
+                        if (liveView != null && liveView.requestFocus()) {
+                            return@post
+                        }
+                        deferredRow.requestFocus()
+                    }
+                }
+            }
+        }
         requestFocus()
     }
 

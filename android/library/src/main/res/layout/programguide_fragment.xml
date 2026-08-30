@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/programguide_filter_spacing"
         android:text="@string/programguide_button_jump_to_live"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
         app:layout_constraintStart_toEndOf="@id/programguide_time_of_day_filter"
         app:layout_constraintTop_toTopOf="@id/programguide_top_margin" />
@@ -309,5 +309,20 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/programguide_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:textColor="#55FFFFFF"
+        android:textSize="11sp"
+        android:gravity="end"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="v0.5.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
