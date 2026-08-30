@@ -18,8 +18,8 @@ export class NlzietCatalogStore {
   private lastUpdated: string | null = null;
 
   constructor(options: CatalogOptions = {}) {
-    this.seedFilePath = options.seedFilePath || path.resolve(process.cwd(), 'config/nlziet_catalog_seed.json');
-    this.cacheFilePath = options.cacheFilePath || path.resolve(process.cwd(), 'data/nlziet-catalog.json');
+    this.seedFilePath = options.seedFilePath || process.env.NLZIET_SEED_FILE_PATH || path.resolve(process.cwd(), 'config/nlziet_catalog_seed.json');
+    this.cacheFilePath = options.cacheFilePath || process.env.NLZIET_CACHE_FILE_PATH || path.resolve(process.cwd(), 'data/nlziet-catalog.json');
     this.sitemapUrl = options.sitemapUrl || 'https://www.nlziet.nl/nl/program-sitemap.xml';
 
     this.initialize();

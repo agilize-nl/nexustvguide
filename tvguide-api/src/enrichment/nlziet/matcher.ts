@@ -17,7 +17,7 @@ export class NlzietMatcher {
   private overridesFilePath: string;
 
   constructor(options: MatcherOptions = {}) {
-    this.overridesFilePath = options.overridesFilePath || path.resolve(process.cwd(), 'config/nlziet_overrides.json');
+    this.overridesFilePath = options.overridesFilePath || process.env.NLZIET_OVERRIDES_FILE_PATH || path.resolve(process.cwd(), 'config/nlziet_overrides.json');
     this.catalogStore = options.catalogStore || new NlzietCatalogStore();
 
     this.loadOverrides();
