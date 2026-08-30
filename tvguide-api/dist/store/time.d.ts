@@ -1,3 +1,4 @@
+import { Temporal } from '@js-temporal/polyfill';
 export declare const TIME_ZONE = "Europe/Amsterdam";
 /**
  * Berekent het exacte UTC [from, to) venster voor een lokale datum in Amsterdam.
@@ -15,6 +16,13 @@ export declare function getAmsterdamDateString(instantUtcIso: string): string;
  * Haalt de huidige lokale datum in Amsterdam op (YYYY-MM-DD).
  */
 export declare function getTodayAmsterdam(): string;
+/**
+ * Parseert een ISO-8601 instant zoals de rest van deze module hem verwacht.
+ * Geeft null in plaats van te gooien, zodat aanroepers een nette 400 kunnen
+ * teruggeven. Let op: Temporal eist een tijdzone-offset ("Z" of "+02:00"),
+ * dus een kale datum als "2026-08-30" is hier bewust ongeldig.
+ */
+export declare function parseInstant(iso: string): Temporal.Instant | null;
 /**
  * Geeft een lijst van YYYY-MM-DD datums tussen twee UTC ISO strings.
  */

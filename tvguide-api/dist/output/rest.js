@@ -1,4 +1,4 @@
-import { getLocalDateRange, TIME_ZONE } from '../store/time.js';
+import { getLocalDateRange, parseInstant, TIME_ZONE } from '../store/time.js';
 export function registerRestRoutes(app, store, engine) {
     // GET /api/v1/channels
     app.get('/api/v1/channels', async (request, reply) => {
@@ -63,17 +63,25 @@ export function registerRestRoutes(app, store, engine) {
         }
         // 2. Tijdsvenster-specifieke bevraging (?from=&to=)
         if (from && to) {
-            const fromTime = new Date(from).getTime();
-            const toTime = new Date(to).getTime();
-            if (isNaN(fromTime) || isNaN(toTime)) {
+            // Valideren met dezelfde parser die getLocalDateRange() hieronder gebruikt.
+            // new Date() is soepeler dan Temporal en accepteert bijv. "2026-08-30";
+            // dat leverde verderop een throw op en dus een 500 op wat eigenlijk een
+            // invoerfout is.
+            const fromInstant = parseInstant(from);
+            const toInstant = parseInstant(to);
+            if (fromInstant === null || toInstant === null) {
                 reply.status(400);
                 return {
                     error: {
                         code: 'INVALID_QUERY_PARAM',
-                        message: 'Parameters "from" en "to" moeten geldige ISO-8601 UTC datums zijn.',
+                        message: 'Parameters "from" en "to" moeten ISO-8601 timestamps met tijdzone zijn, ' +
+                            'bijvoorbeeld 2026-08-30T00:00:00Z. Een kale datum is niet geldig; ' +
+                            'gebruik daarvoor ?date=YYYY-MM-DD.',
                     },
                 };
             }
+            const fromTime = fromInstant.epochMilliseconds;
+            const toTime = toInstant.epochMilliseconds;
             if (toTime <= fromTime) {
                 reply.status(400);
                 return {

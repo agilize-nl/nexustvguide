@@ -34,6 +34,20 @@ export function getTodayAmsterdam(): string {
 }
 
 /**
+ * Parseert een ISO-8601 instant zoals de rest van deze module hem verwacht.
+ * Geeft null in plaats van te gooien, zodat aanroepers een nette 400 kunnen
+ * teruggeven. Let op: Temporal eist een tijdzone-offset ("Z" of "+02:00"),
+ * dus een kale datum als "2026-08-30" is hier bewust ongeldig.
+ */
+export function parseInstant(iso: string): Temporal.Instant | null {
+  try {
+    return Temporal.Instant.from(iso);
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Geeft een lijst van YYYY-MM-DD datums tussen twee UTC ISO strings.
  */
 export function getLocalDateRange(fromIso: string, toIso: string): string[] {

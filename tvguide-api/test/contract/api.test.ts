@@ -155,6 +155,31 @@ describe('API Contract Tests', () => {
     });
     expect(resSpan.statusCode).toBe(422);
     expect(resSpan.json().error.code).toBe('DATE_OUT_OF_RANGE');
+
+    // Regressie: een kale datum in from/to werd door new Date() geaccepteerd,
+    // waarna Temporal.Instant.from() verderop gooide -> 500 op een invoerfout.
+    // Dit hoort een nette 400 te zijn.
+    const resBareDate = await app.inject({
+      method: 'GET',
+      url: '/api/v1/guide?from=2026-08-30&to=2026-08-31',
+    });
+    expect(resBareDate.statusCode).toBe(400);
+    expect(resBareDate.json().error.code).toBe('INVALID_QUERY_PARAM');
+
+    // Volledige ISO-timestamps met offset blijven wel geldig.
+    const resOffset = await app.inject({
+      method: 'GET',
+      url: '/api/v1/guide?from=2026-08-30T00:00:00%2B02:00&to=2026-08-31T00:00:00%2B02:00',
+    });
+    expect(resOffset.statusCode).not.toBe(400);
+    expect(resOffset.statusCode).not.toBe(500);
+
+    // Onzin blijft afgewezen.
+    const resGarbage = await app.inject({
+      method: 'GET',
+      url: '/api/v1/guide?from=onzin&to=ooknietgeldig',
+    });
+    expect(resGarbage.statusCode).toBe(400);
   });
 
   it('GET /xmltv.xml generates valid XMLTV XML with DTD header and escaped content', async () => {
