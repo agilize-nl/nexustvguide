@@ -11,6 +11,12 @@ export interface MatcherOptions {
   catalogStore?: NlzietCatalogStore;
 }
 
+
+function isRealNlzietId(id: string | null | undefined): boolean {
+  if (!id) return false;
+  return /^[a-zA-Z0-9_-]{20,24}$/.test(id);
+}
+
 export class NlzietMatcher {
   private catalogStore: NlzietCatalogStore;
   private overridesConfig: NlzietOverridesConfig = { aliases: {}, rules: [] };
@@ -42,7 +48,12 @@ export class NlzietMatcher {
    * Zoekt het beste NLZIET content/playable ID voor een gegeven programma.
    */
   public matchProgramme(programme: Programme, channel?: Channel): string | null {
-    if (programme.nlzietId) {
+    const matched = this.internalMatchProgramme(programme, channel);
+    return isRealNlzietId(matched) ? matched : null;
+  }
+
+  private internalMatchProgramme(programme: Programme, channel?: Channel): string | null {
+    if (isRealNlzietId(programme.nlzietId)) {
       return programme.nlzietId;
     }
 

@@ -10,5 +10,5 @@ public final class BuildConfig {
   public static final int VERSION_CODE = 1;
   public static final String VERSION_NAME = "1.0.0";
   // Field from default config.
-  public static final String DEFAULT_BASE_URL = "http://192.168.1.100:3000/";
+  public static final String DEFAULT_BASE_URL = "http://192.168.2.171:3000/";
 }

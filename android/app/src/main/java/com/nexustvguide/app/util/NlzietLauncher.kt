@@ -32,6 +32,18 @@ object NlzietLauncher {
     const val PLAY_STORE_WEB_URL = "https://play.google.com/store/apps/details?id=nl.nlziet"
 
     /**
+     * Valideert of een string een authentieke NLZIET VOD content-ID is.
+     * Authentieke NLZIET content-IDs zijn base64url-compatibele UUID-hashes van 22 karakters.
+     */
+    fun isValidNlzietId(id: String?): Boolean {
+        if (id.isNullOrBlank()) return false
+        if (!id.matches(Regex("^[a-zA-Z0-9_-]{22}$"))) return false
+        if (id.contains("-latest") || id.contains("latest")) return false
+        if (!id.any { it.isUpperCase() || it.isDigit() }) return false
+        return true
+    }
+
+    /**
      * Controleert of het NLZIET package is geïnstalleerd op het apparaat.
      */
     fun isNlzietInstalled(context: Context): Boolean {
@@ -132,12 +144,13 @@ object NlzietLauncher {
 
     /**
      * Start NLZIET voor een specifiek gids-programma.
-     * Als er een NLZIET content-ID (nlzietId) aanwezig is, wordt direct de 'watchnext' deeplink aangeroepen.
+     * Als er een geverifieerd NLZIET content-ID (nlzietId) aanwezig is, wordt direct de 'watchnext' deeplink aangeroepen.
+     * Zonder geldig VOD-ID wordt de hoofd-app geopend zonder foutmelding te triggeren.
      */
     fun launchProgramme(context: Context, programme: ProgrammeDto?): Boolean {
         if (programme != null) {
             val nlzietId = programme.nlzietId
-            if (!nlzietId.isNullOrBlank()) {
+            if (isValidNlzietId(nlzietId)) {
                 Log.d(TAG, "Launching NLZIET via deeplink for: ${programme.title} (nlzietId: $nlzietId)")
                 try {
                     Toast.makeText(
@@ -156,7 +169,7 @@ object NlzietLauncher {
                     launchApp(context)
                 }
             } else {
-                Log.d(TAG, "Launching NLZIET app for programme: ${programme.title} (ID: ${programme.id})")
+                Log.d(TAG, "Launching NLZIET app for programme without direct VOD ID: ${programme.title}")
                 try {
                     Toast.makeText(
                         context,

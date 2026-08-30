@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.test.core.app.ApplicationProvider
 import com.nexustvguide.app.data.model.ProgrammeDto
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -28,6 +29,17 @@ class NlzietLauncherTest {
     }
 
     @Test
+    fun testIsValidNlzietId() {
+        assertTrue(NlzietLauncher.isValidNlzietId("pDNA4tFqJU6JzlVKbBLGtQ"))
+        assertTrue(NlzietLauncher.isValidNlzietId("Xk6gZ6CVQEulAN6plVOlEA"))
+        assertTrue(NlzietLauncher.isValidNlzietId("4AcLsp3y30ygoRsNgjnBjQ"))
+        assertFalse(NlzietLauncher.isValidNlzietId("npo-nos-journaal-latest"))
+        assertFalse(NlzietLauncher.isValidNlzietId("hmm-29830-dfa8"))
+        assertFalse(NlzietLauncher.isValidNlzietId(null))
+        assertFalse(NlzietLauncher.isValidNlzietId(""))
+    }
+
+    @Test
     fun testCreateLeanbackIntent() {
         val intent = NlzietLauncher.createLeanbackIntent()
         assertNotNull(intent)
@@ -43,7 +55,7 @@ class NlzietLauncherTest {
 
     @Test
     fun testCreateDeeplinkIntent() {
-        val testUri = "nlziet://watchnext/12345"
+        val testUri = "nlziet://watchnext/pDNA4tFqJU6JzlVKbBLGtQ"
         val intent = NlzietLauncher.createDeeplinkIntent(testUri)
         assertNotNull(intent)
         assertEquals(Intent.ACTION_VIEW, intent.action)
@@ -64,9 +76,9 @@ class NlzietLauncherTest {
     }
 
     @Test
-    fun testLaunchProgrammeWithNlzietIdTriggersDeeplink() {
+    fun testLaunchProgrammeWithValidNlzietIdTriggersDeeplink() {
         val context = ApplicationProvider.getApplicationContext<Context>()
-        val progWithNlzietId = ProgrammeDto(
+        val progWithValidNlzietId = ProgrammeDto(
             id = "123",
             channelId = "npo1",
             title = "Wie is de Mol?",
@@ -79,15 +91,41 @@ class NlzietLauncherTest {
             isRerun = false,
             isPremiere = false,
             ageRating = "12",
-            nlzietId = "widm-2026-ep3"
+            nlzietId = "pDNA4tFqJU6JzlVKbBLGtQ"
         )
 
-        NlzietLauncher.launchProgramme(context, progWithNlzietId)
+        NlzietLauncher.launchProgramme(context, progWithValidNlzietId)
         val shadowApp = shadowOf(context as android.app.Application)
         val nextStartedIntent = shadowApp.nextStartedActivity
         assertNotNull(nextStartedIntent)
         assertEquals(Intent.ACTION_VIEW, nextStartedIntent.action)
-        assertEquals("nlziet://watchnext/widm-2026-ep3", nextStartedIntent.dataString)
+        assertEquals("nlziet://watchnext/pDNA4tFqJU6JzlVKbBLGtQ", nextStartedIntent.dataString)
         assertEquals("nl.nlziet", nextStartedIntent.`package`)
+    }
+
+    @Test
+    fun testLaunchProgrammeWithInvalidNlzietIdFallsBackToMainApp() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val progWithInvalidNlzietId = ProgrammeDto(
+            id = "456",
+            channelId = "npo1",
+            title = "NOS Journaal",
+            start = "2026-08-30T18:00:00Z",
+            end = "2026-08-30T18:30:00Z",
+            description = "Nieuws",
+            imageUrl = null,
+            genre = "Nieuws",
+            isLive = false,
+            isRerun = false,
+            isPremiere = false,
+            ageRating = null,
+            nlzietId = "npo-nos-journaal-latest"
+        )
+
+        NlzietLauncher.launchProgramme(context, progWithInvalidNlzietId)
+        val shadowApp = shadowOf(context as android.app.Application)
+        val nextStartedIntent = shadowApp.nextStartedActivity
+        // Zonder mock activities zal het proberen de play store of main intent te openen
+        assertNotNull(nextStartedIntent)
     }
 }

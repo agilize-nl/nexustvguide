@@ -51,8 +51,7 @@
     "title": "NOS Journaal",
     "url": "https://www.nlziet.nl/nl/programma/nos-journaal/",
     "vodIds": [
-      "npo-nos-journaal-latest",
-      "NOS_JOURNAAL_LATEST"
+      "npo-nos-journaal-latest"
     ],
     "primaryId": "npo-nos-journaal-latest",
     "channelSlug": "npo-1"
@@ -118,176 +117,136 @@
     "slug": "flikken-maastricht",
     "title": "Flikken Maastricht",
     "url": "https://www.nlziet.nl/nl/programma/flikken-maastricht/",
-    "vodIds": [
-      "flk-mst-823901-af83",
-      "flk-mst-823902-bf94"
-    ],
-    "primaryId": "flk-mst-823901-af83",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "max-vakantieman",
     "title": "MAX Vakantieman",
     "url": "https://www.nlziet.nl/nl/programma/max-vakantieman/",
-    "vodIds": [
-      "max-vkm-39820-2938",
-      "max-vkm-39821-2939"
-    ],
-    "primaryId": "max-vkm-39820-2938",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "we-zijn-er-bijna-gemist",
     "title": "We zijn er bijna!",
     "url": "https://www.nlziet.nl/nl/programma/we-zijn-er-bijna-gemist/",
-    "vodIds": [
-      "wzb-38290-a83d",
-      "wzb-38291-b84e"
-    ],
-    "primaryId": "wzb-38290-a83d",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "het-mooiste-meisje-van-de-klas",
     "title": "Het mooiste meisje van de klas",
     "url": "https://www.nlziet.nl/nl/programma/het-mooiste-meisje-van-de-klas/",
-    "vodIds": [
-      "hmm-29830-dfa8",
-      "hmm-29831-efa9"
-    ],
-    "primaryId": "hmm-29830-dfa8",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "ik-vertrek",
     "title": "Ik Vertrek",
     "url": "https://www.nlziet.nl/nl/programma/ik-vertrek/",
-    "vodIds": [
-      "ikv-48201-923a",
-      "ikv-48202-924b"
-    ],
-    "primaryId": "ikv-48201-923a",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "een-huis-vol",
     "title": "Een Huis Vol",
     "url": "https://www.nlziet.nl/nl/programma/een-huis-vol/",
-    "vodIds": [
-      "ehv-58291-039c",
-      "ehv-58292-040d"
-    ],
-    "primaryId": "ehv-58291-039c",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "dit-was-het-nieuws",
     "title": "Dit Was Het Nieuws",
     "url": "https://www.nlziet.nl/nl/programma/dit-was-het-nieuws/",
-    "vodIds": [
-      "dwhn-38291-923a"
-    ],
-    "primaryId": "dwhn-38291-923a",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "even-tot-hier",
     "title": "Even Tot Hier",
     "url": "https://www.nlziet.nl/nl/programma/even-tot-hier/",
-    "vodIds": [
-      "eth-29831-a8df"
-    ],
-    "primaryId": "eth-29831-a8df",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "oogappels",
     "title": "Oogappels",
     "url": "https://www.nlziet.nl/nl/programma/oogappels/",
-    "vodIds": [
-      "oog-38291-cf83"
-    ],
-    "primaryId": "oog-38291-cf83",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "heel-holland-bakt",
     "title": "Heel Holland Bakt",
     "url": "https://www.nlziet.nl/nl/programma/heel-holland-bakt/",
-    "vodIds": [
-      "hhb-29831-ba82"
-    ],
-    "primaryId": "hhb-29831-ba82",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "rtl-nieuws",
     "title": "RTL Nieuws",
     "url": "https://www.nlziet.nl/nl/programma/rtl-nieuws/",
-    "vodIds": [
-      "rtl-nieuws-latest"
-    ],
-    "primaryId": "rtl-nieuws-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "hart-van-nederland",
     "title": "Hart van Nederland",
     "url": "https://www.nlziet.nl/nl/programma/hart-van-nederland/",
-    "vodIds": [
-      "hvn-latest"
-    ],
-    "primaryId": "hvn-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "sbs-6"
   },
   {
     "slug": "shownieuws",
     "title": "Shownieuws",
     "url": "https://www.nlziet.nl/nl/programma/shownieuws/",
-    "vodIds": [
-      "shownieuws-latest"
-    ],
-    "primaryId": "shownieuws-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "sbs-6"
   },
   {
     "slug": "editie-nl",
     "title": "Editie NL",
     "url": "https://www.nlziet.nl/nl/programma/editie-nl/",
-    "vodIds": [
-      "editie-nl-latest"
-    ],
-    "primaryId": "editie-nl-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "nieuwsuur",
     "title": "Nieuwsuur",
     "url": "https://www.nlziet.nl/nl/programma/nieuwsuur/",
-    "vodIds": [
-      "nieuwsuur-latest"
-    ],
-    "primaryId": "nieuwsuur-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-2"
   },
   {
     "slug": "eva",
     "title": "Eva",
     "url": "https://www.nlziet.nl/nl/programma/eva/",
-    "vodIds": [
-      "eva-talkshow-latest"
-    ],
-    "primaryId": "eva-talkshow-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "bar-laat",
     "title": "Bar Laat",
     "url": "https://www.nlziet.nl/nl/programma/bar-laat/",
-    "vodIds": [
-      "bar-laat-latest"
-    ],
-    "primaryId": "bar-laat-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
@@ -324,40 +283,32 @@
     "slug": "expeditie-robinson",
     "title": "Expeditie Robinson",
     "url": "https://www.nlziet.nl/nl/programma/expeditie-robinson/",
-    "vodIds": [
-      "exp-rob-latest-01"
-    ],
-    "primaryId": "exp-rob-latest-01",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "de-verraders",
     "title": "De Verraders",
     "url": "https://www.nlziet.nl/nl/programma/de-verraders/",
-    "vodIds": [
-      "verraders-latest-01"
-    ],
-    "primaryId": "verraders-latest-01",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "chateau-meiland",
     "title": "Chateau Meiland",
     "url": "https://www.nlziet.nl/nl/programma/chateau-meiland/",
-    "vodIds": [
-      "meiland-latest-01"
-    ],
-    "primaryId": "meiland-latest-01",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "sbs-6"
   },
   {
     "slug": "first-dates",
     "title": "First Dates",
     "url": "https://www.nlziet.nl/nl/programma/first-dates/",
-    "vodIds": [
-      "first-dates-latest"
-    ],
-    "primaryId": "first-dates-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-3"
   }
 ]
