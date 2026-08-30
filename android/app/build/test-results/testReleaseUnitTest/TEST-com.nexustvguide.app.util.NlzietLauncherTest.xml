@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nexustvguide.app.util.NlzietLauncherTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-08-30T13:23:04" hostname="zorinar7" time="2.324">
+<testsuite name="com.nexustvguide.app.util.NlzietLauncherTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-08-30T13:28:32" hostname="zorinar7" time="2.336">
   <properties/>
-  <testcase name="testLaunchProgrammeCurrentlyAiringWithoutReplayTriggersLiveDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="2.164"/>
-  <testcase name="testLaunchProgrammeWithReplayTargetTriggersReplayDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.029"/>
-  <testcase name="testCreateLiveDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.021"/>
-  <testcase name="testValidation" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.021"/>
-  <testcase name="testLaunchProgrammeLegacyNlzietIdIgnoredAndFallsBackToMainApp" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.025"/>
-  <testcase name="testConstants" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.022"/>
-  <testcase name="testCreateReplayDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.021"/>
-  <testcase name="testCreateVodDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.019"/>
+  <testcase name="testLaunchProgrammeCurrentlyAiringWithoutReplayTriggersLiveDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="2.155"/>
+  <testcase name="testLaunchProgrammeWithReplayTargetTriggersReplayDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.03"/>
+  <testcase name="testCreateLiveDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.023"/>
+  <testcase name="testValidation" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testLaunchProgrammeLegacyNlzietIdIgnoredAndFallsBackToMainApp" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.024"/>
+  <testcase name="testConstants" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.028"/>
+  <testcase name="testCreateReplayDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.029"/>
+  <testcase name="testCreateVodDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.025"/>
   <system-out><![CDATA[WARNING: No manifest file found at ./AndroidManifest.xml.
 Falling back to the Android OS resources only.
 To remove this warning, annotate your test class with @Config(manifest=Config.NONE).

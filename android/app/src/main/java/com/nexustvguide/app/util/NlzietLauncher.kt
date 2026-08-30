@@ -16,10 +16,10 @@ import org.threeten.bp.Instant
 /**
  * Centrale launcher en deeplink builder voor NLZIET Android TV (Leanback UI).
  *
- * Volgt de veilige NLZIET-EPG routeringshiërarchie met uitgebreide logging:
- * 1. Exacte replay target (isReplayAllowed == true) -> nlziet://open/epg/<contentItemId>/<assetId>
- * 2. Lopende uitzending met restart target (isRestartAllowed == true) -> nlziet://open/epg/<contentItemId>/<assetId>
- * 3. Lopende uitzending live -> nlziet://open/tv-kijken/<channelId>
+ * Volgt de veilige NLZIET Android TV Leanback routeringshiërarchie:
+ * 1. Exacte replay target (isReplayAllowed == true) -> nlziet://watchnext/<contentItemId>
+ * 2. Lopende uitzending met restart target (isRestartAllowed == true) -> nlziet://watchnext/<contentItemId>
+ * 3. Lopende uitzending live kanaal -> nlziet://open/tv-kijken/<channelId>
  * 4. Fallback -> NLZIET Leanback UI
  */
 object NlzietLauncher {
@@ -30,6 +30,7 @@ object NlzietLauncher {
     const val LEANBACK_ACTIVITY_NAME = "nl.nlziet.tv.app.di.tv.InjectActivity"
 
     const val SCHEME = "nlziet"
+    const val WATCHNEXT_AUTHORITY = "watchnext"
     const val DEEPLINK_AUTHORITY = "open"
     const val EPG_PATH = "epg"
     const val LIVE_PATH = "tv-kijken"
@@ -134,16 +135,23 @@ object NlzietLauncher {
     }
 
     /**
-     * Bouwt een intent voor directe replay / aflevering weergave via de officiële EPG deeplink.
+     * Bouwt een intent voor directe replay / aflevering weergave via het officiële Android TV watchnext schema.
      */
-    fun createReplayDeeplinkIntent(contentItemId: String, assetId: String): Intent {
-        val uri = Uri.Builder()
-            .scheme(SCHEME)
-            .authority(DEEPLINK_AUTHORITY)
-            .appendPath(EPG_PATH)
-            .appendPath(contentItemId)
-            .appendPath(assetId)
-            .build()
+    fun createReplayDeeplinkIntent(contentItemId: String, assetId: String? = null): Intent {
+        val uri = Uri.parse("$SCHEME://$WATCHNEXT_AUTHORITY/$contentItemId")
+
+        return Intent(Intent.ACTION_VIEW, uri).apply {
+            setPackage(PACKAGE_NAME)
+            component = ComponentName(PACKAGE_NAME, LEANBACK_ACTIVITY_NAME)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+        }
+    }
+
+    /**
+     * Bouwt een intent voor VOD / standalone aflevering weergave via Android TV watchnext schema.
+     */
+    fun createVodDeeplinkIntent(contentItemId: String): Intent {
+        val uri = Uri.parse("$SCHEME://$WATCHNEXT_AUTHORITY/$contentItemId")
 
         return Intent(Intent.ACTION_VIEW, uri).apply {
             setPackage(PACKAGE_NAME)
@@ -155,24 +163,6 @@ object NlzietLauncher {
     /**
      * Bouwt een intent voor live tv-kijken naar een specifiek kanaal via deeplink.
      */
-    /**
-     * Bouwt een intent voor VOD / aflevering weergave via deeplink (legacy / standalone).
-     */
-    fun createVodDeeplinkIntent(contentItemId: String): Intent {
-        val uri = Uri.Builder()
-            .scheme(SCHEME)
-            .authority(DEEPLINK_AUTHORITY)
-            .appendPath(VOD_PATH)
-            .appendPath(contentItemId)
-            .build()
-
-        return Intent(Intent.ACTION_VIEW, uri).apply {
-            setPackage(PACKAGE_NAME)
-            component = ComponentName(PACKAGE_NAME, LEANBACK_ACTIVITY_NAME)
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-        }
-    }
-
     fun createLiveDeeplinkIntent(channelId: String): Intent {
         val uri = Uri.Builder()
             .scheme(SCHEME)
@@ -295,7 +285,7 @@ object NlzietLauncher {
         // 1. Exacte replay target
         if (isValidEpgTarget(target) && target!!.isReplayAllowed) {
             val intent = createReplayDeeplinkIntent(target.contentItemId, target.assetId)
-            Log.i(TAG, "DECISION: Tier 1 (Exact Replay Target). Intent=[action=${intent.action}, data=${intent.dataString}, component=${intent.component?.flattenToString()}, flags=0x${Integer.toHexString(intent.flags)}]")
+            Log.i(TAG, "DECISION: Tier 1 (Exact Replay Target -> watchnext). Intent=[action=${intent.action}, data=${intent.dataString}, component=${intent.component?.flattenToString()}, flags=0x${Integer.toHexString(intent.flags)}]")
             try {
                 Toast.makeText(
                     context,
@@ -317,7 +307,7 @@ object NlzietLauncher {
         // 2. Lopende uitzending met restart target
         if (isValidEpgTarget(target) && target!!.isRestartAllowed && isAiring) {
             val intent = createReplayDeeplinkIntent(target.contentItemId, target.assetId)
-            Log.i(TAG, "DECISION: Tier 2 (Live Airing with Restart Target). Intent=[action=${intent.action}, data=${intent.dataString}, component=${intent.component?.flattenToString()}, flags=0x${Integer.toHexString(intent.flags)}]")
+            Log.i(TAG, "DECISION: Tier 2 (Live Airing with Restart Target -> watchnext). Intent=[action=${intent.action}, data=${intent.dataString}, component=${intent.component?.flattenToString()}, flags=0x${Integer.toHexString(intent.flags)}]")
             try {
                 Toast.makeText(
                     context,

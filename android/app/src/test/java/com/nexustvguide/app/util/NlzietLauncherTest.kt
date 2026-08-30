@@ -81,7 +81,7 @@ class NlzietLauncherTest {
 
         assertNotNull(intent)
         assertEquals(Intent.ACTION_VIEW, intent.action)
-        assertEquals("nlziet://open/epg/$contentItemId/$assetId", intent.dataString)
+        assertEquals("nlziet://watchnext/$contentItemId", intent.dataString)
         assertEquals("nl.nlziet", intent.`package`)
         assertEquals(ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"), intent.component)
         val expectedFlags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -108,7 +108,7 @@ class NlzietLauncherTest {
         val intent = NlzietLauncher.createVodDeeplinkIntent(nlzietId)
         assertNotNull(intent)
         assertEquals(Intent.ACTION_VIEW, intent.action)
-        assertEquals("nlziet://open/vod/$nlzietId", intent.dataString)
+        assertEquals("nlziet://watchnext/$nlzietId", intent.dataString)
         assertEquals("nl.nlziet", intent.`package`)
         assertEquals(ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"), intent.component)
     }
@@ -144,7 +144,7 @@ class NlzietLauncherTest {
         val nextStartedIntent = shadowApp.nextStartedActivity
         assertNotNull(nextStartedIntent)
         assertEquals(Intent.ACTION_VIEW, nextStartedIntent.action)
-        assertEquals("nlziet://open/epg/pXZD1nmyCkSuW_pB1ylCQg/108C33FB3A16FDFCE5E88B43871AC6BA", nextStartedIntent.dataString)
+        assertEquals("nlziet://watchnext/pXZD1nmyCkSuW_pB1ylCQg", nextStartedIntent.dataString)
         assertEquals("nl.nlziet", nextStartedIntent.`package`)
         assertEquals(
             ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"),
