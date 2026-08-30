@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nexus TV Gids</string>
+    <string name="guide_title">TV Gids</string>
+    <string name="loading_guide">TV-gids laden...</string>
+    <string name="error_loading">Fout bij laden van de TV-gids</string>
+    <string name="nlziet_not_installed">NLZiet app is niet geïnstalleerd op dit apparaat.</string>
+    <string name="nlziet_opening_channel">NLZiet openen voor %1$s...</string>
+    <string name="nlziet_opening_program">NLZiet openen: %1$s...</string>
+    <string name="nlziet_opening_app">NLZiet openen...</string>
+    <string name="nlziet_open_play_store">NLZiet installeren via Google Play...</string>
+    <string name="stale_data_notice">Offline weergave</string>
+
+    <!-- ProgramGuide library strings in het Nederlands -->
+    <string name="programguide_title_no_program">Geen uitzending</string>
+    <string name="programguide_error_fetching_content">Kan tv-gids niet laden. Probeer het opnieuw.</string>
+    <string name="programguide_day_yesterday">Gisteren</string>
+    <string name="programguide_day_today">Vandaag</string>
+    <string name="programguide_day_tomorrow">Morgen</string>
+    <string name="programguide_part_of_day_morning">Ochtend</string>
+    <string name="programguide_part_of_day_afternoon">Middag</string>
+    <string name="programguide_part_of_day_evening">Avond</string>
+    <string name="programguide_button_jump_to_live">Nu live</string>
+    <string name="programguide_day_selector_title">Kies een dag</string>
+    <string name="programguide_day_time_selector_title">Kies een dagdeel</string>
+    <string name="programguide_content_description_large_thumbnail">Programma afbeelding</string>
+    <string name="programguide_content_description_channel_logo">Zenderlogo</string>
+    <string name="programguide_content_description_dropdown_icon">Vervolgkeuzemenu</string>
+</resources>

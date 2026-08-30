@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nexustvguide.app.util.NlzietLauncherTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-08-30T00:00:53" hostname="zorinar7" time="2.266">
+  <properties/>
+  <testcase name="testLaunchProgrammeWithNlzietIdTriggersDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="2.185"/>
+  <testcase name="testCreateDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testConstants" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testCreateLeanbackIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testCreatePlayStoreIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.018"/>
+  <system-out><![CDATA[WARNING: No manifest file found at ./AndroidManifest.xml.
+Falling back to the Android OS resources only.
+To remove this warning, annotate your test class with @Config(manifest=Config.NONE).
+If you're using Android Gradle Plugin, add testOptions.unitTests.includeAndroidResources = true to your build.gradle
+]]></system-out>
+  <system-err><![CDATA[No package ID 7f found for ID 0x7f100051.
+]]></system-err>
+</testsuite>

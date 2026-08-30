@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.nexustvguide.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/xml_network_security_config.xml.flat",
+        "source": "com.nexustvguide.app-main-37:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/drawable_tv_banner.xml.flat",
+        "source": "com.nexustvguide.app-main-37:/drawable/tv_banner.xml"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.nexustvguide.app-debug-35:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.nexustvguide.app-main-37:/mipmap-mdpi/ic_launcher.png"
+    }
+]

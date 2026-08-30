@@ -1,0 +1,52 @@
+{
+    "apkm_version": 5,
+    "apk_title": "NLZIET | Online tv-kijken (Android TV) 5.15.3 (arm64-v8a + arm-v7a) (320dpi) (Android 7.1+)",
+    "app_name": "NLZIET | Online tv-kijken (Android TV)",
+    "release_version": "5.15.3",
+    "variant": "(arm64-v8a + arm-v7a) (320dpi) (Android 7.1+)",
+    "release_title": "NLZIET | Online tv-kijken (Android TV) 5.15.3 (arm64-v8a + arm-v7a) (320dpi) (Android 7.1+)",
+    "versioncode": "740504",
+    "pname": "nl.nlziet",
+    "post_date": "2026-08-18 08:53:35",
+    "capabilities": [
+        "leanback",
+        "leanback_standalone"
+    ],
+    "languages": [
+        "ar",
+        "de",
+        "en",
+        "es",
+        "et",
+        "fi",
+        "fr",
+        "hi",
+        "hu",
+        "in",
+        "it",
+        "ja",
+        "ko",
+        "ms",
+        "nl",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "th",
+        "tr",
+        "uk",
+        "vi",
+        "zh"
+    ],
+    "arches": [
+        "arm64-v8a",
+        "armeabi-v7a"
+    ],
+    "dpis": [
+        "320"
+    ],
+    "min_api": "25",
+    "accent_color": "ff407c",
+    "apk_id": 15470059,
+    "release_id": 15470063
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NexusTVGuide" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:colorPrimary">@color/accent_blue</item>
+        <item name="android:colorPrimaryDark">@color/dark_background</item>
+        <item name="android:colorAccent">@color/accent_focused</item>
+    </style>
+</resources>

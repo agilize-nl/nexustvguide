@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_background">#0D0F12</color>
+    <color name="card_background">#171A21</color>
+    <color name="ic_launcher_background">#171A21</color>
+    <color name="accent_blue">#2563EB</color>
+    <color name="accent_focused">#3B82F6</color>
+    <color name="accent_amber">#F59E0B</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+
+    <!-- Program Guide Theme Overrides -->
+    <color name="programguide_header_background">#11141A</color>
+    <color name="programguide_content_background">#090A0D</color>
+    <color name="programguide_footer_background">#11141A</color>
+    <color name="programguide_selected_gap_color">#1AFFFFFF</color>
+    <color name="programguide_default_gap_color">@android:color/transparent</color>
+
+    <!-- Schedule Tiles -->
+    <color name="programguide_selected_schedule_color">#2563EB</color>
+    <color name="programguide_past_schedule_color">#131722</color>
+    <color name="programguide_default_schedule_color">#1C2230</color>
+
+    <!-- Current Progress Bar -->
+    <color name="programguide_progress_background_focused">#334155</color>
+    <color name="programguide_progress_background_default">#00000000</color>
+    <color name="programguide_progress_foreground_focused">#FFFFFF</color>
+    <color name="programguide_progress_foreground_default">#3B82F6</color>
+
+    <!-- Text and Indicators -->
+    <color name="programguide_time_text_color">#94A3B8</color>
+    <color name="programguide_channel_text_color">#F1F5F9</color>
+    <color name="programguide_time_indicator_line">#EF4444</color>
+    <color name="programguide_time_indicator_triangle">#EF4444</color>
+    <color name="programguide_placeholder_default_color">#1E293B</color>
+    <color name="programguide_filter_border_focused">#3B82F6</color>
+    <color name="programguide_filter_border_default">#334155</color>
+    <color name="programguide_filter_background_focused">#333B82F6</color>
+    <color name="programguide_filter_background_default">#1C2230</color>
+    <color name="programguide_filter_icon_color">#94A3B8</color>
+    <color name="programguide_channel_item_background_color_default">#E611141A</color>
+    <color name="programguide_channel_item_background_color_selected">#F21C2230</color>
+    <color name="programguide_channel_item_background_color_focused">#802563EB</color>
+    <color name="programguide_detail_text_color">#CBD5E1</color>
+    <color name="programguide_button_focused">#2563EB</color>
+    <color name="programguide_button_default">#334155</color>
+
+    <color name="programguide_title_text_color_focused">#FFFFFF</color>
+    <color name="programguide_title_text_color_in_past">#64748B</color>
+    <color name="programguide_title_text_color_default">#E2E8F0</color>
+</resources>
