@@ -115,9 +115,9 @@ describe('NLZIET Matcher Engine', () => {
   });
 
   it('matches title with timestamp via regex rules or normalization', () => {
-    const prog = createProg('NOS Journaal 20:00');
+    const prog = createProg('Studio Sport 20:00');
     const id = matcher.matchProgramme(prog);
-    expect(id).toBe('npo-nos-journaal-latest');
+    expect(id).toBe('RVvAjvdvf0e_9SAK3OWaUg');
   });
 
   it('matches titles with subtitle or episode indicators', () => {
@@ -127,9 +127,9 @@ describe('NLZIET Matcher Engine', () => {
   });
 
   it('matches alias rules', () => {
-    const prog = createProg('Journaal');
+    const prog = createProg('Studio Sport');
     const id = matcher.matchProgramme(prog);
-    expect(id).toBe('npo-nos-journaal-latest');
+    expect(id).toBe('RVvAjvdvf0e_9SAK3OWaUg');
   });
 
   it('returns null for unmatchable local or regional programs', () => {
@@ -138,11 +138,11 @@ describe('NLZIET Matcher Engine', () => {
     expect(id).toBeNull();
   });
 
-  it('preserves existing nlzietId if already set', () => {
+  it('preserves existing nlzietId if already set and valid', () => {
     const prog = createProg('Onbekend Programma');
-    prog.nlzietId = 'custom-override-id-99';
+    prog.nlzietId = 'pDNA4tFqJU6JzlVKbBLGtQ';
     const id = matcher.matchProgramme(prog);
-    expect(id).toBe('custom-override-id-99');
+    expect(id).toBe('pDNA4tFqJU6JzlVKbBLGtQ');
   });
 
   it('enriches a batch of programmes and produces correct statistics', () => {

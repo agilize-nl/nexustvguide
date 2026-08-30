@@ -2,6 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { slugifyTitle } from './normalizer.js';
 import { NlzietCatalogStore } from './catalog.js';
+function isRealNlzietId(id) {
+    if (!id)
+        return false;
+    if (id.includes('latest') || id.includes('-latest'))
+        return false;
+    return /^[a-zA-Z0-9_-]{20,24}$/.test(id) && /[A-Z0-9]/.test(id);
+}
 export class NlzietMatcher {
     catalogStore;
     overridesConfig = { aliases: {}, rules: [] };
@@ -29,7 +36,11 @@ export class NlzietMatcher {
      * Zoekt het beste NLZIET content/playable ID voor een gegeven programma.
      */
     matchProgramme(programme, channel) {
-        if (programme.nlzietId) {
+        const matched = this.internalMatchProgramme(programme, channel);
+        return isRealNlzietId(matched) ? matched : null;
+    }
+    internalMatchProgramme(programme, channel) {
+        if (isRealNlzietId(programme.nlzietId)) {
             return programme.nlzietId;
         }
         if (!programme.title) {

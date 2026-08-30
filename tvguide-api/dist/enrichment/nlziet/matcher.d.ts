@@ -17,6 +17,7 @@ export declare class NlzietMatcher {
      * Zoekt het beste NLZIET content/playable ID voor een gegeven programma.
      */
     matchProgramme(programme: Programme, channel?: Channel): string | null;
+    private internalMatchProgramme;
     /**
      * Verrijkt een lijst van programma's met NLZIET ID's en berekent statistieken.
      */

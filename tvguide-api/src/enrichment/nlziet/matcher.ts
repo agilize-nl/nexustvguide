@@ -14,7 +14,8 @@ export interface MatcherOptions {
 
 function isRealNlzietId(id: string | null | undefined): boolean {
   if (!id) return false;
-  return /^[a-zA-Z0-9_-]{20,24}$/.test(id);
+  if (id.includes('latest') || id.includes('-latest')) return false;
+  return /^[a-zA-Z0-9_-]{20,24}$/.test(id) && /[A-Z0-9]/.test(id);
 }
 
 export class NlzietMatcher {

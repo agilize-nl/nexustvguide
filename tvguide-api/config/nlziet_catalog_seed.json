@@ -50,20 +50,16 @@
     "slug": "nos-journaal",
     "title": "NOS Journaal",
     "url": "https://www.nlziet.nl/nl/programma/nos-journaal/",
-    "vodIds": [
-      "npo-nos-journaal-latest"
-    ],
-    "primaryId": "npo-nos-journaal-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
     "slug": "nos-jeugdjournaal",
     "title": "NOS Jeugdjournaal",
     "url": "https://www.nlziet.nl/nl/programma/nos-jeugdjournaal/",
-    "vodIds": [
-      "npo-jeugdjournaal-latest"
-    ],
-    "primaryId": "npo-jeugdjournaal-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-3"
   },
   {
