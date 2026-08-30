@@ -49,12 +49,12 @@ export class NlzietMatcher {
    */
   public matchProgramme(programme: Programme, channel?: Channel): string | null {
     const matched = this.internalMatchProgramme(programme, channel);
-    return isRealNlzietId(matched) ? matched : null;
+    return isRealNlzietId(matched) ? (matched as string) : null;
   }
 
   private internalMatchProgramme(programme: Programme, channel?: Channel): string | null {
     if (isRealNlzietId(programme.nlzietId)) {
-      return programme.nlzietId;
+      return programme.nlzietId!;
     }
 
     if (!programme.title) {
