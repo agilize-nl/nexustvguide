@@ -68,12 +68,13 @@ object NlzietLauncher {
     }
 
     /**
-     * Bouwt een Deeplink Intent voor het nlziet:// schema.
+     * Bouwt een Deeplink Intent voor het nlziet:// schema gericht aan de Leanback inject activity.
      */
     fun createDeeplinkIntent(uriString: String): Intent {
         return Intent(Intent.ACTION_VIEW, Uri.parse(uriString)).apply {
             setPackage(PACKAGE_NAME)
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+            component = ComponentName(PACKAGE_NAME, LEANBACK_ACTIVITY_NAME)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
     }
 

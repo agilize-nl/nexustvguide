@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nexustvguide.app.util.NlzietLauncherTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-30T00:53:46" hostname="zorinar7" time="2.458">
+<testsuite name="com.nexustvguide.app.util.NlzietLauncherTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-30T01:00:47" hostname="zorinar7" time="2.333">
   <properties/>
-  <testcase name="testLaunchProgrammeWithValidNlzietIdTriggersDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="2.332"/>
+  <testcase name="testLaunchProgrammeWithValidNlzietIdTriggersDeeplink" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="2.206"/>
   <testcase name="testCreateDeeplinkIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.022"/>
-  <testcase name="testIsValidNlzietId" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
-  <testcase name="testConstants" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testIsValidNlzietId" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.021"/>
+  <testcase name="testConstants" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.021"/>
   <testcase name="testCreateLeanbackIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.018"/>
-  <testcase name="testLaunchProgrammeWithInvalidNlzietIdFallsBackToMainApp" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.022"/>
-  <testcase name="testCreatePlayStoreIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.02"/>
+  <testcase name="testLaunchProgrammeWithInvalidNlzietIdFallsBackToMainApp" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.025"/>
+  <testcase name="testCreatePlayStoreIntent" classname="com.nexustvguide.app.util.NlzietLauncherTest" time="0.019"/>
   <system-out><![CDATA[WARNING: No manifest file found at ./AndroidManifest.xml.
 Falling back to the Android OS resources only.
 To remove this warning, annotate your test class with @Config(manifest=Config.NONE).

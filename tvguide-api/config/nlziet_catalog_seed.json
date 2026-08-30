@@ -102,11 +102,8 @@
     "slug": "de-slimste-mens",
     "title": "De Slimste Mens",
     "url": "https://www.nlziet.nl/nl/programma/de-slimste-mens/",
-    "vodIds": [
-      "slm-992384a-83df-4cfa",
-      "slm-882314b-22df-1afa"
-    ],
-    "primaryId": "slm-992384a-83df-4cfa",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "npo-1"
   },
   {
@@ -249,30 +246,24 @@
     "slug": "humberto",
     "title": "Humberto",
     "url": "https://www.nlziet.nl/nl/programma/humberto/",
-    "vodIds": [
-      "humberto-talkshow-latest"
-    ],
-    "primaryId": "humberto-talkshow-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "renze",
     "title": "Renze",
     "url": "https://www.nlziet.nl/nl/programma/renze/",
-    "vodIds": [
-      "renze-talkshow-latest"
-    ],
-    "primaryId": "renze-talkshow-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {
     "slug": "beau",
     "title": "Beau",
     "url": "https://www.nlziet.nl/nl/programma/beau/",
-    "vodIds": [
-      "beau-talkshow-latest"
-    ],
-    "primaryId": "beau-talkshow-latest",
+    "vodIds": [],
+    "primaryId": null,
     "channelSlug": "rtl-4"
   },
   {

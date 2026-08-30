@@ -61,7 +61,8 @@ class NlzietLauncherTest {
         assertEquals(Intent.ACTION_VIEW, intent.action)
         assertEquals(testUri, intent.dataString)
         assertEquals("nl.nlziet", intent.`package`)
-        val expectedFlags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+        assertEquals(ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"), intent.component)
+        val expectedFlags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         assertEquals(expectedFlags, intent.flags and expectedFlags)
     }
 
