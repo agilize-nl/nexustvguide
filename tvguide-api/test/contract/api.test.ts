@@ -14,9 +14,9 @@ describe('API Contract Tests', () => {
     channelsPath = path.join(tempDir, 'channels.json');
 
     const sampleChannels = [
-      { id: 'npo1', sourceId: '1', name: 'NPO 1', logoUrl: null, inNlziet: true, nlzietSlug: 'npo-1', sortOrder: 1 },
-      { id: 'npo2', sourceId: '2', name: 'NPO 2', logoUrl: null, inNlziet: true, nlzietSlug: 'npo-2', sortOrder: 2 },
-      { id: 'discovery', sourceId: '29', name: 'Discovery', logoUrl: null, inNlziet: false, nlzietSlug: null, sortOrder: 3 },
+      { id: 'npo1', sourceId: '1', name: 'NPO 1', logoUrl: null, inNlziet: true, nlzietSlug: 'npo-1', nlzietChannelId: 'npo1', sortOrder: 1 },
+      { id: 'npo2', sourceId: '2', name: 'NPO 2', logoUrl: null, inNlziet: true, nlzietSlug: 'npo-2', nlzietChannelId: 'npo2', sortOrder: 2 },
+      { id: 'discovery', sourceId: '29', name: 'Discovery', logoUrl: null, inNlziet: false, nlzietSlug: null, nlzietChannelId: null, sortOrder: 3 },
     ];
     fs.writeFileSync(channelsPath, JSON.stringify(sampleChannels));
   });
@@ -55,10 +55,11 @@ describe('API Contract Tests', () => {
     const channels = res.json();
     expect(channels.length).toBe(2);
     expect(channels[0].id).toBe('npo1');
+    expect(channels[0].nlzietChannelId).toBe('npo1');
     expect(channels[1].id).toBe('npo2');
   });
 
-  it('GET /api/v1/guide?date=YYYY-MM-DD returns guide with nlzietId and handles ETag/304', async () => {
+  it('GET /api/v1/guide?date=YYYY-MM-DD returns guide with exact nlziet target and handles ETag/304', async () => {
     const { app, store, engine } = buildApp({
       dataDir: tempDir,
       channelsConfigPath: channelsPath,
@@ -87,7 +88,15 @@ describe('API Contract Tests', () => {
           isRerun: false,
           isPremiere: true,
           ageRating: '12',
-          nlzietId: 'pDNA4tFqJU6JzlVKbBLGtQ',
+          nlziet: {
+            kind: 'replay',
+            contentItemId: 'pXZD1nmyCkSuW_pB1ylCQg',
+            assetId: '108C33FB3A16FDFCE5E88B43871AC6BA',
+            channelId: 'npo1',
+            isReplayAllowed: true,
+            isRestartAllowed: true,
+          },
+          nlzietId: null,
         },
       ],
     };
@@ -101,7 +110,14 @@ describe('API Contract Tests', () => {
     expect(body.meta.date).toBe('2026-08-30');
     expect(body.programmes.length).toBe(1);
     expect(body.programmes[0].title).toBe('Wie is de Mol?');
-    expect(body.programmes[0].nlzietId).toBe('pDNA4tFqJU6JzlVKbBLGtQ');
+    expect(body.programmes[0].nlziet).toEqual({
+      kind: 'replay',
+      contentItemId: 'pXZD1nmyCkSuW_pB1ylCQg',
+      assetId: '108C33FB3A16FDFCE5E88B43871AC6BA',
+      channelId: 'npo1',
+      isReplayAllowed: true,
+      isRestartAllowed: true,
+    });
 
     const etag = res.headers['etag'];
     expect(etag).toBeDefined();

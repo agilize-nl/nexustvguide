@@ -698,7 +698,12 @@ private fun launchNlziet() {
 
 ---
 
-## Fase 3 — NLZiet-koppeling & Verrijkingslaag (in validatie)
+## Fase 3 — NLZiet-koppeling & Verrijkingslaag (EPG-mapping gepland)
+
+> **Uitgewerkt vervolgplan:**
+> [`nlziet-epg-mapping-plan.md`](nlziet-epg-mapping-plan.md). Dit beschrijft het
+> exacte EPG-datacontract, de strikte zender-/tijd-/titelmatching, de Android
+> replay- en live-routes, de veilige migratie van `nlzietId` en de Shield-acceptatietest.
 
 ### Geanalyseerde APK & Intent Filters
 - **Appversie & Build:** NLZIET Android TV v5.15.3 (build `740504`, package `nl.nlziet`).
@@ -722,6 +727,10 @@ matcher gebruikt titel/alias en kan daarom alleen een bijpassende NLZIET-titel o
 openen; hij bewijst nog niet dat het exact dezelfde aflevering of live-uitzending is. Exacte
 EPG-doorschakeling vereist een betrouwbare NLZIET-EPG-ID plus zender- en tijdmapping. Maak een
 match zonder zo'n bron niet sterker in de UI of documentatie dan hij is.
+
+De volgende stap is niet het versoepelen van de titelmatcher, maar de implementatie van het
+strikte EPG-plan waarnaar hierboven wordt verwezen. Tot die tijd blijft een gewone
+NLZIET-launch de veilige fallback.
 
 ---
 

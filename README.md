@@ -175,9 +175,9 @@ deeplink faalt. `nlziet://watchnext/<id>` is geen geregistreerde NLZIET-route.
 
 De backend verrijkt de gids voorlopig op titel/alias met een VOD-content-ID. Dat kan een
 bijpassend catalogusitem openen, maar is nog geen garantie voor exact dezelfde aflevering of
-live-uitzending. Daarvoor is een betrouwbare NLZIET-EPG-ID plus zender- en tijdmapping nodig.
-De volledige technische status en de Shield-acceptatietest staan in
-[`docs/PLAN.md`](docs/PLAN.md#fase-3--nlziet-koppeling--verrijkingslaag-in-validatie).
+live-uitzending. De uitgewerkte migratie naar een strikte NLZIET-EPG-koppeling staat in
+[`docs/nlziet-epg-mapping-plan.md`](docs/nlziet-epg-mapping-plan.md). De volledige technische
+status en de Shield-acceptatietest staan in [`docs/PLAN.md`](docs/PLAN.md).
 
 ## Scope
 

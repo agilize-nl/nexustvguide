@@ -5,5 +5,6 @@ export interface Channel {
     logoUrl: string | null;
     inNlziet: boolean;
     nlzietSlug: string | null;
+    nlzietChannelId: string | null;
     sortOrder: number;
 }

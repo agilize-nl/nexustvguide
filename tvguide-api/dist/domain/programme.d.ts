@@ -1,3 +1,11 @@
+export interface NlzietProgrammeTarget {
+    kind: 'replay';
+    contentItemId: string;
+    assetId: string;
+    channelId: string;
+    isReplayAllowed: boolean;
+    isRestartAllowed: boolean;
+}
 export interface Programme {
     id: string;
     channelId: string;
@@ -11,5 +19,7 @@ export interface Programme {
     isRerun: boolean;
     isPremiere: boolean;
     ageRating: string | null;
+    nlziet?: NlzietProgrammeTarget | null;
+    /** @deprecated Niet gebruiken voor een klik op een gidsprogramma. */
     nlzietId?: string | null;
 }

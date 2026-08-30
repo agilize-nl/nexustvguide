@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import path from 'node:path';
 import { Temporal } from '@js-temporal/polyfill';
 import type { TvgidsClient } from '../sources/tvgids/client.js';
 import type { SnapshotStore } from './cache.js';
@@ -9,7 +8,8 @@ import type { DaySnapshot } from '../domain/guide.js';
 import { parseProgramsEnvelope } from '../sources/tvgids/schema.js';
 import { mapProgramme } from '../sources/tvgids/mapper.js';
 import { getTodayAmsterdam, getLocalDayUtcWindow, TIME_ZONE } from './time.js';
-import { NlzietMatcher } from '../enrichment/nlziet/matcher.js';
+import { NlzietEpgClient } from '../enrichment/nlziet/epg-client.js';
+import { NlzietEpgMatcher } from '../enrichment/nlziet/epg-matcher.js';
 import type { EnrichmentStats } from '../enrichment/nlziet/types.js';
 
 export const MIN_PROVIDER_OFFSET = -2;
@@ -31,7 +31,8 @@ export class RefreshEngine {
   private client: TvgidsClient;
   private store: SnapshotStore;
   private channelsConfigPath: string;
-  private nlzietMatcher: NlzietMatcher;
+  private epgClient: NlzietEpgClient;
+  private epgMatcher: NlzietEpgMatcher;
   private isRefreshing = false;
   private refreshIntervalTimer: NodeJS.Timeout | null = null;
   private lastSuccessfulRefresh: string | null = null;
@@ -45,22 +46,28 @@ export class RefreshEngine {
     client: TvgidsClient,
     store: SnapshotStore,
     channelsConfigPath: string,
-    nlzietMatcher?: NlzietMatcher
+    epgMatcher?: NlzietEpgMatcher | any,
+    epgClient?: NlzietEpgClient
   ) {
     this.client = client;
     this.store = store;
     this.channelsConfigPath = channelsConfigPath;
-    this.nlzietMatcher = nlzietMatcher || new NlzietMatcher();
+    this.epgMatcher = epgMatcher instanceof NlzietEpgMatcher ? epgMatcher : new NlzietEpgMatcher();
+    this.epgClient = epgClient || new NlzietEpgClient();
   }
 
-  getNlzietMatcher(): NlzietMatcher {
-    return this.nlzietMatcher;
+  getEpgMatcher(): NlzietEpgMatcher {
+    return this.epgMatcher;
+  }
+
+  getEpgClient(): NlzietEpgClient {
+    return this.epgClient;
   }
 
   loadChannelsConfig(): Channel[] {
     const raw = fs.readFileSync(this.channelsConfigPath, 'utf-8');
     const allChannels = JSON.parse(raw) as Channel[];
-    // Alleen actieve NLZiet-zenders (Besluit 4), gesorteerd op sortOrder
+    // Alleen actieve NLZiet-zenders, gesorteerd op sortOrder
     const active = allChannels.filter((c) => c.inNlziet).sort((a, b) => a.sortOrder - b.sortOrder);
     this.store.setChannels(active);
     return active;
@@ -96,9 +103,10 @@ export class RefreshEngine {
 
     // Gisteren t/m morgen: stale na 2 uur (7.200.000 ms)
     // Overige dagen: stale na 8 uur (28.800.000 ms)
-    const maxAgeMs = snapshot.date <= today || snapshot.date === this.addDays(today, 1)
-      ? 2 * 60 * 60 * 1000
-      : 8 * 60 * 60 * 1000;
+    const maxAgeMs =
+      snapshot.date <= today || snapshot.date === this.addDays(today, 1)
+        ? 2 * 60 * 60 * 1000
+        : 8 * 60 * 60 * 1000;
 
     return ageMs > maxAgeMs;
   }
@@ -160,11 +168,21 @@ export class RefreshEngine {
         datesToProcess.push(this.addDays(today, d));
       }
 
-      let successfulDaysCount = 0;
-      let totalEnrichedCount = 0;
-      let totalProcessedProgs = 0;
+      const nlzietChannelIds = Array.from(
+        new Set(activeChannels.map((c) => c.nlzietChannelId).filter((id): id is string => Boolean(id)))
+      );
 
-      // 2. Verdeel programma's over lokale kalenderdagen en voer sanity-checks uit
+      let successfulDaysCount = 0;
+      let totalProcessedProgs = 0;
+      let totalEligibleProgs = 0;
+      let totalExactTargets = 0;
+      let totalReplayAllowed = 0;
+      let totalRejectedAmbiguous = 0;
+      let totalRejectedTitleOrTiming = 0;
+      let totalSkippedOutsideWindow = 0;
+      let anyEpgFetchFailed = false;
+
+      // 2. Verdeel programma's over lokale kalenderdagen en verrijk met NLZIET EPG
       for (const date of datesToProcess) {
         const { from, to } = getLocalDayUtcWindow(date);
         const fromMs = new Date(from).getTime();
@@ -178,7 +196,6 @@ export class RefreshEngine {
             return pStart < toMs && pEnd > fromMs;
           })
           .sort((a, b) => {
-            // Sorteer op zender sortOrder, daarna op starttijd
             const chA = activeChannels.find((c) => c.id === a.channelId)?.sortOrder ?? 999;
             const chB = activeChannels.find((c) => c.id === b.channelId)?.sortOrder ?? 999;
             if (chA !== chB) return chA - chB;
@@ -197,7 +214,8 @@ export class RefreshEngine {
 
         // b) Geen daling van meer dan 40% ten opzichte van bestaande snapshot
         if (existingSnapshot && existingSnapshot.programmes.length > 50) {
-          const dropRatio = (existingSnapshot.programmes.length - dayProgrammes.length) / existingSnapshot.programmes.length;
+          const dropRatio =
+            (existingSnapshot.programmes.length - dayProgrammes.length) / existingSnapshot.programmes.length;
           if (dropRatio > 0.4) {
             console.warn(
               `Sanity check failed for date ${date}: programme count dropped from ${existingSnapshot.programmes.length} to ${dayProgrammes.length} (>40% drop). Preserving existing snapshot.`
@@ -215,10 +233,36 @@ export class RefreshEngine {
         }
 
         if (dayProgrammes.length > 0) {
-          // NLZIET Verrijking: vul nlzietId voor gematchte programma's
-          const enrichmentStats = this.nlzietMatcher.enrichProgrammes(dayProgrammes, activeChannels);
-          totalEnrichedCount += enrichmentStats.enrichedProgrammes;
+          // Haal NLZIET EPG op indien binnen venster
+          const isInWindow = this.epgClient.isDateInEpgWindow(date, today);
+          let epgResponse = null;
+          let epgFetchFailed = false;
+
+          if (isInWindow && nlzietChannelIds.length > 0) {
+            try {
+              epgResponse = await this.epgClient.fetchEpg(date, nlzietChannelIds);
+            } catch (epgErr) {
+              console.warn(`NLZIET EPG fetch failed for date ${date}:`, epgErr);
+              epgFetchFailed = true;
+              anyEpgFetchFailed = true;
+            }
+          }
+
+          const enrichmentStats = this.epgMatcher.enrichProgrammes(
+            dayProgrammes,
+            epgResponse,
+            activeChannels,
+            !isInWindow,
+            epgFetchFailed
+          );
+
           totalProcessedProgs += enrichmentStats.totalProgrammes;
+          totalEligibleProgs += enrichmentStats.epgEligibleProgrammes;
+          totalExactTargets += enrichmentStats.exactTargets;
+          totalReplayAllowed += enrichmentStats.replayAllowedTargets;
+          totalRejectedAmbiguous += enrichmentStats.rejectedAmbiguous;
+          totalRejectedTitleOrTiming += enrichmentStats.rejectedTitleOrTiming;
+          totalSkippedOutsideWindow += enrichmentStats.skippedOutsideEpgWindow;
 
           const snapshot: DaySnapshot = {
             date,
@@ -241,8 +285,15 @@ export class RefreshEngine {
         this.lastError = null;
         this.lastEnrichmentStats = {
           totalProgrammes: totalProcessedProgs,
-          enrichedProgrammes: totalEnrichedCount,
-          enrichmentRate: totalProcessedProgs > 0 ? totalEnrichedCount / totalProcessedProgs : 0,
+          epgEligibleProgrammes: totalEligibleProgs,
+          exactTargets: totalExactTargets,
+          replayAllowedTargets: totalReplayAllowed,
+          rejectedAmbiguous: totalRejectedAmbiguous,
+          rejectedTitleOrTiming: totalRejectedTitleOrTiming,
+          skippedOutsideEpgWindow: totalSkippedOutsideWindow,
+          epgFetchFailed: anyEpgFetchFailed,
+          enrichedProgrammes: totalExactTargets,
+          enrichmentRate: totalProcessedProgs > 0 ? totalExactTargets / totalProcessedProgs : 0,
           matchedSlugs: {},
         };
       }
@@ -252,7 +303,7 @@ export class RefreshEngine {
       await this.store.cleanOldSnapshots(purgeThreshold);
 
       console.log(
-        `Refresh cycle completed. Successfully updated ${successfulDaysCount} days. Enriched ${totalEnrichedCount}/${totalProcessedProgs} programmes with NLZIET IDs.`
+        `Refresh cycle completed. Successfully updated ${successfulDaysCount} days. Exact EPG targets: ${totalExactTargets}/${totalProcessedProgs} programmes.`
       );
     } catch (err: unknown) {
       const errorMsg = err instanceof Error ? err.message : String(err);

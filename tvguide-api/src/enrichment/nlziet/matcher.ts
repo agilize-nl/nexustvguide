@@ -188,6 +188,13 @@ export class NlzietMatcher {
 
     return {
       totalProgrammes: total,
+      epgEligibleProgrammes: total,
+      exactTargets: enrichedCount,
+      replayAllowedTargets: enrichedCount,
+      rejectedAmbiguous: 0,
+      rejectedTitleOrTiming: total - enrichedCount,
+      skippedOutsideEpgWindow: 0,
+      epgFetchFailed: false,
       enrichedProgrammes: enrichedCount,
       enrichmentRate,
       matchedSlugs,

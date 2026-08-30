@@ -20,7 +20,14 @@ export interface NlzietOverridesConfig {
 }
 export interface EnrichmentStats {
     totalProgrammes: number;
-    enrichedProgrammes: number;
-    enrichmentRate: number;
-    matchedSlugs: Record<string, number>;
+    epgEligibleProgrammes: number;
+    exactTargets: number;
+    replayAllowedTargets: number;
+    rejectedAmbiguous: number;
+    rejectedTitleOrTiming: number;
+    skippedOutsideEpgWindow: number;
+    epgFetchFailed: boolean;
+    enrichedProgrammes?: number;
+    enrichmentRate?: number;
+    matchedSlugs?: Record<string, number>;
 }

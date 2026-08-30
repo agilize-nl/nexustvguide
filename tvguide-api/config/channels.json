@@ -1,28 +1,262 @@
 [
-  { "id": "npo1", "sourceId": "1", "name": "NPO 1", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-1", "sortOrder": 1 },
-  { "id": "npo2", "sourceId": "2", "name": "NPO 2", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-2", "sortOrder": 2 },
-  { "id": "npo3", "sourceId": "3", "name": "NPO 3", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-3", "sortOrder": 3 },
-  { "id": "rtl4", "sourceId": "4", "name": "RTL 4", "logoUrl": null, "inNlziet": true, "nlzietSlug": "rtl-4", "sortOrder": 4 },
-  { "id": "rtl5", "sourceId": "31", "name": "RTL 5", "logoUrl": null, "inNlziet": true, "nlzietSlug": "rtl-5", "sortOrder": 5 },
-  { "id": "sbs6", "sourceId": "36", "name": "SBS 6", "logoUrl": null, "inNlziet": true, "nlzietSlug": "sbs-6", "sortOrder": 6 },
-  { "id": "rtl7", "sourceId": "46", "name": "RTL 7", "logoUrl": null, "inNlziet": true, "nlzietSlug": "rtl-7", "sortOrder": 7 },
-  { "id": "veronica", "sourceId": "480", "name": "Veronica", "logoUrl": null, "inNlziet": true, "nlzietSlug": "veronica", "sortOrder": 8 },
-  { "id": "net5", "sourceId": "37", "name": "NET 5", "logoUrl": null, "inNlziet": true, "nlzietSlug": "net-5", "sortOrder": 9 },
-  { "id": "rtl8", "sourceId": "92", "name": "RTL 8", "logoUrl": null, "inNlziet": true, "nlzietSlug": "rtl-8", "sortOrder": 10 },
-  { "id": "rtlz", "sourceId": "465", "name": "RTL Z", "logoUrl": null, "inNlziet": true, "nlzietSlug": "rtl-z", "sortOrder": 11 },
-  { "id": "sbs9", "sourceId": "460", "name": "Viaplay TV", "logoUrl": null, "inNlziet": true, "nlzietSlug": "viaplay-tv", "sortOrder": 12 },
-  { "id": "een", "sourceId": "5", "name": "VRT 1", "logoUrl": null, "inNlziet": true, "nlzietSlug": "vrt-1", "sortOrder": 13 },
-  { "id": "vrtcanvas", "sourceId": "6", "name": "VRT Canvas", "logoUrl": null, "inNlziet": true, "nlzietSlug": "vrt-canvas", "sortOrder": 14 },
-  { "id": "bbc1", "sourceId": "7", "name": "BBC 1", "logoUrl": null, "inNlziet": true, "nlzietSlug": "bbc-1", "sortOrder": 15 },
-  { "id": "bbc2", "sourceId": "8", "name": "BBC 2", "logoUrl": null, "inNlziet": true, "nlzietSlug": "bbc-2", "sortOrder": 16 },
-  { "id": "npo1extra", "sourceId": "410", "name": "NPO 1 extra", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-1-extra", "sortOrder": 17 },
-  { "id": "npo2extra", "sourceId": "70", "name": "NPO 2 extra", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-2-extra", "sortOrder": 18 },
-  { "id": "npopolitiek", "sourceId": "494", "name": "NPO Politiek", "logoUrl": null, "inNlziet": true, "nlzietSlug": "npo-politiek-en-nieuws", "sortOrder": 19 },
-  { "id": "ons", "sourceId": "406", "name": "ONS", "logoUrl": null, "inNlziet": true, "nlzietSlug": "ons", "sortOrder": 20 },
-  { "id": "discovery", "sourceId": "29", "name": "Discovery", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 21 },
-  { "id": "tlc", "sourceId": "438", "name": "TLC", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 22 },
-  { "id": "comedycentral", "sourceId": "91", "name": "Comedy Central", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 23 },
-  { "id": "paramount", "sourceId": "496", "name": "Paramount Network", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 24 },
-  { "id": "espn1", "sourceId": "148", "name": "ESPN", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 25 },
-  { "id": "ziggosport", "sourceId": "99", "name": "Ziggo Sport", "logoUrl": null, "inNlziet": false, "nlzietSlug": null, "sortOrder": 26 }
+  {
+    "id": "npo1",
+    "sourceId": "1",
+    "name": "NPO 1",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-1",
+    "sortOrder": 1,
+    "nlzietChannelId": "npo1"
+  },
+  {
+    "id": "npo2",
+    "sourceId": "2",
+    "name": "NPO 2",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-2",
+    "sortOrder": 2,
+    "nlzietChannelId": "npo2"
+  },
+  {
+    "id": "npo3",
+    "sourceId": "3",
+    "name": "NPO 3",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-3",
+    "sortOrder": 3,
+    "nlzietChannelId": "npo3"
+  },
+  {
+    "id": "rtl4",
+    "sourceId": "4",
+    "name": "RTL 4",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "rtl-4",
+    "sortOrder": 4,
+    "nlzietChannelId": "rtl4"
+  },
+  {
+    "id": "rtl5",
+    "sourceId": "31",
+    "name": "RTL 5",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "rtl-5",
+    "sortOrder": 5,
+    "nlzietChannelId": "rtl5"
+  },
+  {
+    "id": "sbs6",
+    "sourceId": "36",
+    "name": "SBS 6",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "sbs-6",
+    "sortOrder": 6,
+    "nlzietChannelId": "sbs6"
+  },
+  {
+    "id": "rtl7",
+    "sourceId": "46",
+    "name": "RTL 7",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "rtl-7",
+    "sortOrder": 7,
+    "nlzietChannelId": "rtl7"
+  },
+  {
+    "id": "veronica",
+    "sourceId": "480",
+    "name": "Veronica",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "veronica",
+    "sortOrder": 8,
+    "nlzietChannelId": "veronica"
+  },
+  {
+    "id": "net5",
+    "sourceId": "37",
+    "name": "NET 5",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "net-5",
+    "sortOrder": 9,
+    "nlzietChannelId": "net5"
+  },
+  {
+    "id": "rtl8",
+    "sourceId": "92",
+    "name": "RTL 8",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "rtl-8",
+    "sortOrder": 10,
+    "nlzietChannelId": "rtl8"
+  },
+  {
+    "id": "rtlz",
+    "sourceId": "465",
+    "name": "RTL Z",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "rtl-z",
+    "sortOrder": 11,
+    "nlzietChannelId": "rtlz"
+  },
+  {
+    "id": "sbs9",
+    "sourceId": "460",
+    "name": "Viaplay TV",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "viaplay-tv",
+    "sortOrder": 12,
+    "nlzietChannelId": "sbs9"
+  },
+  {
+    "id": "een",
+    "sourceId": "5",
+    "name": "VRT 1",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "vrt-1",
+    "sortOrder": 13,
+    "nlzietChannelId": "een"
+  },
+  {
+    "id": "vrtcanvas",
+    "sourceId": "6",
+    "name": "VRT Canvas",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "vrt-canvas",
+    "sortOrder": 14,
+    "nlzietChannelId": "canvas"
+  },
+  {
+    "id": "bbc1",
+    "sourceId": "7",
+    "name": "BBC 1",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "bbc-1",
+    "sortOrder": 15,
+    "nlzietChannelId": "bbcone"
+  },
+  {
+    "id": "bbc2",
+    "sourceId": "8",
+    "name": "BBC 2",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "bbc-2",
+    "sortOrder": 16,
+    "nlzietChannelId": "bbctwo"
+  },
+  {
+    "id": "npo1extra",
+    "sourceId": "410",
+    "name": "NPO 1 extra",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-1-extra",
+    "sortOrder": 17,
+    "nlzietChannelId": "npo1extra"
+  },
+  {
+    "id": "npo2extra",
+    "sourceId": "70",
+    "name": "NPO 2 extra",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-2-extra",
+    "sortOrder": 18,
+    "nlzietChannelId": "npo2extra"
+  },
+  {
+    "id": "npopolitiek",
+    "sourceId": "494",
+    "name": "NPO Politiek",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "npo-politiek-en-nieuws",
+    "sortOrder": 19,
+    "nlzietChannelId": "npopolitiek"
+  },
+  {
+    "id": "ons",
+    "sourceId": "406",
+    "name": "ONS",
+    "logoUrl": null,
+    "inNlziet": true,
+    "nlzietSlug": "ons",
+    "sortOrder": 20,
+    "nlzietChannelId": "ons"
+  },
+  {
+    "id": "discovery",
+    "sourceId": "29",
+    "name": "Discovery",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 21,
+    "nlzietChannelId": null
+  },
+  {
+    "id": "tlc",
+    "sourceId": "438",
+    "name": "TLC",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 22,
+    "nlzietChannelId": null
+  },
+  {
+    "id": "comedycentral",
+    "sourceId": "91",
+    "name": "Comedy Central",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 23,
+    "nlzietChannelId": null
+  },
+  {
+    "id": "paramount",
+    "sourceId": "496",
+    "name": "Paramount Network",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 24,
+    "nlzietChannelId": null
+  },
+  {
+    "id": "espn1",
+    "sourceId": "148",
+    "name": "ESPN",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 25,
+    "nlzietChannelId": null
+  },
+  {
+    "id": "ziggosport",
+    "sourceId": "99",
+    "name": "Ziggo Sport",
+    "logoUrl": null,
+    "inNlziet": false,
+    "nlzietSlug": null,
+    "sortOrder": 26,
+    "nlzietChannelId": null
+  }
 ]

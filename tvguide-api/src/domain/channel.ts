@@ -5,5 +5,6 @@ export interface Channel {
   logoUrl: string | null;
   inNlziet: boolean;     // stuurt de zenderselectie
   nlzietSlug: string | null;
+  nlzietChannelId: string | null; // technische NLZIET EPG channel ID, bv "npo1", "canvas", "bbcone"
   sortOrder: number;
 }

@@ -140,6 +140,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     }
 
     override fun onScheduleClicked(programGuideSchedule: ProgramGuideSchedule<ProgrammeDto>) {
+        Log.i("NexusProgramGuide", "onScheduleClicked: [id=${programGuideSchedule.id}, title='${programGuideSchedule.program?.title}', channelId='${programGuideSchedule.program?.channelId}', startMillis=${programGuideSchedule.startsAtMillis}, endsMillis=${programGuideSchedule.endsAtMillis}]")
         NlzietLauncher.launchProgramme(requireContext(), programGuideSchedule.program)
     }
 

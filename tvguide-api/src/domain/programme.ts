@@ -1,3 +1,12 @@
+export interface NlzietProgrammeTarget {
+  kind: 'replay';
+  contentItemId: string;       // exact 22 base64url-tekens
+  assetId: string;             // exact 32 hex-tekens
+  channelId: string;           // NLZIET EPG-zender-ID, bijvoorbeeld "npo1" of "canvas"
+  isReplayAllowed: boolean;
+  isRestartAllowed: boolean;
+}
+
 export interface Programme {
   id: string;            // db_id; decimale string die in een signed 64-bit Kotlin Long past
   channelId: string;     // verwijst naar Channel.id (bv "npo1"), niet de sourceId
@@ -11,5 +20,7 @@ export interface Programme {
   isRerun: boolean;
   isPremiere: boolean;
   ageRating: string | null; // genormaliseerd naar Kijkwijzer-code (bv. "12", "AL") of null
-  nlzietId?: string | null; // Optionele NLZIET content/programma-ID voor directe doorschakeling
+  nlziet?: NlzietProgrammeTarget | null; // Exact NLZIET EPG afspeeldoel
+  /** @deprecated Niet gebruiken voor een klik op een gidsprogramma. */
+  nlzietId?: string | null;
 }

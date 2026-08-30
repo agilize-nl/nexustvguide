@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-07T22:00:00Z",
   "to": "2026-09-08T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T11:32:08.502Z",
-  "publishedAt": "2026-08-30T11:32:08.502Z",
+  "sourceFetchedAt": "2026-08-30T13:05:08.433Z",
+  "publishedAt": "2026-08-30T13:05:08.433Z",
   "channels": [
     {
       "id": "npo1",
@@ -13,7 +13,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-1",
-      "sortOrder": 1
+      "sortOrder": 1,
+      "nlzietChannelId": "npo1"
     },
     {
       "id": "npo2",
@@ -22,7 +23,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-2",
-      "sortOrder": 2
+      "sortOrder": 2,
+      "nlzietChannelId": "npo2"
     },
     {
       "id": "npo3",
@@ -31,7 +33,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-3",
-      "sortOrder": 3
+      "sortOrder": 3,
+      "nlzietChannelId": "npo3"
     },
     {
       "id": "rtl4",
@@ -40,7 +43,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "rtl-4",
-      "sortOrder": 4
+      "sortOrder": 4,
+      "nlzietChannelId": "rtl4"
     },
     {
       "id": "rtl5",
@@ -49,7 +53,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "rtl-5",
-      "sortOrder": 5
+      "sortOrder": 5,
+      "nlzietChannelId": "rtl5"
     },
     {
       "id": "sbs6",
@@ -58,7 +63,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "sbs-6",
-      "sortOrder": 6
+      "sortOrder": 6,
+      "nlzietChannelId": "sbs6"
     },
     {
       "id": "rtl7",
@@ -67,7 +73,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "rtl-7",
-      "sortOrder": 7
+      "sortOrder": 7,
+      "nlzietChannelId": "rtl7"
     },
     {
       "id": "veronica",
@@ -76,7 +83,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "veronica",
-      "sortOrder": 8
+      "sortOrder": 8,
+      "nlzietChannelId": "veronica"
     },
     {
       "id": "net5",
@@ -85,7 +93,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "net-5",
-      "sortOrder": 9
+      "sortOrder": 9,
+      "nlzietChannelId": "net5"
     },
     {
       "id": "rtl8",
@@ -94,7 +103,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "rtl-8",
-      "sortOrder": 10
+      "sortOrder": 10,
+      "nlzietChannelId": "rtl8"
     },
     {
       "id": "rtlz",
@@ -103,7 +113,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "rtl-z",
-      "sortOrder": 11
+      "sortOrder": 11,
+      "nlzietChannelId": "rtlz"
     },
     {
       "id": "sbs9",
@@ -112,7 +123,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "viaplay-tv",
-      "sortOrder": 12
+      "sortOrder": 12,
+      "nlzietChannelId": "sbs9"
     },
     {
       "id": "een",
@@ -121,7 +133,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "vrt-1",
-      "sortOrder": 13
+      "sortOrder": 13,
+      "nlzietChannelId": "een"
     },
     {
       "id": "vrtcanvas",
@@ -130,7 +143,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "vrt-canvas",
-      "sortOrder": 14
+      "sortOrder": 14,
+      "nlzietChannelId": "canvas"
     },
     {
       "id": "bbc1",
@@ -139,7 +153,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "bbc-1",
-      "sortOrder": 15
+      "sortOrder": 15,
+      "nlzietChannelId": "bbcone"
     },
     {
       "id": "bbc2",
@@ -148,7 +163,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "bbc-2",
-      "sortOrder": 16
+      "sortOrder": 16,
+      "nlzietChannelId": "bbctwo"
     },
     {
       "id": "npo1extra",
@@ -157,7 +173,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-1-extra",
-      "sortOrder": 17
+      "sortOrder": 17,
+      "nlzietChannelId": "npo1extra"
     },
     {
       "id": "npo2extra",
@@ -166,7 +183,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-2-extra",
-      "sortOrder": 18
+      "sortOrder": 18,
+      "nlzietChannelId": "npo2extra"
     },
     {
       "id": "npopolitiek",
@@ -175,7 +193,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "npo-politiek-en-nieuws",
-      "sortOrder": 19
+      "sortOrder": 19,
+      "nlzietChannelId": "npopolitiek"
     },
     {
       "id": "ons",
@@ -184,7 +203,8 @@
       "logoUrl": null,
       "inNlziet": true,
       "nlzietSlug": "ons",
-      "sortOrder": 20
+      "sortOrder": 20,
+      "nlzietChannelId": "ons"
     }
   ],
   "programmes": [
@@ -200,7 +220,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206172",
@@ -214,7 +236,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206192",
@@ -228,7 +252,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206182",
@@ -242,7 +268,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219205912",
@@ -256,7 +284,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206202",
@@ -270,7 +300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206212",
@@ -284,7 +316,9 @@
       "isLive": true,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276732",
@@ -298,7 +332,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276832",
@@ -312,7 +348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276892",
@@ -326,7 +364,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277042",
@@ -340,7 +380,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277052",
@@ -354,7 +396,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277062",
@@ -368,7 +412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277072",
@@ -382,7 +428,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276772",
@@ -396,7 +444,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277082",
@@ -410,7 +460,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276762",
@@ -424,7 +476,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276822",
@@ -438,7 +492,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276882",
@@ -452,7 +508,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276722",
@@ -466,7 +524,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277002",
@@ -480,7 +540,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276992",
@@ -494,7 +556,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276872",
@@ -508,7 +572,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276812",
@@ -522,7 +588,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277092",
@@ -536,7 +604,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277102",
@@ -550,7 +620,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276972",
@@ -564,7 +636,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276712",
@@ -578,7 +652,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276982",
@@ -592,7 +668,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277112",
@@ -606,7 +684,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276932",
@@ -620,7 +700,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276922",
@@ -634,7 +716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276862",
@@ -648,7 +732,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276642",
@@ -662,7 +748,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276962",
@@ -676,7 +764,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276912",
@@ -690,7 +780,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277032",
@@ -704,7 +796,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277122",
@@ -718,7 +812,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276852",
@@ -732,7 +828,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276752",
@@ -746,7 +844,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277132",
@@ -760,7 +860,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277142",
@@ -774,7 +876,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277012",
@@ -788,7 +892,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277022",
@@ -802,7 +908,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276662",
@@ -816,7 +924,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276802",
@@ -830,7 +940,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276702",
@@ -844,7 +956,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276742",
@@ -858,7 +972,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276952",
@@ -872,7 +988,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276792",
@@ -886,7 +1004,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276842",
@@ -900,7 +1020,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276682",
@@ -914,7 +1036,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276902",
@@ -928,7 +1052,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276692",
@@ -942,7 +1068,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276672",
@@ -956,7 +1084,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276652",
@@ -970,7 +1100,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219618452",
@@ -984,7 +1116,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276782",
@@ -998,7 +1132,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206492",
@@ -1012,7 +1148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206702",
@@ -1026,7 +1164,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206782",
@@ -1040,7 +1180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206792",
@@ -1054,7 +1196,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277602",
@@ -1068,7 +1212,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277482",
@@ -1082,7 +1228,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277552",
@@ -1096,7 +1244,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277642",
@@ -1110,7 +1260,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277632",
@@ -1124,7 +1276,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277662",
@@ -1138,7 +1292,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277732",
@@ -1152,7 +1308,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277592",
@@ -1166,7 +1324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277502",
@@ -1180,7 +1340,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277572",
@@ -1194,7 +1356,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277522",
@@ -1208,7 +1372,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277722",
@@ -1222,7 +1388,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277692",
@@ -1236,7 +1404,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277702",
@@ -1250,7 +1420,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277542",
@@ -1264,7 +1436,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277622",
@@ -1278,7 +1452,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277672",
@@ -1292,7 +1468,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277492",
@@ -1306,7 +1484,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277752",
@@ -1320,7 +1500,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277512",
@@ -1334,7 +1516,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277712",
@@ -1348,7 +1532,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277682",
@@ -1362,7 +1548,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277582",
@@ -1376,7 +1564,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277532",
@@ -1390,7 +1580,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277762",
@@ -1404,7 +1596,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277562",
@@ -1418,7 +1612,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277462",
@@ -1432,7 +1628,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277392",
@@ -1446,7 +1644,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277612",
@@ -1460,7 +1660,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277472",
@@ -1474,7 +1676,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277452",
@@ -1488,7 +1692,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277442",
@@ -1502,7 +1708,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277432",
@@ -1516,7 +1724,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277652",
@@ -1530,7 +1740,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277422",
@@ -1544,7 +1756,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277742",
@@ -1558,7 +1772,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277412",
@@ -1572,7 +1788,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219207372",
@@ -1586,7 +1804,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219207742",
@@ -1600,7 +1820,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219207752",
@@ -1614,7 +1836,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552582",
@@ -1628,7 +1852,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206932",
@@ -1642,7 +1868,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206922",
@@ -1656,7 +1884,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219207092",
@@ -1670,7 +1900,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219619222",
@@ -1684,7 +1916,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278022",
@@ -1698,7 +1932,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278582",
@@ -1712,7 +1948,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278742",
@@ -1726,7 +1964,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278632",
@@ -1740,7 +1980,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278912",
@@ -1754,7 +1996,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278692",
@@ -1768,7 +2012,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278882",
@@ -1782,7 +2028,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278732",
@@ -1796,7 +2044,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278702",
@@ -1810,7 +2060,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630682",
@@ -1824,7 +2076,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630672",
@@ -1838,7 +2092,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278642",
@@ -1852,7 +2108,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630652",
@@ -1866,7 +2124,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278062",
@@ -1880,7 +2140,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630662",
@@ -1894,7 +2156,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278492",
@@ -1908,7 +2172,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630642",
@@ -1922,7 +2188,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630632",
@@ -1936,7 +2204,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278682",
@@ -1950,7 +2220,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278662",
@@ -1964,7 +2236,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278382",
@@ -1978,7 +2252,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278402",
@@ -1992,7 +2268,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278012",
@@ -2006,7 +2284,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277972",
@@ -2020,7 +2300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278852",
@@ -2034,7 +2316,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278902",
@@ -2048,7 +2332,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278842",
@@ -2062,7 +2348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278512",
@@ -2076,7 +2364,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278332",
@@ -2090,7 +2380,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278412",
@@ -2104,7 +2396,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278352",
@@ -2118,7 +2412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277992",
@@ -2132,7 +2428,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278712",
@@ -2146,7 +2444,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278862",
@@ -2160,7 +2460,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277962",
@@ -2174,7 +2476,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277982",
@@ -2188,7 +2492,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278602",
@@ -2202,7 +2508,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278722",
@@ -2216,7 +2524,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278462",
@@ -2230,7 +2540,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278002",
@@ -2244,7 +2556,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278762",
@@ -2258,7 +2572,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278532",
@@ -2272,7 +2588,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630622",
@@ -2286,7 +2604,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278792",
@@ -2300,7 +2620,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278452",
@@ -2314,7 +2636,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278052",
@@ -2328,7 +2652,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278622",
@@ -2342,7 +2668,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278592",
@@ -2356,7 +2684,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278042",
@@ -2370,7 +2700,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630692",
@@ -2384,7 +2716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630702",
@@ -2398,7 +2732,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278672",
@@ -2412,7 +2748,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630712",
@@ -2426,7 +2764,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278552",
@@ -2440,7 +2780,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630722",
@@ -2454,7 +2796,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278072",
@@ -2468,7 +2812,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630732",
@@ -2482,7 +2828,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219630742",
@@ -2496,7 +2844,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278472",
@@ -2510,7 +2860,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278612",
@@ -2524,7 +2876,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278542",
@@ -2538,7 +2892,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278502",
@@ -2552,7 +2908,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278822",
@@ -2566,7 +2924,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278572",
@@ -2580,7 +2940,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278832",
@@ -2594,7 +2956,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278772",
@@ -2608,7 +2972,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278482",
@@ -2622,7 +2988,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278392",
@@ -2636,7 +3004,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278812",
@@ -2650,7 +3020,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278652",
@@ -2664,7 +3036,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278432",
@@ -2678,7 +3052,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278422",
@@ -2692,7 +3068,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278032",
@@ -2706,7 +3084,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278872",
@@ -2720,7 +3100,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278442",
@@ -2734,7 +3116,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278362",
@@ -2748,7 +3132,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278752",
@@ -2762,7 +3148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278152",
@@ -2776,7 +3164,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278082",
@@ -2790,7 +3180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278522",
@@ -2804,7 +3196,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278562",
@@ -2818,7 +3212,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278322",
@@ -2832,7 +3228,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278342",
@@ -2846,7 +3244,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278142",
@@ -2860,7 +3260,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278132",
@@ -2874,7 +3276,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278292",
@@ -2888,7 +3292,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219278302",
@@ -2902,7 +3308,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204272",
@@ -2916,7 +3324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204282",
@@ -2930,7 +3340,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204292",
@@ -2944,7 +3356,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204152",
@@ -2958,7 +3372,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275082",
@@ -2972,7 +3388,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275182",
@@ -2986,7 +3404,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275022",
@@ -3000,7 +3420,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274972",
@@ -3014,7 +3436,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275192",
@@ -3028,7 +3452,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275202",
@@ -3042,7 +3468,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275032",
@@ -3056,7 +3484,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275012",
@@ -3070,7 +3500,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274882",
@@ -3084,7 +3516,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274892",
@@ -3098,7 +3532,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275212",
@@ -3112,7 +3548,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275222",
@@ -3126,7 +3564,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275232",
@@ -3140,7 +3580,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275242",
@@ -3154,7 +3596,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274962",
@@ -3168,7 +3612,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274912",
@@ -3182,7 +3628,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275002",
@@ -3196,7 +3644,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274952",
@@ -3210,7 +3660,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275252",
@@ -3224,7 +3676,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275262",
@@ -3238,7 +3692,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275052",
@@ -3252,7 +3708,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274902",
@@ -3266,7 +3724,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275272",
@@ -3280,7 +3740,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275282",
@@ -3294,7 +3756,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275102",
@@ -3308,7 +3772,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275162",
@@ -3322,7 +3788,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275142",
@@ -3336,7 +3804,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275132",
@@ -3350,7 +3820,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275172",
@@ -3364,7 +3836,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275112",
@@ -3378,7 +3852,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275072",
@@ -3392,7 +3868,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275092",
@@ -3406,7 +3884,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274942",
@@ -3420,7 +3900,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274862",
@@ -3434,7 +3916,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274932",
@@ -3448,7 +3932,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274872",
@@ -3462,7 +3948,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274992",
@@ -3476,7 +3964,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275062",
@@ -3490,7 +3980,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275122",
@@ -3504,7 +3996,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274852",
@@ -3518,7 +4012,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274922",
@@ -3532,7 +4028,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274842",
@@ -3546,7 +4044,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274982",
@@ -3560,7 +4060,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275042",
@@ -3574,7 +4076,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275292",
@@ -3588,7 +4092,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206392",
@@ -3602,7 +4108,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206302",
@@ -3616,7 +4124,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206402",
@@ -3630,7 +4140,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219206282",
@@ -3644,7 +4156,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277252",
@@ -3658,7 +4172,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277322",
@@ -3672,7 +4188,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277332",
@@ -3686,7 +4204,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277342",
@@ -3700,7 +4220,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277352",
@@ -3714,7 +4236,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277272",
@@ -3728,7 +4252,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277242",
@@ -3742,7 +4268,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277302",
@@ -3756,7 +4284,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277292",
@@ -3770,7 +4300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277212",
@@ -3784,7 +4316,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277232",
@@ -3798,7 +4332,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277222",
@@ -3812,7 +4348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277312",
@@ -3826,7 +4364,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219277362",
@@ -3840,7 +4380,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204652",
@@ -3854,7 +4396,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204352",
@@ -3868,7 +4412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204342",
@@ -3882,7 +4428,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275632",
@@ -3896,7 +4444,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275622",
@@ -3910,7 +4460,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275612",
@@ -3924,7 +4476,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275602",
@@ -3938,7 +4492,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275592",
@@ -3952,7 +4508,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275582",
@@ -3966,7 +4524,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275572",
@@ -3980,7 +4540,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275562",
@@ -3994,7 +4556,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275552",
@@ -4008,7 +4572,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275542",
@@ -4022,7 +4588,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275532",
@@ -4036,7 +4604,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275522",
@@ -4050,7 +4620,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275512",
@@ -4064,7 +4636,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275502",
@@ -4078,7 +4652,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275492",
@@ -4092,7 +4668,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275482",
@@ -4106,7 +4684,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275472",
@@ -4120,7 +4700,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275462",
@@ -4134,7 +4716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275382",
@@ -4148,7 +4732,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275642",
@@ -4162,7 +4748,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275362",
@@ -4176,7 +4764,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275372",
@@ -4190,7 +4780,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275672",
@@ -4204,7 +4796,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275652",
@@ -4218,7 +4812,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275662",
@@ -4232,7 +4828,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275452",
@@ -4246,7 +4844,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275342",
@@ -4260,7 +4860,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275442",
@@ -4274,7 +4876,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275332",
@@ -4288,7 +4892,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275392",
@@ -4302,7 +4908,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275352",
@@ -4316,7 +4924,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275432",
@@ -4330,7 +4940,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275422",
@@ -4344,7 +4956,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275322",
@@ -4358,7 +4972,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204882",
@@ -4372,7 +4988,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204772",
@@ -4386,7 +5004,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204892",
@@ -4400,7 +5020,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204722",
@@ -4414,7 +5036,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275702",
@@ -4428,7 +5052,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275712",
@@ -4442,7 +5068,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275802",
@@ -4456,7 +5084,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275792",
@@ -4470,7 +5100,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275832",
@@ -4484,7 +5116,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275842",
@@ -4498,7 +5132,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275872",
@@ -4512,7 +5148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275882",
@@ -4526,7 +5164,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275892",
@@ -4540,7 +5180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275862",
@@ -4554,7 +5196,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275852",
@@ -4568,7 +5212,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275732",
@@ -4582,7 +5228,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275692",
@@ -4596,7 +5244,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275682",
@@ -4610,7 +5260,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275772",
@@ -4624,7 +5276,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275902",
@@ -4638,7 +5292,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275922",
@@ -4652,7 +5308,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275762",
@@ -4666,7 +5324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275812",
@@ -4680,7 +5340,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275782",
@@ -4694,7 +5356,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275742",
@@ -4708,7 +5372,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275822",
@@ -4722,7 +5388,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275912",
@@ -4736,7 +5404,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203392",
@@ -4750,7 +5420,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219223062",
@@ -4764,7 +5436,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219202762",
@@ -4778,7 +5452,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219202712",
@@ -4792,7 +5468,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203322",
@@ -4806,7 +5484,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203342",
@@ -4820,7 +5500,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203272",
@@ -4834,7 +5516,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203182",
@@ -4848,7 +5532,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203382",
@@ -4862,7 +5548,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203212",
@@ -4876,7 +5564,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203302",
@@ -4890,7 +5580,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203372",
@@ -4904,7 +5596,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203362",
@@ -4918,7 +5612,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203252",
@@ -4932,7 +5628,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274222",
@@ -4946,7 +5644,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273972",
@@ -4960,7 +5660,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273962",
@@ -4974,7 +5676,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273832",
@@ -4988,7 +5692,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273782",
@@ -5002,7 +5708,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273772",
@@ -5016,7 +5724,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273822",
@@ -5030,7 +5740,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274082",
@@ -5044,7 +5756,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274092",
@@ -5058,7 +5772,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274102",
@@ -5072,7 +5788,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274112",
@@ -5086,7 +5804,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274162",
@@ -5100,7 +5820,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274142",
@@ -5114,7 +5836,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274032",
@@ -5128,7 +5852,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273792",
@@ -5142,7 +5868,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274002",
@@ -5156,7 +5884,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273812",
@@ -5170,7 +5900,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273872",
@@ -5184,7 +5916,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273862",
@@ -5198,7 +5932,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273982",
@@ -5212,7 +5948,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273992",
@@ -5226,7 +5964,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274042",
@@ -5240,7 +5980,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274122",
@@ -5254,7 +5996,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274062",
@@ -5268,7 +6012,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274152",
@@ -5282,7 +6028,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274132",
@@ -5296,7 +6044,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274172",
@@ -5310,7 +6060,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274462",
@@ -5324,7 +6076,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274472",
@@ -5338,7 +6092,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273952",
@@ -5352,7 +6108,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273902",
@@ -5366,7 +6124,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274022",
@@ -5380,7 +6140,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274342",
@@ -5394,7 +6156,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274432",
@@ -5408,7 +6172,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274332",
@@ -5422,7 +6188,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274412",
@@ -5436,7 +6204,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274262",
@@ -5450,7 +6220,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274192",
@@ -5464,7 +6236,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274302",
@@ -5478,7 +6252,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274292",
@@ -5492,7 +6268,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274482",
@@ -5506,7 +6284,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273892",
@@ -5520,7 +6300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273922",
@@ -5534,7 +6316,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274492",
@@ -5548,7 +6332,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273842",
@@ -5562,7 +6348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274052",
@@ -5576,7 +6364,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273912",
@@ -5590,7 +6380,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274392",
@@ -5604,7 +6396,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274312",
@@ -5618,7 +6412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274422",
@@ -5632,7 +6428,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274442",
@@ -5646,7 +6444,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274372",
@@ -5660,7 +6460,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274252",
@@ -5674,7 +6476,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274452",
@@ -5688,7 +6492,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274502",
@@ -5702,7 +6508,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273882",
@@ -5716,7 +6524,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273852",
@@ -5730,7 +6540,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274512",
@@ -5744,7 +6556,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273762",
@@ -5758,7 +6572,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274352",
@@ -5772,7 +6588,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273942",
@@ -5786,7 +6604,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273932",
@@ -5800,7 +6620,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273752",
@@ -5814,7 +6636,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219273742",
@@ -5828,7 +6652,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274272",
@@ -5842,7 +6668,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274072",
@@ -5856,7 +6684,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203802",
@@ -5870,7 +6700,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203772",
@@ -5884,7 +6716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203812",
@@ -5898,7 +6732,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219618012",
@@ -5912,7 +6748,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219618002",
@@ -5926,7 +6764,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219203652",
@@ -5940,7 +6780,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274682",
@@ -5954,7 +6796,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274692",
@@ -5968,7 +6812,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274732",
@@ -5982,7 +6828,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274722",
@@ -5996,7 +6844,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274702",
@@ -6010,7 +6860,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274672",
@@ -6024,7 +6876,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274762",
@@ -6038,7 +6892,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274782",
@@ -6052,7 +6908,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274772",
@@ -6066,7 +6924,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274792",
@@ -6080,7 +6940,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274752",
@@ -6094,7 +6956,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274642",
@@ -6108,7 +6972,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274662",
@@ -6122,7 +6988,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274652",
@@ -6136,7 +7004,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274632",
@@ -6150,7 +7020,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274802",
@@ -6164,7 +7036,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274742",
@@ -6178,7 +7052,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219274812",
@@ -6192,7 +7068,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219205052",
@@ -6206,7 +7084,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219205112",
@@ -6220,7 +7100,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219205182",
@@ -6234,7 +7116,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219205092",
@@ -6248,7 +7132,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276192",
@@ -6262,7 +7148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276202",
@@ -6276,7 +7164,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276142",
@@ -6290,7 +7180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276102",
@@ -6304,7 +7196,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276132",
@@ -6318,7 +7212,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276172",
@@ -6332,7 +7228,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276182",
@@ -6346,7 +7244,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219668772",
@@ -6360,7 +7260,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276152",
@@ -6374,7 +7276,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276092",
@@ -6388,7 +7292,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276082",
@@ -6402,7 +7308,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276162",
@@ -6416,7 +7324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149082",
@@ -6430,7 +7340,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149072",
@@ -6444,7 +7356,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149092",
@@ -6458,7 +7372,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149122",
@@ -6472,7 +7388,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149152",
@@ -6486,7 +7404,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149112",
@@ -6500,7 +7420,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149132",
@@ -6514,7 +7436,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149162",
@@ -6528,7 +7452,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149142",
@@ -6542,7 +7468,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219149172",
@@ -6556,7 +7484,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212132",
@@ -6570,7 +7500,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212182",
@@ -6584,7 +7516,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211882",
@@ -6598,7 +7532,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212122",
@@ -6612,7 +7548,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211872",
@@ -6626,7 +7564,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211972",
@@ -6640,7 +7580,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211792",
@@ -6654,7 +7596,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211782",
@@ -6668,7 +7612,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211772",
@@ -6682,7 +7628,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211802",
@@ -6696,7 +7644,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211962",
@@ -6710,7 +7660,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212112",
@@ -6724,7 +7676,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212102",
@@ -6738,7 +7692,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211922",
@@ -6752,7 +7708,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211862",
@@ -6766,7 +7724,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211852",
@@ -6780,7 +7740,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212172",
@@ -6794,7 +7756,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212222",
@@ -6808,7 +7772,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211692",
@@ -6822,7 +7788,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212092",
@@ -6836,7 +7804,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212062",
@@ -6850,7 +7820,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212052",
@@ -6864,7 +7836,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212162",
@@ -6878,7 +7852,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211842",
@@ -6892,7 +7868,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211912",
@@ -6906,7 +7884,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212002",
@@ -6920,7 +7900,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211832",
@@ -6934,7 +7916,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211902",
@@ -6948,7 +7932,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211952",
@@ -6962,7 +7948,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212082",
@@ -6976,7 +7964,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211942",
@@ -6990,7 +7980,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212152",
@@ -7004,7 +7996,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211932",
@@ -7018,7 +8012,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211992",
@@ -7032,7 +8028,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212212",
@@ -7046,7 +8044,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212042",
@@ -7060,7 +8060,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211982",
@@ -7074,7 +8076,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212142",
@@ -7088,7 +8092,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212032",
@@ -7102,7 +8108,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211822",
@@ -7116,7 +8124,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212202",
@@ -7130,7 +8140,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212022",
@@ -7144,7 +8156,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212192",
@@ -7158,7 +8172,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211812",
@@ -7172,7 +8188,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212332",
@@ -7186,7 +8204,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211682",
@@ -7200,7 +8220,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212012",
@@ -7214,7 +8236,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212342",
@@ -7228,7 +8252,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211892",
@@ -7242,7 +8268,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212072",
@@ -7256,7 +8284,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212262",
@@ -7270,7 +8300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212242",
@@ -7284,7 +8316,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212252",
@@ -7298,7 +8332,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212232",
@@ -7312,7 +8348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211672",
@@ -7326,7 +8364,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219211662",
@@ -7340,7 +8380,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212292",
@@ -7354,7 +8396,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212272",
@@ -7368,7 +8412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212282",
@@ -7382,7 +8428,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219212322",
@@ -7396,7 +8444,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204922",
@@ -7410,7 +8460,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219225932",
@@ -7424,7 +8476,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204942",
@@ -7438,7 +8492,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219204932",
@@ -7452,7 +8508,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276022",
@@ -7466,7 +8524,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275992",
@@ -7480,7 +8540,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276062",
@@ -7494,7 +8556,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275952",
@@ -7508,7 +8572,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275942",
@@ -7522,7 +8588,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276042",
@@ -7536,7 +8604,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276052",
@@ -7550,7 +8620,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275982",
@@ -7564,7 +8636,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219276032",
@@ -7578,7 +8652,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275962",
@@ -7592,7 +8668,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219275972",
@@ -7606,7 +8684,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597302",
@@ -7620,7 +8700,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597722",
@@ -7634,7 +8716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597792",
@@ -7648,7 +8732,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597382",
@@ -7662,7 +8748,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597782",
@@ -7676,7 +8764,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597102",
@@ -7690,7 +8780,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597082",
@@ -7704,7 +8796,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597142",
@@ -7718,7 +8812,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596772",
@@ -7732,7 +8828,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597162",
@@ -7746,7 +8844,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219598712",
@@ -7760,7 +8860,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596912",
@@ -7774,7 +8876,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596902",
@@ -7788,7 +8892,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597192",
@@ -7802,7 +8908,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219808862",
@@ -7816,7 +8924,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597182",
@@ -7830,7 +8940,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597052",
@@ -7844,7 +8956,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597152",
@@ -7858,7 +8972,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597072",
@@ -7872,7 +8988,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597172",
@@ -7886,7 +9004,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597122",
@@ -7900,7 +9020,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596992",
@@ -7914,7 +9036,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596982",
@@ -7928,7 +9052,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597002",
@@ -7942,7 +9068,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596892",
@@ -7956,7 +9084,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597772",
@@ -7970,7 +9100,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596972",
@@ -7984,7 +9116,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596872",
@@ -7998,7 +9132,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597042",
@@ -8012,7 +9148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597132",
@@ -8026,7 +9164,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597022",
@@ -8040,7 +9180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219919172",
@@ -8054,7 +9196,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219919182",
@@ -8068,7 +9212,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596862",
@@ -8082,7 +9228,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597212",
@@ -8096,7 +9244,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596852",
@@ -8110,7 +9260,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596882",
@@ -8124,7 +9276,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597762",
@@ -8138,7 +9292,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596962",
@@ -8152,7 +9308,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597032",
@@ -8166,7 +9324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596832",
@@ -8180,7 +9340,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596822",
@@ -8194,7 +9356,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596842",
@@ -8208,7 +9372,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596812",
@@ -8222,7 +9388,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596952",
@@ -8236,7 +9404,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219596782",
@@ -8250,7 +9420,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597092",
@@ -8264,7 +9436,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597012",
@@ -8278,7 +9452,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219597232",
@@ -8292,7 +9468,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551402",
@@ -8306,7 +9484,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551432",
@@ -8320,7 +9500,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551372",
@@ -8334,7 +9516,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551442",
@@ -8348,7 +9532,9 @@
       "isLive": true,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551272",
@@ -8362,7 +9548,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551452",
@@ -8376,7 +9564,9 @@
       "isLive": true,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219551462",
@@ -8390,7 +9580,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552392",
@@ -8404,7 +9596,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552462",
@@ -8418,7 +9612,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552382",
@@ -8432,7 +9628,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552502",
@@ -8446,7 +9644,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552412",
@@ -8460,7 +9660,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552492",
@@ -8474,7 +9676,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552472",
@@ -8488,7 +9692,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552432",
@@ -8502,7 +9708,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552422",
@@ -8516,7 +9724,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552442",
@@ -8530,7 +9740,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552452",
@@ -8544,7 +9756,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219552482",
@@ -8558,7 +9772,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762442",
@@ -8572,7 +9788,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219759812",
@@ -8586,7 +9804,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219482082",
@@ -8600,7 +9820,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219482172",
@@ -8614,7 +9836,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219759802",
@@ -8628,7 +9852,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219759792",
@@ -8642,7 +9868,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481992",
@@ -8656,7 +9884,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481952",
@@ -8670,7 +9900,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804482",
@@ -8684,7 +9916,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549242",
@@ -8698,7 +9932,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549232",
@@ -8712,7 +9948,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481982",
@@ -8726,7 +9964,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549172",
@@ -8740,7 +9980,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481902",
@@ -8754,7 +9996,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804472",
@@ -8768,7 +10012,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549212",
@@ -8782,7 +10028,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549222",
@@ -8796,7 +10044,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549202",
@@ -8810,7 +10060,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481972",
@@ -8824,7 +10076,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481962",
@@ -8838,7 +10092,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549192",
@@ -8852,7 +10108,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481872",
@@ -8866,7 +10124,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481862",
@@ -8880,7 +10140,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481852",
@@ -8894,7 +10156,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219482002",
@@ -8908,7 +10172,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219481912",
@@ -8922,7 +10188,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219549182",
@@ -8936,7 +10204,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219482032",
@@ -8950,7 +10220,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219479172",
@@ -8964,7 +10236,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762232",
@@ -8978,7 +10252,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219479222",
@@ -8992,7 +10268,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762242",
@@ -9006,7 +10284,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762252",
@@ -9020,7 +10300,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762282",
@@ -9034,7 +10316,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762292",
@@ -9048,7 +10332,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219478862",
@@ -9062,7 +10348,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804272",
@@ -9076,7 +10364,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219478852",
@@ -9090,7 +10380,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219478812",
@@ -9104,7 +10396,9 @@
       "isLive": true,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804312",
@@ -9118,7 +10412,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804292",
@@ -9132,7 +10428,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762162",
@@ -9146,7 +10444,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804242",
@@ -9160,7 +10460,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762172",
@@ -9174,7 +10476,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762132",
@@ -9188,7 +10492,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804322",
@@ -9202,7 +10508,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804302",
@@ -9216,7 +10524,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219804282",
@@ -9230,7 +10540,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762182",
@@ -9244,7 +10556,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219478922",
@@ -9258,7 +10572,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762122",
@@ -9272,7 +10588,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762112",
@@ -9286,7 +10604,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219762152",
@@ -9300,7 +10620,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219478772",
@@ -9314,7 +10636,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184362",
@@ -9328,7 +10652,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184372",
@@ -9342,7 +10668,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184302",
@@ -9356,7 +10684,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184352",
@@ -9370,7 +10700,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184322",
@@ -9384,7 +10716,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219270222",
@@ -9398,7 +10732,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184312",
@@ -9412,7 +10748,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184282",
@@ -9426,7 +10764,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248712",
@@ -9440,7 +10780,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248702",
@@ -9454,7 +10796,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248692",
@@ -9468,7 +10812,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248682",
@@ -9482,7 +10828,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248672",
@@ -9496,7 +10844,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248662",
@@ -9510,7 +10860,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248652",
@@ -9524,7 +10876,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248642",
@@ -9538,7 +10892,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248632",
@@ -9552,7 +10908,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248622",
@@ -9566,7 +10924,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248612",
@@ -9580,7 +10940,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248602",
@@ -9594,7 +10956,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248592",
@@ -9608,7 +10972,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248582",
@@ -9622,7 +10988,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248572",
@@ -9636,7 +11004,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248562",
@@ -9650,7 +11020,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248552",
@@ -9664,7 +11036,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248542",
@@ -9678,7 +11052,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248512",
@@ -9692,7 +11068,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248532",
@@ -9706,7 +11084,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248722",
@@ -9720,7 +11100,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219677772",
@@ -9734,7 +11116,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248522",
@@ -9748,7 +11132,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248492",
@@ -9762,7 +11148,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248792",
@@ -9776,7 +11164,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248782",
@@ -9790,7 +11180,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248502",
@@ -9804,7 +11196,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219164672",
@@ -9818,7 +11212,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219164822",
@@ -9832,7 +11228,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219164802",
@@ -9846,7 +11244,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219164912",
@@ -9860,7 +11260,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219164922",
@@ -9874,7 +11276,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235602",
@@ -9888,7 +11292,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235622",
@@ -9902,7 +11308,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235672",
@@ -9916,7 +11324,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235732",
@@ -9930,7 +11340,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235722",
@@ -9944,7 +11356,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235652",
@@ -9958,7 +11372,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235572",
@@ -9972,7 +11388,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235712",
@@ -9986,7 +11404,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235752",
@@ -10000,7 +11420,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235642",
@@ -10014,7 +11436,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235552",
@@ -10028,7 +11452,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235762",
@@ -10042,7 +11468,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235692",
@@ -10056,7 +11484,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235562",
@@ -10070,7 +11500,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235582",
@@ -10084,7 +11516,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235682",
@@ -10098,7 +11532,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235612",
@@ -10112,7 +11548,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219672032",
@@ -10126,7 +11564,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219235742",
@@ -10140,7 +11580,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184442",
@@ -10154,7 +11596,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219184452",
@@ -10168,7 +11612,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248822",
@@ -10182,7 +11628,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248832",
@@ -10196,7 +11644,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248842",
@@ -10210,7 +11660,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248852",
@@ -10224,7 +11676,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248862",
@@ -10238,7 +11692,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219248872",
@@ -10252,7 +11708,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147552",
@@ -10266,7 +11724,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147312",
@@ -10280,7 +11740,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147562",
@@ -10294,7 +11756,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147492",
@@ -10308,7 +11772,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147292",
@@ -10322,7 +11788,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147572",
@@ -10336,7 +11804,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147582",
@@ -10350,7 +11820,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147432",
@@ -10364,7 +11836,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219147472",
@@ -10378,7 +11852,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210162",
@@ -10392,7 +11868,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210022",
@@ -10406,7 +11884,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210042",
@@ -10420,7 +11900,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210212",
@@ -10434,7 +11916,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210232",
@@ -10448,7 +11932,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210092",
@@ -10462,7 +11948,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210152",
@@ -10476,7 +11964,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210002",
@@ -10490,7 +11980,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210072",
@@ -10504,7 +11996,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210132",
@@ -10518,7 +12012,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210182",
@@ -10532,7 +12028,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210192",
@@ -10546,7 +12044,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210112",
@@ -10560,7 +12060,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210032",
@@ -10574,7 +12076,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210122",
@@ -10588,7 +12092,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210082",
@@ -10602,7 +12108,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210172",
@@ -10616,7 +12124,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210222",
@@ -10630,7 +12140,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210252",
@@ -10644,7 +12156,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210012",
@@ -10658,7 +12172,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210142",
@@ -10672,7 +12188,9 @@
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     },
     {
       "id": "219210242",
@@ -10686,7 +12204,9 @@
       "isLive": false,
       "isRerun": true,
       "isPremiere": false,
-      "ageRating": null
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
     }
   ]
 }

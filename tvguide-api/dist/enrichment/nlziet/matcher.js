@@ -160,6 +160,13 @@ export class NlzietMatcher {
         const enrichmentRate = total > 0 ? enrichedCount / total : 0;
         return {
             totalProgrammes: total,
+            epgEligibleProgrammes: total,
+            exactTargets: enrichedCount,
+            replayAllowedTargets: enrichedCount,
+            rejectedAmbiguous: 0,
+            rejectedTitleOrTiming: total - enrichedCount,
+            skippedOutsideEpgWindow: 0,
+            epgFetchFailed: false,
             enrichedProgrammes: enrichedCount,
             enrichmentRate,
             matchedSlugs,

@@ -9,16 +9,21 @@ import { registerXmltvRoutes } from './output/xmltv.js';
 import { registerHealthRoutes } from './output/health.js';
 import { NlzietCatalogStore } from './enrichment/nlziet/catalog.js';
 import { NlzietMatcher } from './enrichment/nlziet/matcher.js';
+import { NlzietEpgMatcher } from './enrichment/nlziet/epg-matcher.js';
+import { NlzietEpgClient } from './enrichment/nlziet/epg-client.js';
 
 export interface AppOptions {
   dataDir?: string;
   channelsConfigPath?: string;
   tvgidsBaseUrl?: string;
+  nlzietEpgBaseUrl?: string;
   enableCors?: boolean;
   nlzietSeedFilePath?: string;
   nlzietCacheFilePath?: string;
   nlzietOverridesFilePath?: string;
   nlzietMatcher?: NlzietMatcher;
+  nlzietEpgMatcher?: NlzietEpgMatcher;
+  nlzietEpgClient?: NlzietEpgClient;
 }
 
 export function buildApp(options: AppOptions = {}): {
@@ -27,6 +32,8 @@ export function buildApp(options: AppOptions = {}): {
   engine: RefreshEngine;
   client: TvgidsClient;
   matcher: NlzietMatcher;
+  epgMatcher: NlzietEpgMatcher;
+  epgClient: NlzietEpgClient;
 } {
   const app = fastify({
     logger: false,
@@ -53,9 +60,12 @@ export function buildApp(options: AppOptions = {}): {
       overridesFilePath: options.nlzietOverridesFilePath,
     });
 
+  const epgMatcher = options.nlzietEpgMatcher || new NlzietEpgMatcher();
+  const epgClient = options.nlzietEpgClient || new NlzietEpgClient({ baseUrl: options.nlzietEpgBaseUrl });
+
   const store = new SnapshotStore(dataDir);
   const client = new TvgidsClient({ baseUrl: options.tvgidsBaseUrl });
-  const engine = new RefreshEngine(client, store, channelsConfigPath, matcher);
+  const engine = new RefreshEngine(client, store, channelsConfigPath, epgMatcher, epgClient);
 
   // Standaard foutafhandeling
   app.setErrorHandler((error, request, reply) => {
@@ -75,5 +85,5 @@ export function buildApp(options: AppOptions = {}): {
   registerRestRoutes(app, store, engine);
   registerXmltvRoutes(app, store);
 
-  return { app, store, engine, client, matcher };
+  return { app, store, engine, client, matcher, epgMatcher, epgClient };
 }
