@@ -14,6 +14,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.egeniq.androidtvprogramguide.ProgramGuideFragment
+import com.egeniq.androidtvprogramguide.util.FixedLocalDateTime
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
@@ -78,6 +79,19 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
 
     override fun requestRefresh() {
         viewModel.loadGuideForDate(currentDate)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // When TVGuide regains focus / is resumed (e.g. user returns from NLZiet, returns to app),
+        // always ensure we are displaying today's live view rather than the start of the day.
+        val today = FixedLocalDateTime.now().toLocalDate()
+        if (currentDate != today) {
+            selectToday()
+        } else {
+            jumpToLive(focus = true)
+            requestRefresh()
+        }
     }
 
     override fun isTopMenuVisible(): Boolean = false

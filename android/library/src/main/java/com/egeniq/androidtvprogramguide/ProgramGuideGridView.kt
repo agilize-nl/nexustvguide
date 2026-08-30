@@ -320,7 +320,7 @@ class ProgramGuideGridView<T>(context: Context, attrs: AttributeSet?, defStyle: 
         direction: Int,
         previouslyFocusedRect: Rect?
     ): Boolean {
-        if (lastFocusedView?.isShown == true) {
+        if (!internalKeepCurrentProgramFocused && lastFocusedView?.isShown == true) {
             if (lastFocusedView?.requestFocus() == true) {
                 return true
             }
@@ -329,8 +329,13 @@ class ProgramGuideGridView<T>(context: Context, attrs: AttributeSet?, defStyle: 
     }
 
     fun focusCurrentProgram() {
+        lastFocusedView = null
         internalKeepCurrentProgramFocused = true
         requestFocus()
+    }
+
+    fun clearLastFocusedView() {
+        lastFocusedView = null
     }
 
     fun isKeepCurrentProgramFocused(): Boolean {

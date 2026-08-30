@@ -36,9 +36,12 @@ class GuideViewModel(application: Application) : AndroidViewModel(application) {
 
     private val dateFormatter = DateTimeFormatter.ISO_LOCAL_DATE
 
-    fun loadGuideForDate(date: LocalDate) {
+    fun loadGuideForDate(date: LocalDate, forceLoadingState: Boolean = false) {
         viewModelScope.launch {
-            _uiState.value = GuideUiState.Loading
+            val currentState = _uiState.value
+            if (forceLoadingState || currentState !is GuideUiState.Content || currentState.date != date) {
+                _uiState.value = GuideUiState.Loading
+            }
             val dateStr = date.format(dateFormatter)
 
             try {

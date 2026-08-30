@@ -71,6 +71,17 @@ object ProgramGuideUtil {
         val focusables = ArrayList<View>()
         findFocusables(programRow, focusables)
 
+        if (keepCurrentProgramFocused) {
+            lastClickedSchedule = null
+            // Select the current program if possible.
+            for (i in focusables.indices) {
+                val focusable = focusables[i]
+                if (focusable is ProgramGuideItemView<*> && isCurrentProgram(focusable)) {
+                    return focusable
+                }
+            }
+        }
+
         if (lastClickedSchedule != null) {
             // Select the current program if possible.
             for (i in focusables.indices) {
@@ -81,16 +92,6 @@ object ProgramGuideUtil {
                 }
             }
             lastClickedSchedule = null
-        }
-
-        if (keepCurrentProgramFocused) {
-            // Select the current program if possible.
-            for (i in focusables.indices) {
-                val focusable = focusables[i]
-                if (focusable is ProgramGuideItemView<*> && isCurrentProgram(focusable)) {
-                    return focusable
-                }
-            }
         }
 
         // Find the largest focusable among fully overlapped focusables.

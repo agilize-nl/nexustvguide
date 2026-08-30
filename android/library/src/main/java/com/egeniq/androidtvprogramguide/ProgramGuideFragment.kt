@@ -149,8 +149,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
 
     private var focusEnabledScrollListener: RecyclerView.OnScrollListener? = null
 
-    protected var currentDate: LocalDate = FixedLocalDateTime.now().toLocalDate()
-        private set
+    var currentDate: LocalDate = FixedLocalDateTime.now().toLocalDate()
+        protected set
 
     private val progressUpdateHandler: Handler = Handler(Looper.getMainLooper())
     private val progressUpdateRunnable: Runnable = object : Runnable {
@@ -470,18 +470,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         }
         val jumpToLive = view.findViewById<View>(R.id.programguide_jump_to_live)!!
         jumpToLive.setOnClickListener {
-            val currentChannelId: String?
-            val gridView = view.findViewById<ProgramGuideGridView<T>>(R.id.programguide_grid)
-            if (gridView != null && gridView.hasFocus()) {
-                val focusedView = gridView.findFocus() as? ProgramGuideItemView<*>
-                val rowView = focusedView?.parent as? ProgramGuideRowGridView
-                val channel = rowView?.channel
-                currentChannelId = channel?.id
-                isJumpingGridInTime = true
-            } else {
-                currentChannelId = null
-            }
-            autoScrollToBestProgramme(specificChannelId = currentChannelId)
+            jumpToLive(focus = true)
         }
     }
 
@@ -617,14 +606,100 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     }
 
     /**
+     * Updates the day filter label to match currentlySelectedFilterIndex.
+     */
+    fun updateDayFilterText() {
+        val now = FixedZonedDateTime.now().withZoneSameInstant(DISPLAY_TIMEZONE)
+        val dayFilterOptions =
+            (-SELECTABLE_DAYS_IN_PAST until SELECTABLE_DAYS_IN_FUTURE).map { dayIndex ->
+                val indexLong = dayIndex.toLong()
+                when {
+                    USE_HUMAN_DATES && dayIndex == -1 -> FilterOption(
+                        getString(R.string.programguide_day_yesterday),
+                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                        false
+                    )
+                    USE_HUMAN_DATES && dayIndex == 0 -> FilterOption(
+                        getString(R.string.programguide_day_today),
+                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                        true
+                    )
+                    USE_HUMAN_DATES && dayIndex == 1 -> FilterOption(
+                        getString(R.string.programguide_day_tomorrow),
+                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                        false
+                    )
+                    else -> FilterOption(
+                        DATE_WITH_DAY_FORMATTER.format(now.plusDays(indexLong)),
+                        FILTER_DATE_FORMATTER.format(now.plusDays(indexLong)),
+                        false
+                    )
+                }
+            }
+        val dayFilterView = view?.findViewById<View>(R.id.programguide_day_filter)
+        if (dayFilterView != null && currentlySelectedFilterIndex in dayFilterOptions.indices) {
+            dayFilterView.findViewById<TextView>(R.id.programguide_filter_title)?.text =
+                dayFilterOptions[currentlySelectedFilterIndex].displayTitle
+        }
+    }
+
+    /**
+     * Resets the selected date to today and requests the guide.
+     */
+    fun selectToday() {
+        val today = FixedLocalDateTime.now().toLocalDate()
+        currentDate = today
+        currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST
+        updateDayFilterText()
+        didScrollToBestProgramme = false
+        setJumpToLiveButtonVisible(false)
+        requestingProgramGuideFor(today)
+    }
+
+    /**
+     * Jumps the program guide to the current live broadcast and focuses the current program.
+     */
+    fun jumpToLive(focus: Boolean = true) {
+        val today = FixedLocalDateTime.now().toLocalDate()
+        if (currentDate != today) {
+            selectToday()
+            return
+        }
+
+        val currentChannelId: String?
+        if (programGuideGrid.hasFocus()) {
+            val focusedView = programGuideGrid.findFocus() as? ProgramGuideItemView<*>
+            val rowView = focusedView?.parent as? ProgramGuideRowGridView
+            val channel = rowView?.channel
+            currentChannelId = channel?.id
+            isJumpingGridInTime = true
+        } else {
+            currentChannelId = null
+        }
+
+        ProgramGuideUtil.lastClickedSchedule = null
+        programGuideGrid.clearLastFocusedView()
+        didScrollToBestProgramme = false
+        autoScrollToBestProgramme(useTimeOfDayFilter = false, specificChannelId = currentChannelId)
+        if (focus) {
+            programGuideGrid.focusCurrentProgram()
+        }
+        updateCurrentTimeIndicator()
+    }
+
+    /**
      * Called when the fragment will be resumed.
-     * Starts the progress updates for the programs.
+     * Starts the progress updates for the programs and ensures the guide jumps to live view if showing today.
      */
     override fun onResume() {
         super.onResume()
         if (DISPLAY_SHOW_PROGRESS) {
             progressUpdateHandler.removeCallbacks(progressUpdateRunnable)
             progressUpdateHandler.post(progressUpdateRunnable)
+        }
+        val today = FixedLocalDateTime.now().toLocalDate()
+        if (currentDate == today && currentState is State.Content) {
+            jumpToLive(focus = true)
         }
     }
 
@@ -657,6 +732,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         newChannelEntries: Map<String, List<ProgramGuideSchedule<T>>>,
         selectedDate: LocalDate
     ) {
+        currentDate = selectedDate
+        didScrollToBestProgramme = false
         programGuideManager.setData(newChannels, newChannelEntries, selectedDate, DISPLAY_TIMEZONE)
     }
 
@@ -668,11 +745,16 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             isInitialScroll = false
             timeRow?.post {
                 timeRow?.scrollTo(scrollOffset, false)
+                if (currentDate == FixedLocalDateTime.now().toLocalDate()) {
+                    programGuideGrid.focusCurrentProgram()
+                }
+                updateCurrentTimeIndicator()
             }
         } else {
             if (!programGuideGrid.hasFocus() || isJumpingGridInTime) {
                 // We will temporarily catch the focus, so that the program guide does not focus on all the views while it is scrolling.
                 // This is better for performance, and also avoids a bug where the focused view would be out of scope.
+                val shouldFocusCurrent = isJumpingGridInTime || currentDate == FixedLocalDateTime.now().toLocalDate()
                 isJumpingGridInTime = false
                 focusEnabledScrollListener?.let {
                     timeRow?.removeOnScrollListener(it)
@@ -684,7 +766,11 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 val idleScrollRunnable = Runnable {
                     programGuideGrid.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
                     focusEnabledScrollListener = null
-                    programGuideGrid.requestFocus()
+                    if (shouldFocusCurrent) {
+                        programGuideGrid.focusCurrentProgram()
+                    } else {
+                        programGuideGrid.requestFocus()
+                    }
                     focusCatcher?.visibility = View.GONE
                     updateCurrentTimeIndicator()
 
@@ -932,6 +1018,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 )
                 if (!programGuideManager.jumpTo(currentProgram.startsAtMillis)) {
                     programGuideGrid.focusCurrentProgram()
+                    updateCurrentTimeIndicator()
                 }
             }
         } else {
