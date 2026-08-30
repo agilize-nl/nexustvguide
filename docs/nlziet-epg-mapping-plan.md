@@ -1,6 +1,6 @@
 # Uitvoeringsplan — exacte NLZIET-EPG-koppeling
 
-Status: **ontwerp vastgesteld, nog niet geïmplementeerd**  
+Status: **geïmplementeerd; TV cold-start op emulator (Android 16 / API 36) end-to-end geverifieerd voor 7 zenders, Shield-validatie open**  
 Datum: 30 augustus 2026
 
 ## Doel
@@ -62,19 +62,49 @@ vooruit. Dit is geen gedocumenteerde publieke API. De implementatie behandelt de
 daarom als veranderlijk: runtimevalidatie, tijdslimieten, caching, meetwaarden en een
 veilige fallback zijn verplicht.
 
-### Bevestigde Android-TV-routes
+### Bevestigd Android-TV-gedrag
 
-Analyse van NLZIET Android TV 5.15.3 (build 740504) bevestigt de volgende custom routes:
+Decompilatie en apparaattests met NLZIET Android TV 5.15.3 (build 740504) bevestigen:
 
 | Gebruik | Route | Benodigde gegevens |
 |---|---|---|
-| Exacte replay / restart | `nlziet://open/epg/<contentItemId>/<assetId>` | content- en asset-ID |
-| Live kanaal | `nlziet://open/tv-kijken/<channelId>` | NLZIET-zender-ID |
-| Algemene VOD-pagina | `nlziet://open/vod/<contentItemId>` | alleen content-ID |
+| Replay / restart in de TV-player | `nlziet://watchnext/<contentItemId>` | content-ID |
+| Veilige fallback | expliciete Leanback-launch | package en TV-activity |
 
-`nlziet://watchnext/<id>` is geen geregistreerde route. De bestaande VOD-route blijft
-alleen nuttig voor een expliciete, algemene VOD-actie; zij mag niet meer het resultaat van
-een klik op een gidsprogramma zijn.
+De TV-build genereert `watchnext` zelf voor Android TV Watch Next. `InjectActivity` staat in
+het manifest als `android:launchMode="singleTop"`, en dat verklaart het waargenomen gedrag:
+
+- Bij een **koude start** maakt de eerste `nlziet://watchnext/<id>` de activity aan, maar is de
+  interne router nog niet geinitialiseerd. De URI wordt genegeerd en het dashboard verschijnt.
+- Een **tweede identieke intent** wordt dankzij singleTop bezorgd als `onNewIntent()`
+  (`am start` meldt "delivered to currently running top-most instance", `result code=3` =
+  `START_DELIVERED_TO_TOP`). Die tweede levering start wel de juiste uitzending.
+- **Twee starts direct achter elkaar werken niet.** Dit is op de emulator expliciet getest: de
+  tweede intent wordt wel bezorgd, maar arriveert nog steeds voordat de router klaar is, en het
+  dashboard blijft staan. Er is een echte wachttijd nodig; vanaf circa 1 seconde is de start
+  betrouwbaar. NexusTVGuide gebruikt 1250 ms als marge.
+
+Daarnaast geldt een Android-beperking: zodra NexusTVGuide na de eerste start naar de achtergrond
+gaat, mag het geen tweede activity meer starten (background activity launch). De oplossing is
+`NlzietRelayActivity`: een onzichtbare, niet-geexporteerde activity in een eigen task die in de
+voorgrond blijft staan tot de retry verstuurd is, en zichzelf daarna sluit. In logcat is te zien
+dat de eerste start `BAL_ALLOW_VISIBLE_WINDOW` krijgt en de retry `BAL_ALLOW_GRACE_PERIOD` — geen
+blokkade.
+
+De watchnext-intents krijgen bewust **geen** `FLAG_ACTIVITY_CLEAR_TOP`. `InjectActivity` is
+singleTop en staat als root van zijn task; met CLEAR_TOP zou Android de activity opnieuw aanmaken
+in plaats van `onNewIntent()` aan te roepen, en juist die route speelt de uitzending af.
+
+Een uitzending die **nog niet begonnen is** heeft geen replay-opname. NLZIET accepteert de
+deeplink dan wel, maar toont "Er is iets misgegaan / Onbekende fout opgetreden". Dit is op het
+apparaat aangetoond voor NPO 2 en NPO 3, koud en warm identiek. `launchProgramme` eist daarom dat
+het programma al begonnen is voordat het een replay-deeplink stuurt.
+
+De eerder aangenomen routes `nlziet://open/epg/<contentItemId>/<assetId>` en
+`nlziet://open/vod/<contentItemId>` worden door deze TV-build niet als programma-actie
+afgehandeld en openden in de apparaattest alleen het dashboard. `assetId` blijft wel vereist
+in het backendcontract: samen met `contentItemId`, zender en tijd bewijst hij dat de matcher
+de exacte EPG-uitzending heeft gekozen.
 
 ### Onderzoeksresultaat op de snapshot van 2026-08-30
 
@@ -292,12 +322,13 @@ als het backendcontract. Valideer vóór het maken van een Intent:
 
 `NlzietLauncher.launchProgramme` volgt deze volgorde:
 
-1. Een geldig exact target met `isReplayAllowed` opent
-   `nlziet://open/epg/<contentItemId>/<assetId>`.
+1. Een geldig exact target met `isReplayAllowed`, **voor een uitzending die al begonnen is**,
+   opent `nlziet://watchnext/<contentItemId>` via `NlzietRelayActivity`, die dezelfde intent na
+   1250 ms nogmaals stuurt zodat NLZIET hem als `onNewIntent()` verwerkt.
 2. Een programma dat op dat moment loopt en een geldig target met
-   `isRestartAllowed` heeft, mag dezelfde EPG-route gebruiken voor restart.
+   `isRestartAllowed` heeft, mag dezelfde TV-route gebruiken voor restart.
 3. Een programma dat op dat moment loopt, maar geen bruikbare replay-/restarttarget heeft,
-   opent uitsluitend `nlziet://open/tv-kijken/<channelId>`.
+   opent geen onbewezen programma-URI en valt terug op de gewone NLZIET-app.
 4. Alle andere gevallen openen de gewone NLZIET Leanback-app.
 
 Een fout bij het starten van een deeplink valt terug op de gewone app-launch. Een toekomstig
@@ -331,15 +362,40 @@ Voeg vaste, geanonimiseerde EPG-fixtures toe; tests maken geen live call naar NL
 ### Android-tests
 
 - `createReplayDeeplinkIntent` produceert exact
-  `nlziet://open/epg/<contentItemId>/<assetId>`.
-- `createLiveDeeplinkIntent` produceert exact
-  `nlziet://open/tv-kijken/<channelId>`.
+  `nlziet://watchnext/<contentItemId>`.
+- Een replay-/restartklik start `NlzietRelayActivity` met de exacte watchnext-intent als extra.
+- De relay stuurt die intent tweemaal: direct, en nogmaals na 1250 ms; niet twee keer meteen.
+- Een nog niet begonnen programma stuurt geen watchnext-deeplink.
 - Foutieve content-, asset- en zender-ID's worden afgewezen.
 - Een replaybaar `ProgrammeDto` kiest de replay-intent.
 - Een actueel restartbaar programma kiest de EPG-intent.
 - Een actueel live-only programma kiest de live-intent.
 - Een toekomstig, ambigu of legacy-only programma kiest geen VOD-intent en valt terug op
   de gewone app-launch.
+
+### Uitgevoerde apparaattest (emulator, Android 16 / API 36)
+
+Uitgevoerd op 30 augustus 2026 met NLZIET Android TV 5.15.3 (build 740504) en een ingelogd
+account. Per test werd NLZIET eerst volledig gestopt (`am force-stop`), zodat elke meting een
+echte koude start is.
+
+| Zender | Programma | Resultaat |
+|---|---|---|
+| NPO 1 | Beste zangers | speelt af |
+| NPO 2 | De nachtzoen | speelt af |
+| NPO 3 | Bollox | speelt af |
+| NPO 3 | Meiden die rijden | speelt af |
+| RTL 4 | RTL Boulevard | speelt af |
+| SBS 6 | Shownieuws | speelt af |
+| Veronica | 911 crisis center | speelt af |
+
+Zeven van zeven al uitgezonden programma's starten direct de juiste uitzending vanaf een koude
+NLZIET. De relay is voor de gebruiker onzichtbaar.
+
+Programma's die nog niet begonnen waren (NPO 2 NOS Journaal 15:00, NPO 2 Pauscast 15:05, NPO 3
+Topdoks 15:55) gaven "Er is iets misgegaan" — koud en warm identiek. Dat is geen deeplinkfout maar
+ontbrekende replay-content; `launchProgramme` stuurt voor zulke programma's sindsdien geen
+deeplink meer.
 
 ### Handmatige Shield-acceptatie
 
@@ -390,7 +446,7 @@ De wijziging is pas klaar wanneer:
 | TVgids- en NLZIET-tijden lopen uiteen | Alleen strikte unieke matches; nooit een gok of titel-only fallback. |
 | Rechten of abonnement maken replay onmogelijk | `isReplayAllowed` en `isRestartAllowed` respecteren; altijd app-fallback. |
 | BBC/Canvas-planning wijkt af | Alleen live openen als de actuele status klopt; automatische afleveringmatch uitgeschakeld tot verificatie. |
-| Nieuwe NLZIET-TV-app verandert deeplinks | APK-/Shield-test als releasegate; centrale launcher houdt wijziging lokaal. |
+| Nieuwe NLZIET-TV-app verandert deeplinks of verwerkt koude starts anders | APK-/Shield-test als releasegate; centrale launcher en cold-startretry houden de wijziging lokaal. |
 | Oude snapshots bevatten `nlzietId` | Nieuwe Android-client negeert het veld voor programma-kliks. |
 
 ## Bronnen

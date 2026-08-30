@@ -6,4 +6,14 @@
         <item name="android:colorPrimaryDark">@color/dark_background</item>
         <item name="android:colorAccent">@color/accent_focused</item>
     </style>
+
+    <!-- Onzichtbare relay voor de NLZIET koude-startretry. Blijft in de voorgrondtaak
+         zodat de tweede intent niet door background-activity-launch geblokkeerd wordt. -->
+    <style name="Theme.NexusTVGuide.Relay" parent="Theme.NexusTVGuide">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 </resources>

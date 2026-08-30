@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Alleen voor debug-builds: maakt de NLZIET-relay aanroepbaar via `adb shell am start`,
+  zodat de koude-startroute op een echt apparaat/emulator getest kan worden zonder de
+  D-pad-navigatie van de gids te hoeven simuleren. De release-build houdt exported=false.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application>
+        <activity
+            android:name=".util.NlzietRelayActivity"
+            android:exported="true"
+            tools:replace="android:exported" />
+    </application>
+</manifest>

@@ -3,19 +3,23 @@ package com.nexustvguide.app.util
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.os.Looper
 import androidx.test.core.app.ApplicationProvider
 import com.nexustvguide.app.data.model.NlzietProgrammeTargetDto
 import com.nexustvguide.app.data.model.ProgrammeDto
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.threeten.bp.Instant
+import java.util.concurrent.TimeUnit
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [34], packageName = "com.nexustvguide.app")
@@ -30,6 +34,7 @@ class NlzietLauncherTest {
         assertEquals("epg", NlzietLauncher.EPG_PATH)
         assertEquals("tv-kijken", NlzietLauncher.LIVE_PATH)
         assertEquals("vod", NlzietLauncher.VOD_PATH)
+        assertEquals(NlzietRelayActivity.RETRY_DELAY_MS, NlzietLauncher.COLD_START_RETRY_DELAY_MS)
         assertEquals("market://details?id=nl.nlziet", NlzietLauncher.PLAY_STORE_MARKET_URI)
         assertEquals("https://play.google.com/store/apps/details?id=nl.nlziet", NlzietLauncher.PLAY_STORE_WEB_URL)
     }
@@ -74,18 +79,106 @@ class NlzietLauncherTest {
     }
 
     @Test
+    fun testLiveLabelDoesNotMakeHistoricalProgrammeCurrentlyAiring() {
+        val historicalLiveProgramme = ProgrammeDto(
+            id = "live-archive",
+            channelId = "npo1",
+            title = "Historische live-uitzending",
+            start = "2026-08-29T18:00:00Z",
+            end = "2026-08-29T19:00:00Z",
+            description = null,
+            imageUrl = null,
+            genre = null,
+            isLive = true,
+            isRerun = false,
+            isPremiere = false,
+            ageRating = null
+        )
+
+        assertFalse(
+            NlzietLauncher.isCurrentlyAiring(
+                historicalLiveProgramme,
+                Instant.parse("2026-08-30T12:00:00Z").toEpochMilli()
+            )
+        )
+    }
+
+    @Test
+    fun testFutureProgrammeWithReplayTargetDoesNotOpenTheFailingPlayer() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val future = Instant.now().plusSeconds(3600)
+        val prog = ProgrammeDto(
+            id = "future-1",
+            channelId = "npo3",
+            title = "Topdoks",
+            start = future.toString(),
+            end = future.plusSeconds(1200).toString(),
+            description = null,
+            imageUrl = null,
+            genre = null,
+            isLive = false,
+            isRerun = false,
+            isPremiere = false,
+            ageRating = null,
+            nlziet = NlzietProgrammeTargetDto(
+                kind = "replay",
+                contentItemId = "XezEafRN6kyd2J3_LcOULg",
+                assetId = "108C33FB3A16FDFCE5E88B43871AC6BA",
+                channelId = "npo3",
+                isReplayAllowed = true,
+                isRestartAllowed = true
+            )
+        )
+
+        assertFalse(NlzietLauncher.hasStarted(prog))
+
+        NlzietLauncher.launchProgramme(context, prog)
+        val started = shadowOf(context as android.app.Application).nextStartedActivity
+        assertNotNull(started)
+        // Geen relay en geen watchnext-URI: een nog niet begonnen uitzending heeft geen
+        // replay-opname en zou in NLZIET een foutmelding tonen.
+        assertFalse(started.dataString?.contains("watchnext") == true)
+        assertFalse(
+            started.component == ComponentName(context, NlzietRelayActivity::class.java)
+        )
+    }
+
+    @Test
+    fun testHasStartedBoundaries() {
+        val prog = ProgrammeDto(
+            id = "b",
+            channelId = "npo1",
+            title = "Grens",
+            start = "2026-08-30T12:00:00Z",
+            end = "2026-08-30T13:00:00Z",
+            description = null,
+            imageUrl = null,
+            genre = null,
+            isLive = false,
+            isRerun = false,
+            isPremiere = false,
+            ageRating = null
+        )
+        val startMs = Instant.parse("2026-08-30T12:00:00Z").toEpochMilli()
+        assertFalse(NlzietLauncher.hasStarted(prog, startMs - 1))
+        assertTrue(NlzietLauncher.hasStarted(prog, startMs))
+        assertTrue(NlzietLauncher.hasStarted(prog, startMs + 60_000))
+    }
+
+    @Test
     fun testCreateReplayDeeplinkIntent() {
         val contentItemId = "pXZD1nmyCkSuW_pB1ylCQg"
-        val assetId = "108C33FB3A16FDFCE5E88B43871AC6BA"
-        val intent = NlzietLauncher.createReplayDeeplinkIntent(contentItemId, assetId)
+        val intent = NlzietLauncher.createReplayDeeplinkIntent(contentItemId)
 
         assertNotNull(intent)
         assertEquals(Intent.ACTION_VIEW, intent.action)
         assertEquals("nlziet://watchnext/$contentItemId", intent.dataString)
         assertEquals("nl.nlziet", intent.`package`)
         assertEquals(ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"), intent.component)
-        val expectedFlags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-        assertEquals(expectedFlags, intent.flags and expectedFlags)
+        assertEquals(Intent.FLAG_ACTIVITY_NEW_TASK, intent.flags and Intent.FLAG_ACTIVITY_NEW_TASK)
+        // CLEAR_TOP zou InjectActivity (singleTop, root of task) herstarten in plaats van
+        // onNewIntent() aan te roepen. Juist die onNewIntent-route speelt de uitzending af.
+        assertEquals(0, intent.flags and Intent.FLAG_ACTIVITY_CLEAR_TOP)
     }
 
     @Test
@@ -120,8 +213,8 @@ class NlzietLauncherTest {
             id = "123",
             channelId = "npo1",
             title = "Wie is de Mol?",
-            start = "2026-08-30T18:00:00Z",
-            end = "2026-08-30T19:00:00Z",
+            start = "2026-08-29T18:00:00Z",
+            end = "2026-08-29T19:00:00Z",
             description = "Spannende aflevering",
             imageUrl = null,
             genre = "Spel",
@@ -141,19 +234,65 @@ class NlzietLauncherTest {
 
         NlzietLauncher.launchProgramme(context, prog)
         val shadowApp = shadowOf(context as android.app.Application)
-        val nextStartedIntent = shadowApp.nextStartedActivity
-        assertNotNull(nextStartedIntent)
-        assertEquals(Intent.ACTION_VIEW, nextStartedIntent.action)
-        assertEquals("nlziet://watchnext/pXZD1nmyCkSuW_pB1ylCQg", nextStartedIntent.dataString)
-        assertEquals("nl.nlziet", nextStartedIntent.`package`)
+        val relayIntent = shadowApp.nextStartedActivity
+        assertNotNull(relayIntent)
+
+        // De klik start de relay-activity, niet direct NLZIET. De relay houdt de voorgrond vast
+        // zodat de tweede (onNewIntent-)start niet door background-activity-launch geblokkeerd wordt.
+        assertEquals(
+            ComponentName(context, NlzietRelayActivity::class.java),
+            relayIntent.component
+        )
+
+        // De relay draagt de exacte watchnext-intent als extra mee.
+        val target = relayIntent.getParcelableExtra<Intent>(NlzietRelayActivity.EXTRA_TARGET_INTENT)
+        assertNotNull(target)
+        assertEquals(Intent.ACTION_VIEW, target!!.action)
+        assertEquals("nlziet://watchnext/pXZD1nmyCkSuW_pB1ylCQg", target.dataString)
+        assertEquals("nl.nlziet", target.`package`)
         assertEquals(
             ComponentName("nl.nlziet", "nl.nlziet.tv.app.di.tv.InjectActivity"),
-            nextStartedIntent.component
+            target.component
         )
     }
 
     @Test
-    fun testLaunchProgrammeCurrentlyAiringWithoutReplayTriggersLiveDeeplink() {
+    fun testRelaySendsTheIdenticalWatchNextIntentTwice() {
+        val target = NlzietLauncher.createReplayDeeplinkIntent("pXZD1nmyCkSuW_pB1ylCQg")
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val relayIntent = NlzietRelayActivity.createIntent(context, target)
+
+        val controller = Robolectric.buildActivity(NlzietRelayActivity::class.java, relayIntent).setup()
+        val shadowActivity = shadowOf(controller.get())
+
+        // Eerste start: warmt NLZIET op bij een koude start.
+        val first = shadowActivity.nextStartedActivity
+        assertNotNull(first)
+        assertTrue(first.filterEquals(target))
+
+        // Direct daarna mag er nog geen tweede start zijn: twee starts achter elkaar komen
+        // aantoonbaar te vroeg voor de NLZIET-router.
+        assertNull(shadowActivity.nextStartedActivity)
+
+        // Na de wachttijd volgt exact dezelfde intent; singleTop bezorgt die als onNewIntent().
+        shadowOf(Looper.getMainLooper()).idleFor(
+            NlzietRelayActivity.RETRY_DELAY_MS,
+            TimeUnit.MILLISECONDS
+        )
+        val retry = shadowActivity.nextStartedActivity
+        assertNotNull(retry)
+        assertTrue(retry.filterEquals(target))
+
+        // De relay ruimt zichzelf op zodat hij niet in de weg blijft staan.
+        shadowOf(Looper.getMainLooper()).idleFor(
+            NlzietRelayActivity.SELF_FINISH_DELAY_MS - NlzietRelayActivity.RETRY_DELAY_MS,
+            TimeUnit.MILLISECONDS
+        )
+        assertTrue(controller.get().isFinishing)
+    }
+
+    @Test
+    fun testLaunchProgrammeCurrentlyAiringWithoutExactTargetDoesNotUseUnsupportedLiveDeeplink() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val now = Instant.now()
         val startIso = now.minusSeconds(600).toString()
@@ -179,9 +318,7 @@ class NlzietLauncherTest {
         val shadowApp = shadowOf(context as android.app.Application)
         val nextStartedIntent = shadowApp.nextStartedActivity
         assertNotNull(nextStartedIntent)
-        assertEquals(Intent.ACTION_VIEW, nextStartedIntent.action)
-        // vrtcanvas maps to canvas
-        assertEquals("nlziet://open/tv-kijken/canvas", nextStartedIntent.dataString)
+        assertFalse(nextStartedIntent.dataString == "nlziet://open/tv-kijken/canvas")
     }
 
     @Test
