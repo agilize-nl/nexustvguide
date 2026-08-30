@@ -34,4 +34,6 @@
     <string name="programguide_content_description_large_thumbnail">Program thumbnail</string>
     <string name="programguide_content_description_channel_logo">Channel logo</string>
     <string name="programguide_content_description_dropdown_icon">Dropdown icon</string>
+    <string name="programguide_header_app_title">Nexus TV Gids</string>
+    <string name="programguide_header_guide_date_label">TV-gids voor</string>
 </resources>

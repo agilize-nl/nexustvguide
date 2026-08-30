@@ -103,6 +103,10 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
 
     protected open val DATE_WITH_DAY_FORMATTER: DateTimeFormatter
         get() = DateTimeFormatter.ofPattern("EEE d MMM").withLocale(DISPLAY_LOCALE)
+    protected open val GUIDE_DATE_FORMATTER: DateTimeFormatter
+        get() = DateTimeFormatter.ofPattern("EEEE d MMMM yyyy").withLocale(DISPLAY_LOCALE)
+    protected open val LIVE_DATETIME_FORMATTER: DateTimeFormatter
+        get() = DateTimeFormatter.ofPattern("EEE d MMM yyyy • HH:mm").withLocale(DISPLAY_LOCALE)
     protected open val DISPLAY_CURRENT_TIME_INDICATOR = true
 
     override val DISPLAY_SHOW_PROGRESS = true
@@ -137,6 +141,9 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     private val focusCatcher get() = view?.findViewById<View>(R.id.programguide_focus_catcher)
     private val contentAnimator get() = view?.findViewById<ViewAnimator>(R.id.programguide_content_animator)
     private val errorMessage get() = view?.findViewById<TextView>(R.id.programguide_error_message)
+    private val headerAppTitleView get() = view?.findViewById<TextView>(R.id.programguide_header_app_title)
+    private val headerGuideDateView get() = view?.findViewById<TextView>(R.id.programguide_header_guide_date_value)
+    private val headerCurrentDateView get() = view?.findViewById<TextView>(R.id.programguide_header_current_date)
 
     private var timelineStartMillis = 0L
     private var disableScrollSyncUntilOffset: Int? = null
@@ -159,6 +166,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 updateCurrentTimeIndicator(this)
                 updateCurrentProgramProgress(this)
             }
+            updateCurrentLiveDateTimeDisplay()
             progressUpdateHandler.postDelayed(this, TIME_INDICATOR_UPDATE_INTERVAL)
         }
     }
@@ -266,6 +274,14 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     )
                 }
             }
+        val matchingIndex = dayFilterOptions.indexOfFirst {
+            it.value == FILTER_DATE_FORMATTER.format(currentDate)
+        }
+        if (matchingIndex != -1) {
+            currentlySelectedFilterIndex = matchingIndex
+        } else {
+            currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST.coerceIn(dayFilterOptions.indices)
+        }
         val dayFilter = view.findViewById<View>(R.id.programguide_day_filter)
         dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
             dayFilterOptions[currentlySelectedFilterIndex].displayTitle
@@ -285,6 +301,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     setJumpToLiveButtonVisible(false)
                     currentDate =
                         LocalDate.parse(dayFilterOptions[position].value, FILTER_DATE_FORMATTER)
+                    updateGuideDateDisplay()
                     requestingProgramGuideFor(currentDate)
                 }
                 .show()
@@ -472,6 +489,9 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         jumpToLive.setOnClickListener {
             jumpToLive(focus = true)
         }
+        updateHeaderAppTitle()
+        updateGuideDateDisplay()
+        updateCurrentLiveDateTimeDisplay()
     }
 
     /**
@@ -479,6 +499,9 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        updateHeaderAppTitle()
+        updateGuideDateDisplay()
+        updateCurrentLiveDateTimeDisplay()
         if ((savedInstanceState == null && !created) || currentState !is State.Content) {
             created = true
             // Only get data when fragment is created first time, not recreated from backstack.
@@ -636,6 +659,12 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     )
                 }
             }
+        val matchingIndex = dayFilterOptions.indexOfFirst {
+            it.value == FILTER_DATE_FORMATTER.format(currentDate)
+        }
+        if (matchingIndex != -1) {
+            currentlySelectedFilterIndex = matchingIndex
+        }
         val dayFilterView = view?.findViewById<View>(R.id.programguide_day_filter)
         if (dayFilterView != null && currentlySelectedFilterIndex in dayFilterOptions.indices) {
             dayFilterView.findViewById<TextView>(R.id.programguide_filter_title)?.text =
@@ -651,6 +680,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         currentDate = today
         currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST
         updateDayFilterText()
+        updateGuideDateDisplay()
         didScrollToBestProgramme = false
         setJumpToLiveButtonVisible(false)
         requestingProgramGuideFor(today)
@@ -693,6 +723,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      */
     override fun onResume() {
         super.onResume()
+        updateGuideDateDisplay()
+        updateCurrentLiveDateTimeDisplay()
         if (DISPLAY_SHOW_PROGRESS) {
             progressUpdateHandler.removeCallbacks(progressUpdateRunnable)
             progressUpdateHandler.post(progressUpdateRunnable)
@@ -733,6 +765,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         selectedDate: LocalDate
     ) {
         currentDate = selectedDate
+        updateDayFilterText()
+        updateGuideDateDisplay()
         didScrollToBestProgramme = false
         programGuideManager.setData(newChannels, newChannelEntries, selectedDate, DISPLAY_TIMEZONE)
     }
@@ -1088,6 +1122,36 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             viewHolder.updateLayout()
         } else {
             Log.w(TAG, "Program not updated, no match found.")
+        }
+    }
+
+    protected open fun updateHeaderAppTitle() {
+        headerAppTitleView?.text = getString(R.string.programguide_header_app_title)
+    }
+
+    protected open fun updateGuideDateDisplay() {
+        try {
+            val formatted = GUIDE_DATE_FORMATTER.format(currentDate)
+            val capitalized = formatted.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(DISPLAY_LOCALE) else it.toString()
+            }
+            headerGuideDateView?.text = capitalized
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to format guide date: ", e)
+        }
+    }
+
+    protected open fun updateCurrentLiveDateTimeDisplay() {
+        try {
+            val now = FixedZonedDateTime.now().withZoneSameInstant(DISPLAY_TIMEZONE)
+            var liveText = LIVE_DATETIME_FORMATTER.format(now)
+            liveText = liveText.replaceFirstChar {
+                if (it.isLowerCase()) it.titlecase(DISPLAY_LOCALE) else it.toString()
+            }
+            liveText = liveText.replace(".", "")
+            headerCurrentDateView?.text = liveText
+        } catch (e: Exception) {
+            Log.w(TAG, "Failed to format live datetime", e)
         }
     }
 }

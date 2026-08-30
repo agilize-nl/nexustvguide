@@ -26,4 +26,6 @@
     <string name="programguide_content_description_large_thumbnail">Programma afbeelding</string>
     <string name="programguide_content_description_channel_logo">Zenderlogo</string>
     <string name="programguide_content_description_dropdown_icon">Vervolgkeuzemenu</string>
+    <string name="programguide_header_app_title">@string/app_name</string>
+    <string name="programguide_header_guide_date_label">TV-gids voor</string>
 </resources>

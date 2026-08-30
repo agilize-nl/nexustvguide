@@ -51,4 +51,5 @@
     <color name="programguide_title_text_color_focused">#FFFFFF</color>
     <color name="programguide_title_text_color_in_past">#64748B</color>
     <color name="programguide_title_text_color_default">#E2E8F0</color>
+    <color name="programguide_header_label_color">#64748B</color>
 </resources>

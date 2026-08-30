@@ -35,6 +35,74 @@
         app:layout_constraintStart_toEndOf="@id/programguide_time_of_day_filter"
         app:layout_constraintTop_toTopOf="@id/programguide_top_margin" />
 
+    <LinearLayout
+        android:id="@+id/programguide_header_guide_date_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
+        app:layout_constraintStart_toEndOf="@id/programguide_jump_to_live"
+        app:layout_constraintTop_toTopOf="@id/programguide_top_margin">
+
+        <TextView
+            android:id="@+id/programguide_header_guide_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/programguide_header_guide_date_label"
+            android:textColor="@color/programguide_header_label_color"
+            android:textSize="10sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.08"
+            android:textAllCaps="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/programguide_header_guide_date_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/programguide_title_text_color_default"
+            android:textSize="14sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:singleLine="true"
+            tools:text="Zondag 30 augustus 2026" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/programguide_header_right_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/programguide_page_left_padding"
+        app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/programguide_top_margin">
+
+        <TextView
+            android:id="@+id/programguide_header_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/programguide_header_app_title"
+            android:textColor="@color/programguide_title_text_color_focused"
+            android:textSize="16sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:letterSpacing="0.03"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/programguide_header_current_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/programguide_time_text_color"
+            android:textSize="12sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:singleLine="true"
+            tools:text="Ma 31 aug 2026 • 00:35" />
+    </LinearLayout>
+
     <Space
         android:id="@+id/programguide_menu_visible_margin"
         android:layout_width="0dp"
