@@ -168,14 +168,18 @@ zijn, zonder deeplink. Dan is de app al bruikbaar en is de deeplink puur een ver
 
 ### Fase 3 — NLZIET-koppeling (in validatie)
 
-De huidige APK-analyse van NLZIET Android TV v5.15.3 (build `740504`) bevestigt
-`nlziet://open/vod/<contentId>` als de VOD-route. De Android-app gebruikt precies die route
-en valt terug op een normale launch-intent als er geen geldig content-ID bestaat of de
-deeplink faalt. `nlziet://watchnext/<id>` is geen geregistreerde NLZIET-route.
+Analyse en apparaattests met NLZIET Android TV v5.15.3 (build `740504`) bevestigen
+`nlziet://watchnext/<contentItemId>` als de werkende TV-afspeelroute. De TV-build verwerkt
+deze URI alleen via `InjectActivity.onNewIntent()`: bij een koude start opent de eerste
+intent uitsluitend de app en moet dezelfde intent na initialisatie nogmaals worden
+aangeboden. NexusTVGuide doet dat automatisch na 1,5 seconde. Dit is op de Android-TV-emulator
+met een actuele EPG-entry geverifieerd; de Shield-acceptatietest blijft de releasegate.
 
 De backend verrijkt de gids voorlopig op titel/alias met een VOD-content-ID. Dat kan een
 bijpassend catalogusitem openen, maar is nog geen garantie voor exact dezelfde aflevering of
-live-uitzending. De uitgewerkte migratie naar een strikte NLZIET-EPG-koppeling staat in
+live-uitzending. De strikte NLZIET-EPG-koppeling levert daarvoor het exacte
+`contentItemId` plus de bijbehorende `assetId`; de TV-route gebruikt het content-ID en de
+asset-ID blijft onderdeel van de bewijsbare backendmatch. De uitwerking staat in
 [`docs/nlziet-epg-mapping-plan.md`](docs/nlziet-epg-mapping-plan.md). De volledige technische
 status en de Shield-acceptatietest staan in [`docs/PLAN.md`](docs/PLAN.md).
 

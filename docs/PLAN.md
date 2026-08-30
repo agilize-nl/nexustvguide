@@ -698,7 +698,7 @@ private fun launchNlziet() {
 
 ---
 
-## Fase 3 — NLZiet-koppeling & Verrijkingslaag (EPG-mapping gepland)
+## Fase 3 — NLZiet-koppeling & Verrijkingslaag (EPG-mapping geïmplementeerd, Shield-validatie open)
 
 > **Uitgewerkt vervolgplan:**
 > [`nlziet-epg-mapping-plan.md`](nlziet-epg-mapping-plan.md). Dit beschrijft het
@@ -709,9 +709,14 @@ private fun launchNlziet() {
 - **Appversie & Build:** NLZIET Android TV v5.15.3 (build `740504`, package `nl.nlziet`).
 - **Main Leanback Launch Activity:** `nl.nlziet.tv.app.di.tv.InjectActivity`
   (`android.intent.action.MAIN` + `android.intent.category.LEANBACK_LAUNCHER`).
-- **VOD-deeplink:** `nlziet://open/vod/<contentId>`. Dit is de route die de APK via een
-  `UriMatcher` registreert als `APP_PLAYER_VOD`; `nlziet://watchnext/<id>` is **geen**
-  geregistreerde route en mag niet worden gebruikt.
+- **TV-afspeeldeeplink:** `nlziet://watchnext/<contentItemId>`. De TV-build maakt deze URI
+  zelf aan voor Android TV Watch Next en verwerkt hem in `InjectActivity.onNewIntent()`.
+  Een koude start verwerkt de initiële URI niet; NexusTVGuide stuurt daarom na 1,5 seconde een
+  identieke intent. Een directe emulatorproef met `Jazzportretten` op 30 augustus 2026
+  opende daarmee aantoonbaar de geselecteerde uitzending.
+- **Niet voor de TV-build:** de eerder veronderstelde routes
+  `nlziet://open/epg/<contentItemId>/<assetId>` en `nlziet://open/vod/<contentId>` openden
+  in dezelfde TV-build alleen het dashboard. Zij mogen niet voor een gidsklik worden gebruikt.
 - **Web/App Link:** `https://app.nlziet.nl/vod/<id>` is eveneens geregistreerd. Dynamic Links
   op `https://nlzietshare.page.link` bestaan ook, maar zijn geen stabiel contract voor de app.
 - **Package Visibility:** Geconfigureerd in `AndroidManifest.xml` via `<queries>` voor `nl.nlziet`, `nlziet://` en `nlzietshare.page.link`.
@@ -777,8 +782,9 @@ De architectuur is voorbereid op uitwijk:
 - [x] De geteste NLZiet-appversie en de ondersteunde VOD-deeplink-URI zijn vastgelegd.
 - [x] Deeplinks vallen automatisch terug op de launch-intent bij falen.
 - [x] NLZIET-matcher en verrijkingslaag in `tvguide-api` verrijkt gidsdata met `nlzietId`.
+- [x] De koude-startafwijking van de TV-build wordt afgevangen met een geteste retry.
 - [ ] Op de Shield is bevestigd dat een geselecteerd, verrijkt programma de verwachte
-      NLZIET-VOD opent; voor exact-afleveringgedrag is EPG-mapping nog nodig.
+      NLZIET-uitzending opent.
 
 ---
 

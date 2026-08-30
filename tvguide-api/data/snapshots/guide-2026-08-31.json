@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-30T22:00:00Z",
   "to": "2026-08-31T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T13:05:08.433Z",
-  "publishedAt": "2026-08-30T13:05:08.433Z",
+  "sourceFetchedAt": "2026-08-30T14:35:08.462Z",
+  "publishedAt": "2026-08-30T14:35:08.462Z",
   "channels": [
     {
       "id": "npo1",
@@ -14504,14 +14504,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "LLU8iR1SKEOcFt5glcJYow",
-        "assetId": "8A854611486F3C787882CDC0A9D227A7",
-        "channelId": "npo2extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219832612",
@@ -14527,7 +14520,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LLU8iR1SKEOcFt5glcJYow",
+        "assetId": "8A854611486F3C787882CDC0A9D227A7",
+        "channelId": "npo2extra",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218807582",

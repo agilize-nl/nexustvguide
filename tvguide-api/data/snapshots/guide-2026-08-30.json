@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-29T22:00:00Z",
   "to": "2026-08-30T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T13:05:08.433Z",
-  "publishedAt": "2026-08-30T13:05:08.433Z",
+  "sourceFetchedAt": "2026-08-30T14:35:08.462Z",
+  "publishedAt": "2026-08-30T14:35:08.462Z",
   "channels": [
     {
       "id": "npo1",
@@ -10886,7 +10886,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "RrGWJhFRGEagMbOpQBjZnA",
+        "assetId": "BA6A6F77E987CFF1C66D802B7F4F53F4",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219346452",

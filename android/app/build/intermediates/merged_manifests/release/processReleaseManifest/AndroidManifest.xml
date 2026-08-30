@@ -65,6 +65,17 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--
+             Onzichtbare relay die de NLZIET koude-start-deeplink betrouwbaar maakt.
+             Draait in een eigen task en wordt niet in Recents getoond.
+        -->
+        <activity
+            android:name="com.nexustvguide.app.util.NlzietRelayActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/Theme.NexusTVGuide.Relay" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

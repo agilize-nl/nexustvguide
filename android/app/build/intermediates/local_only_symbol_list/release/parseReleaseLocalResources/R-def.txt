@@ -73,4 +73,5 @@ string programguide_part_of_day_morning
 string programguide_title_no_program
 string stale_data_notice
 style Theme.NexusTVGuide
+style Theme.NexusTVGuide.Relay
 xml network_security_config

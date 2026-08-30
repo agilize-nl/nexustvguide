@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Alleen voor debug-builds: maakt de NLZIET-relay aanroepbaar via `adb shell am start`,
+  zodat de koude-startroute op een echt apparaat/emulator getest kan worden zonder de
+  D-pad-navigatie van de gids te hoeven simuleren. De release-build houdt exported=false.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nexustvguide.app.debug"
     android:versionCode="1"
@@ -53,6 +58,13 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.NexusTVGuide" >
+        <activity
+            android:name="com.nexustvguide.app.util.NlzietRelayActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/Theme.NexusTVGuide.Relay" />
         <activity
             android:name="com.nexustvguide.app.ui.MainActivity"
             android:banner="@drawable/tv_banner"

@@ -405,7 +405,7 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="ic_launcher_background">#171A21</color>
+    <color name="ic_launcher_background">#0F1318</color>
     <color name="lb_action_text_color">#EEEEEE</color>
     <color name="lb_background_protection">#99000000</color>
     <color name="lb_basic_card_bg_color">#FF263238</color>
@@ -2940,6 +2940,13 @@
         <item name="android:colorPrimary">@color/accent_blue</item>
         <item name="android:colorPrimaryDark">@color/dark_background</item>
         <item name="android:colorAccent">@color/accent_focused</item>
+    </style>
+    <style name="Theme.NexusTVGuide.Relay" parent="Theme.NexusTVGuide">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
