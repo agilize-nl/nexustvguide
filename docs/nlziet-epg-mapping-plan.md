@@ -1,6 +1,6 @@
 # Uitvoeringsplan — exacte NLZIET-EPG-koppeling
 
-Status: **geïmplementeerd; TV cold-start op emulator (Android 16 / API 36) end-to-end geverifieerd voor 7 zenders, Shield-validatie open**  
+Status: **geïmplementeerd en uitgerold; backend op .171 draait de EPG-matcher, TV cold-start end-to-end geverifieerd tegen de productieserver, Shield-validatie open**  
 Datum: 30 augustus 2026
 
 ## Doel
@@ -396,6 +396,50 @@ Programma's die nog niet begonnen waren (NPO 2 NOS Journaal 15:00, NPO 2 Pauscas
 Topdoks 15:55) gaven "Er is iets misgegaan" — koud en warm identiek. Dat is geen deeplinkfout maar
 ontbrekende replay-content; `launchProgramme` stuurt voor zulke programma's sindsdien geen
 deeplink meer.
+
+### Productie-uitrol (.171 / nexustvguide-api)
+
+De backend draait als systemd-unit `tvguide-api.service` (user `tvguide`,
+`WorkingDirectory=/opt/nexustvguide-api/current/tvguide-api`, `ExecStart=/usr/bin/node dist/server.js`).
+De host is via Tailscale bereikbaar als `nexustvguide-api` (100.88.166.57); SSH als `root`.
+
+Tot 30 augustus 2026 16:49 draaide daar nog een build van vóór de EPG-koppeling: `dist/enrichment/nlziet/`
+bevatte alleen `catalog`, `matcher`, `normalizer` en `types`. De EPG-modules ontbraken volledig, dus de
+API leverde 0 `nlziet`-targets en elke gidsklik kwam op het NLZIET-dashboard uit. Een herstart alleen
+zou daar niets aan veranderd hebben.
+
+Uitrolstappen:
+
+```bash
+git push origin main
+ssh root@100.88.166.57
+sudo -u tvguide git -C /opt/nexustvguide-api/current pull --ff-only
+cd /opt/nexustvguide-api/current/tvguide-api && sudo -u tvguide npm run build
+systemctl restart tvguide-api.service
+```
+
+Verificatie na herstart:
+
+```
+Refresh cycle completed. Successfully updated 13 days. Exact EPG targets: 5339/9000 programmes.
+```
+
+`GET /api/v1/guide?date=2026-08-30` levert nu 446 targets (was 0), waarvan 397 met `isReplayAllowed`.
+`/health` toont `exactTargets: 5339`, `replayAllowedTargets: 4824`, `epgFetchFailed: false`.
+
+### End-to-end test tegen productie
+
+Met de emulator-app op `http://192.168.2.171:3000/` en NLZIET vooraf volledig gestopt, opende een
+echte gidsklik op "Beste zangers" (NPO 1, 29 augustus 22:50) direct de juiste aflevering. Logcat:
+
+```
+DECISION: Tier 1 (Exact Replay Target -> watchnext)
+NlzietRelay: Eerste watchnext-start  -> BAL_ALLOW_VISIBLE_WINDOW  result code=0
+NlzietRelay: Retry watchnext-start   -> BAL_ALLOW_GRACE_PERIOD    result code=3
+```
+
+`result code=3` is `START_DELIVERED_TO_TOP`: de retry is als `onNewIntent()` bezorgd en dat is de
+levering die afspeelt.
 
 ### Handmatige Shield-acceptatie
 
