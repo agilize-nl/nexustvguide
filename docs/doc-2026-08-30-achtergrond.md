@@ -2,8 +2,8 @@
 
 > Dit bestand bewaart de oorspronkelijke vraag en verkenning en is **geen actuele
 > projectspecificatie**. Sommige aannames hieronder zijn na verificatie onjuist gebleken.
-> Gebruik [README.md](README.md) voor het overzicht en
-> [docs/PLAN.md](docs/PLAN.md) voor actuele besluiten, contracten en werkvolgorde.
+> Gebruik [../README.md](../README.md) voor het overzicht en
+> [plan-2026-08-30-bouwplan.md](plan-2026-08-30-bouwplan.md) voor actuele besluiten, contracten en werkvolgorde.
 
 Bekende achterhaalde punten in de ruwe tekst:
 
