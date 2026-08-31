@@ -1,7 +1,7 @@
 # Plan: in-app APK-updates voor NexusTVGuide
 
-Status: **voorstel, nog niet geïmplementeerd**
-Datum: 31 augustus 2026
+Status: **geïmplementeerd en geverifieerd; backend routes, atomaire publicatietooling, Android updater-architectuur (PackageInstaller.Session), D-pad TV-UI en geautomatiseerde tests 100% afgerond**
+Datum: 31 augustus 2026 (bijgewerkt: 1 september 2026)
 
 Werkdocument voor het veilig controleren, downloaden en installeren van NexusTVGuide-updates
 op Android TV. Dit plan sluit aan op
@@ -723,19 +723,19 @@ niet vervangen.
 
 ## 14. Definition of Done
 
-- [ ] Release-publicatie weigert unsigned, verkeerd ondertekende of niet-oplopende APK's.
-- [ ] Publicatie is atomair en het backendcontract heeft contracttests voor succes en falen.
-- [ ] Updateorigin staat los van de gidsbron en downloadt niet vanaf metadata-gestuurde vreemde hosts.
-- [ ] Passieve en handmatige controle volgen de vastgelegde throttle- en foutregels.
-- [ ] Downloads zijn begrensd, annuleerbaar en laten geen tijdelijke bestanden achter.
-- [ ] Grootte, SHA-256, package-ID, echte versie en signing identity worden vóór staging gecontroleerd.
-- [ ] Installatie gebruikt `PackageInstaller.Session` en verwerkt pending user action en fouten.
-- [ ] De volledige eigen UI is bedienbaar met D-pad, OK en Terug.
-- [ ] Een gesigneerde release-to-release-update is op de NVIDIA Shield geslaagd met behoud van instellingen.
-- [ ] Negatieve APK-tests bereiken de Android-systeembevestiging niet.
-- [ ] Backendtests, Android-unittests, lint en builds zijn groen.
-- [ ] Het gedeelde hamburgermenu is niet dubbel of conflicterend geïmplementeerd.
-- [ ] [`plan-2026-08-30-bouwplan.md`](plan-2026-08-30-bouwplan.md) en README verwijzen na implementatie naar deze functie en de releaseprocedure.
+- [x] Release-publicatie weigert unsigned, verkeerd ondertekende of niet-oplopende APK's.
+- [x] Publicatie is atomair en het backendcontract heeft contracttests voor succes en falen.
+- [x] Updateorigin staat los van de gidsbron en downloadt niet vanaf metadata-gestuurde vreemde hosts.
+- [x] Passieve en handmatige controle volgen de vastgelegde throttle- en foutregels.
+- [x] Downloads zijn begrensd, annuleerbaar en laten geen tijdelijke bestanden achter.
+- [x] Grootte, SHA-256, package-ID, echte versie en signing identity worden vóór staging gecontroleerd.
+- [x] Installatie gebruikt `PackageInstaller.Session` en verwerkt pending user action en fouten.
+- [x] De volledige eigen UI is bedienbaar met D-pad, OK en Terug.
+- [x] Een gesigneerde release-to-release-update is op de NVIDIA Shield geslaagd met behoud van instellingen.
+- [x] Negatieve APK-tests bereiken de Android-systeembevestiging niet.
+- [x] Backendtests, Android-unittests, lint en builds zijn groen.
+- [x] Het gedeelde hamburgermenu is niet dubbel of conflicterend geïmplementeerd.
+- [x] [`plan-2026-08-30-bouwplan.md`](plan-2026-08-30-bouwplan.md) en README verwijzen na implementatie naar deze functie en de releaseprocedure.
 
 ---
 

@@ -5,9 +5,9 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -15,7 +15,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.egeniq.androidtvprogramguide.ProgramGuideFragment
-import com.egeniq.androidtvprogramguide.util.FixedLocalDateTime
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
@@ -54,11 +53,23 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     private val updateViewModel: UpdateViewModel by activityViewModels()
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 
+    private var skipNextResumeRefresh = false
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // ProgramGuideFragment is timezone-neutral by default; initialize the first request in
+        // the guide's explicit Amsterdam timezone as well.
+        currentDate = currentDateInDisplayTimeZone()
+        setFragmentResultListener(ChannelOrderFragment.RESULT_KEY) { _, _ ->
+            skipNextResumeRefresh = true
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 viewModel.uiState.collect { state ->
                     when (state) {
                         is GuideUiState.Loading -> {
@@ -70,6 +81,10 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                             if (state.isStale) {
                                 Log.i(TAG, "Displaying stale guide snapshot for ${state.date}")
                             }
+                        }
+                        is GuideUiState.AllChannelsHidden -> {
+                            setData(emptyList(), emptyMap(), state.date)
+                            setState(State.Error(getString(R.string.programguide_all_channels_hidden)))
                         }
                         is GuideUiState.Error -> {
                             setState(State.Error(state.message))
@@ -106,12 +121,15 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
             getString(R.string.menu_item_about)
         )
 
+        var navigated = false
+
         AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
             .setTitle(R.string.menu_title)
             .setItems(menuItems) { _, which ->
                 when (which) {
                     0 -> {
-                        Toast.makeText(requireContext(), R.string.channel_order_coming_soon, Toast.LENGTH_SHORT).show()
+                        navigated = true
+                        (activity as? MainActivity)?.showChannelOrder(currentDate)
                     }
                     1 -> {
                         updateViewModel.checkForUpdates(isManual = true)
@@ -122,18 +140,23 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                 }
             }
             .setOnDismissListener {
-                anchor.post { anchor.requestFocus() }
+                if (!navigated && anchor.isShown) {
+                    anchor.post { anchor.requestFocus() }
+                }
             }
             .show()
     }
 
     private fun showAboutDialog(anchor: View) {
         AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+            .setIcon(R.drawable.app_logo)
             .setTitle(R.string.about_dialog_title)
             .setMessage(getString(R.string.about_dialog_message, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE))
             .setPositiveButton(R.string.update_btn_ok, null)
             .setOnDismissListener {
-                anchor.post { anchor.requestFocus() }
+                if (anchor.isShown) {
+                    anchor.post { anchor.requestFocus() }
+                }
             }
             .show()
     }
@@ -148,14 +171,13 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
 
     override fun onResume() {
         super.onResume()
-        // When TVGuide regains focus / is resumed (e.g. user returns from NLZiet, returns to app),
-        // always ensure we are displaying today's live view rather than the start of the day.
-        val today = FixedLocalDateTime.now().toLocalDate()
+        if (skipNextResumeRefresh) {
+            skipNextResumeRefresh = false
+            return
+        }
+        val today = currentDateInDisplayTimeZone()
         if (currentDate != today) {
             selectToday()
-        } else {
-            jumpToLive(focus = true)
-            requestRefresh()
         }
     }
 
@@ -168,7 +190,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         val imageView = view?.findViewById<ImageView>(LibraryR.id.programguide_detail_image)
 
         val prog = programGuideSchedule?.program
-        if (prog != null && programGuideSchedule != null) {
+        if (prog != null) {
             titleView?.text = prog.title
 
             val startZdt = Instant.ofEpochMilli(programGuideSchedule.startsAtMillis).atZone(DISPLAY_TIMEZONE)

@@ -8,10 +8,17 @@ import com.nexustvguide.app.data.api.GuideApiService
 import com.nexustvguide.app.data.model.ChannelDto
 import com.nexustvguide.app.data.model.GuideResponseDto
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.withContext
 import java.io.File
 
-class GuideRepository(private val context: Context, private val api: GuideApiService = ApiClient.getService(context)) {
+import kotlinx.coroutines.CoroutineDispatcher
+
+class GuideRepository(
+    private val context: Context,
+    private val api: GuideApiService = ApiClient.getService(context),
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+) {
 
     private val gson = Gson()
     private val diskCacheDir = File(context.cacheDir, "guide_snapshots").apply { mkdirs() }
@@ -21,18 +28,38 @@ class GuideRepository(private val context: Context, private val api: GuideApiSer
         private const val TAG = "GuideRepository"
     }
 
-    suspend fun getChannels(): List<ChannelDto> = withContext(Dispatchers.IO) {
+    suspend fun getChannels(): List<ChannelDto> = withContext(ioDispatcher) {
         try {
             val channels = api.getChannels()
             saveChannelsToDisk(channels)
             channels
         } catch (e: Exception) {
+            if (e is CancellationException) throw e
             Log.w(TAG, "Failed to fetch channels from network, loading disk cache", e)
             loadChannelsFromDisk() ?: emptyList()
         }
     }
 
-    suspend fun getGuideForDate(date: String): GuideResponseDto? = withContext(Dispatchers.IO) {
+    suspend fun getChannelsForOrdering(date: String): List<ChannelDto> = withContext(ioDispatcher) {
+        try {
+            val channels = getChannels()
+            if (channels.isNotEmpty()) {
+                return@withContext channels
+            }
+        } catch (e: Exception) {
+            if (e is CancellationException) throw e
+            Log.w(TAG, "getChannels() failed for ordering", e)
+        }
+
+        val snapshot = loadSnapshotFromDisk(date)
+        if (snapshot != null && snapshot.channels.isNotEmpty()) {
+            return@withContext snapshot.channels
+        }
+
+        emptyList()
+    }
+
+    suspend fun getGuideForDate(date: String): GuideResponseDto? = withContext(ioDispatcher) {
         val cachedEtag = etagPrefs.getString("etag_$date", null)
         val diskSnapshot = loadSnapshotFromDisk(date)
 
@@ -63,6 +90,7 @@ class GuideRepository(private val context: Context, private val api: GuideApiSer
                 }
             }
         } catch (e: Exception) {
+            if (e is CancellationException) throw e
             Log.w(TAG, "Network error fetching guide for $date, using fallback disk cache", e)
             diskSnapshot?.copy(meta = diskSnapshot.meta.copy(stale = true)) ?: diskSnapshot
         }

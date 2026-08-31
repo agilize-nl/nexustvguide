@@ -2,6 +2,38 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
+def versionPropertiesFile = rootProject.file("app/version.properties")
+
+def loadAppVersion = {
+    if (!versionPropertiesFile.exists()) {
+        throw new GradleException("Ontbrekend versiebestand: ${versionPropertiesFile}")
+    }
+
+    def properties = new Properties()
+    versionPropertiesFile.withInputStream { properties.load(it) }
+
+    def rawVersionCode = properties.getProperty("VERSION_CODE")?.trim()
+    def versionName = properties.getProperty("VERSION_NAME")?.trim()
+    if (!rawVersionCode?.isInteger() || rawVersionCode.toInteger() <= 0) {
+        throw new GradleException("VERSION_CODE moet een positief geheel getal zijn")
+    }
+    if (!(versionName ==~ /^\d+\.\d+\.\d+$/)) {
+        throw new GradleException("VERSION_NAME moet de vorm x.x.x hebben")
+    }
+
+    [code: rawVersionCode.toInteger(), name: versionName]
+}
+
+def parseSemanticVersion = { String versionName ->
+    def matcher = versionName =~ /^(\d+)\.(\d+)\.(\d+)$/
+    if (!matcher.matches()) {
+        throw new GradleException("VERSION_NAME moet de vorm x.x.x hebben")
+    }
+    [major: matcher.group(1).toInteger(), minor: matcher.group(2).toInteger(), patch: matcher.group(3).toInteger()]
+}
+
+def appVersion = loadAppVersion()
+
 // Signing-gegevens komen uit android/keystore.properties, dat buiten versiebeheer
 // blijft. Ontbreekt dat bestand (bijv. op een schone checkout of CI zonder secrets),
 // dan valt de release-build terug op niet-ondertekend in plaats van te falen.
@@ -24,8 +56,8 @@ android {
         minSdk 21
         targetSdk 34
         compileSdk 34
-        versionCode 1
-        versionName "0.5.0"
+        versionCode appVersion.code
+        versionName appVersion.name
 
         buildConfigField "String", "DEFAULT_BASE_URL", "\"http://192.168.2.171:3000/\""
         buildConfigField "String", "UPDATE_BASE_URL", "\"http://192.168.2.171:3000/\""
@@ -81,6 +113,36 @@ android {
     }
 }
 
+// Een debug-APK krijgt de versie uit version.properties. Na een geslaagde packaging
+// wordt dat bestand naar de volgende patchversie geschreven, klaar voor de volgende
+// debug-build. Daardoor verbruiken unit tests en mislukte builds geen versienummer.
+def bumpDebugVersion = {
+    def currentVersion = loadAppVersion()
+    def semanticVersion = parseSemanticVersion(currentVersion.name)
+    def nextVersionCode = Math.addExact(currentVersion.code, 1)
+    def nextPatch = Math.addExact(semanticVersion.patch, 1)
+    def nextVersionName = "${semanticVersion.major}.${semanticVersion.minor}.${nextPatch}"
+
+    versionPropertiesFile.setText(
+        "VERSION_CODE=${nextVersionCode}\nVERSION_NAME=${nextVersionName}\n",
+        "UTF-8"
+    )
+    logger.lifecycle("Debug-APK gebouwd als ${currentVersion.name} (${currentVersion.code}); volgende versie: ${nextVersionName} (${nextVersionCode})")
+}
+
+tasks.configureEach { task ->
+    // BuildConfig.VERSION_CODE en VERSION_NAME worden door Kotlin ingevoegd als
+    // constanten. Maak het versiebestand daarom een expliciete buildinput, zodat
+    // deze klassen bij elke bump opnieuw worden gecompileerd.
+    if (task.name.startsWith("compile") && task.name.endsWith("Kotlin")) {
+        task.inputs.file(versionPropertiesFile)
+    }
+
+    if (task.name == "packageDebug" || task.name == "packageDebugBundle") {
+        task.doLast(bumpDebugVersion)
+    }
+}
+
 dependencies {
     implementation project(":library")
 
@@ -92,6 +154,7 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.8.2'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.4'
@@ -99,6 +162,7 @@ dependencies {
     // Networking: Retrofit & OkHttp
     implementation 'com.squareup.retrofit2:retrofit:2.11.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
 

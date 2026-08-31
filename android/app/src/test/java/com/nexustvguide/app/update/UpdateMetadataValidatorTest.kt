@@ -117,4 +117,11 @@ class UpdateMetadataValidatorTest {
         val dtoInvalidDate = createValidDto(publishedAt = "invalid-date")
         assertTrue(UpdateMetadataValidator.validate(dtoInvalidDate, validBaseUrl) is MetadataValidationResult.Invalid)
     }
+
+    @Test
+    fun `rejects invalid base url`() {
+        val dto = createValidDto()
+        val result = UpdateMetadataValidator.validate(dto, "not-a-valid-url")
+        assertTrue(result is MetadataValidationResult.Invalid)
+    }
 }

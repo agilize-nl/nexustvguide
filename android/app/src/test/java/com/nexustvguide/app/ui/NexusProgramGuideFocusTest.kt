@@ -1,8 +1,14 @@
 package com.nexustvguide.app.ui
 
 import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.test.core.app.ApplicationProvider
+import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
 import com.egeniq.androidtvprogramguide.item.ProgramGuideItemView
 import com.egeniq.androidtvprogramguide.util.FixedLocalDateTime
@@ -74,5 +80,37 @@ class NexusProgramGuideFocusTest {
         val today = FixedLocalDateTime.now().toLocalDate()
         assertNotNull(today)
         assertTrue(today.year >= 2024)
+    }
+
+    @Test
+    fun testLogoOnFarLeftAndMenuButtonProperHeight() {
+        val context = ApplicationProvider.getApplicationContext<Context>().apply {
+            setTheme(com.nexustvguide.app.R.style.Theme_NexusTVGuide)
+        }
+        val layout = LayoutInflater.from(context).inflate(LibraryR.layout.programguide_fragment, null)
+        assertNotNull(layout)
+
+        val menuButton = layout.findViewById<ImageButton>(LibraryR.id.programguide_menu_button)
+        val logoView = layout.findViewById<ImageView>(LibraryR.id.programguide_header_logo)
+        val rightContainer = layout.findViewById<ViewGroup>(LibraryR.id.programguide_header_right_container)
+
+        assertNotNull(menuButton)
+        assertNotNull(logoView)
+        assertNotNull(rightContainer)
+
+        // Logo is a direct child of root constraint layout on the far left
+        assertEquals(layout, logoView.parent)
+
+        // Menu button is inside rightContainer
+        val menuIndex = rightContainer.indexOfChild(menuButton)
+        assertTrue("Menu button must be inside rightContainer", menuIndex >= 0)
+
+        // Menu button must be focusable
+        assertTrue("Menu button must be focusable", menuButton.isFocusable)
+
+        // Menu button height should be 28dp (scaled by density)
+        val density = context.resources.displayMetrics.density
+        val expectedHeightPx = (28 * density).toInt()
+        assertEquals(expectedHeightPx, menuButton.layoutParams.height)
     }
 }

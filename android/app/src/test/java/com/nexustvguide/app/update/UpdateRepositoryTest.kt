@@ -19,22 +19,29 @@ import okio.Buffer
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import java.io.File
+import java.io.IOException
 import java.security.MessageDigest
 
-class TestTimeProvider(var time: Long = 1000000L) : TimeProvider {
+class TestTimeProvider(var time: Long) : TimeProvider {
     override fun currentTimeMillis(): Long = time
 }
 
-class FakeUpdateApiService(var dto: AppUpdateDto? = null, var exception: Exception? = null) : UpdateApiService {
+class FakeUpdateApiService : UpdateApiService {
+    var dto: AppUpdateDto? = null
+    var shouldThrow: Boolean = false
+
     override suspend fun getLatestVersion(): AppUpdateDto {
-        exception?.let { throw it }
-        return dto ?: throw IllegalStateException("No DTO configured")
+        if (shouldThrow) {
+            throw IOException("Simulated network error")
+        }
+        return dto ?: throw IOException("No DTO set")
     }
 }
 
@@ -43,8 +50,8 @@ class UpdateRepositoryTest {
 
     private lateinit var context: Context
     private lateinit var mockWebServer: MockWebServer
-    private lateinit var timeProvider: TestTimeProvider
     private lateinit var fakeApiService: FakeUpdateApiService
+    private lateinit var timeProvider: TestTimeProvider
     private lateinit var repository: UpdateRepository
 
     @Before
@@ -56,7 +63,11 @@ class UpdateRepositoryTest {
         timeProvider = TestTimeProvider(1000000L)
         fakeApiService = FakeUpdateApiService()
 
-        val okHttpClient = OkHttpClient.Builder().build()
+        val okHttpClient = OkHttpClient.Builder()
+            .followRedirects(false)
+            .followSslRedirects(false)
+            .build()
+
         repository = UpdateRepository(
             context = context,
             apiService = fakeApiService,
@@ -122,6 +133,15 @@ class UpdateRepositoryTest {
 
         val result = repository.checkForUpdates(isManual = true, customBaseUrl = baseUrl)
         assertTrue(result is UpdateCheckResult.UpToDate)
+    }
+
+    @Test
+    fun `checkForUpdates returns Error on network failure`() = runBlocking {
+        val baseUrl = mockWebServer.url("/").toString()
+        fakeApiService.shouldThrow = true
+
+        val result = repository.checkForUpdates(isManual = true, customBaseUrl = baseUrl)
+        assertTrue(result is UpdateCheckResult.Error)
     }
 
     @Test
@@ -230,6 +250,90 @@ class UpdateRepositoryTest {
         // Part file must be deleted
         val partFile = File(repository.getUpdatesDir(), "update_2.apk.part")
         assertFalse(partFile.exists())
+    }
+
+    @Test
+    fun `downloadApk fails on HTTP 500 error`() = runBlocking {
+        mockWebServer.enqueue(
+            MockResponse()
+                .setResponseCode(500)
+                .setBody("Server Error")
+        )
+
+        val downloadUrl = mockWebServer.url("/api/v1/app/download/nexus-tv-guide-1.0.0.apk").toString()
+        val metadata = ValidatedUpdateMetadata(
+            schemaVersion = 1,
+            applicationId = "com.nexustvguide.app",
+            versionCode = 2L,
+            versionName = "1.0.0",
+            releaseNotes = "Test",
+            downloadUrl = downloadUrl,
+            sha256 = "0000000000000000000000000000000000000000000000000000000000000000",
+            fileSizeBytes = 1000,
+            publishedAt = "2026-08-31T12:00:00.000Z"
+        )
+
+        val states = repository.downloadApk(metadata).toList()
+        val lastState = states.last()
+        assertTrue(lastState is DownloadState.Failed)
+        assertTrue((lastState as DownloadState.Failed).error is UpdateError.NetworkError)
+    }
+
+    @Test
+    fun `downloadApk fails on Content-Length mismatch`() = runBlocking {
+        val apkPayload = "APK_DATA".toByteArray()
+
+        mockWebServer.enqueue(
+            MockResponse()
+                .setResponseCode(200)
+                .setHeader("Content-Type", "application/vnd.android.package-archive")
+                .setBody(Buffer().write(apkPayload))
+        )
+
+        val downloadUrl = mockWebServer.url("/api/v1/app/download/nexus-tv-guide-1.0.0.apk").toString()
+        val metadata = ValidatedUpdateMetadata(
+            schemaVersion = 1,
+            applicationId = "com.nexustvguide.app",
+            versionCode = 2L,
+            versionName = "1.0.0",
+            releaseNotes = "Test",
+            downloadUrl = downloadUrl,
+            sha256 = sha256(apkPayload),
+            fileSizeBytes = 5000L, // Expected 5000 bytes, but server sends apkPayload.size bytes
+            publishedAt = "2026-08-31T12:00:00.000Z"
+        )
+
+        val states = repository.downloadApk(metadata).toList()
+        val lastState = states.last()
+        assertTrue(lastState is DownloadState.Failed)
+        assertTrue((lastState as DownloadState.Failed).error is UpdateError.ContractError)
+    }
+
+    @Test
+    fun `snooze and clearSnooze persist correctly`() {
+        repository.snoozeUpdate(42L)
+        val prefs = context.getSharedPreferences(UpdateRepository.PREFS_NAME, Context.MODE_PRIVATE)
+        assertEquals(42L, prefs.getLong(UpdateRepository.KEY_SNOOZED_VERSION, -1L))
+
+        repository.clearSnooze()
+        assertEquals(-1L, prefs.getLong(UpdateRepository.KEY_SNOOZED_VERSION, -1L))
+    }
+
+    @Test
+    fun `pending session persistence and reconciliation`() {
+        repository.savePendingSession(1234, 100L)
+        assertEquals(1234, repository.getPendingSessionId())
+        assertEquals(100L, repository.getPendingTargetVersionCode())
+
+        // Target version 100L is not yet reached by current BuildConfig.VERSION_CODE (which is <= 10)
+        assertFalse(repository.reconcileStartupState())
+        assertEquals(1234, repository.getPendingSessionId())
+
+        // If target version is equal or lower than current BuildConfig.VERSION_CODE
+        repository.savePendingSession(5678, BuildConfig.VERSION_CODE.toLong())
+        assertTrue(repository.reconcileStartupState())
+        assertNull(repository.getPendingSessionId())
+        assertNull(repository.getPendingTargetVersionCode())
     }
 
     @Test

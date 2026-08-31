@@ -45,6 +45,9 @@ class ProgramGuideRowGridView @JvmOverloads constructor(
     companion object {
         private val ONE_HOUR_MILLIS = TimeUnit.HOURS.toMillis(1)
         private val HALF_HOUR_MILLIS = ONE_HOUR_MILLIS / 2
+        // Keep a little of the upcoming schedule visible when D-pad navigation moves right.
+        // This avoids a newly focused programme ending up underneath the viewport edge.
+        private val FOCUS_EDGE_MARGIN_MILLIS = TimeUnit.MINUTES.toMillis(15)
     }
 
     private var keepFocusToCurrentProgram: Boolean = false
@@ -142,19 +145,24 @@ class ProgramGuideRowGridView @JvmOverloads constructor(
         val targetEntry = target.schedule ?: return target
 
         if (isDirectionStart(direction) || direction == View.FOCUS_BACKWARD) {
-            if (targetEntry.startsAtMillis < fromMillis && targetEntry.endsAtMillis < fromMillis + HALF_HOUR_MILLIS) {
-                // The target entry starts outside the view; Align or scroll to the left (or right, on RTL).
+            if (targetEntry.startsAtMillis < fromMillis + FOCUS_EDGE_MARGIN_MILLIS) {
+                // The target is at, or just beyond, the left edge. Move the viewport with it.
                 scrollByTime(
-                    max(-ONE_HOUR_MILLIS, targetEntry.startsAtMillis - fromMillis)
+                    max(
+                        -ONE_HOUR_MILLIS,
+                        targetEntry.startsAtMillis - fromMillis - FOCUS_EDGE_MARGIN_MILLIS
+                    )
                 )
             }
         } else if (isDirectionEnd(direction) || direction == View.FOCUS_FORWARD) {
-            if (targetEntry.startsAtMillis > fromMillis + ONE_HOUR_MILLIS + HALF_HOUR_MILLIS) {
-                // The target entry starts outside the view; Align or scroll to the right (or left, on RTL).
+            val rightFocusEdge = toMillis - FOCUS_EDGE_MARGIN_MILLIS
+            if (targetEntry.endsAtMillis > rightFocusEdge) {
+                // Use the actual viewport end rather than a fixed time from its start. The
+                // latter only worked for one screen width and allowed focus to leave view.
                 scrollByTime(
                     min(
                         ONE_HOUR_MILLIS,
-                        targetEntry.startsAtMillis - fromMillis - ONE_HOUR_MILLIS
+                        targetEntry.endsAtMillis - rightFocusEdge
                     )
                 )
             }

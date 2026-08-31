@@ -111,6 +111,53 @@ class UpdateViewModelTest {
     }
 
     @Test
+    fun `manual checkForUpdates transitions to Error when network fails`() = testScope.runTest {
+        fakeApiService.shouldThrow = true
+
+        viewModel.checkForUpdates(isManual = true, customBaseUrl = "http://192.168.2.171:3000/")
+        advanceUntilIdle()
+
+        val state = viewModel.uiState.value
+        assertTrue(state is UpdateUiState.Error)
+        val errorState = state as UpdateUiState.Error
+        assertTrue(errorState.canRetry)
+    }
+
+    @Test
+    fun `cancelDownload resets state to Idle and emits DismissDialog`() = testScope.runTest {
+        var eventReceived: UpdateNavigationEvent? = null
+        val job = launch(testDispatcher) {
+            viewModel.navEvents.collect {
+                eventReceived = it
+            }
+        }
+
+        viewModel.cancelDownload()
+        advanceUntilIdle()
+
+        assertEquals(UpdateUiState.Idle, viewModel.uiState.value)
+        assertEquals(UpdateNavigationEvent.DismissDialog, eventReceived)
+        job.cancel()
+    }
+
+    @Test
+    fun `dismiss resets state to Idle and emits DismissDialog`() = testScope.runTest {
+        var eventReceived: UpdateNavigationEvent? = null
+        val job = launch(testDispatcher) {
+            viewModel.navEvents.collect {
+                eventReceived = it
+            }
+        }
+
+        viewModel.dismiss()
+        advanceUntilIdle()
+
+        assertEquals(UpdateUiState.Idle, viewModel.uiState.value)
+        assertEquals(UpdateNavigationEvent.DismissDialog, eventReceived)
+        job.cancel()
+    }
+
+    @Test
     fun `snooze updates repository and emits DismissDialog`() = testScope.runTest {
         var eventReceived: UpdateNavigationEvent? = null
         val job = launch(testDispatcher) {

@@ -14,6 +14,7 @@
     <!-- ProgramGuide library strings in het Nederlands -->
     <string name="programguide_title_no_program">Geen uitzending</string>
     <string name="programguide_error_fetching_content">Kan tv-gids niet laden. Probeer het opnieuw.</string>
+    <string name="programguide_all_channels_hidden">Alle zenders zijn verborgen. Open het menu om zenders weer zichtbaar te maken.</string>
     <string name="programguide_day_yesterday">Gisteren</string>
     <string name="programguide_day_today">Vandaag</string>
     <string name="programguide_day_tomorrow">Morgen</string>
@@ -66,4 +67,24 @@
     <string name="update_btn_close">Sluiten</string>
     <string name="update_btn_install">Installeren</string>
     <string name="update_btn_ok">OK</string>
+    <!-- Zendervolgorde en Zichtbaarheid -->
+    <string name="channel_order_title">Zendervolgorde</string>
+    <string name="channel_order_instructions_normal">D-pad op/neer: selecteren • OK: oppakken • Rechts: verbergen • Terug: klaar</string>
+    <string name="channel_order_instructions_grabbed">D-pad op/neer: verplaatsen • OK: neerzetten • Terug: annuleren</string>
+    <string name="channel_order_btn_reset">Herstel standaardvolgorde</string>
+    <string name="channel_order_btn_done">Klaar</string>
+    <string name="channel_order_btn_retry">Opnieuw proberen</string>
+    <string name="channel_order_reset_dialog_title">Standaardvolgorde herstellen?</string>
+    <string name="channel_order_reset_dialog_message">De aangepaste volgorde en alle verborgen zenders worden teruggezet naar de standaardinstellingen.</string>
+    <string name="channel_order_reset_dialog_confirm">Herstellen</string>
+    <string name="channel_order_reset_dialog_cancel">Annuleren</string>
+    <string name="channel_order_hide_last_dialog_title">Alle zenders verbergen?</string>
+    <string name="channel_order_hide_last_dialog_message">Als je alle zenders verbergt, toont de tv-gids een lege pagina totdat je zenders weer zichtbaar maakt.</string>
+    <string name="channel_order_hide_last_dialog_confirm">Verbergen</string>
+    <string name="channel_order_hide_last_dialog_cancel">Annuleren</string>
+    <string name="channel_order_error_message">Kan zenderlijst niet laden. Controleer de verbinding en probeer het opnieuw.</string>
+    <string name="channel_order_loading">Zenderlijst laden...</string>
+    <string name="channel_order_a11y_moved">%1$s, positie %2$d van %3$d</string>
+    <string name="channel_order_a11y_hide">Verberg %1$s</string>
+    <string name="channel_order_a11y_show">Toon %1$s</string>
 </resources>

@@ -263,9 +263,11 @@ class ProgramGuideManager<T> {
      * @return True if the time was shifted. False if not change was triggered (time was the same as before).
      */
     internal fun jumpTo(timeMillis: Long): Boolean {
-        val timeShift = timeMillis - fromUtcMillis
-        shiftTime(timeShift)
-        return timeShift != 0L
+        val previousFromUtcMillis = fromUtcMillis
+        shiftTime(timeMillis - fromUtcMillis)
+        // A requested target can be clamped to the current viewport at either end of the
+        // schedule. Report the actual result so callers can restore focus immediately.
+        return fromUtcMillis != previousFromUtcMillis
     }
 
     /** Shifts the time range by the given time. Also makes the guide scroll the views.

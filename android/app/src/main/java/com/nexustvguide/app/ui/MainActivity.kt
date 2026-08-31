@@ -11,8 +11,14 @@ import com.nexustvguide.app.ui.update.UpdateDialogFragment
 import com.nexustvguide.app.ui.update.UpdateNavigationEvent
 import com.nexustvguide.app.ui.update.UpdateViewModel
 import kotlinx.coroutines.launch
+import org.threeten.bp.LocalDate
 
 class MainActivity : FragmentActivity() {
+
+    companion object {
+        const val TAG_GUIDE = "guide"
+        const val TAG_CHANNEL_ORDER = "channel_order"
+    }
 
     private val updateViewModel: UpdateViewModel by viewModels()
 
@@ -22,7 +28,7 @@ class MainActivity : FragmentActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.main_container, NexusProgramGuideFragment())
+                .replace(R.id.main_container, NexusProgramGuideFragment(), TAG_GUIDE)
                 .commitNow()
         }
 
@@ -40,6 +46,22 @@ class MainActivity : FragmentActivity() {
         window.decorView.post {
             updateViewModel.checkForUpdates(isManual = false)
         }
+    }
+
+    fun showChannelOrder(date: LocalDate) {
+        if (supportFragmentManager.isStateSaved) return
+        if (supportFragmentManager.findFragmentByTag(TAG_CHANNEL_ORDER) != null) return
+
+        val guideFragment = supportFragmentManager.findFragmentByTag(TAG_GUIDE) ?: return
+        val channelOrderFragment = ChannelOrderFragment.newInstance(date)
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.main_container, channelOrderFragment, TAG_CHANNEL_ORDER)
+            .hide(guideFragment)
+            .setMaxLifecycle(guideFragment, Lifecycle.State.STARTED)
+            .setPrimaryNavigationFragment(channelOrderFragment)
+            .addToBackStack(TAG_CHANNEL_ORDER)
+            .commit()
     }
 
     private fun showUpdateDialog() {

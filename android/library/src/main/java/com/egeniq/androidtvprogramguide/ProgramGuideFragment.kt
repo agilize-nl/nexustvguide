@@ -160,6 +160,10 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     var currentDate: LocalDate = FixedLocalDateTime.now().toLocalDate()
         protected set
 
+    /** The guide date must use the same timezone as the rendered schedule. */
+    protected fun currentDateInDisplayTimeZone(nowMillis: Long = System.currentTimeMillis()): LocalDate =
+        Instant.ofEpochMilli(nowMillis).atZone(DISPLAY_TIMEZONE).toLocalDate()
+
     private val progressUpdateHandler: Handler = Handler(Looper.getMainLooper())
     private val progressUpdateRunnable: Runnable = object : Runnable {
         override fun run() {
@@ -399,12 +403,13 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * It should be enabled if we are viewing a day other than today, or if we are on today and
      * the current scroll range does not show the current live timestamp.
      */
-    protected fun setJumpToLiveButtonEnabled(enabled: Boolean) {
+    protected fun setJumpToLiveButtonEnabled(enabled: Boolean = true) {
         jumpToLive?.apply {
-            isEnabled = enabled
-            isClickable = enabled
-            isFocusable = enabled
-            alpha = if (enabled) 1.0f else 0.35f
+            val isEnabledState = (currentState is State.Content) && enabled
+            isEnabled = isEnabledState
+            isClickable = isEnabledState
+            isFocusable = isEnabledState
+            alpha = if (isEnabledState) 1.0f else 0.35f
         }
     }
 
@@ -632,13 +637,13 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * If the currently visible time range does not contain the live timestamp, it should be hidden.
      */
     protected fun updateCurrentTimeIndicator(now: Long = System.currentTimeMillis()) {
-        val today = FixedLocalDateTime.now().toLocalDate()
+        val today = currentDateInDisplayTimeZone(now)
         val isToday = currentDate == today
 
-        // No content, feature is disabled, or not today -> hide indicator and enable Jump to Live if not today
+        // No content, feature is disabled, or not today -> hide indicator
         if (currentState != State.Content || !DISPLAY_CURRENT_TIME_INDICATOR || !isToday) {
             currentTimeIndicator?.visibility = View.GONE
-            setJumpToLiveButtonEnabled(currentState is State.Content && !isToday)
+            setJumpToLiveButtonEnabled(currentState is State.Content)
             return
         }
 
@@ -648,7 +653,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         ) - (timeRow?.currentScrollOffset ?: 0) - timelineAdjustmentPixels
         if (offset < 0) {
             currentTimeIndicator?.visibility = View.GONE
-            setJumpToLiveButtonEnabled(currentState is State.Content && (programGuideManager.getStartTime() <= now && now <= programGuideManager.getEndTime()))
+            setJumpToLiveButtonEnabled(currentState is State.Content)
         } else {
             if (currentTimeIndicatorWidth == 0) {
                 currentTimeIndicator?.measure(
@@ -663,7 +668,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 currentTimeIndicator?.translationX = -offset - currentTimeIndicatorWidth / 2f
             }
             currentTimeIndicator?.visibility = View.VISIBLE
-            setJumpToLiveButtonEnabled(currentState is State.Content && offset > gridWidth)
+            setJumpToLiveButtonEnabled(currentState is State.Content)
         }
     }
 
@@ -710,7 +715,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * Resets the selected date to today and requests the guide.
      */
     fun selectToday() {
-        val today = FixedLocalDateTime.now().toLocalDate()
+        val today = currentDateInDisplayTimeZone()
         currentDate = today
         currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST
         updateDayFilterText()
@@ -725,7 +730,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * Jumps the program guide to the current live broadcast and focuses the current program.
      */
     fun jumpToLive(focus: Boolean = true) {
-        val today = FixedLocalDateTime.now().toLocalDate()
+        val today = currentDateInDisplayTimeZone()
         if (currentDate != today) {
             selectToday()
             return
@@ -735,6 +740,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         programGuideGrid.clearLastFocusedView()
         didScrollToBestProgramme = false
         isJumpingGridInTime = true
+        programGuideGrid.smoothScrollToPosition(0)
         val firstChannelId = programGuideManager.getChannel(0)?.id
         autoScrollToBestProgramme(useTimeOfDayFilter = false, specificChannelId = firstChannelId)
         if (focus) {
@@ -757,7 +763,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             progressUpdateHandler.removeCallbacks(progressUpdateRunnable)
             progressUpdateHandler.post(progressUpdateRunnable)
         }
-        val today = FixedLocalDateTime.now().toLocalDate()
+        val today = currentDateInDisplayTimeZone()
         if (currentDate == today && currentState is State.Content) {
             jumpToLive(focus = true)
         }
@@ -807,7 +813,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             isInitialScroll = false
             timeRow?.post {
                 timeRow?.scrollTo(scrollOffset, false)
-                if (currentDate == FixedLocalDateTime.now().toLocalDate()) {
+                if (currentDate == currentDateInDisplayTimeZone()) {
                     programGuideGrid.focusCurrentProgram(0)
                 }
                 updateCurrentTimeIndicator()
@@ -882,11 +888,10 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             }
             timeRow?.scrollTo(scrollOffset, true)
         }
-        // Might just be a reset
-        if (scrollOffset != 0) {
-            updateTimeOfDayFilter()
-            updateCurrentDateText()
-        }
+        // A day switch can reset the horizontal offset to zero. The old condition left the
+        // previous day's label in place in that case, making a fresh live view look historical.
+        updateTimeOfDayFilter()
+        updateCurrentDateText()
     }
 
     private fun updateTimeOfDayFilter() {
@@ -959,6 +964,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      */
     fun setState(state: State) {
         currentState = state
+        setJumpToLiveButtonEnabled(state is State.Content)
         val alpha: Float
         when (state) {
             State.Content -> {
@@ -1067,21 +1073,17 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         useTimeOfDayFilter: Boolean = false,
         specificChannelId: String? = null
     ) {
-        val nowMillis = Instant.now().toEpochMilli()
-        // If the current time is within the managed frame, jump to it.
-        if (!useTimeOfDayFilter && programGuideManager.getStartTime() <= nowMillis && nowMillis <= programGuideManager.getEndTime()) {
-            val currentProgram = programGuideManager.getCurrentProgram(specificChannelId)
-            if (currentProgram == null) {
-                Log.w(TAG, "Can't scroll to current program because schedule not found.")
-            } else {
-                Log.i(
-                    TAG,
-                    "Scrolling to ${currentProgram.displayTitle}, started at ${currentProgram.startsAtMillis}"
-                )
-                if (!programGuideManager.jumpTo(currentProgram.startsAtMillis)) {
-                    programGuideGrid.focusCurrentProgram(0)
-                    updateCurrentTimeIndicator()
-                }
+        val nowMillis = System.currentTimeMillis()
+        val isViewingToday = currentDate == currentDateInDisplayTimeZone(nowMillis)
+        if (!useTimeOfDayFilter && isViewingToday) {
+            // "Nu live" must be anchored to the clock, not to a programme's start. A channel
+            // can have a gap or a long-running programme; using its start made the guide appear
+            // to jump back to an arbitrary time in the past.
+            val liveAnchorMillis = nowMillis - HALF_HOUR_IN_MILLIS
+            Log.i(TAG, "Scrolling to live time $liveAnchorMillis")
+            if (!programGuideManager.jumpTo(liveAnchorMillis)) {
+                programGuideGrid.focusCurrentProgram(0)
+                updateCurrentTimeIndicator()
             }
         } else {
             // The day is not today.

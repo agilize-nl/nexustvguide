@@ -1,5 +1,8 @@
 # Bouwplan NexusTVGuide
 
+Status: **fase 1 t/m 4 geïmplementeerd en geverifieerd; backend (.171) & Android TV app (EPG-grid, NLZIET-relay, zenderordening, in-app updates) gereed, Shield-validatie open**  
+Datum: 30 augustus 2026 (bijgewerkt: 1 september 2026)
+
 Werkdocument met vastgestelde besluiten, concrete implementatiestappen en expliciete
 acceptatiecriteria. Bron van de achtergrondinformatie: [`doc-2026-08-30-achtergrond.md`](doc-2026-08-30-achtergrond.md).
 De aantallen en het gedrag van de tvgids.nl-API zijn voor het laatst gecontroleerd rond de
@@ -564,6 +567,9 @@ services hiertegen:
 
 Pas starten wanneer `/api/v1/guide` live draait en echte data retourneert.
 
+> [!NOTE]
+> Zie [`plan-2026-08-31-channel-ordering.md`](plan-2026-08-31-channel-ordering.md) voor het gedetailleerde plan en de implementatie van zendervolgorde en zichtbaarheid via het ordenscherm.
+
 ### Opzetten
 
 ```bash
@@ -763,20 +769,21 @@ De architectuur is voorbereid op uitwijk:
 ## Definition of Done per fase
 
 ### Fase 1 is klaar wanneer:
-- [ ] Alle unit-, schema- en contracttests slagen (incl. zomertijdwissels en fixture-tests).
-- [ ] De service na herstart zonder internetverbinding de gids kan serveren vanuit disk-snapshots.
-- [ ] `/api/v1/guide` (zowel met `?date=` als met `?from=&to=`), `/api/v1/channels`, `/xmltv.xml`,
+- [x] Alle unit-, schema- en contracttests slagen (incl. zomertijdwissels en fixture-tests).
+- [x] De service na herstart zonder internetverbinding de gids kan serveren vanuit disk-snapshots.
+- [x] `/api/v1/guide` (zowel met `?date=` als met `?from=&to=`), `/api/v1/channels`, `/xmltv.xml`,
       `/health` en `/ready` exact aan het contract voldoen.
-- [ ] HTTP caching headers (`ETag`, `If-None-Match`, `Cache-Control`) correct werken en `304` teruggeven.
-- [ ] XMLTV-output valide XML genereert die geaccepteerd wordt door minstens één externe client (TiviMate of Jellyfin).
-- [ ] De systemd-service in de LXC stabiel draait onder een unprivileged user met HTTPS reverse proxy.
+- [x] HTTP caching headers (`ETag`, `If-None-Match`, `Cache-Control`) correct werken en `304` teruggeven.
+- [x] XMLTV-output valide XML genereert die geaccepteerd wordt door minstens één externe client (TiviMate of Jellyfin).
+- [x] De systemd-service in de LXC stabiel draait onder een unprivileged user met HTTPS reverse proxy.
 
 ### Fase 2 is klaar wanneer:
-- [ ] Het EPG-grid op de Shield vloeiend navigeert via D-pad (links/rechts door de tijd, op/neer door zenders).
-- [ ] Dagfilters tonen: gisteren, vandaag en +1 t/m +7 dagen; wisselen tussen dagen werkt vlot.
-- [ ] Jump-to-live en huidige-tijd-indicator kloppen visueel en qua tijdzone (`Europe/Amsterdam`).
-- [ ] Bij tijdelijk netwerkverlies blijft de laatst bekende gids zichtbaar.
-- [ ] Een klik op een programma opent betrouwbaar de NLZiet-app (of toont een nette melding indien niet aanwezig).
+- [x] Het EPG-grid op de Shield vloeiend navigeert via D-pad (links/rechts door de tijd, op/neer door zenders).
+- [x] Dagfilters tonen: gisteren, vandaag en +1 t/m +7 dagen; wisselen tussen dagen werkt vlot.
+- [x] Jump-to-live en huidige-tijd-indicator kloppen visueel en qua tijdzone (`Europe/Amsterdam`).
+- [x] Bij tijdelijk netwerkverlies blijft de laatst bekende gids zichtbaar.
+- [x] Een klik op een programma opent betrouwbaar de NLZiet-app (of toont een nette melding indien niet aanwezig).
+- [x] Zendervolgorde en zichtbaarheid instelbaar via ordenscherm ([`plan-2026-08-31-channel-ordering.md`](plan-2026-08-31-channel-ordering.md)).
 
 ### Fase 3 is klaar wanneer:
 - [x] De geteste NLZiet-appversie en de ondersteunde VOD-deeplink-URI zijn vastgelegd.
@@ -785,6 +792,11 @@ De architectuur is voorbereid op uitwijk:
 - [x] De koude-startafwijking van de TV-build wordt afgevangen met een geteste retry.
 - [ ] Op de Shield is bevestigd dat een geselecteerd, verrijkt programma de verwachte
       NLZIET-uitzending opent.
+
+### Fase 4 is klaar wanneer:
+- [x] In-app update endpoints en atomaire publicatietooling gereed zijn.
+- [x] Android updater met PackageInstaller.Session, single-flight download en preflight-checks is geïmplementeerd.
+- [x] D-pad bedienbare update-dialoog met release notes en focusmanagement is afgerond ([`plan-2026-08-31-in-app-updates.md`](plan-2026-08-31-in-app-updates.md)).
 
 ---
 

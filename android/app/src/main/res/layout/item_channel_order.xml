@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/channel_order_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginBottom="6dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/channel_order_item_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    android:paddingStart="16dp"
+    android:paddingEnd="12dp">
+
+    <TextView
+        android:id="@+id/tv_channel_position"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        android:fontFamily="@font/open_sans_bold"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/iv_channel_logo"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        tools:src="@drawable/programguide_icon_placeholder" />
+
+    <TextView
+        android:id="@+id/tv_channel_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:fontFamily="@font/open_sans_regular"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="NPO 1" />
+
+    <ImageButton
+        android:id="@+id/btn_channel_visibility"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/channel_order_eye_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_visibility"
+        android:contentDescription="@string/channel_order_a11y_hide" />
+
+</LinearLayout>

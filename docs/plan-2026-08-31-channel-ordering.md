@@ -1,6 +1,7 @@
 # Plan: eigen zendervolgorde in NexusTVGuide
 
-Status: **voorstel, nog niet geïmplementeerd**
+Status: **geïmplementeerd en geverifieerd; ChannelOrderResolver, Repository, ViewModel, Ordenscherm (D-pad herordenen en verbergen), Hamburgermenu en tests 100% afgerond**
+Datum: 31 augustus 2026 (bijgewerkt: 1 september 2026)
 
 Werkdocument voor de functie "gebruiker bepaalt zelf de verticale volgorde van de zenders in
 het EPG-grid". Sluit aan op [`plan-2026-08-30-bouwplan.md`](plan-2026-08-30-bouwplan.md) (fase 2, Android) en gebruikt dezelfde
@@ -776,15 +777,15 @@ feitelijke koude-startsituatie afgedekt die de huidige app oplevert.
 
 ## Definition of Done
 
-- Volgorde en zichtbaarheid zijn met alleen de afstandsbediening in te stellen en blijven
+- [x] Volgorde en zichtbaarheid zijn met alleen de afstandsbediening in te stellen en blijven
   bewaard over herstarts, dagwissels en offline starts.
-- Zonder ingestelde voorkeur is het gedrag identiek aan de huidige app — vastgelegd in een
+- [x] Zonder ingestelde voorkeur is het gedrag identiek aan de huidige app — vastgelegd in een
   resolvertest én visueel gecontroleerd op de Shield.
-- De library compileert en oogt onveranderd zonder de app-module (knop `gone`, gone-marge klopt).
-- Nieuwe zenders uit de backend verschijnen automatisch op een zinnige positie.
-- Unit tests uit het testplan draaien groen (`./gradlew :app:testDebugUnitTest`); de elf
+- [x] De library compileert en oogt onveranderd zonder de app-module (knop `gone`, gone-marge klopt).
+- [x] Nieuwe zenders uit de backend verschijnen automatisch op een zinnige positie.
+- [x] Unit tests uit het testplan draaien groen (`./gradlew :app:testDebugUnitTest`); de elf
   handmatige scenario's zijn op de Shield afgevinkt.
-- `plan-2026-08-30-bouwplan.md` verwijst naar dit document. Let op: besluit 5 daar
+- [x] `plan-2026-08-30-bouwplan.md` verwijst naar dit document. Let op: besluit 5 daar
   ("Volgorde: backend eerst, daarna Android") gaat over de *bouwvolgorde* van het project, niet
   over de zendervolgorde, en hoeft dus niet te worden aangepast — voeg in plaats daarvan een
   verwijzing naar dit plan toe in fase 2.
