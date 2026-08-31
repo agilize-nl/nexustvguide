@@ -16,7 +16,7 @@ export class NlzietEpgClient {
         this.nowFn = options.nowFn || (() => new Date());
     }
     isDateInEpgWindow(dateStr, todayStr) {
-        const today = todayStr || getTodayAmsterdam();
+        const today = todayStr || getTodayAmsterdam(this.nowFn());
         const todayPlain = Temporal.PlainDate.from(today);
         const targetPlain = Temporal.PlainDate.from(dateStr);
         const diffDays = targetPlain.since(todayPlain).total({ unit: "day" });
@@ -41,7 +41,7 @@ export class NlzietEpgClient {
         if (validChannelIds.length === 0) {
             return { data: [] };
         }
-        const today = getTodayAmsterdam();
+        const today = getTodayAmsterdam(this.nowFn());
         if (!this.isDateInEpgWindow(dateStr, today)) {
             return { data: [] };
         }

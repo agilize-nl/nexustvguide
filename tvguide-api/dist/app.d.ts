@@ -7,6 +7,7 @@ import { NlzietEpgMatcher } from './enrichment/nlziet/epg-matcher.js';
 import { NlzietEpgClient } from './enrichment/nlziet/epg-client.js';
 export interface AppOptions {
     dataDir?: string;
+    releasesDir?: string;
     channelsConfigPath?: string;
     tvgidsBaseUrl?: string;
     nlzietEpgBaseUrl?: string;

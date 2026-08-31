@@ -6,9 +6,9 @@ Betreft: verhuizing van de `tvguide-api`-logica (ophalen `json.tvgids.nl/v4`, no
 NLZIET-EPG-matching, caching) naar de Kotlin Android-app, zodat één `.apk` op de Shield
 zonder LXC, Docker of homelab-afhankelijkheid werkt.
 
-Gerelateerd: [`PLAN.md`](PLAN.md) (bouwplan backend + app),
-[`nlziet-epg-mapping-plan.md`](nlziet-epg-mapping-plan.md) (de matcher die hier wordt geport),
-[`channel-ordering-plan.md`](channel-ordering-plan.md) (zendervolgorde).
+Gerelateerd: [`plan-2026-08-30-bouwplan.md`](plan-2026-08-30-bouwplan.md) (bouwplan backend + app),
+[`plan-2026-08-30-nlziet-epg-mapping.md`](plan-2026-08-30-nlziet-epg-mapping.md) (de matcher die hier wordt geport),
+[`plan-2026-08-31-channel-ordering.md`](plan-2026-08-31-channel-ordering.md) (zendervolgorde).
 
 ---
 

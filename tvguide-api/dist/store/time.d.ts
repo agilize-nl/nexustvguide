@@ -15,7 +15,7 @@ export declare function getAmsterdamDateString(instantUtcIso: string): string;
 /**
  * Haalt de huidige lokale datum in Amsterdam op (YYYY-MM-DD).
  */
-export declare function getTodayAmsterdam(): string;
+export declare function getTodayAmsterdam(nowDate?: Date | Temporal.Instant): string;
 /**
  * Parseert een ISO-8601 instant zoals de rest van deze module hem verwacht.
  * Geeft null in plaats van te gooien, zodat aanroepers een nette 400 kunnen

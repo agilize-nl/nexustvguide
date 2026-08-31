@@ -1,12 +1,13 @@
 package com.nexustvguide.app.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -18,8 +19,12 @@ import com.egeniq.androidtvprogramguide.util.FixedLocalDateTime
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
+import com.nexustvguide.app.BuildConfig
 import com.nexustvguide.app.R
 import com.nexustvguide.app.data.model.ProgrammeDto
+import com.nexustvguide.app.ui.update.UpdateDialogFragment
+import com.nexustvguide.app.ui.update.UpdateNavigationEvent
+import com.nexustvguide.app.ui.update.UpdateViewModel
 import com.nexustvguide.app.util.NlzietLauncher
 import kotlinx.coroutines.launch
 import org.threeten.bp.Instant
@@ -40,11 +45,13 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     // Egeniq gebruikt `until` (exclusief bovengrens): 8 toont vandaag t/m +7 dagen.
     override val SELECTABLE_DAYS_IN_FUTURE: Int = 8
     override val DISPLAY_CURRENT_TIME_INDICATOR: Boolean = true
+    override val DISPLAY_MENU_BUTTON: Boolean = true
     override val USE_HUMAN_DATES: Boolean = true
     override val DATE_WITH_DAY_FORMATTER: DateTimeFormatter =
         DateTimeFormatter.ofPattern("EEE d MMM", Locale("nl", "NL"))
 
     private val viewModel: GuideViewModel by viewModels()
+    private val updateViewModel: UpdateViewModel by activityViewModels()
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -71,6 +78,64 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                 }
             }
         }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                updateViewModel.navEvents.collect { event ->
+                    if (event is UpdateNavigationEvent.ShowUpdateDialog) {
+                        showUpdateDialog()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showUpdateDialog() {
+        if (childFragmentManager.findFragmentByTag(UpdateDialogFragment.TAG) == null &&
+            parentFragmentManager.findFragmentByTag(UpdateDialogFragment.TAG) == null
+        ) {
+            val dialog = UpdateDialogFragment.newInstance()
+            dialog.show(parentFragmentManager, UpdateDialogFragment.TAG)
+        }
+    }
+
+    override fun onMenuButtonClicked(anchor: View) {
+        val menuItems = arrayOf(
+            getString(R.string.menu_item_channel_order),
+            getString(R.string.menu_item_check_updates),
+            getString(R.string.menu_item_about)
+        )
+
+        AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+            .setTitle(R.string.menu_title)
+            .setItems(menuItems) { _, which ->
+                when (which) {
+                    0 -> {
+                        Toast.makeText(requireContext(), R.string.channel_order_coming_soon, Toast.LENGTH_SHORT).show()
+                    }
+                    1 -> {
+                        updateViewModel.checkForUpdates(isManual = true)
+                    }
+                    2 -> {
+                        showAboutDialog(anchor)
+                    }
+                }
+            }
+            .setOnDismissListener {
+                anchor.post { anchor.requestFocus() }
+            }
+            .show()
+    }
+
+    private fun showAboutDialog(anchor: View) {
+        AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+            .setTitle(R.string.about_dialog_title)
+            .setMessage(getString(R.string.about_dialog_message, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE))
+            .setPositiveButton(R.string.update_btn_ok, null)
+            .setOnDismissListener {
+                anchor.post { anchor.requestFocus() }
+            }
+            .show()
     }
 
     override fun requestingProgramGuideFor(localDate: LocalDate) {

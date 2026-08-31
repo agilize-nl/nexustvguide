@@ -480,7 +480,7 @@ De wijziging is pas klaar wanneer:
 - op de Shield voor minimaal drie verschillende omroepen is bevestigd dat een gekozen
   replay de verwachte uitzending opent;
 - het resultaat van de Shield-test en eventuele uitzonderingen per zender zijn toegevoegd
-  aan `docs/PLAN.md`.
+  aan `docs/plan-2026-08-30-bouwplan.md`.
 
 ## Risico's en open verificaties
 

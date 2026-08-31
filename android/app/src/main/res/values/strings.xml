@@ -28,4 +28,42 @@
     <string name="programguide_content_description_dropdown_icon">Vervolgkeuzemenu</string>
     <string name="programguide_header_app_title">@string/app_name</string>
     <string name="programguide_header_guide_date_label">TV-gids voor</string>
+
+    <!-- Menu strings -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_item_channel_order">Zenders ordenen</string>
+    <string name="menu_item_check_updates">Zoeken naar updates</string>
+    <string name="menu_item_about">Over NexusTVGuide</string>
+    <string name="about_dialog_title">Over NexusTVGuide</string>
+    <string name="about_dialog_message">NexusTVGuide v%1$s (build %2$d)\n\nLive TV-gids voor Android TV met directe NLZIET-integratie.</string>
+    <string name="channel_order_coming_soon">Zenderordening is binnenkort beschikbaar.</string>
+
+    <!-- In-app updates strings -->
+    <string name="update_dialog_title_available">Update beschikbaar — versie %1$s</string>
+    <string name="update_dialog_title_checking">Zoeken naar updates</string>
+    <string name="update_dialog_title_uptodate">NexusTVGuide is up-to-date</string>
+    <string name="update_dialog_title_error">Update mislukt</string>
+    <string name="update_error_title">Update mislukt</string>
+    <string name="update_dialog_title_permission">Installatietoestemming vereist</string>
+    <string name="update_dialog_title_downloading">Bezig met downloaden</string>
+    <string name="update_dialog_title_verifying">Integriteit verifiëren</string>
+    <string name="update_dialog_title_ready">Klaar voor installatie</string>
+
+    <string name="update_current_version_label">Huidige versie:</string>
+    <string name="update_new_version_label">Nieuwe versie:</string>
+    <string name="update_release_notes_label">Wat is er nieuw in deze versie:</string>
+    <string name="update_no_release_notes">Onderhoudsupdate en prestatieverbeteringen.</string>
+    <string name="update_size_label">Grootte:</string>
+    <string name="update_uptodate_message">Je gebruikt al de nieuwste versie (%1$s).</string>
+    <string name="update_permission_explanation">Om NexusTVGuide direct bij te werken, moet Android toestemming krijgen om onbekende apps uit deze bron te installeren.</string>
+    <string name="update_waiting_system_dialog">Android-systeembevestiging openen...</string>
+
+    <string name="update_btn_download_install">Downloaden en installeren</string>
+    <string name="update_btn_later">Later</string>
+    <string name="update_btn_cancel">Annuleren</string>
+    <string name="update_btn_open_settings">Instellingen openen</string>
+    <string name="update_btn_retry">Opnieuw proberen</string>
+    <string name="update_btn_close">Sluiten</string>
+    <string name="update_btn_install">Installeren</string>
+    <string name="update_btn_ok">OK</string>
 </resources>

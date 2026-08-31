@@ -29,7 +29,12 @@ export function getAmsterdamDateString(instantUtcIso: string): string {
 /**
  * Haalt de huidige lokale datum in Amsterdam op (YYYY-MM-DD).
  */
-export function getTodayAmsterdam(): string {
+export function getTodayAmsterdam(nowDate?: Date | Temporal.Instant): string {
+  if (nowDate instanceof Date) {
+    return Temporal.Instant.fromEpochMilliseconds(nowDate.getTime()).toZonedDateTimeISO(TIME_ZONE).toPlainDate().toString();
+  } else if (nowDate) {
+    return nowDate.toZonedDateTimeISO(TIME_ZONE).toPlainDate().toString();
+  }
   return Temporal.Now.zonedDateTimeISO(TIME_ZONE).toPlainDate().toString();
 }
 

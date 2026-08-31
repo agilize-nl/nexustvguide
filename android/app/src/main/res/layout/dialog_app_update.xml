@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/update_dialog_root"
+    android:layout_width="640dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/update_badge_background"
+    android:backgroundTint="#171A21"
+    android:padding="24dp">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:id="@+id/update_dialog_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Update beschikbaar — versie 0.6.0" />
+
+    <!-- Version Badges Container -->
+    <LinearLayout
+        android:id="@+id/update_version_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_dialog_title">
+
+        <TextView
+            android:id="@+id/update_current_version_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/update_badge_background"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            tools:text="Huidig: v0.5.0" />
+
+        <TextView
+            android:id="@+id/update_new_version_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/update_badge_background"
+            android:backgroundTint="#1E3A8A"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="#93C5FD"
+            android:textSize="12sp"
+            tools:text="Nieuw: v0.6.0" />
+
+        <TextView
+            android:id="@+id/update_size_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/update_badge_background"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            tools:text="18.5 MB" />
+    </LinearLayout>
+
+    <!-- Release Notes Header -->
+    <TextView
+        android:id="@+id/update_release_notes_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/update_release_notes_label"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_version_container" />
+
+    <!-- Release Notes Scroll Container -->
+    <ScrollView
+        android:id="@+id/update_release_notes_scroll"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="6dp"
+        android:background="#0F1318"
+        android:fadeScrollbars="false"
+        android:focusable="false"
+        android:padding="12dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_release_notes_label">
+
+        <TextView
+            android:id="@+id/update_release_notes_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            tools:text="• Nieuw: Zenders handmatig sorteren\n• Verbeterd: Snellere laadtijden van de EPG\n• Opgelost: Focusprobleem bij terugkeren uit detailvenster" />
+    </ScrollView>
+
+    <!-- Status Message (for errors, permissions, checking, up-to-date) -->
+    <TextView
+        android:id="@+id/update_status_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_release_notes_scroll"
+        tools:text="Om NexusTVGuide bij te werken, heeft de app toestemming nodig om onbekende apps te installeren."
+        tools:visibility="visible" />
+
+    <!-- Progress Bar (determinate or indeterminate) -->
+    <ProgressBar
+        android:id="@+id/update_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="14dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/update_button_background"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_status_message"
+        tools:progress="45"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/update_spinner"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="14dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_status_message"
+        tools:visibility="gone" />
+
+    <!-- Progress Metrics Text (e.g. "12.4 MB / 18.5 MB (67%)") -->
+    <TextView
+        android:id="@+id/update_progress_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="end"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_progress_bar"
+        tools:text="12.4 MB / 18.5 MB (67%)"
+        tools:visibility="visible" />
+
+    <!-- Action Buttons Container -->
+    <LinearLayout
+        android:id="@+id/update_buttons_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_progress_text">
+
+        <Button
+            android:id="@+id/update_btn_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/update_button_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minWidth="120dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/update_btn_later"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/update_btn_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@drawable/update_button_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minWidth="140dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/update_btn_download_install"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

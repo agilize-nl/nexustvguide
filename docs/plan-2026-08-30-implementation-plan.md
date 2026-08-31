@@ -1,10 +1,10 @@
-# Implementation Plan - Review en Verbetering van docs/PLAN.md
+# Implementation Plan - Review en Verbetering van docs/plan-2026-08-30-bouwplan.md
 
-Review van [`docs/PLAN.md`](file:///home/djawiz/Data/Development/_Apps/NexusTVGuide/docs/PLAN.md) en het aanbrengen van gerichte verbeteringen en preciseringen zonder regressies of wijzigingen in de vastgestelde architectuurbesluiten.
+Review van [`docs/plan-2026-08-30-bouwplan.md`](file:///home/djawiz/Data/Development/_Apps/NexusTVGuide/docs/plan-2026-08-30-bouwplan.md) en het aanbrengen van gerichte verbeteringen en preciseringen zonder regressies of wijzigingen in de vastgestelde architectuurbesluiten.
 
 ## Analyse & Bevindingen
 
-Na een grondige inspectie van `docs/PLAN.md`, de live `json.tvgids.nl/v4`-API en de broncode van `egeniq/android-tv-program-guide` zijn de volgende verbeterpunten en aanscherpingen geïdentificeerd:
+Na een grondige inspectie van `docs/plan-2026-08-30-bouwplan.md`, de live `json.tvgids.nl/v4`-API en de broncode van `egeniq/android-tv-program-guide` zijn de volgende verbeterpunten en aanscherpingen geïdentificeerd:
 
 1. **Upstream Response Envelope & Structuur**:
    - `json.tvgids.nl/v4/programs/?day=X&channels=Y` retourneert een object (dictionary) onder `data` met zender-id's als keys (`data: { [chId: string]: { ch_id: string, prog: RawProgramme[] } }`), terwijl calls zonder `channels`-parameter een array retourneren. Dit moet expliciet in het schema en mapper-contract worden vastgelegd om parsingfouten te voorkomen.
@@ -38,7 +38,7 @@ Na een grondige inspectie van `docs/PLAN.md`, de live `json.tvgids.nl/v4`-API en
 
 ### Documentatie
 
-#### [MODIFY] [PLAN.md](file:///home/djawiz/Data/Development/_Apps/NexusTVGuide/docs/PLAN.md)
+#### [MODIFY] [plan-2026-08-30-bouwplan.md](file:///home/djawiz/Data/Development/_Apps/NexusTVGuide/docs/plan-2026-08-30-bouwplan.md)
 - **Fase 0 (Verificatie)**: Upstream payload dictionary vs array formaat preciseren.
 - **Fase 1 (Backend)**:
   - Schema & mapper: validatieregels voor `RawProgramme`, timestamp checks, `db_id` validatie, HTML-entity decoding en Kijkwijzer `ageRating` normalisatie.
@@ -54,6 +54,6 @@ Na een grondige inspectie van `docs/PLAN.md`, de live `json.tvgids.nl/v4`-API en
 ## Verification Plan
 
 ### Manual Verification
-- Controleren of alle hyperlinks in `docs/PLAN.md` correct zijn.
+- Controleren of alle hyperlinks in `docs/plan-2026-08-30-bouwplan.md` correct zijn.
 - Valideren dat de voorgestelde TypeScript en Kotlin codevoorbeelden syntactisch correct zijn en aansluiten op de echte bibliotheken (`egeniq/android-tv-program-guide`, TC39 Temporal, Retrofit/OkHttp).
-- Verifiëren dat er geen tegenstrijdigheden zijn tussen `background.md`, `README.md` en `docs/PLAN.md`.
+- Verifiëren dat er geen tegenstrijdigheden zijn tussen `doc-2026-08-30-achtergrond.md`, `README.md` en `docs/plan-2026-08-30-bouwplan.md`.

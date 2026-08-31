@@ -3,8 +3,8 @@
 Een reclamevrije, remote-first tv-gids voor Android TV (NVIDIA Shield), die doorlinkt
 naar NLZiet voor de daadwerkelijke playback.
 
-> **Actueel bouwplan:** [`docs/PLAN.md`](docs/PLAN.md) — de normatieve bron voor scope,
-> fasering, contracten en acceptatiecriteria. [`background.md`](background.md) bevat alleen
+> **Actueel bouwplan:** [`docs/plan-2026-08-30-bouwplan.md`](docs/plan-2026-08-30-bouwplan.md) — de normatieve bron voor scope,
+> fasering, contracten en acceptatiecriteria. [`docs/doc-2026-08-30-achtergrond.md`](docs/doc-2026-08-30-achtergrond.md) bevat alleen
 > de oorspronkelijke, deels achterhaalde verkenning.
 
 ## Waarom
@@ -116,7 +116,7 @@ niet optioneel is: één adapter aanpassen als het breekt, in plaats van de hele
 
 #### 2. iptv-org/epg — FALLBACK
 
-**Correctie op de aanname in `background.md`: de site heet `tvgids.nl`, niet
+**Correctie op de aanname in `docs/doc-2026-08-30-achtergrond.md`: de site heet `tvgids.nl`, niet
 `tvgids.tv`** — daarom geeft de daar genoemde guide-URL
 `guides/nl/tvgids.tv.epg.xml` een 404.
 
@@ -132,7 +132,7 @@ en andere NL-bronnen in de repo (`horizon.tv`, `epgshare01.online`, `artonline.t
 #### 3. tvgrabbers/tvgrabpyAPI — AFGEVALLEN
 
 Laatste commit december 2022, 28 stars. De omschrijving "actief onderhouden" in
-`background.md` klopt niet meer. Python-dependency in een verder Kotlin/TS-stack, voor
+`docs/doc-2026-08-30-achtergrond.md` klopt niet meer. Python-dependency in een verder Kotlin/TS-stack, voor
 detail (seizoen/aflevering) dat de JSON-API grotendeels ook levert.
 
 Blijft waardevol als **documentatie**: `tvgrabbers/sourcematching` bevat leesbare
@@ -180,8 +180,8 @@ bijpassend catalogusitem openen, maar is nog geen garantie voor exact dezelfde a
 live-uitzending. De strikte NLZIET-EPG-koppeling levert daarvoor het exacte
 `contentItemId` plus de bijbehorende `assetId`; de TV-route gebruikt het content-ID en de
 asset-ID blijft onderdeel van de bewijsbare backendmatch. De uitwerking staat in
-[`docs/nlziet-epg-mapping-plan.md`](docs/nlziet-epg-mapping-plan.md). De volledige technische
-status en de Shield-acceptatietest staan in [`docs/PLAN.md`](docs/PLAN.md).
+[`docs/plan-2026-08-30-nlziet-epg-mapping.md`](docs/plan-2026-08-30-nlziet-epg-mapping.md). De volledige technische
+status en de Shield-acceptatietest staan in [`docs/plan-2026-08-30-bouwplan.md`](docs/plan-2026-08-30-bouwplan.md).
 
 ## Scope
 
@@ -190,4 +190,12 @@ XMLTV-output, en de egeniq-gebaseerde Android TV-app met een gewone NLZiet-launc
 Zenderdeeplinks zijn een latere verbetering en blokkeren de eerste bruikbare versie niet.
 
 De exacte afbakening en definition of done per fase staan in
-[`docs/PLAN.md`](docs/PLAN.md#definition-of-done-per-fase).
+[`docs/plan-2026-08-30-bouwplan.md`](docs/plan-2026-08-30-bouwplan.md#definition-of-done-per-fase).
+
+## In-App Updates & Releases
+
+NexusTVGuide beschikt over een veilig, D-pad bedienbaar in-app updatesysteem volgens [`docs/plan-2026-08-31-in-app-updates.md`](docs/plan-2026-08-31-in-app-updates.md):
+
+- **Backend Distributie**: `tvguide-api` serveert release-metadata via `GET /api/v1/app/version` en APK-downloads via `GET /api/v1/app/download/:filename` met Zod-validatie, integriteitscontroles (SHA-256) en path-traversal beveiliging.
+- **Android Updater**: Single-flight downloader met 24-uurs passieve throttle, bestandsvalidatie (grootte en SHA-256), APK-preflight (package identity, monotone version codes en signing certificaten) en integratie via `PackageInstaller.Session`.
+- **Publicatietooling**: `tools/publish-release.mjs` automatiseert de controle van `keystore.properties`, `assembleRelease`, `apksigner verify`, monotone versie-verificatie en atomaire publicatie van `version.json`.

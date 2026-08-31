@@ -3,6 +3,7 @@ import { buildApp } from './app.js';
 const PORT = parseInt(process.env.PORT || '3000', 10);
 const HOST = process.env.HOST || '0.0.0.0';
 const DATA_DIR = process.env.DATA_DIR || path.resolve(process.cwd(), 'data/snapshots');
+const RELEASES_DIR = process.env.APP_RELEASES_DIR || path.resolve(process.cwd(), 'data/releases');
 const CHANNELS_CONFIG = process.env.CHANNELS_CONFIG || path.resolve(process.cwd(), 'config/channels.json');
 const NLZIET_CACHE_FILE_PATH = process.env.NLZIET_CACHE_FILE_PATH;
 const NLZIET_SEED_FILE_PATH = process.env.NLZIET_SEED_FILE_PATH;
@@ -12,6 +13,7 @@ async function main() {
     console.log('Starting NexusTVGuide backend (tvguide-api)...');
     const { app, store, engine } = buildApp({
         dataDir: DATA_DIR,
+        releasesDir: RELEASES_DIR,
         channelsConfigPath: CHANNELS_CONFIG,
         nlzietCacheFilePath: NLZIET_CACHE_FILE_PATH,
         nlzietSeedFilePath: NLZIET_SEED_FILE_PATH,

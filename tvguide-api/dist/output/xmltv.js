@@ -22,9 +22,11 @@ export function registerXmltvRoutes(app, store) {
                 days = parsedDays;
             }
         }
-        const today = getTodayAmsterdam();
+        const startDateStr = request.query.date && /^\d{4}-\d{2}-\d{2}$/.test(request.query.date)
+            ? request.query.date
+            : getTodayAmsterdam();
         const dates = [];
-        let current = Temporal.PlainDate.from(today);
+        let current = Temporal.PlainDate.from(startDateStr);
         for (let i = 0; i < days; i++) {
             dates.push(current.toString());
             current = current.add({ days: 1 });

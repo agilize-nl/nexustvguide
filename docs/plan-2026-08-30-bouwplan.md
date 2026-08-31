@@ -1,7 +1,7 @@
 # Bouwplan NexusTVGuide
 
 Werkdocument met vastgestelde besluiten, concrete implementatiestappen en expliciete
-acceptatiecriteria. Bron van de achtergrondinformatie: [`../background.md`](../background.md).
+acceptatiecriteria. Bron van de achtergrondinformatie: [`doc-2026-08-30-achtergrond.md`](doc-2026-08-30-achtergrond.md).
 De aantallen en het gedrag van de tvgids.nl-API zijn voor het laatst gecontroleerd rond de
 lokale datumovergang van **2026-08-29 naar 2026-08-30**.
 
@@ -97,7 +97,7 @@ genoeg om gisteren volledig samen te stellen en ruim genoeg voor de zeven toekom
 MVP-dagen.
 
 **egeniq is Leanback/Views, geen Compose.** De library gebruikt `androidx.leanback` +
-ConstraintLayout met XML-layouts. De oorspronkelijke Compose-aanname uit `background.md`
+ConstraintLayout met XML-layouts. De oorspronkelijke Compose-aanname uit `doc-2026-08-30-achtergrond.md`
 vervalt daarmee voor het gidsscherm; besluit 1 gaat voor.
 
 **egeniq levert geen package.** Uit hun README: *"we do not provide the library as a
@@ -105,7 +105,7 @@ package. You will probably have to fork this project."* Dus vendoren als eigen m
 Toolchain is gezonder dan de commitdatum (aug 2024) doet vermoeden: AGP 8.5.2,
 Kotlin 2.0.10, appcompat 1.7.0, leanback 1.0.0, Glide 4.16.0.
 
-### Correcties op `background.md`
+### Correcties op `doc-2026-08-30-achtergrond.md`
 
 - **iptv-org heet `tvgids.nl`, niet `tvgids.tv`.** Daarom 404't de daar genoemde
   `guides/nl/tvgids.tv.epg.xml`.
@@ -701,7 +701,7 @@ private fun launchNlziet() {
 ## Fase 3 — NLZiet-koppeling & Verrijkingslaag (EPG-mapping geïmplementeerd, Shield-validatie open)
 
 > **Uitgewerkt vervolgplan:**
-> [`nlziet-epg-mapping-plan.md`](nlziet-epg-mapping-plan.md). Dit beschrijft het
+> [`plan-2026-08-30-nlziet-epg-mapping.md`](plan-2026-08-30-nlziet-epg-mapping.md). Dit beschrijft het
 > exacte EPG-datacontract, de strikte zender-/tijd-/titelmatching, de Android
 > replay- en live-routes, de veilige migratie van `nlzietId` en de Shield-acceptatietest.
 
@@ -799,6 +799,7 @@ De architectuur is voorbereid op uitwijk:
 7. **Android ViewModel & Grid:** Retrofit client, offline disk-cache, UI data-binding via `setData()`, launch-intent bij klik.
 8. **Testen op de Shield:** D-pad navigatie, netwerkfoutafhandeling en zomertijdovergangen valideren.
 9. **Fase 3:** NLZiet package dumpen via ADB en deeplinks implementeren.
+10. **Fase 4 (In-App Updates & Releases):** In-app update API (`tvguide-api`), package installer staging (`PackageInstaller.Session`), D-pad dialoog en release-publicatietooling conform [`docs/plan-2026-08-31-in-app-updates.md`](plan-2026-08-31-in-app-updates.md).
 
 ---
 

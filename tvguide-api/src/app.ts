@@ -7,6 +7,7 @@ import { RefreshEngine } from './store/refresh.js';
 import { registerRestRoutes } from './output/rest.js';
 import { registerXmltvRoutes } from './output/xmltv.js';
 import { registerHealthRoutes } from './output/health.js';
+import { registerAppUpdateRoutes } from './output/app-update.js';
 import { NlzietCatalogStore } from './enrichment/nlziet/catalog.js';
 import { NlzietMatcher } from './enrichment/nlziet/matcher.js';
 import { NlzietEpgMatcher } from './enrichment/nlziet/epg-matcher.js';
@@ -14,6 +15,7 @@ import { NlzietEpgClient } from './enrichment/nlziet/epg-client.js';
 
 export interface AppOptions {
   dataDir?: string;
+  releasesDir?: string;
   channelsConfigPath?: string;
   tvgidsBaseUrl?: string;
   nlzietEpgBaseUrl?: string;
@@ -46,6 +48,7 @@ export function buildApp(options: AppOptions = {}): {
   }
 
   const dataDir = options.dataDir || path.resolve(process.cwd(), 'data/snapshots');
+  const releasesDir = options.releasesDir || path.resolve(process.cwd(), 'data/releases');
   const channelsConfigPath = options.channelsConfigPath || path.resolve(process.cwd(), 'config/channels.json');
 
   const catalogStore = new NlzietCatalogStore({
@@ -84,6 +87,7 @@ export function buildApp(options: AppOptions = {}): {
   registerHealthRoutes(app, engine);
   registerRestRoutes(app, store, engine);
   registerXmltvRoutes(app, store);
+  registerAppUpdateRoutes(app, { releasesDir });
 
   return { app, store, engine, client, matcher, epgMatcher, epgClient };
 }

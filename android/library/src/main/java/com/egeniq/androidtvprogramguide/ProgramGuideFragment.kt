@@ -108,6 +108,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     protected open val LIVE_DATETIME_FORMATTER: DateTimeFormatter
         get() = DateTimeFormatter.ofPattern("EEE d MMM yyyy • HH:mm").withLocale(DISPLAY_LOCALE)
     protected open val DISPLAY_CURRENT_TIME_INDICATOR = true
+    protected open val DISPLAY_MENU_BUTTON = false
 
     override val DISPLAY_SHOW_PROGRESS = true
 
@@ -225,6 +226,14 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         // Override in your implementation
     }
 
+    /**
+     * Called when the user clicks the menu button in the top bar.
+     * The menu button is hidden by default. Enable it by overriding DISPLAY_MENU_BUTTON = true.
+     */
+    protected open fun onMenuButtonClicked(anchor: View) {
+        // Override in your implementation
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -304,6 +313,15 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * Also you can change the display values by overriding the string resources.
      */
     private fun setupFilters(view: View) {
+        val menuButton = view.findViewById<View>(R.id.programguide_menu_button)
+        if (menuButton != null) {
+            if (DISPLAY_MENU_BUTTON) {
+                menuButton.visibility = View.VISIBLE
+                menuButton.setOnClickListener { onMenuButtonClicked(it) }
+            } else {
+                menuButton.visibility = View.GONE
+            }
+        }
         // Day filter
         val dayFilterOptions = getDayFilterOptions()
         val matchingIndex = dayFilterOptions.indexOfFirst {

@@ -259,14 +259,33 @@
         tools:alpha="1"
         tools:listitem="@layout/programguide_item_time" />
 
+    <ImageButton
+        android:id="@+id/programguide_menu_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/programguide_page_left_padding"
+        android:background="@drawable/programguide_button_background"
+        android:contentDescription="@string/programguide_content_description_menu"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/programguide_ic_menu"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/programguide_top_margin"
+        tools:visibility="visible" />
+
     <include
         android:id="@+id/programguide_day_filter"
         layout="@layout/programguide_item_filter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/programguide_page_left_padding"
+        android:layout_marginStart="@dimen/programguide_filter_spacing"
+        app:layout_goneMarginStart="@dimen/programguide_page_left_padding"
         app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/programguide_menu_button"
         app:layout_constraintTop_toTopOf="@id/programguide_top_margin" />
 
     <include

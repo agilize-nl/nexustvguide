@@ -39,3 +39,8 @@ Thumbs.db
 android/keystore.properties
 *.jks
 *.keystore
+
+# --- Releases & In-app updates ---
+tvguide-api/data/releases/*
+!tvguide-api/data/releases/.gitkeep
+*.part

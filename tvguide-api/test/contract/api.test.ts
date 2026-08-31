@@ -216,7 +216,7 @@ describe('API Contract Tests', () => {
     };
     await store.saveSnapshot(snapshot);
 
-    const res = await app.inject({ method: 'GET', url: '/xmltv.xml?days=1' });
+    const res = await app.inject({ method: 'GET', url: '/xmltv.xml?date=2026-08-30&days=1' });
     expect(res.statusCode).toBe(200);
     expect(res.headers['content-type']).toBe('application/xml; charset=utf-8');
 

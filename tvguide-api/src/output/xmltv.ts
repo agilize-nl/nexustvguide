@@ -5,6 +5,7 @@ import { getTodayAmsterdam, formatXmltvTimestamp } from '../store/time.js';
 import type { Programme } from '../domain/programme.js';
 
 interface XmltvQuery {
+  date?: string;
   days?: string;
 }
 
@@ -31,9 +32,12 @@ export function registerXmltvRoutes(app: FastifyInstance, store: SnapshotStore):
       }
     }
 
-    const today = getTodayAmsterdam();
+    const startDateStr = request.query.date && /^\d{4}-\d{2}-\d{2}$/.test(request.query.date)
+      ? request.query.date
+      : getTodayAmsterdam();
+
     const dates: string[] = [];
-    let current = Temporal.PlainDate.from(today);
+    let current = Temporal.PlainDate.from(startDateStr);
     for (let i = 0; i < days; i++) {
       dates.push(current.toString());
       current = current.add({ days: 1 });
