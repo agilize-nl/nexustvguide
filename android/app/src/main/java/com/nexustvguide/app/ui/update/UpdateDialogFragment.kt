@@ -3,6 +3,7 @@ package com.nexustvguide.app.ui.update
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -52,7 +53,6 @@ class UpdateDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         return dialog
     }
 
@@ -62,6 +62,18 @@ class UpdateDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.dialog_app_update, container, false)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.let { window ->
+            val displayMetrics = resources.displayMetrics
+            val widthPx = (580 * displayMetrics.density).toInt()
+            window.setLayout(widthPx, ViewGroup.LayoutParams.WRAP_CONTENT)
+            window.setGravity(Gravity.CENTER)
+            window.setBackgroundDrawableResource(android.R.color.transparent)
+            window.setDimAmount(0.65f)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -148,7 +160,6 @@ class UpdateDialogFragment : DialogFragment() {
                 releaseNotesLabel.visibility = View.VISIBLE
                 releaseNotesScroll.visibility = View.VISIBLE
                 releaseNotesText.text = meta.releaseNotes ?: getString(R.string.update_no_release_notes)
-
                 statusMessageText.visibility = View.GONE
                 progressBar.visibility = View.GONE
                 spinner.visibility = View.GONE

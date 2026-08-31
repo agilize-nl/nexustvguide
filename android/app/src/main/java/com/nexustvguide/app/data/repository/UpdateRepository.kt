@@ -152,7 +152,10 @@ class UpdateRepository(
             }
         } catch (e: HttpException) {
             if (e.code() == 503) {
-                UpdateCheckResult.Error("Geen actieve release beschikbaar (503)", isContractError = true)
+                if (!isManual) {
+                    sharedPreferences.edit().putLong(KEY_LAST_PASSIVE_CHECK_TIME, now).apply()
+                }
+                UpdateCheckResult.UpToDate(BuildConfig.VERSION_CODE.toLong(), BuildConfig.VERSION_NAME)
             } else {
                 UpdateCheckResult.Error("HTTP fout: ${e.code()} ${e.message()}", isContractError = false)
             }
