@@ -197,5 +197,16 @@ De exacte afbakening en definition of done per fase staan in
 NexusTVGuide beschikt over een veilig, D-pad bedienbaar in-app updatesysteem volgens [`docs/plan-2026-08-31-in-app-updates.md`](docs/plan-2026-08-31-in-app-updates.md):
 
 - **Backend Distributie**: `tvguide-api` serveert release-metadata via `GET /api/v1/app/version` en APK-downloads via `GET /api/v1/app/download/:filename` met Zod-validatie, integriteitscontroles (SHA-256) en path-traversal beveiliging.
+- **Serverlocatie (.171)**: `/opt/nexustvguide-api/current/tvguide-api/data/releases/` (bevat `version.json` en `nexus-tv-guide-<versie>.apk`).
 - **Android Updater**: Single-flight downloader met 24-uurs passieve throttle, bestandsvalidatie (grootte en SHA-256), APK-preflight (package identity, monotone version codes en signing certificaten) en integratie via `PackageInstaller.Session`.
-- **Publicatietooling**: `tools/publish-release.mjs` automatiseert de controle van `keystore.properties`, `assembleRelease`, `apksigner verify`, monotone versie-verificatie en atomaire publicatie van `version.json`.
+- **Geautomatiseerde Publicatietooling**: `tools/publish-release.mjs` automatiseert de keystore-controle, `assembleRelease`, `apksigner verify`, SHA-256 berekening, atomaire publicatie en directe SCP-upload naar de server op .171.
+
+### Nieuwe Release Bouwen en Publiceren
+
+```bash
+# 1. Bouwt productie-APK, verifieert handtekening en uploadt direct naar server .171:
+node tools/publish-release.mjs --notes "• Wijzigingen in deze versie"
+
+# 2. Optioneel: alleen lokaal bouwen zonder upload naar server
+node tools/publish-release.mjs --notes "• Wijzigingen in deze versie" --no-deploy
+```

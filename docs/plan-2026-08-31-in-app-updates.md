@@ -721,7 +721,47 @@ niet vervangen.
 
 ---
 
-## 14. Definition of Done
+## 14. Server-uitrol en Beheer (.171)
+
+### 14.1 Fysieke serverlocatie en runtime-omgeving
+De productiebackend draait als systemd-service `tvguide-api.service` in een LXC-container op IP **`192.168.2.171`** (via Tailscale: `root@100.88.166.57`).
+
+- **Releases-directory op server:**
+  ```text
+  /opt/nexustvguide-api/current/tvguide-api/data/releases/
+  ```
+- **Bestanden per actieve release:**
+  - `version.json`: Atomaire metadata (`schemaVersion: 1`, `applicationId: com.nexustvguide.app`, `versionCode`, `versionName`, `releaseNotes`, `sha256`, `fileSizeBytes`, `publishedAt`).
+  - `nexus-tv-guide-<versionName>.apk`: Het met de productie-keystore ondertekende binary APK-bestand.
+
+### 14.2 HTTP-endpoints voor de Android-applicatie
+De app (Android TV / NVIDIA Shield / Emulator) benadert de updatebron via poort 3000:
+- **Versiecontrole (manifest):**
+  `GET http://192.168.2.171:3000/api/v1/app/version`
+- **APK Download:**
+  `GET http://192.168.2.171:3000/api/v1/app/download/nexus-tv-guide-<versionName>.apk`
+
+### 14.3 Geautomatiseerde release-publicatie en server-upload
+De tooling in [`tools/publish-release.mjs`](../tools/publish-release.mjs) automatiseert de volledige pipeline:
+1. Controleert `keystore.properties` en de keystore `~/.android/keystores/nexustvguide-release.jks`.
+2. Bouwt de productie-APK via Gradle `assembleRelease`.
+3. Verifieert handtekening en manifestgegevens via `apksigner` en `aapt`.
+4. Berekent SHA-256 en bestandsgrootte.
+5. Publiceert lokaal atomair naar `tvguide-api/data/releases/version.json` en de APK.
+6. **Uploadt automatisch via SCP naar de productieserver op .171** (`root@100.88.166.57:/opt/nexustvguide-api/current/tvguide-api/data/releases/`) en past eigendomsrechten aan (`chown -R tvguide:tvguide`).
+
+**Gebruik:**
+```bash
+# Volledige release bouwen, lokaal publiceren en direct naar .171 uploaden:
+node tools/publish-release.mjs --notes "• Omschrijving van de nieuwe release"
+
+# Optioneel: alleen lokaal bouwen zonder remote deployment
+node tools/publish-release.mjs --notes "• Omschrijving" --no-deploy
+```
+
+---
+
+## 15. Definition of Done
 
 - [x] Release-publicatie weigert unsigned, verkeerd ondertekende of niet-oplopende APK's.
 - [x] Publicatie is atomair en het backendcontract heeft contracttests voor succes en falen.
@@ -739,7 +779,7 @@ niet vervangen.
 
 ---
 
-## 15. Primaire Android-referenties
+## 16. Primaire Android-referenties
 
 - [How app updates work](https://developer.android.com/google/play/app-updates) — voorwaarden voor application-ID, version code en signing identity.
 - [PackageInstaller](https://developer.android.com/reference/android/content/pm/PackageInstaller) en
