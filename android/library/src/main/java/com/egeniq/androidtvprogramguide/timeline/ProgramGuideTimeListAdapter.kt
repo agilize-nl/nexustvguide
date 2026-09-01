@@ -41,21 +41,12 @@ class ProgramGuideTimeListAdapter(
 
     companion object {
         private val TIME_UNIT_MS = TimeUnit.MINUTES.toMillis(30)
-        private var rowHeaderOverlapping: Int = 0
         private val TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm")
     }
 
     // Nearest half hour at or before the start time.
     private var startUtcMs: Long = 0
     private var timelineAdjustmentPixels = 0
-
-    init {
-        if (rowHeaderOverlapping == 0) {
-            rowHeaderOverlapping =
-                abs(res.getDimensionPixelOffset(R.dimen.programguide_time_row_negative_margin))
-        }
-
-    }
 
     fun update(startTimeMs: Long, timelineAdjustmentPx: Int) {
         startUtcMs = startTimeMs
@@ -84,8 +75,8 @@ class ProgramGuideTimeListAdapter(
         val lp = itemView.layoutParams as RecyclerView.LayoutParams
         lp.width = ProgramGuideUtil.convertMillisToPixel(startTime, endTime)
         if (position == 0) {
-            // Adjust width for the first entry to make the item starts from the fading edge.
-            lp.marginStart = rowHeaderOverlapping - lp.width / 2 - timelineAdjustmentPixels
+            // Adjust margin for the first entry to center the time labels over their exact boundaries.
+            lp.marginStart = - lp.width / 2 - timelineAdjustmentPixels
         } else {
             lp.marginStart = 0
         }

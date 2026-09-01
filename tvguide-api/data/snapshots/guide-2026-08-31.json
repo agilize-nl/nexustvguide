@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-30T22:00:00Z",
   "to": "2026-08-31T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T15:05:10.760Z",
-  "publishedAt": "2026-08-30T15:05:10.760Z",
+  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
+  "publishedAt": "2026-09-01T10:08:55.691Z",
   "channels": [
     {
       "id": "npo1",
@@ -261,14 +261,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "6bhIgSG85E2s5JseMnRsTg",
-        "assetId": "765E693FCD4AADAB483AE3AE010A25D4",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784592",
@@ -284,14 +277,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "qgNBXX29PkiVAmGq4OvYHA",
-        "assetId": "F2AC61FBC7834B3D7AD253B8C143FEAC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784502",
@@ -307,14 +293,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "SE8sx9vC9EiUtj5QaKa-6w",
-        "assetId": "4F5D99778E5BBBC4CD9EFAFC74A78A81",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784612",
@@ -330,14 +309,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-4rn6c4JdU-PMABCM3DlPQ",
-        "assetId": "850B9288E59B343E9D4E42BE1FF9C486",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784602",
@@ -353,14 +325,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "mbwAm6K-1EitHHI7i9xEnw",
-        "assetId": "26A3FACE5D7EAACC066C6D8C497BE9F6",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218849862",
@@ -470,7 +435,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "e5gHN2jfJ0e5pRmIZrOyCw",
+        "assetId": "C1AB2900856C394542FDEE8A3145BCE3",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218850162",
@@ -486,7 +458,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "e5gHN2jfJ0e5pRmIZrOyCw",
+        "assetId": "B87813AB2B50BBCB1AB426E7239CE8DC",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218849972",
@@ -1192,14 +1171,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "lFgItwIscU6UNQzvohG8Og",
-        "assetId": "679961DA0D9E3208476B42D0D847D1AC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218850312",
@@ -1346,7 +1318,7 @@
       "start": "2026-08-31T15:10:00.000Z",
       "end": "2026-08-31T15:56:00.000Z",
       "description": "Martine van Os en Sybrand Niessen ontvangen gasten. Ze bespreken een mix van nieuws, kunst, cultuur en entertainment.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/tijd-voor-max-765341882.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/tijd-voor-max-766663372.jpg",
       "genre": "Talkshow",
       "isLive": false,
       "isRerun": false,
@@ -1592,14 +1564,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TAcPaBrWiEamhQ59d0A9cw",
-        "assetId": "8EF2EFD9D29D6129008082356B92DDCC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218849752",
@@ -1620,7 +1585,7 @@
         "contentItemId": "Dq0vZf19c0-WOTa49bQspQ",
         "assetId": "31EB2E8B2951C6BC99E1347BF3E53644",
         "channelId": "npo1",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -1762,7 +1727,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LCphGQcSqEKXF-h9iiMlqw",
+        "assetId": "8B0D382EBAAEC2BB1945F6499042695A",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219197552",
@@ -1778,7 +1750,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LCphGQcSqEKXF-h9iiMlqw",
+        "assetId": "8B0D382EBAAEC2BB1945F6499042695A",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219197542",
@@ -1794,7 +1773,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LCphGQcSqEKXF-h9iiMlqw",
+        "assetId": "F29264E81853BCF8390918CEFF82554A",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219197532",
@@ -1810,7 +1796,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LCphGQcSqEKXF-h9iiMlqw",
+        "assetId": "F29264E81853BCF8390918CEFF82554A",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218953772",
@@ -1849,7 +1842,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "djtnO2bk20ClDyvZXlDL5g",
+        "assetId": "70B2A2EB9701CEB6EBA87E249BC921E9",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219197592",
@@ -2242,7 +2242,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "KIpuepAza0WjaKo0IZCZzA",
+        "assetId": "F731E36735C322E11178C4A44872335B",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219197502",
@@ -2380,7 +2387,7 @@
         "contentItemId": "rajEPKHSD0yy9vs-dBT2Rg",
         "assetId": "F2CE53EDB1F0432F7F7B865195112789",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2534,7 +2541,7 @@
         "contentItemId": "GyA0uEbOrEqRnH0Fv89dYw",
         "assetId": "2BB6E4BEB95B1B3B68B3624852E348DE",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2722,7 +2729,7 @@
         "contentItemId": "mb4hekle5kur0kJd-7d5Rw",
         "assetId": "4ABB4896E8EF0223973C4A0155FD9099",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2768,7 +2775,7 @@
         "contentItemId": "kQUCoRodkUSZyVrrHQq5Sw",
         "assetId": "8A1F4DD2B76B2C1A1D11E7CEFE152F63",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2791,7 +2798,7 @@
         "contentItemId": "Egxcu7WlyEqMqGjdDRdFdg",
         "assetId": "B97A7F5307FF242F183D7DCC19577079",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3039,7 +3046,7 @@
         "contentItemId": "XjJ3sRru1U6EQRI2C66khQ",
         "assetId": "30A68D61BCE5564A425502D40D5513AC",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3117,7 +3124,7 @@
         "contentItemId": "qJVNrWRrMkCDPVK2UZITYA",
         "assetId": "04494ADEA90DC5D0B9D5DFEB669205BF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3140,7 +3147,7 @@
         "contentItemId": "uwB9Q77lQ0uzVSpxg4Sylw",
         "assetId": "F9BD561B1C3D9E82EB345455D9BBA328",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3163,7 +3170,7 @@
         "contentItemId": "j8KGT1sSpkqX52aY5N4q5A",
         "assetId": "959C8D77952CC62066389B69AFB9D4A6",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3209,7 +3216,7 @@
         "contentItemId": "pho9YGmtCk2EQPlwBEjvxQ",
         "assetId": "8162ED6E82CA90E289C13793558BCD4E",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3232,7 +3239,7 @@
         "contentItemId": "bqCc8vgTpE2yP5MUr5U2dg",
         "assetId": "1A0A51AE0863162D117CB2DDBC1FBB5A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3347,7 +3354,7 @@
         "contentItemId": "_hKO_s8LGE-xodjQcY_h1Q",
         "assetId": "92F06A961A223295154C81826FBEC371",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3416,7 +3423,7 @@
         "contentItemId": "CKD23wfU7EuRBbv8WxcRNw",
         "assetId": "0F3F8AF1D9B63C37C3F993552E1A65AF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3439,7 +3446,7 @@
         "contentItemId": "QUrIyTdiXECoR_DntXwyNg",
         "assetId": "28B82CAFEA3E86A1AB302AE9868476BF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3485,7 +3492,7 @@
         "contentItemId": "QcXj73tzWUGXtjoK4ueBgQ",
         "assetId": "EE53A4E36F4EBC21F14768D05D5E3C9F",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3531,7 +3538,7 @@
         "contentItemId": "lP6sNEFuoEeDppRXVzNqmw",
         "assetId": "734D73C65B54C207C40D259812193874",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3554,7 +3561,7 @@
         "contentItemId": "92FfFd6Ggk6BDPho6O1Ozw",
         "assetId": "DDE1EBAB83AF50DA578B6EC2A0C45BE7",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3623,7 +3630,7 @@
         "contentItemId": "wlwexUNVzEWyGhSp1AONcg",
         "assetId": "63E4232A8F6FAC8DF326ECB142162490",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3692,7 +3699,7 @@
         "contentItemId": "W-e81dMlqkyt8aNGJgeQmw",
         "assetId": "F6F8EA7C1565F68812F0400495FCF74F",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3715,7 +3722,7 @@
         "contentItemId": "QNc2ZMzfJEeP_rtngR9lMg",
         "assetId": "C1AA5C3AED453CD1FC0D10BC74F9EF50",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3738,7 +3745,7 @@
         "contentItemId": "EG5GVnd59kCFDBbW_AIMcw",
         "assetId": "5ECDDAD4479E71D464C4A3A4872FD844",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3761,7 +3768,7 @@
         "contentItemId": "BI-NvyFcsEGsvSS0PR4pSg",
         "assetId": "81D64115235F52A106FD0BBC1E488F32",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3784,7 +3791,7 @@
         "contentItemId": "7lf2cUTWrEO_abZw_Dco0w",
         "assetId": "6F709ACF5EBDEBD6C2AC4D8830B6A134",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3839,7 +3846,7 @@
         "contentItemId": "3wc-JqUUbkOhWe77D_EmtA",
         "assetId": "3C8E0AC715582DFBBB6D92A976EFE71B",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3979,7 +3986,7 @@
         "contentItemId": "TfU8ZmsUF06pWbU6gUIqVg",
         "assetId": "67179E3A3F045552F2D62D6919148266",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4002,7 +4009,7 @@
         "contentItemId": "JkBwDVRTbkexp6_zni2Qbw",
         "assetId": "285859B0003F5266F1B118D153399F9D",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4025,7 +4032,7 @@
         "contentItemId": "UglNS_WvqUyWPJgPtbEerw",
         "assetId": "26036386B45880455A772F94C6910358",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4048,7 +4055,7 @@
         "contentItemId": "DI79D9thHkSGXWWfbbD2eQ",
         "assetId": "41EA74C324C53367AADBC86492DF4B0B",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4071,7 +4078,7 @@
         "contentItemId": "pQRNIb1EZEm5dI5TmquHyQ",
         "assetId": "BB3A39323BF5E8213157E111760B9E46",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4094,7 +4101,7 @@
         "contentItemId": "10V0wOR5aki2QB42y29A2Q",
         "assetId": "5E23BF307C9FF4730515FDE0F963158D",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4163,7 +4170,7 @@
         "contentItemId": "3ozis_WXP0Ssyw1l5Jjbsw",
         "assetId": "7C40D07A9EDCD0E7FE61A5E2E3036E94",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4186,7 +4193,7 @@
         "contentItemId": "27ERdLatTUKwNVOhHSaoFg",
         "assetId": "B26F46ECFF86D1DD53161182DF241E20",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4209,7 +4216,7 @@
         "contentItemId": "sEAOVs_MIkeNC210_4QR_g",
         "assetId": "B3AA1084968FEACA3F8C668511C914FA",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4232,7 +4239,7 @@
         "contentItemId": "lS3EHngyREG6kDa5R65hFQ",
         "assetId": "8D76103BC11978CD3C6CE2FC98C0F4C8",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4255,7 +4262,7 @@
         "contentItemId": "4OAzjN552UynkDjdkwoz7w",
         "assetId": "23EB21215F4EC0946DEE0DB1EC95C317",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4301,7 +4308,7 @@
         "contentItemId": "jC5RQRyLqE6S4mss1UmvUA",
         "assetId": "46B14C563CD555B7E0A634D9D1E4111F",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4324,7 +4331,7 @@
         "contentItemId": "JXlzD3ghJ0yDlloMGWQ1mA",
         "assetId": "80E910B914D16DD95DC1BF89DCF9B44A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4347,7 +4354,7 @@
         "contentItemId": "R7IYBkuLT0KRhHpMDkTYrw",
         "assetId": "AAC6628F8B82765B287ADA407D34208E",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4370,7 +4377,7 @@
         "contentItemId": "JMuDo_--L0-meDxgFlRupA",
         "assetId": "E7F95797AD6E9DC04ABA3EFAA4D2B39D",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4380,7 +4387,7 @@
       "title": "NXT -  Laat je maar horen",
       "start": "2026-08-31T15:00:00.000Z",
       "end": "2026-08-31T15:25:00.000Z",
-      "description": "Met \"Laat je maar horen\" vragen NXT en Kinderpostzegels aandacht voor kinderen voor wie het thuis niet altijd veilig is. De boodschap van het lied is hoopvol en laat kinderen weten dat ze erover mogen praten en van zich mogen laten horen.",
+      "description": "Met 'Laat je maar horen' vragen NXT en Kinderpostzegels aandacht voor kinderen voor wie het thuis niet altijd veilig is. De boodschap van het lied is hoopvol en laat kinderen weten dat ze erover mogen praten en van zich mogen laten horen.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nxt-laat-je-maar-horen-765344572.jpg",
       "genre": "Muziekprogramma",
       "isLive": false,
@@ -4388,14 +4395,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "N2VMV0M17UmELh6sTQGLmA",
-        "assetId": "8F6FF8F7E6BD2329FC59EB485236CB8A",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218852062",
@@ -4634,7 +4634,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "d_dMb_5lY0mSXSJ9eOMNDQ",
+        "assetId": "367B8F6B60E497A8900AF3647E507A93",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218783172",
@@ -5671,14 +5678,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "sGQLhFADPEmGmQ_d_SPszA",
-        "assetId": "6F908B8F14BE1594B5F0D80FAD18784E",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218848202",
@@ -5694,14 +5694,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "twPY2w4cGEa4G3-6vLtMrw",
-        "assetId": "6F70CB99FFCCD058EA49520495E7CD12",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218848432",
@@ -5717,14 +5710,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "nDl4Uq3uR0mhMlLd1rtHSA",
-        "assetId": "341CFC20ACD2BA18E0612E1D6B3A7A7B",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784692",
@@ -6823,7 +6809,7 @@
       "channelId": "sbs6",
       "title": "De bondgenoten",
       "start": "2026-08-31T17:30:00.000Z",
-      "end": "2026-08-31T18:27:00.000Z",
+      "end": "2026-08-31T18:28:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -6845,7 +6831,7 @@
       "id": "218848472",
       "channelId": "sbs6",
       "title": "De Hanslers: Van de piste naar de playa",
-      "start": "2026-08-31T18:27:00.000Z",
+      "start": "2026-08-31T18:28:00.000Z",
       "end": "2026-08-31T19:37:00.000Z",
       "description": "Mike en zijn ouders Monique en Peter Hansler zijn beroemd geworden door een winterse datingshow. Ze droomden echter van de zonnige Spaanse Costa's en zijn daar hun geluk gaan beproeven in de horeca.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-hanslers-van-de-piste-naar-de-playa-759205612.jpg",
@@ -6938,7 +6924,7 @@
       "channelId": "sbs6",
       "title": "De bondgenoten",
       "start": "2026-08-31T21:58:00.000Z",
-      "end": "2026-08-31T22:55:00.000Z",
+      "end": "2026-08-31T22:54:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -7005,7 +6991,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "BE7LtpP8_0ymIkMSio0JZg",
-        "assetId": "40A409388996532F3D4641D8F9877F2D",
+        "assetId": "ADF7B71C448AD7C752E20C586F3725BB",
         "channelId": "rtl7",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -7680,11 +7666,11 @@
       "nlziet": null
     },
     {
-      "id": "218847222",
+      "id": "218847232",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T03:00:00.000Z",
-      "end": "2026-08-31T03:05:00.000Z",
+      "start": "2026-08-31T03:02:00.000Z",
+      "end": "2026-08-31T03:13:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7696,34 +7682,11 @@
       "nlziet": null
     },
     {
-      "id": "218847232",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-31T03:05:00.000Z",
-      "end": "2026-08-31T03:10:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TdGdWnAprkW4SgLt0INDyg",
-        "assetId": "A3D5E29A6FD6B1726D1E2B0B2639D251",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
       "id": "218847142",
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
-      "start": "2026-08-31T03:10:00.000Z",
-      "end": "2026-08-31T03:35:00.000Z",
+      "start": "2026-08-31T03:13:00.000Z",
+      "end": "2026-08-31T03:36:00.000Z",
       "description": "De helden staan tegenover een vulkaan. Gobby steelt bijen.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
       "genre": "Animatieserie",
@@ -7745,7 +7708,7 @@
       "id": "218847152",
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
-      "start": "2026-08-31T03:35:00.000Z",
+      "start": "2026-08-31T03:36:00.000Z",
       "end": "2026-08-31T04:00:00.000Z",
       "description": "Schurken nemen Lockjaw. Zola vangt Spidey en Ghosty.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
@@ -7808,7 +7771,7 @@
       "channelId": "veronica",
       "title": "Super Katjes",
       "start": "2026-08-31T04:50:00.000Z",
-      "end": "2026-08-31T05:15:00.000Z",
+      "end": "2026-08-31T05:14:00.000Z",
       "description": "Rare regen in Kittydale, de Super Katjes redden de race.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/super-katjes-759291892.jpg",
       "genre": "Animatieserie",
@@ -7823,8 +7786,8 @@
       "id": "218847382",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:15:00.000Z",
-      "end": "2026-08-31T05:25:00.000Z",
+      "start": "2026-08-31T05:14:00.000Z",
+      "end": "2026-08-31T05:21:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7839,8 +7802,8 @@
       "id": "218847362",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:25:00.000Z",
-      "end": "2026-08-31T05:30:00.000Z",
+      "start": "2026-08-31T05:21:00.000Z",
+      "end": "2026-08-31T05:28:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7855,8 +7818,8 @@
       "id": "218847442",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:30:00.000Z",
-      "end": "2026-08-31T05:40:00.000Z",
+      "start": "2026-08-31T05:28:00.000Z",
+      "end": "2026-08-31T05:35:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7871,8 +7834,8 @@
       "id": "218847392",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:40:00.000Z",
-      "end": "2026-08-31T05:45:00.000Z",
+      "start": "2026-08-31T05:35:00.000Z",
+      "end": "2026-08-31T05:46:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7887,8 +7850,8 @@
       "id": "218847432",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:45:00.000Z",
-      "end": "2026-08-31T05:55:00.000Z",
+      "start": "2026-08-31T05:46:00.000Z",
+      "end": "2026-08-31T05:53:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -7903,7 +7866,7 @@
       "id": "218847422",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T05:55:00.000Z",
+      "start": "2026-08-31T05:53:00.000Z",
       "end": "2026-08-31T06:00:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -7936,7 +7899,7 @@
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
       "start": "2026-08-31T06:10:00.000Z",
-      "end": "2026-08-31T06:35:00.000Z",
+      "end": "2026-08-31T06:34:00.000Z",
       "description": "Spidey versus dinosaurus. Spidey bezorgt Hulks taart.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
       "genre": "Animatieserie",
@@ -7958,8 +7921,8 @@
       "id": "218846942",
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
-      "start": "2026-08-31T06:35:00.000Z",
-      "end": "2026-08-31T07:00:00.000Z",
+      "start": "2026-08-31T06:34:00.000Z",
+      "end": "2026-08-31T06:59:00.000Z",
       "description": "Ga met Mickey, Minnie en hun vriendjes op nieuwe avonturen!",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-759290682.jpg",
       "genre": "Animatieserie",
@@ -7974,8 +7937,8 @@
       "id": "218846932",
       "channelId": "veronica",
       "title": "Sofia het Prinsesje: Koninklijke Magie",
-      "start": "2026-08-31T07:00:00.000Z",
-      "end": "2026-08-31T07:25:00.000Z",
+      "start": "2026-08-31T06:59:00.000Z",
+      "end": "2026-08-31T07:24:00.000Z",
       "description": "Het is Sofia's eerste dag op de koninklijke toverschool",
       "imageUrl": "https://tvgidsassets.nl/upload/s/sofia-het-prinsesje-koninklijke-magie-759290152.jpg",
       "genre": "Animatieserie",
@@ -7997,8 +7960,8 @@
       "id": "218846972",
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
-      "start": "2026-08-31T07:25:00.000Z",
-      "end": "2026-08-31T07:50:00.000Z",
+      "start": "2026-08-31T07:24:00.000Z",
+      "end": "2026-08-31T07:51:00.000Z",
       "description": "Ga met Mickey, Minnie en hun vriendjes op nieuwe avonturen!",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-759290682.jpg",
       "genre": "Animatieserie",
@@ -8013,8 +7976,8 @@
       "id": "218847552",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T07:50:00.000Z",
-      "end": "2026-08-31T07:55:00.000Z",
+      "start": "2026-08-31T07:51:00.000Z",
+      "end": "2026-08-31T07:58:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8036,7 +7999,7 @@
       "id": "218847502",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T07:55:00.000Z",
+      "start": "2026-08-31T07:58:00.000Z",
       "end": "2026-08-31T08:05:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -8046,14 +8009,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "SYmbmKf8bUuvuKlaJsDhgg",
+        "assetId": "90FB34A8DA62A1EBA767CFE0CD3A7D83",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847482",
       "channelId": "veronica",
       "title": "Bluey",
       "start": "2026-08-31T08:05:00.000Z",
-      "end": "2026-08-31T08:10:00.000Z",
+      "end": "2026-08-31T08:12:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8075,7 +8045,7 @@
       "id": "218847562",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T08:10:00.000Z",
+      "start": "2026-08-31T08:12:00.000Z",
       "end": "2026-08-31T08:20:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -8085,14 +8055,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "JZcAaltSc0iEfl-P_MUw1w",
+        "assetId": "7FDD7498A4102477296AFFD44B4E3953",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847492",
       "channelId": "veronica",
       "title": "Bluey",
       "start": "2026-08-31T08:20:00.000Z",
-      "end": "2026-08-31T08:25:00.000Z",
+      "end": "2026-08-31T08:27:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8114,8 +8091,8 @@
       "id": "218847462",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T08:25:00.000Z",
-      "end": "2026-08-31T08:35:00.000Z",
+      "start": "2026-08-31T08:27:00.000Z",
+      "end": "2026-08-31T08:34:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8124,14 +8101,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "nVuSkd0iPkmpD2kfFjCxxQ",
+        "assetId": "110DAC17B2401AAB3F6B0AA4284341BB",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847452",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T08:35:00.000Z",
-      "end": "2026-08-31T08:40:00.000Z",
+      "start": "2026-08-31T08:34:00.000Z",
+      "end": "2026-08-31T08:41:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8153,8 +8137,8 @@
       "id": "218847472",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T08:40:00.000Z",
-      "end": "2026-08-31T08:45:00.000Z",
+      "start": "2026-08-31T08:41:00.000Z",
+      "end": "2026-08-31T08:50:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8163,14 +8147,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "5Pqu56yKV0GTPNtoXQrR7w",
+        "assetId": "0CCF889E8782FF59B84285D86AF654BC",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847582",
       "channelId": "veronica",
       "title": "Sofia het Prinsesje: Koninklijke Magie",
-      "start": "2026-08-31T08:45:00.000Z",
-      "end": "2026-08-31T09:10:00.000Z",
+      "start": "2026-08-31T08:50:00.000Z",
+      "end": "2026-08-31T09:15:00.000Z",
       "description": "De magische parade van Sofia en Layla. Zyans dansspreuk.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/sofia-het-prinsesje-koninklijke-magie-759290152.jpg",
       "genre": "Animatieserie",
@@ -8192,8 +8183,8 @@
       "id": "218847062",
       "channelId": "veronica",
       "title": "Super Katjes",
-      "start": "2026-08-31T09:10:00.000Z",
-      "end": "2026-08-31T09:35:00.000Z",
+      "start": "2026-08-31T09:15:00.000Z",
+      "end": "2026-08-31T09:39:00.000Z",
       "description": "De Katjes trotseren een Spookhuis. De Pumpkinbal is weg.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/super-katjes-759291892.jpg",
       "genre": "Animatieserie",
@@ -8208,8 +8199,8 @@
       "id": "218847022",
       "channelId": "veronica",
       "title": "Pupstruction",
-      "start": "2026-08-31T09:35:00.000Z",
-      "end": "2026-08-31T10:00:00.000Z",
+      "start": "2026-08-31T09:39:00.000Z",
+      "end": "2026-08-31T10:02:00.000Z",
       "description": "Avonturen van een schattig hondenbouwbedrijf.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pupstruction-759290942.jpg",
       "genre": "Animatieserie",
@@ -8231,8 +8222,8 @@
       "id": "218847302",
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
-      "start": "2026-08-31T10:00:00.000Z",
-      "end": "2026-08-31T10:25:00.000Z",
+      "start": "2026-08-31T10:02:00.000Z",
+      "end": "2026-08-31T10:28:00.000Z",
       "description": "Gobby bemachtigt Peters hanger. Spin bouwt een robot.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
       "genre": "Animatieserie",
@@ -8254,8 +8245,8 @@
       "id": "218847092",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T10:25:00.000Z",
-      "end": "2026-08-31T10:30:00.000Z",
+      "start": "2026-08-31T10:28:00.000Z",
+      "end": "2026-08-31T10:35:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8277,8 +8268,8 @@
       "id": "218847132",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T10:30:00.000Z",
-      "end": "2026-08-31T10:40:00.000Z",
+      "start": "2026-08-31T10:35:00.000Z",
+      "end": "2026-08-31T10:42:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8287,14 +8278,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "jjpOPuF3RUSarFPp4Tvg7A",
+        "assetId": "CE5058DB1410CF35536631FFA2073A8E",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847102",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T10:40:00.000Z",
-      "end": "2026-08-31T10:45:00.000Z",
+      "start": "2026-08-31T10:42:00.000Z",
+      "end": "2026-08-31T10:49:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8303,14 +8301,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "P554UGsH8kqLhbTmE7tmsw",
+        "assetId": "3CB3011B555FCE085E40C68C2DDE440D",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847122",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T10:45:00.000Z",
-      "end": "2026-08-31T10:55:00.000Z",
+      "start": "2026-08-31T10:49:00.000Z",
+      "end": "2026-08-31T10:58:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8319,14 +8324,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "I4uVJe7NXUORMoGJ-nBy4Q",
+        "assetId": "AE8C30A228FC7C436689AD0166914643",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847112",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T10:55:00.000Z",
-      "end": "2026-08-31T11:00:00.000Z",
+      "start": "2026-08-31T10:58:00.000Z",
+      "end": "2026-08-31T11:04:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8335,14 +8347,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "eYywzKTZUEWlJGBR8koefQ",
+        "assetId": "793FA833F2543196A3B5B402A679019B",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847192",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T11:00:00.000Z",
-      "end": "2026-08-31T11:10:00.000Z",
+      "start": "2026-08-31T11:04:00.000Z",
+      "end": "2026-08-31T11:11:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8357,8 +8376,8 @@
       "id": "218847202",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T11:10:00.000Z",
-      "end": "2026-08-31T11:15:00.000Z",
+      "start": "2026-08-31T11:11:00.000Z",
+      "end": "2026-08-31T11:18:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8367,14 +8386,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "p8CNhQIusUaYlmT-7N9rJg",
+        "assetId": "CEF955E36698214F30C352E67ADA9966",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847212",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T11:15:00.000Z",
-      "end": "2026-08-31T11:25:00.000Z",
+      "start": "2026-08-31T11:18:00.000Z",
+      "end": "2026-08-31T11:26:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8383,14 +8409,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "1SwwULjYIkaTOQa5KpU7fA",
+        "assetId": "C61816F3847346BF5DEDB17BE2A0F09E",
+        "channelId": "veronica",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218847002",
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
-      "start": "2026-08-31T11:25:00.000Z",
-      "end": "2026-08-31T11:50:00.000Z",
+      "start": "2026-08-31T11:26:00.000Z",
+      "end": "2026-08-31T11:51:00.000Z",
       "description": "Mickey en zijn vriendjes herbouwen Clarabella's kippenhok.",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-759290682.jpg",
       "genre": "Animatieserie",
@@ -8405,8 +8438,8 @@
       "id": "218847012",
       "channelId": "veronica",
       "title": "Super Katjes",
-      "start": "2026-08-31T11:50:00.000Z",
-      "end": "2026-08-31T12:15:00.000Z",
+      "start": "2026-08-31T11:51:00.000Z",
+      "end": "2026-08-31T12:16:00.000Z",
       "description": "Zsa Zsa maakt wolken. Super Katjes brengen lijnen terug.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/super-katjes-759291892.jpg",
       "genre": "Animatieserie",
@@ -8421,8 +8454,8 @@
       "id": "218846902",
       "channelId": "veronica",
       "title": "Sofia het Prinsesje: Koninklijke Magie",
-      "start": "2026-08-31T12:15:00.000Z",
-      "end": "2026-08-31T12:40:00.000Z",
+      "start": "2026-08-31T12:16:00.000Z",
+      "end": "2026-08-31T12:41:00.000Z",
       "description": "Sofia en Amber in het dorp. Sofia's magische plant.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/sofia-het-prinsesje-koninklijke-magie-759290152.jpg",
       "genre": "Animatieserie",
@@ -8444,7 +8477,7 @@
       "id": "218846982",
       "channelId": "veronica",
       "title": "Iron Man en Zijn Fantastische Vriendjes",
-      "start": "2026-08-31T12:40:00.000Z",
+      "start": "2026-08-31T12:41:00.000Z",
       "end": "2026-08-31T13:05:00.000Z",
       "description": "We leren de Iron vrienden kennen.",
       "imageUrl": null,
@@ -8468,7 +8501,7 @@
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
       "start": "2026-08-31T13:05:00.000Z",
-      "end": "2026-08-31T13:20:00.000Z",
+      "end": "2026-08-31T13:18:00.000Z",
       "description": "De Spidey's redden de kerstman.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
       "genre": "Animatieserie",
@@ -8490,8 +8523,8 @@
       "id": "218847052",
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
-      "start": "2026-08-31T13:20:00.000Z",
-      "end": "2026-08-31T13:45:00.000Z",
+      "start": "2026-08-31T13:18:00.000Z",
+      "end": "2026-08-31T13:46:00.000Z",
       "description": "De Spidey's redden de kerstman. Er missen Chanoeka-latkes.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-759291752.jpg",
       "genre": "Animatieserie",
@@ -8513,8 +8546,8 @@
       "id": "218847592",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T13:45:00.000Z",
-      "end": "2026-08-31T13:55:00.000Z",
+      "start": "2026-08-31T13:46:00.000Z",
+      "end": "2026-08-31T13:53:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8529,7 +8562,7 @@
       "id": "218847332",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T13:55:00.000Z",
+      "start": "2026-08-31T13:53:00.000Z",
       "end": "2026-08-31T14:00:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -8546,7 +8579,7 @@
       "channelId": "veronica",
       "title": "Bluey",
       "start": "2026-08-31T14:00:00.000Z",
-      "end": "2026-08-31T14:10:00.000Z",
+      "end": "2026-08-31T14:07:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8561,7 +8594,7 @@
       "id": "218847322",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T14:10:00.000Z",
+      "start": "2026-08-31T14:07:00.000Z",
       "end": "2026-08-31T14:15:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -8578,7 +8611,7 @@
       "channelId": "veronica",
       "title": "Bluey",
       "start": "2026-08-31T14:15:00.000Z",
-      "end": "2026-08-31T14:25:00.000Z",
+      "end": "2026-08-31T14:22:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8593,8 +8626,8 @@
       "id": "218847372",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T14:25:00.000Z",
-      "end": "2026-08-31T14:30:00.000Z",
+      "start": "2026-08-31T14:22:00.000Z",
+      "end": "2026-08-31T14:29:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
       "genre": "Animatieserie",
@@ -8609,7 +8642,7 @@
       "id": "218847402",
       "channelId": "veronica",
       "title": "Bluey",
-      "start": "2026-08-31T14:30:00.000Z",
+      "start": "2026-08-31T14:29:00.000Z",
       "end": "2026-08-31T14:40:00.000Z",
       "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-759296702.jpg",
@@ -8626,7 +8659,7 @@
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
       "start": "2026-08-31T14:40:00.000Z",
-      "end": "2026-08-31T15:05:00.000Z",
+      "end": "2026-08-31T15:04:00.000Z",
       "description": "Minnie en de vriendjes wandelen naar de Goofy Rots.",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-759290682.jpg",
       "genre": "Animatieserie",
@@ -8641,7 +8674,7 @@
       "id": "218846962",
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
-      "start": "2026-08-31T15:05:00.000Z",
+      "start": "2026-08-31T15:04:00.000Z",
       "end": "2026-08-31T15:30:00.000Z",
       "description": "Ga met Mickey, Minnie en hun vriendjes op nieuwe avonturen!",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-759290682.jpg",
@@ -8819,7 +8852,7 @@
       "channelId": "veronica",
       "title": "Ocean's Eleven",
       "start": "2026-08-31T18:26:00.000Z",
-      "end": "2026-08-31T20:46:00.000Z",
+      "end": "2026-08-31T20:47:00.000Z",
       "description": "Nog geen 24 uur na zijn voorwaardelijke vrijlating uit de gevangenis van New Jersey is Danny Ocean alweer bezig met het uitstippelen van zijn volgende misdaad. Hij heeft als doel de meest geavanceerde casinoberoving aller tijden te verwezenlijken. Om dit doel te bereiken, zoekt hij een groep van tien gespecialiseerde criminelen bij elkaar. Samen met Danny vormen zij 'Ocean's Eleven'.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/ocean-s-eleven-759197332.jpg",
       "genre": "Misdaadkomedie",
@@ -8841,8 +8874,8 @@
       "id": "218847572",
       "channelId": "veronica",
       "title": "The Thomas Crown Affair",
-      "start": "2026-08-31T20:46:00.000Z",
-      "end": "2026-08-31T23:02:00.000Z",
+      "start": "2026-08-31T20:47:00.000Z",
+      "end": "2026-08-31T23:03:00.000Z",
       "description": "Miljardair Thomas Crown is het beu alles te krijgen wat hij verlangt. Ook op liefdesvlak zijn er geen echte uitdagingen meer voor hem. Daarom besluit hij zijn kick elders te zoeken: hij steelt schilderijen van onschatbare waarde. Na de diefstal van een bekend doek van Monet wordt Thomas door verzekeringsmedewerker Catherine Banning aangewezen als verdachte nummer één. Ze heeft echter geen bewijzen om haar vermoedens te staven en ze besluit zich in het leven van haar doelwit te nestelen. Catherine kan zich echter niet voorbereiden op de aantrekkingskracht van de kunstdief.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-thomas-crown-affair-759198262.jpg",
       "genre": "Misdaad",
@@ -8926,8 +8959,8 @@
       "id": "218847732",
       "channelId": "net5",
       "title": "Loop: Hart van Nederland",
-      "start": "2026-08-31T04:02:00.000Z",
-      "end": "2026-08-31T05:28:00.000Z",
+      "start": "2026-08-31T04:01:00.000Z",
+      "end": "2026-08-31T05:27:00.000Z",
       "description": "Toegankelijk nieuwsprogramma over het gesprek van de dag.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/loop-hart-van-nederland-760250442.jpg",
       "genre": "Actualiteiten",
@@ -8949,8 +8982,8 @@
       "id": "218847722",
       "channelId": "net5",
       "title": "Telvero",
-      "start": "2026-08-31T05:28:00.000Z",
-      "end": "2026-08-31T09:28:00.000Z",
+      "start": "2026-08-31T05:27:00.000Z",
+      "end": "2026-08-31T09:27:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
       "genre": "Consumentenprogramma",
@@ -8961,7 +8994,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "RwbUBN7Lr06EmhELZNe7vw",
+        "contentItemId": "ZjW6NFR1jE-Zkx0riO-r7w",
         "assetId": "E9378E65AE58DB75352B040582B44BE6",
         "channelId": "net5",
         "isReplayAllowed": true,
@@ -8972,7 +9005,7 @@
       "id": "218847852",
       "channelId": "net5",
       "title": "Million dollar listing NY",
-      "start": "2026-08-31T09:28:00.000Z",
+      "start": "2026-08-31T09:27:00.000Z",
       "end": "2026-08-31T10:26:00.000Z",
       "description": "Er staan grote veranderingen op stapel dit seizoen. Een makelaar is getrouwd, een ander is spiritueel geworden en een derde makelaar is nieuw: oud-model Steve Gold maakt nu deel uit van de cast.",
       "imageUrl": "https://tvgidsassets.nl/upload/m/million-dollar-listing-ny-759198452.jpg",
@@ -8996,7 +9029,7 @@
       "channelId": "net5",
       "title": "Million dollar listing NY",
       "start": "2026-08-31T10:26:00.000Z",
-      "end": "2026-08-31T11:24:00.000Z",
+      "end": "2026-08-31T11:23:00.000Z",
       "description": "Er staan grote veranderingen op stapel dit seizoen. Een makelaar is getrouwd, een ander is spiritueel geworden en een derde makelaar is nieuw: oud-model Steve Gold maakt nu deel uit van de cast.",
       "imageUrl": "https://tvgidsassets.nl/upload/m/million-dollar-listing-ny-759198452.jpg",
       "genre": "Realityserie",
@@ -9018,7 +9051,7 @@
       "id": "218847752",
       "channelId": "net5",
       "title": "Telvero",
-      "start": "2026-08-31T11:24:00.000Z",
+      "start": "2026-08-31T11:23:00.000Z",
       "end": "2026-08-31T11:54:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
@@ -9329,14 +9362,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kOuPNwmQEUOJ-Krg3VaJzA",
-        "assetId": "055A87CDC5E0D6EA3D7A18A4EC38A693",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218849322",
@@ -9352,14 +9378,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kOuPNwmQEUOJ-Krg3VaJzA",
-        "assetId": "655FE30F4CD2C4E734131C59FAF2E54E",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218849202",
@@ -9676,14 +9695,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "WSoKyN3EAUyWfdMU9ax-RA",
-        "assetId": "1B321CEEE83F6221CA5C8CE3E73D4399",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218754422",
@@ -9699,14 +9711,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "g4B3n2afMk6UtD0KTv4HCg",
-        "assetId": "016851E3AF399AAA36AC9A12C1DD66C8",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218754412",
@@ -9722,14 +9727,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "WSoKyN3EAUyWfdMU9ax-RA",
-        "assetId": "C6C8D6D12E73EF9B5E4E29B2F6C0FC3B",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218754452",
@@ -9745,14 +9743,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "g4B3n2afMk6UtD0KTv4HCg",
-        "assetId": "49BB185E6F4D327D118504A21ADBB8BE",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218754402",
@@ -9768,14 +9759,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "WSoKyN3EAUyWfdMU9ax-RA",
-        "assetId": "32DB49E3644223BE6E8E5E01BAE4C4BE",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219919082",
@@ -10757,14 +10741,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "wIjZW1hx8UWVzDLmmtvhMw",
-        "assetId": "2DE99F94089B809C0ADB60C809A4F70E",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218790022",
@@ -10780,14 +10757,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "wIjZW1hx8UWVzDLmmtvhMw",
-        "assetId": "CB182CEEAC4259518CB3203A9BC77DF9",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218790132",
@@ -10918,14 +10888,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Vf1Do0t25kWjHXzyCL5pug",
-        "assetId": "105983A6F01DFA03AE5F40884FBB1A97",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218790112",
@@ -11235,7 +11198,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "vLiFJDPSrUi7qMoTl-E5ZQ",
+        "contentItemId": "N72TDUfiWkCh4Byusa14OA",
         "assetId": "8853A6E324409F375A0248395C2020D2",
         "channelId": "sbs9",
         "isReplayAllowed": true,
@@ -11263,7 +11226,7 @@
       "channelId": "sbs9",
       "title": "Hart van Nederland",
       "start": "2026-08-31T03:08:00.000Z",
-      "end": "2026-08-31T04:00:00.000Z",
+      "end": "2026-08-31T03:57:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-756822582.jpg",
       "genre": "Actualiteiten",
@@ -12276,14 +12239,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "jDp3ROFHI0K0cDz32h6Bow",
-        "assetId": "EA7CE694D6708617A0278084DEDC58C7",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219260772",
@@ -12322,14 +12278,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "IHl_1dop-0aWuCKlZiP19g",
-        "assetId": "8DE3100B38039ADF324D161534862975",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219260932",
@@ -12391,14 +12340,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "efYab2UyrkWl8HeCsMExnQ",
-        "assetId": "BDF34203E8A97FBE80AF47B5B9EB535F",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219260752",
@@ -12414,14 +12356,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "ca8suUyp7E-u67U8c1S7pA",
-        "assetId": "1F5ACE5A2E06DA35F33863AEE602E9A6",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219260902",
@@ -12453,7 +12388,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "0L64q2d_dEytpt5R3Io6Fg",
+        "assetId": "72E14B0B84093B1363B9605CC657E348",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219260982",
@@ -12469,7 +12411,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "BEVuWk_EGECw4Z1NSF4OCg",
+        "assetId": "6F3EAB838C1812DFA8505B9586573064",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219261182",
@@ -12641,7 +12590,7 @@
       "channelId": "vrtcanvas",
       "title": "Radio 1: De wereld vandaag",
       "start": "2026-08-31T14:00:00.000Z",
-      "end": "2026-08-31T15:10:00.000Z",
+      "end": "2026-08-31T15:09:00.000Z",
       "description": "Live vanuit de Radio 1-studio.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/live-radio-rijnmond-761538092.jpg",
       "genre": "Nieuws/actualiteiten",
@@ -12663,8 +12612,8 @@
       "id": "219257802",
       "channelId": "vrtcanvas",
       "title": "Nicole Kidman - Eyes wide open",
-      "start": "2026-08-31T15:10:00.000Z",
-      "end": "2026-08-31T16:05:00.000Z",
+      "start": "2026-08-31T15:09:00.000Z",
+      "end": "2026-08-31T16:03:00.000Z",
       "description": "Actrice Nicole Kidman maakt als tiener een vliegende start in het land waar ze opgroeit: Australië. Haar ambities reiken ver. Na een huwelijk met Hollywoodster Tom Cruise komt ze vanaf 2001 pas echt tot bloei met rollen in films als 'Moulin Rouge' en 'The Hours' en 'Dogville'. Ze zoekt graag de grenzen op in het onderzoeken van de plaats van de vrouw in onze maatschappij en deinst daarbij niet terug voor riskante rollen.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nicole-kidman-eyes-wide-open-761772552.jpg",
       "genre": "Documentaire",
@@ -12686,8 +12635,8 @@
       "id": "219257792",
       "channelId": "vrtcanvas",
       "title": "The future of nature",
-      "start": "2026-08-31T16:05:00.000Z",
-      "end": "2026-08-31T17:00:00.000Z",
+      "start": "2026-08-31T16:03:00.000Z",
+      "end": "2026-08-31T16:58:00.000Z",
       "description": "Hoe kunnen we de kracht van de natuur inzetten om de planeet te herstellen en klimaatverandering tegen te gaan? Deze serie biedt een blik op de toekomst van de natuur door de ogen van mensen die de visie en ambitie hebben om dit te verwezenlijken",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-future-of-nature-761772522.jpg",
       "genre": "Reportageserie",
@@ -12709,7 +12658,7 @@
       "id": "219257782",
       "channelId": "vrtcanvas",
       "title": "Forensics: The real CSI",
-      "start": "2026-08-31T17:00:00.000Z",
+      "start": "2026-08-31T16:58:00.000Z",
       "end": "2026-08-31T18:00:00.000Z",
       "description": "Documentaireserie over het onderzoek naar zware criminaliteit en de cruciale rol die de forensische wetenschap nu speelt bij het voor de rechter brengen van criminelen.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/forensics-the-real-csi-761772462.jpg",
@@ -12731,10 +12680,10 @@
     {
       "id": "219257732",
       "channelId": "vrtcanvas",
-      "title": "Terzake",
+      "title": "VRT NWS Terzake",
       "start": "2026-08-31T18:00:00.000Z",
       "end": "2026-08-31T18:30:00.000Z",
-      "description": "Achtergrond en duiding bij het nieuws van de dag met Kathleen Cools of Annelies Beck.",
+      "description": "Achtergrond en duiding bij het nieuws van de dag.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/terzake-761772282.jpg",
       "genre": "Actualiteiten",
       "isLive": true,
@@ -12756,7 +12705,7 @@
       "channelId": "vrtcanvas",
       "title": "Het weer",
       "start": "2026-08-31T18:30:00.000Z",
-      "end": "2026-08-31T18:35:00.000Z",
+      "end": "2026-08-31T18:33:00.000Z",
       "description": "Het actuele weerbericht.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/het-weer-761562942.jpg",
       "genre": "Weerbericht",
@@ -12778,8 +12727,8 @@
       "id": "219257722",
       "channelId": "vrtcanvas",
       "title": "De afspraak",
-      "start": "2026-08-31T18:35:00.000Z",
-      "end": "2026-08-31T19:25:00.000Z",
+      "start": "2026-08-31T18:33:00.000Z",
+      "end": "2026-08-31T19:21:00.000Z",
       "description": "Dagelijks actualiteitenprogramma waarin Bart Schols en Fatma Taspinar op hun eigen manier naar het nieuws van de dag en de actualiteit kijken. Bart Schols en Fatma Taspinar zullen het programma afwisselend presenteren, in langere blokken.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-afspraak-761772252.jpg",
       "genre": "Actualiteiten",
@@ -12788,21 +12737,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "LNshCpuS60OSaYfNoILQ2w",
-        "assetId": "C944B168C45E74C4F5EB30FAB36E6E0F",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219257772",
       "channelId": "vrtcanvas",
       "title": "The Louvre heist minute by minute",
-      "start": "2026-08-31T19:25:00.000Z",
-      "end": "2026-08-31T20:20:00.000Z",
+      "start": "2026-08-31T19:21:00.000Z",
+      "end": "2026-08-31T20:15:00.000Z",
       "description": "Op 19 oktober 2025 pleegde een commando in amper 3 minuten en 19 seconden één van de meest geruchtmakende kunstroven ooit. Midden op de dag, voor de ogen van bewakers en bezoekers, verdwenen kroonjuwelen uit het Louvre. Hoe kon het meest bezochte museum ter wereld zo makkelijk worden leeggeroofd? We duiken in de coulissen van de diefstal van de eeuw, met ongeziene beelden van de roof, exclusieve getuigenissen en afgeluisterde gesprekken die onthullen wat er écht misliep.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-louvre-heist-minute-by-minute-762205052.jpg",
       "genre": "Documentaire",
@@ -12817,13 +12759,45 @@
       "id": "219257752",
       "channelId": "vrtcanvas",
       "title": "Super/Man: The Christopher Reeve Story",
-      "start": "2026-08-31T20:20:00.000Z",
-      "end": "2026-08-31T22:00:00.000Z",
+      "start": "2026-08-31T20:15:00.000Z",
+      "end": "2026-08-31T21:54:00.000Z",
       "description": "Hij speelde de meest iconische superheld aller tijden, maar zijn echte heldenverhaal begon pas na zijn zwaarste val. In 1995 veranderde een ongeval tijdens het paardrijden het leven van Christopher Reeve voorgoed: van Superman naar iemand die volledig verlamd van de nek naar beneden door het leven moest. Toch weigerde hij zich te laten breken. Aan de hand van zijn eigen woorden, nooit eerder vertoonde homevideos en getuigenissen van zijn familie schetst deze documentaire een ontroerend portret van een man die bewees dat echte moed niets te maken heeft met een cape.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/super-man-the-christopher-reeve-story-762205022.jpg",
       "genre": "Documentaire",
       "isLive": false,
       "isRerun": false,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
+    },
+    {
+      "id": "219257822",
+      "channelId": "vrtcanvas",
+      "title": "Het weer",
+      "start": "2026-08-31T21:54:00.000Z",
+      "end": "2026-08-31T21:58:00.000Z",
+      "description": "Het actuele weerbericht.",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/het-weer-761562942.jpg",
+      "genre": "Weerbericht",
+      "isLive": false,
+      "isRerun": true,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
+    },
+    {
+      "id": "219257762",
+      "channelId": "vrtcanvas",
+      "title": "90 minutes",
+      "start": "2026-08-31T21:58:00.000Z",
+      "end": "2026-08-31T23:58:00.000Z",
+      "description": "Gilles De Coster, Filip Joos en Sam Kerkhofs bespreken de voetbalactualiteit.",
+      "imageUrl": "https://tvgidsassets.nl/upload/9/90-minutes-761772382.jpg",
+      "genre": "Talkshow",
+      "isLive": false,
+      "isRerun": true,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
@@ -13300,14 +13274,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yB1mbgX8ckm87YXFraxL7Q",
-        "assetId": "87F791B490B7350EAE370BC50A8B978D",
-        "channelId": "bbcone",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219080122",
@@ -13424,7 +13391,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "6rv8tdeluEaULk2yW6J9iA",
+        "assetId": "A3AE324E663D11F921AB9B1753C54A22",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219346462",
@@ -13472,14 +13446,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "8-ZGIABLbU2JA2n0TampZQ",
-        "assetId": "B2924D6CF7F0E0B39D91525A9D833612",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219077072",
@@ -13728,6 +13695,29 @@
       "ageRating": null,
       "nlzietId": null,
       "nlziet": null
+    },
+    {
+      "id": "219999392",
+      "channelId": "bbc2",
+      "title": "Grand tours of Scotland's lochs",
+      "start": "2026-08-31T18:00:00.000Z",
+      "end": "2026-08-31T19:00:00.000Z",
+      "description": "Paul Murton maakt een rondreis langs de meren van Schotland.",
+      "imageUrl": "https://tvgidsassets.nl/upload/g/grand-tours-of-scotland-s-lochs-766622962.jpg",
+      "genre": "Documentaireserie",
+      "isLive": false,
+      "isRerun": false,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "ed8HVRywf0WQNMmobn6xhQ",
+        "assetId": "E595B59F2319F939F36753CA2CC2187D",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219392132",
@@ -14504,7 +14494,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "LLU8iR1SKEOcFt5glcJYow",
+        "assetId": "8A854611486F3C787882CDC0A9D227A7",
+        "channelId": "npo2extra",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219832612",
@@ -14520,14 +14517,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "LLU8iR1SKEOcFt5glcJYow",
-        "assetId": "8A854611486F3C787882CDC0A9D227A7",
-        "channelId": "npo2extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218807582",

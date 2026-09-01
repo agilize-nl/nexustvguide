@@ -113,4 +113,40 @@ class NexusProgramGuideFocusTest {
         val expectedHeightPx = (28 * density).toInt()
         assertEquals(expectedHeightPx, menuButton.layoutParams.height)
     }
+    @Test
+    fun testTimelineTimeLabelsAlignWithGridStartWithoutStaleOffset() {
+        val context = ApplicationProvider.getApplicationContext<Context>().apply {
+            setTheme(com.nexustvguide.app.R.style.Theme_NexusTVGuide)
+        }
+        val widthPerHour = context.resources.getDimensionPixelSize(LibraryR.dimen.programguide_table_width_per_hour)
+        ProgramGuideUtil.setWidthPerHour(widthPerHour)
+
+        val adapter = com.egeniq.androidtvprogramguide.timeline.ProgramGuideTimeListAdapter(
+            context.resources,
+            org.threeten.bp.ZoneId.of("Europe/Amsterdam")
+        )
+
+        val halfHourMillis = 30 * 60 * 1000L
+        val t0 = 1700000000000L
+        val timelineStart = t0 - halfHourMillis
+        val timelineAdjustmentPx = ProgramGuideUtil.convertMillisToPixel(halfHourMillis)
+
+        adapter.update(timelineStart, timelineAdjustmentPx)
+
+        val parent = androidx.recyclerview.widget.RecyclerView(context).apply { layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context, androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL, false) }
+        val vh0 = adapter.onCreateViewHolder(parent, adapter.getItemViewType(0))
+        adapter.onBindViewHolder(vh0, 0)
+        val lp0 = vh0.itemView.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
+
+        val halfHourWidthPx = ProgramGuideUtil.convertMillisToPixel(halfHourMillis)
+        assertEquals(-halfHourWidthPx / 2 - timelineAdjustmentPx, lp0.marginStart)
+
+        val vh1 = adapter.onCreateViewHolder(parent, adapter.getItemViewType(1))
+        adapter.onBindViewHolder(vh1, 1)
+        val lp1 = vh1.itemView.layoutParams as androidx.recyclerview.widget.RecyclerView.LayoutParams
+        assertEquals(0, lp1.marginStart)
+
+        val item1Center = lp0.marginStart + lp0.width + (lp1.width / 2)
+        assertEquals("Label for T0 must be centered at coordinate 0 relative to time row start", 0, item1Center)
+    }
 }

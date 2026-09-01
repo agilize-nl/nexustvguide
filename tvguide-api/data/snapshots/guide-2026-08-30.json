@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-29T22:00:00Z",
   "to": "2026-08-30T22:00:00Z",
-  "sourceFetchedAt": "2026-08-30T15:05:10.760Z",
-  "publishedAt": "2026-08-30T15:05:10.760Z",
+  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
+  "publishedAt": "2026-09-01T10:08:55.691Z",
   "channels": [
     {
       "id": "npo1",
@@ -208,153 +208,6 @@
     }
   ],
   "programmes": [
-    {
-      "id": "218748452",
-      "channelId": "npo1",
-      "title": "Wolven",
-      "start": "2026-08-29T22:00:00.000Z",
-      "end": "2026-08-29T22:50:00.000Z",
-      "description": "Spel over vertrouwen, strategie en misleiding. Dertien Burgers, met ieder een eigen specialisme, komen in een afgelegen bos samen voor een spel waarin niets is wat het lijkt. Onder hen bevinden zich ook Wolven: lukt het de wolven om de andere spelers één voor één te verslinden? Terwijl de spanning oploopt en het wantrouwen groeit, blijft één vraag centraal staan: weten de Burgers de Wolven op tijd te ontmaskeren?",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/wolven-761163642.jpg",
-      "genre": "Spel",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218748462",
-      "channelId": "npo1",
-      "title": "Beste zangers",
-      "start": "2026-08-29T22:50:00.000Z",
-      "end": "2026-08-29T23:50:00.000Z",
-      "description": "Nederlandse zangers/zangeressen reizen af naar Sevilla en zingen elkaars werk.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/beste-zangers-758735262.jpg",
-      "genre": "Muziekprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Cj5bMU3ZAUSN3tpe-VDN3A",
-        "assetId": "18EE4A779D930EF5703E81AAC4E3559A",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748472",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-08-29T23:50:00.000Z",
-      "end": "2026-08-29T23:55:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-758734942.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5YKMPuxzoEmtrqaq5TRspQ",
-        "assetId": "71F4D400724E264EE5F9688B59402F05",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748482",
-      "channelId": "npo1",
-      "title": "EenVandaag",
-      "start": "2026-08-29T23:55:00.000Z",
-      "end": "2026-08-30T00:20:00.000Z",
-      "description": "Nieuws en achtergronden uit binnen- en buitenland. Via het 'EenVandaag' Opiniepanel kunnen vijftigduizend leden hun stem laten horen en reageren op actuele thema's. De presentatie is in handen van Rik van de Westelaken, Hila Noorzai, Suzanne Bosman, Malou Petter en Rob Hadders. Een journalistiek platform op televisie, radio en internet.",
-      "imageUrl": "https://tvgidsassets.nl/upload/e/eenvandaag-758735112.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "VMIuRbVvikaBuwaeBRJXhA",
-        "assetId": "A9E1912F1A3181500F38FB74B12E6B33",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748282",
-      "channelId": "npo1",
-      "title": "NOS Journaal met gebarentaal",
-      "start": "2026-08-30T00:20:00.000Z",
-      "end": "2026-08-30T00:40:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-758630472.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "6yEP2nRapUW6IzCzgOT4Qg",
-        "assetId": "AA105624FA2450886B6043623303C5DD",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748492",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-08-30T00:40:00.000Z",
-      "end": "2026-08-30T00:50:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-758734942.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5YKMPuxzoEmtrqaq5TRspQ",
-        "assetId": "302E45AFF49C31A339CBB5E14CCC97B5",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748502",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-08-30T00:50:00.000Z",
-      "end": "2026-08-30T04:15:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-758734942.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": true,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
     {
       "id": "218784492",
       "channelId": "npo1",
@@ -647,14 +500,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "VVTz72RoZkORMKgVuToLOg",
-        "assetId": "F38F54D11A3739C39D3F06AA95A4EE72",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784402",
@@ -808,76 +654,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "WLNHo8mhi0GE74KmxWU_8Q",
-        "assetId": "CB31B433C2E3B7DCC42A1B0FD10D2024",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748902",
-      "channelId": "npo2",
-      "title": "Silent witness",
-      "start": "2026-08-29T21:50:00.000Z",
-      "end": "2026-08-29T22:40:00.000Z",
-      "description": "Britse dramaserie over de forensisch pathologe Nikki Alexander en haar collega's. In het laboratorium ontleden en analyseren ze lichamen om de ware doodsoorzaak te ontdekken. Ze spelen een belangrijke rol in het oplossen van moordzaken.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/silent-witness-756108152.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
       "nlziet": null
-    },
-    {
-      "id": "218748772",
-      "channelId": "npo2",
-      "title": "De nachtzoen",
-      "start": "2026-08-29T22:40:00.000Z",
-      "end": "2026-08-29T22:55:00.000Z",
-      "description": "Een bekende of bijzondere Nederlander vertelt een verhaal; soms uit het leven gegrepen, soms uit de Bijbel.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/de-nachtzoen-756775192.jpg",
-      "genre": "Reportage",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kafTbRpUzUGSJdb6LfG2yA",
-        "assetId": "0CB6091A6D3E59C165B03C2095AD51A9",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748942",
-      "channelId": "npo2",
-      "title": "Nieuwsuur",
-      "start": "2026-08-29T22:55:00.000Z",
-      "end": "2026-08-29T23:35:00.000Z",
-      "description": "Het nieuws met achtergronden, duiding en analyse. Presentatie door Mariëlle Tweebeeke of Jeroen Wollaars, of door invalpresentatoren Eelco Bosch van Rosenthal of Petra Grijzen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nieuwsuur-758735022.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5PkZiRfsbk2ckvxvDwQjGg",
-        "assetId": "29E29AC2629629064801B38668F05E7C",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
     },
     {
       "id": "218784972",
@@ -1413,7 +1190,7 @@
         "contentItemId": "J6dJz__huU-s8BySUZoNSQ",
         "assetId": "9EF8D61D083353839CC80351FF3B3FEF",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -1454,145 +1231,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "bTKHPiT2oEm9dncHAfgcnQ",
-        "assetId": "27E738ED7A62F26F2B1DBFF2725E9873",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749422",
-      "channelId": "npo3",
-      "title": "NPO Doc: David Bowie - The final act",
-      "start": "2026-08-29T21:10:00.000Z",
-      "end": "2026-08-29T22:55:00.000Z",
-      "description": "Tien jaar na zijn dood is het nauwelijks voor te stellen dat David Bowie ooit dreigde weg te zakken in de vergetelheid van de popgeschiedenis. De muzikale kameleon achter hits als 'Let's Dance', 'Space Oddity' en 'Life on Mars?' leek aan het begin van de jaren negentig zijn glans te hebben verloren. Hij kampte met matige recensies en halflege zalen. Deze muzikale documentaire laat zien hoe Bowie zichzelf opnieuw uitvond, het publiek heroverde en met 'Blackstar' zijn eigen afscheid vormde. Het verhaal wordt verteld aan de hand van interviews met vrienden, bandleden en journalisten, aangevuld met een muzikaal archief.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/npo-doc-david-bowie-the-final-act-758575082.jpg",
-      "genre": "Muziekdocumentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
       "nlziet": null
-    },
-    {
-      "id": "218749412",
-      "channelId": "npo3",
-      "title": "Meiden die rijden",
-      "start": "2026-08-29T22:55:00.000Z",
-      "end": "2026-08-29T23:45:00.000Z",
-      "description": "Vrouwen die hun meisjesdroom hebben waargemaakt en vrachtwagenchauffeur zijn geworden worden gevolgd. De meiden rijden op enorme trucks van zo'n vijfhonderd pk, doorkruisen heel Europa en slapen in hun cabines. De een combineert het werk met een leven als muzikant, de ander probeert naast een goede chauffeuse ook een goede moeder te zijn. Het zijn stuk voor stuk meiden met een passie voor de vrachtwagen, die zich staande houden in een wereld die door mannen wordt gedomineerd. De vrouwen worden met de camera gevolgd in de cabines van hun grote trucks en in hun privéleven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/meiden-die-rijden-761723732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "7x3Th1izgkW51LCaaKy9Rg",
-        "assetId": "C460D9C68F99A17BCEBBBCA18DDCE4D3",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749402",
-      "channelId": "npo3",
-      "title": "Meiden die rijden",
-      "start": "2026-08-29T23:45:00.000Z",
-      "end": "2026-08-30T00:40:00.000Z",
-      "description": "Vrouwen die hun meisjesdroom hebben waargemaakt en vrachtwagenchauffeur zijn geworden worden gevolgd. De meiden rijden op enorme trucks van zo'n vijfhonderd pk, doorkruisen heel Europa en slapen in hun cabines. De een combineert het werk met een leven als muzikant, de ander probeert naast een goede chauffeuse ook een goede moeder te zijn. Het zijn stuk voor stuk meiden met een passie voor de vrachtwagen, die zich staande houden in een wereld die door mannen wordt gedomineerd. De vrouwen worden met de camera gevolgd in de cabines van hun grote trucks en in hun privéleven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/meiden-die-rijden-761723732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "0-IJo9BkWUaf8YCC8Swhsg",
-        "assetId": "59275FF484325549A67EA7D219A7F131",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749382",
-      "channelId": "npo3",
-      "title": "Meiden die rijden",
-      "start": "2026-08-30T00:40:00.000Z",
-      "end": "2026-08-30T01:35:00.000Z",
-      "description": "Vrouwen die hun meisjesdroom hebben waargemaakt en vrachtwagenchauffeur zijn geworden worden gevolgd. De meiden rijden op enorme trucks van zo'n vijfhonderd pk, doorkruisen heel Europa en slapen in hun cabines. De een combineert het werk met een leven als muzikant, de ander probeert naast een goede chauffeuse ook een goede moeder te zijn. Het zijn stuk voor stuk meiden met een passie voor de vrachtwagen, die zich staande houden in een wereld die door mannen wordt gedomineerd. De vrouwen worden met de camera gevolgd in de cabines van hun grote trucks en in hun privéleven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/meiden-die-rijden-761723732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "HhIfJsDpdk2RqH9dRNHTAA",
-        "assetId": "EEE3E6ABF2F6B4C68DDF2678F71DB3FD",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749362",
-      "channelId": "npo3",
-      "title": "Meiden die rijden",
-      "start": "2026-08-30T01:35:00.000Z",
-      "end": "2026-08-30T02:25:00.000Z",
-      "description": "Vrouwen die hun meisjesdroom hebben waargemaakt en vrachtwagenchauffeur zijn geworden worden gevolgd. De meiden rijden op enorme trucks van zo'n vijfhonderd pk, doorkruisen heel Europa en slapen in hun cabines. De een combineert het werk met een leven als muzikant, de ander probeert naast een goede chauffeuse ook een goede moeder te zijn. Het zijn stuk voor stuk meiden met een passie voor de vrachtwagen, die zich staande houden in een wereld die door mannen wordt gedomineerd. De vrouwen worden met de camera gevolgd in de cabines van hun grote trucks en in hun privéleven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/meiden-die-rijden-761723732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "SXJgm8Zlg0-WlKweYNWMYw",
-        "assetId": "E8BBB2E9E07FD9AC8EF63224DEB4CF5B",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749372",
-      "channelId": "npo3",
-      "title": "Meiden die rijden",
-      "start": "2026-08-30T02:25:00.000Z",
-      "end": "2026-08-30T03:10:00.000Z",
-      "description": "Vrouwen die hun meisjesdroom hebben waargemaakt en vrachtwagenchauffeur zijn geworden worden gevolgd. De meiden rijden op enorme trucks van zo'n vijfhonderd pk, doorkruisen heel Europa en slapen in hun cabines. De een combineert het werk met een leven als muzikant, de ander probeert naast een goede chauffeuse ook een goede moeder te zijn. Het zijn stuk voor stuk meiden met een passie voor de vrachtwagen, die zich staande houden in een wereld die door mannen wordt gedomineerd. De vrouwen worden met de camera gevolgd in de cabines van hun grote trucks en in hun privéleven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/meiden-die-rijden-761723732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kgfPhjZHeUGsZOWy5jCytQ",
-        "assetId": "5A685035BB7ACD75DEA42F9DDDFA14CA",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
     },
     {
       "id": "219599162",
@@ -2741,14 +2380,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4GytXC8OfESWbVmDbrpIxw",
-        "assetId": "E30BA19265EF8F5E203C45667D5F0580",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218785252",
@@ -2764,14 +2396,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yfhT6ANWDEaINR5X5fKyag",
-        "assetId": "09D7423F94BE61303BE2763CADF679A8",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218785242",
@@ -2787,14 +2412,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "AxiFB1D2D0GlsyVgjw83-g",
-        "assetId": "B10E76AD340863F1A33747A073233523",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218785302",
@@ -2884,7 +2502,7 @@
         "contentItemId": "tyeFK6t60USLWMkpHvvH8g",
         "assetId": "1E4ACFA1B78236E7E84504DD8B34894B",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2907,103 +2525,9 @@
         "contentItemId": "hi2gHOF5SUS4_PLq6MRWoQ",
         "assetId": "42E1D074BF1269B2095074E410FFC8C8",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218746642",
-      "channelId": "rtl4",
-      "title": "RTL Weer",
-      "start": "2026-08-29T21:57:00.000Z",
-      "end": "2026-08-29T22:07:00.000Z",
-      "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-758844952.jpg",
-      "genre": "Weerbericht",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747002",
-      "channelId": "rtl4",
-      "title": "RTL Boulevard",
-      "start": "2026-08-29T22:07:00.000Z",
-      "end": "2026-08-29T22:59:00.000Z",
-      "description": "Dagelijkse mix van actualiteiten, vermaak en opinies met een of twee deskundigen, gasten of andere nieuwsmakers. In hoog tempo volgen afwisselende items en reportages elkaar op met de thema's showbizz, misdaad, koningshuis en lifestyle.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-boulevard-755791492.jpg",
-      "genre": "Amusement",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "AZUfap-unEy-G3BWqA4KOw",
-        "assetId": "3E3070684DA121D19414BEBDCABE9CC5",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218746562",
-      "channelId": "rtl4",
-      "title": "EditieNL",
-      "start": "2026-08-29T22:59:00.000Z",
-      "end": "2026-08-29T23:22:00.000Z",
-      "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
-      "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-758843842.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "PkVYVGZOWUecD7AmHj546w",
-        "assetId": "D59C336F0F402D977550E0ACF0218553",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218747012",
-      "channelId": "rtl4",
-      "title": "Teleshop 4: Tommy teleshopping",
-      "start": "2026-08-29T23:22:00.000Z",
-      "end": "2026-08-30T00:02:00.000Z",
-      "description": "Homeshoppingprogramma.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-4-tommy-teleshopping-760631072.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218746882",
-      "channelId": "rtl4",
-      "title": "Teleshop 4: Tommy teleshopping",
-      "start": "2026-08-30T00:03:00.000Z",
-      "end": "2026-08-30T03:59:00.000Z",
-      "description": "Homeshoppingprogramma.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-4-tommy-teleshopping-760631072.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218783092",
@@ -3180,14 +2704,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yIH_NAByE0ahmi-OiCvsag",
-        "assetId": "1483458B872053FF2A39B7AA215CAB75",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218783132",
@@ -3203,14 +2720,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "V_HgVsgfyUSU_4HckK8N9A",
-        "assetId": "EFE9FD58E1A6443D91F1A505AC3F8B73",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218783112",
@@ -3249,7 +2759,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "T8zIUdSZjEe-tJHo0xpqbA",
+        "assetId": "300714D221C30100740CBC668299FEA3",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219871052",
@@ -3265,7 +2782,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "T8zIUdSZjEe-tJHo0xpqbA",
+        "assetId": "300714D221C30100740CBC668299FEA3",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218783042",
@@ -3327,14 +2851,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "HViOuicUOkSvsMSxJUujsw",
-        "assetId": "ACA3BBB05F5EE5E8682335CBA959DFB7",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218783012",
@@ -3350,14 +2867,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "CrFN0bZuQEyqE4He2jc4JQ",
-        "assetId": "32CC645B36D62BE87C749174E981790F",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218782992",
@@ -4165,38 +3675,6 @@
       }
     },
     {
-      "id": "218748572",
-      "channelId": "rtl5",
-      "title": "Politie in het holst van de nacht",
-      "start": "2026-08-29T21:50:00.000Z",
-      "end": "2026-08-29T22:55:00.000Z",
-      "description": "Britse politieagenten worden gevolgd tijdens hun nachtdienst.",
-      "imageUrl": "https://tvgidsassets.nl/upload/p/politie-in-het-holst-van-de-nacht-754365572.jpg",
-      "genre": "Realityserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218748642",
-      "channelId": "rtl5",
-      "title": "Teleshop 5: Tommy teleshopping",
-      "start": "2026-08-29T22:55:00.000Z",
-      "end": "2026-08-30T00:10:00.000Z",
-      "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-759122602.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
       "id": "218784642",
       "channelId": "rtl5",
       "title": "Pastor Joseph Prince - New creation TV",
@@ -4487,61 +3965,6 @@
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218747332",
-      "channelId": "sbs6",
-      "title": "I've got the music in me",
-      "start": "2026-08-29T21:50:00.000Z",
-      "end": "2026-08-29T23:07:00.000Z",
-      "description": "In deze muzikale show nemen twee bekende Nederlanders het tegen elkaar op. Ze doen dat niet alleen, maar samen met iemand uit hun privé-omgeving. Iemand met veel muziekkennis en een grote liefde voor muziek.",
-      "imageUrl": "https://tvgidsassets.nl/upload/i/i-ve-got-the-music-in-me-758566422.jpg",
-      "genre": "Amusement",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747042",
-      "channelId": "sbs6",
-      "title": "Shownieuws",
-      "start": "2026-08-29T23:07:00.000Z",
-      "end": "2026-08-29T23:45:00.000Z",
-      "description": "Het laatste nieuws uit de wereld van showbizz en entertainment.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/shownieuws-755374502.jpg",
-      "genre": "Amusement",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-vxnrBIgjkGP7me6TNV0Jg",
-        "assetId": "D02E48692B4B8305394083ACCF655840",
-        "channelId": "sbs6",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218747032",
-      "channelId": "sbs6",
-      "title": "Hart van Nederland",
-      "start": "2026-08-29T23:45:00.000Z",
-      "end": "2026-08-30T04:00:00.000Z",
-      "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-756822582.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218783372",
@@ -5204,38 +4627,6 @@
       }
     },
     {
-      "id": "218747462",
-      "channelId": "rtl7",
-      "title": "Pawn Shop Chronicles",
-      "start": "2026-08-29T21:50:00.000Z",
-      "end": "2026-08-30T00:01:00.000Z",
-      "description": "Drie verschillende verhalen komen samen in een pandjeshuis in het zuiden van de Verenigde Staten. Twee drugsverslaafde skinheads beroven een drugsdealer, maar hun overval loopt niet zoals gepland. Een man die zijn spoorloos verdwenen vrouw zoekt, komt oog in oog te staan met een maniak. Tot slot is er een mislukte Elvis-imitator die zijn ziel verkoopt in ruil voor succes. Pandjesbaas Alton helpt hen op weg door enkele objecten in bewaring te nemen, terwijl hij zelf uit handen probeert te blijven van een agressieve automobilist.",
-      "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-shop-chronicles-758567472.jpg",
-      "genre": "Misdaadkomedie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747342",
-      "channelId": "rtl7",
-      "title": "Teleshop",
-      "start": "2026-08-30T00:10:00.000Z",
-      "end": "2026-08-30T04:00:00.000Z",
-      "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-759122602.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
       "id": "218783542",
       "channelId": "rtl7",
       "title": "Teleshop 7: Telvero",
@@ -5680,265 +5071,6 @@
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218745162",
-      "channelId": "veronica",
-      "title": "Baywatch remastered",
-      "start": "2026-08-29T21:20:00.000Z",
-      "end": "2026-08-29T22:16:00.000Z",
-      "description": "Over de dagelijkse werkzaamheden en het privéleven van de strandwachten van Malibu in Californië.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/baywatch-remastered-758560752.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745542",
-      "channelId": "veronica",
-      "title": "911 crisis center",
-      "start": "2026-08-29T22:16:00.000Z",
-      "end": "2026-08-29T22:43:00.000Z",
-      "description": "De medewerkers van een alarmcentrale bij Cleveland worden gevolgd. Ze ontvangen telefoontjes van paniekerige bellers en proberen levens te redden.",
-      "imageUrl": "https://tvgidsassets.nl/upload/9/911-crisis-center-756095442.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "BiCX_QWYAkOF-s1BhZr01A",
-        "assetId": "6885EC4F8D08CDB10ABB3A7C4C24805F",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219061922",
-      "channelId": "veronica",
-      "title": "Alien: Resurrection",
-      "start": "2026-08-29T22:43:00.000Z",
-      "end": "2026-08-30T00:19:00.000Z",
-      "description": "Het is 200 jaar geleden sinds Ellen Ripley zichzelf heeft omgebracht op Fiorina 161 om te vermijden dat het buitenaards wezen, dat zich in haar lichaam bevond, de planeet Aarde zou bereiken. Haar vorige werknemers hebben de Weyland-Yutani Compagnie ontbonden en nu heeft de USM de taak overgenomen om dodelijke buitenaardse wezens te kweken. Uit Ellens DNA is een kloon gemaakt. De nieuwe Ellen Ripley wordt nauwlettend in het oog gehouden door de wetenschappers, die haar 'Nummer 8' noemen. Ze hebben de Queen Alien uit haar lichaam verwijderd en gebruiken het om hun experimenten verder te zetten. De Ripley-kloon ervaart emoties net als de mensheid, maar toch vermoedt ze dat een deel van de Queen in haar gestel in blijven zitten. Wanneer de snelgroeiende afstammelingen van de Queen Alien de controle in handen krijgen van het ruimteschip waarin ze zich bevinden, beseft Ripley dat de tijd rijp is om het ruimteschip te vernietigen. Ze krijgt hierbij de hulp van een aantal ruimtepiraten.",
-      "imageUrl": "https://tvgidsassets.nl/upload/a/alien-resurrection-760627272.jpg",
-      "genre": "Sciencefiction",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "9gQehu_TIEGvTN96VOE7YQ",
-        "assetId": "B870ADA01D52D6B9227C669B6C74D5D6",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218745192",
-      "channelId": "veronica",
-      "title": "Hart van Nederland",
-      "start": "2026-08-30T00:19:00.000Z",
-      "end": "2026-08-30T00:36:00.000Z",
-      "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-756822582.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745112",
-      "channelId": "veronica",
-      "title": "Pause",
-      "start": "2026-08-30T00:36:00.000Z",
-      "end": "2026-08-30T02:00:00.000Z",
-      "description": null,
-      "imageUrl": null,
-      "genre": null,
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "MBp6c4_sREiQUeCPFSFiPA",
-        "assetId": "0B8E20A163A2DDE9DCFA63A46FBFAB8D",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218745572",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:00:00.000Z",
-      "end": "2026-08-30T02:07:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "XffD0AzV0kyCkcJACXyQ2w",
-        "assetId": "F6D8401CFEB8DCE7673366B00CDDAFCD",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218745592",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:07:00.000Z",
-      "end": "2026-08-30T02:14:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "qskG8V7lkUSjLtN8yl5oXA",
-        "assetId": "5C38347CF1FC11D381AC3E235D656ACD",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218745472",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:14:00.000Z",
-      "end": "2026-08-30T02:21:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745582",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:21:00.000Z",
-      "end": "2026-08-30T02:28:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745502",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:28:00.000Z",
-      "end": "2026-08-30T02:35:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745562",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:35:00.000Z",
-      "end": "2026-08-30T02:42:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745552",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:42:00.000Z",
-      "end": "2026-08-30T02:49:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745512",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:49:00.000Z",
-      "end": "2026-08-30T02:56:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218745532",
-      "channelId": "veronica",
-      "title": "Bluey",
-      "start": "2026-08-30T02:56:00.000Z",
-      "end": "2026-08-30T03:03:00.000Z",
-      "description": "Bluey is een zesjarige Blue Heeler hond, die van het alledaagse gezinsleven een avontuur maakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bluey-758671892.jpg",
-      "genre": "Animatieserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218791642",
@@ -7041,68 +6173,6 @@
       }
     },
     {
-      "id": "218746022",
-      "channelId": "net5",
-      "title": "The resident",
-      "start": "2026-08-29T21:56:00.000Z",
-      "end": "2026-08-29T22:54:00.000Z",
-      "description": "Een groep artsen in het Chastain Memorial Hospital staat dagelijks voor verschillende persoonlijke en professionele uitdagingen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/the-resident-753961232.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218746012",
-      "channelId": "net5",
-      "title": "The resident",
-      "start": "2026-08-29T22:54:00.000Z",
-      "end": "2026-08-29T23:54:00.000Z",
-      "description": "Een groep artsen in het Chastain Memorial Hospital staat dagelijks voor verschillende persoonlijke en professionele uitdagingen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/the-resident-753961232.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kOlUCczVc0C3Rtz3h7AaeQ",
-        "assetId": "100A749ACB2BBB1B5BB0D2AA8D37C831",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218745872",
-      "channelId": "net5",
-      "title": "Loop: Hart van Nederland",
-      "start": "2026-08-29T23:54:00.000Z",
-      "end": "2026-08-30T03:53:00.000Z",
-      "description": "Toegankelijk nieuwsprogramma over het gesprek van de dag.",
-      "imageUrl": "https://tvgidsassets.nl/upload/l/loop-hart-van-nederland-760250442.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "a4qfMugblEONuALUQbMNwQ",
-        "assetId": "38960B184B13A42FDC3B808D8EF951F7",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
       "id": "218782082",
       "channelId": "net5",
       "title": "Loop: Hart van Nederland",
@@ -7540,54 +6610,6 @@
       }
     },
     {
-      "id": "218747722",
-      "channelId": "rtl8",
-      "title": "Crime scene investigation",
-      "start": "2026-08-29T21:59:00.000Z",
-      "end": "2026-08-29T23:01:00.000Z",
-      "description": "Een eliteteam van forensische detectives van het Crime Scene Investigations bureau zorgt ervoor dat geen moord in Las Vegas onopgelost blijft.",
-      "imageUrl": "https://tvgidsassets.nl/upload/c/crime-scene-investigation-758653422.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747752",
-      "channelId": "rtl8",
-      "title": "Teleshop 8: Telvero",
-      "start": "2026-08-29T23:01:00.000Z",
-      "end": "2026-08-30T00:02:00.000Z",
-      "description": "Homeshoppingprogramma.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-8-telvero-757118682.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747662",
-      "channelId": "rtl8",
-      "title": "Teleshop 8: Telvero",
-      "start": "2026-08-30T00:01:00.000Z",
-      "end": "2026-08-30T04:15:00.000Z",
-      "description": "Homeshoppingprogramma.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-8-telvero-757118682.jpg",
-      "genre": "Overige",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
       "id": "218783862",
       "channelId": "rtl8",
       "title": "Teleshop",
@@ -7746,254 +6768,6 @@
         "contentItemId": "7MMV6hKArUi8xOXlSXWcwA",
         "assetId": "B543474FB938C579117A30DE451BB0C2",
         "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219807572",
-      "channelId": "rtlz",
-      "title": "Gordon Ramsay: Oorlog in de keuken!",
-      "start": "2026-08-29T21:45:00.000Z",
-      "end": "2026-08-29T22:32:00.000Z",
-      "description": "De Britse chef-kok Gordon Ramsay schiet op geheel eigen wijze te hulp bij noodlijdende Amerikaanse restaurants. Om de zaak weer op de rit te krijgen legt Ramsay de pijnpunten bloot en tiert er lustig op los als zijn aangedragen oplossingen geen vruchtbare bodem vinden. Zijn reputatie staat immers op het spel en de tijd die hij heeft om het restaurant te helpen is beperkt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/g/gordon-ramsay-oorlog-in-de-keuken-765248012.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218716472",
-      "channelId": "rtlz",
-      "title": "Gordon Ramsay: Oorlog in de keuken!",
-      "start": "2026-08-29T22:32:00.000Z",
-      "end": "2026-08-29T23:26:00.000Z",
-      "description": "De Britse chef-kok Gordon Ramsay schiet op geheel eigen wijze te hulp bij noodlijdende Amerikaanse restaurants. Om de zaak weer op de rit te krijgen legt Ramsay de pijnpunten bloot en tiert er lustig op los als zijn aangedragen oplossingen geen vruchtbare bodem vinden. Zijn reputatie staat immers op het spel en de tijd die hij heeft om het restaurant te helpen is beperkt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/g/gordon-ramsay-oorlog-in-de-keuken-758349452.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "R6S65eRCl0emmh-j9GPZ1A",
-        "assetId": "F30EC55DDFB7199F6F4FC42DFA020389",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716612",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-29T23:26:00.000Z",
-      "end": "2026-08-29T23:43:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "SPDgu5NNLk6IF6g9SkY82Q",
-        "assetId": "0DD4663EDB111D0C1ED97BE7C23DD366",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716672",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-29T23:43:00.000Z",
-      "end": "2026-08-30T00:03:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "2GYXHZfWjkqHrKC3fHZ9pw",
-        "assetId": "E7804E0814E33C6E4691011B31EB332D",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716542",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T00:03:00.000Z",
-      "end": "2026-08-30T00:23:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "2GYXHZfWjkqHrKC3fHZ9pw",
-        "assetId": "B586F5573DB8A841BC8539FB718EA283",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716532",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T00:23:00.000Z",
-      "end": "2026-08-30T01:33:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218716562",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T01:33:00.000Z",
-      "end": "2026-08-30T01:43:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218716572",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T01:43:00.000Z",
-      "end": "2026-08-30T02:03:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "2GYXHZfWjkqHrKC3fHZ9pw",
-        "assetId": "0391B51E14DF357DD85A2BCDEAC16B63",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716522",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T02:03:00.000Z",
-      "end": "2026-08-30T02:13:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218716552",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T02:13:00.000Z",
-      "end": "2026-08-30T02:33:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "2GYXHZfWjkqHrKC3fHZ9pw",
-        "assetId": "C72416954B8A0E04EDF0BF09F272BA92",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219875832",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T02:33:00.000Z",
-      "end": "2026-08-30T02:43:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-765705882.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "SPDgu5NNLk6IF6g9SkY82Q",
-        "assetId": "9BF21A49ADD84F9656F4A4B84FC32BE9",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218716582",
-      "channelId": "rtlz",
-      "title": "RTL Nieuws",
-      "start": "2026-08-30T02:43:00.000Z",
-      "end": "2026-08-30T03:03:00.000Z",
-      "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-758555502.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "2GYXHZfWjkqHrKC3fHZ9pw",
-        "assetId": "1996BF5A5036A9BA8A372C5B7B2F88A4",
-        "channelId": "rtlz",
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
@@ -8716,70 +7490,6 @@
       "nlziet": null
     },
     {
-      "id": "218747642",
-      "channelId": "sbs9",
-      "title": "Free solo",
-      "start": "2026-08-29T21:58:00.000Z",
-      "end": "2026-08-29T23:44:00.000Z",
-      "description": "Hoewel iedereen hem probeert te stoppen, bereidt Alex Honnold zich mentaal en fysiek voor op een levensgevaarlijk avontuur: hij wil de ruim 900 meter hoge El Capitan zonder uitrusting beklimmen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/f/free-solo-758567972.jpg",
-      "genre": "Documentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747612",
-      "channelId": "sbs9",
-      "title": "Numb3rs",
-      "start": "2026-08-29T23:44:00.000Z",
-      "end": "2026-08-30T00:25:00.000Z",
-      "description": "Special Agent Don Eppes van de FBI en zijn team hebben hun eigen methode om lastige zaken op te lossen. Dons broer Charlie is een briljante wiskundige en hij gebruikt deze kennis om de meest sluwe criminelen op te sporen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/numb3rs-757118532.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747562",
-      "channelId": "sbs9",
-      "title": "Telvero",
-      "start": "2026-08-30T00:25:00.000Z",
-      "end": "2026-08-30T02:55:00.000Z",
-      "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-7-telvero-759114952.jpg",
-      "genre": "Consumentenprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218747552",
-      "channelId": "sbs9",
-      "title": "Hart van Nederland",
-      "start": "2026-08-30T02:55:00.000Z",
-      "end": "2026-08-30T04:02:00.000Z",
-      "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-756822582.jpg",
-      "genre": "Actualiteiten",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
       "id": "218783762",
       "channelId": "sbs9",
       "title": "Hart van Nederland",
@@ -8896,14 +7606,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "CD9XR_-X2kiORVkJEHqyOQ",
-        "assetId": "A829085FC9203BF9FB20C169D7E692D2",
-        "channelId": "sbs9",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218846102",
@@ -9058,70 +7761,6 @@
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218746472",
-      "channelId": "een",
-      "title": "Goesting",
-      "start": "2026-08-29T21:30:00.000Z",
-      "end": "2026-08-29T22:20:00.000Z",
-      "description": "Over zes mensen met een verschillende achtergrond die samen een restaurant beginnen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/g/goesting-758292422.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218746122",
-      "channelId": "een",
-      "title": "VRT NWS journaal",
-      "start": "2026-08-29T22:20:00.000Z",
-      "end": "2026-08-29T22:35:00.000Z",
-      "description": "Nieuws en sport.",
-      "imageUrl": "https://tvgidsassets.nl/upload/v/vrt-nws-update-762726162.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218746232",
-      "channelId": "een",
-      "title": "Journaallus",
-      "start": "2026-08-29T22:20:00.000Z",
-      "end": "2026-08-30T04:20:00.000Z",
-      "description": "Doorlopende herhalingen van nieuws en sport.",
-      "imageUrl": "https://tvgidsassets.nl/upload/j/journaallus-756097132.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218746112",
-      "channelId": "een",
-      "title": "Het weer",
-      "start": "2026-08-29T22:35:00.000Z",
-      "end": "2026-08-30T04:20:00.000Z",
-      "description": "Het actuele weerbericht.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/het-weer-758896802.jpg",
-      "genre": "Weerbericht",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218782512",
@@ -9436,7 +8075,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "61-GVPtDRkWlazhUvqsM5Q",
+        "assetId": "096344FA037B67180284F035C8F39917",
+        "channelId": "een",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219285572",
@@ -9562,7 +8208,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "gVWtAfWHSU-FnD1DnOwNuw",
+        "assetId": "4E1B85EFE853A40B806585E241A53846",
+        "channelId": "een",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219335482",
@@ -9755,7 +8408,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "0ffaL8KEeke9TkmZl2hEuA",
+        "assetId": "2922CC554E11CB49158C36973077FB7C",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218782312",
@@ -9771,7 +8431,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "F3uA-nfZR0-zeMiG7-Ouqw",
+        "assetId": "A72E9718604AA4B4B2AF987A1BB3C28E",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218782602",
@@ -9795,100 +8462,6 @@
         "isReplayAllowed": false,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218749092",
-      "channelId": "vrtcanvas",
-      "title": "First Man",
-      "start": "2026-08-29T20:10:00.000Z",
-      "end": "2026-08-29T22:26:00.000Z",
-      "description": "Kort na het verlies van zijn dochtertje verhuist NASA-testpiloot Neil Armstrong samen met zijn vrouw Janet en hun zoontje Rick begin jaren zestig naar Houston om deel te nemen aan Project Gemini. Op het gebied van ruimtevaart hebben de Russen tot nu toe iedere slag gewonnen en daarom zijn de Amerikanen erop gebrand om de eerste man op de maan te zetten. De levensgevaarlijke weg naar succes vraagt om vele offers, maar de koelbloedige Armstrong weet zich door alle tegenslagen heen te slaan. En op 20 juli 1969 zijn alle ogen van de wereld op hem gericht.",
-      "imageUrl": "https://tvgidsassets.nl/upload/f/first-man-758574002.jpg",
-      "genre": "Biografie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218749102",
-      "channelId": "vrtcanvas",
-      "title": "Het weer",
-      "start": "2026-08-29T22:26:00.000Z",
-      "end": "2026-08-29T22:30:00.000Z",
-      "description": "Het actuele weerbericht.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/het-weer-758896802.jpg",
-      "genre": "Weerbericht",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "OvJEg9nGkUedCaWC9yw7bg",
-        "assetId": "960470C9D2161A65DAA00A43B1A0F49C",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218748962",
-      "channelId": "vrtcanvas",
-      "title": "VRT NWS journaal",
-      "start": "2026-08-29T22:30:00.000Z",
-      "end": "2026-08-29T22:45:00.000Z",
-      "description": "Nieuws en sport.",
-      "imageUrl": "https://tvgidsassets.nl/upload/v/vrt-nws-update-762726162.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218748972",
-      "channelId": "vrtcanvas",
-      "title": "Nachtlus",
-      "start": "2026-08-29T22:30:00.000Z",
-      "end": "2026-08-30T04:00:00.000Z",
-      "description": "Doorlopende herhaling tot de start van de ochtenduitzendingen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nachtlus-758305722.jpg",
-      "genre": "Amusement",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "dZ8PBUyxJEqa8B1ow6yEjA",
-        "assetId": "EE2B70092F27AE2C5BC8F1E7627D56E9",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218749112",
-      "channelId": "vrtcanvas",
-      "title": "Het weer",
-      "start": "2026-08-29T22:45:00.000Z",
-      "end": "2026-08-30T04:00:00.000Z",
-      "description": "Het actuele weerbericht.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/het-weer-758896802.jpg",
-      "genre": "Weerbericht",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218785092",
@@ -10030,14 +8603,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "uGeNgu7-sEGats2bE7w48A",
-        "assetId": "EC498F2E363C0C2752390EF9AC6BE8DB",
-        "channelId": "canvas",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218785152",
@@ -10053,14 +8619,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "u04UR-D7LUWd-2K7lJ-1ZQ",
-        "assetId": "2DB0080F44B0221026DBEAA59CC0DC27",
-        "channelId": "canvas",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218785162",
@@ -10104,84 +8663,6 @@
         "contentItemId": "-xSIMwY2x0qWCSBAgJef-g",
         "assetId": "BF7A70D8ACE6854B25EF4E4B3C26678A",
         "channelId": "canvas",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219080522",
-      "channelId": "bbc1",
-      "title": "Match of the Day",
-      "start": "2026-08-29T21:25:00.000Z",
-      "end": "2026-08-29T22:35:00.000Z",
-      "description": "Samenvattingen van de wedstrijden in de Premier League.",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/match-of-the-day-760717732.jpg",
-      "genre": "Sportprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219080402",
-      "channelId": "bbc1",
-      "title": "Reading & Leeds Festival",
-      "start": "2026-08-29T22:35:00.000Z",
-      "end": "2026-08-29T23:50:00.000Z",
-      "description": "Registratie van de grootste optredens van de Reading en Leeds festivals.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/reading-leeds-festival-762339582.jpg",
-      "genre": "Muziekprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219080442",
-      "channelId": "bbc1",
-      "title": "Weather for the week ahead",
-      "start": "2026-08-29T23:50:00.000Z",
-      "end": "2026-08-29T23:55:00.000Z",
-      "description": "Uitgebreid weerbericht.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/weather-for-the-week-ahead-760717502.jpg",
-      "genre": "Weerbericht",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "partvmlx20mVI98u4DUzzg",
-        "assetId": "7EFC8E3AE63EA5540E6B75B70DE3E22E",
-        "channelId": "bbcone",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219080412",
-      "channelId": "bbc1",
-      "title": "BBC news",
-      "start": "2026-08-29T23:55:00.000Z",
-      "end": "2026-08-30T05:00:00.000Z",
-      "description": "Het laatste nationale en internationale nieuws.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bbc-news-760788662.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "K2kStNa040iBczaV5SkS3g",
-        "assetId": "622A7D29AE140C3CE724E1CB720A65B0",
-        "channelId": "bbcone",
         "isReplayAllowed": false,
         "isRestartAllowed": true
       }
@@ -10487,7 +8968,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "YHVm6VpDCUeNWJA3TuGc9A",
+        "assetId": "85A67C97D06324445E186A4DB44F3D6A",
+        "channelId": "bbcone",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219080192",
@@ -10549,14 +9037,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "HAXAmAWZXkqgzMAk32kBQQ",
-        "assetId": "367C922E4F8D331B0AD0141DB1498741",
-        "channelId": "bbcone",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219080202",
@@ -10612,93 +9093,6 @@
       "ageRating": null,
       "nlzietId": null,
       "nlziet": null
-    },
-    {
-      "id": "219077622",
-      "channelId": "bbc2",
-      "title": "Wham! at the BBC",
-      "start": "2026-08-29T21:25:00.000Z",
-      "end": "2026-08-29T22:35:00.000Z",
-      "description": "Ter gelegenheid van de veertigste verjaardag van klassieker 'Last Christmas', presenteren Wham! iconen Andrew Ridgeley, Pepsi DeMacque en Shirlie Kemp een selectie van de grootste en beste optredens van de band uit de BBC-archieven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/wham-at-the-bbc-760705502.jpg",
-      "genre": "Muziekprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219346682",
-      "channelId": "bbc2",
-      "title": "Top of the pops",
-      "start": "2026-08-29T22:35:00.000Z",
-      "end": "2026-08-29T23:35:00.000Z",
-      "description": "De hits uit de Engelse hitparade van jaren geleden.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/top-of-the-pops-762351362.jpg",
-      "genre": "Muziekprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219077412",
-      "channelId": "bbc2",
-      "title": "Today At the Test: England - Pakistan",
-      "start": "2026-08-29T23:35:00.000Z",
-      "end": "2026-08-30T00:35:00.000Z",
-      "description": "Verslag van de cricket Test-wedstrijden.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/today-at-the-test-england-pakistan-760704892.jpg",
-      "genre": "Verslag",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219077632",
-      "channelId": "bbc2",
-      "title": "Compartment No. 6",
-      "start": "2026-08-30T00:35:00.000Z",
-      "end": "2026-08-30T02:20:00.000Z",
-      "description": "Om af te reageren nadat het uitgegaan is met haar vriendje reist de Finse Laura vanuit Moskou naar Moermansk om daar de tienduizend jaar oude grottekeningen te bestuderen. Tijdens de treinreis deelt ze haar slaap coupé met mijnwerker Ljoha uit Moermansk. Eenmaal in Moermansk aangekomen blijkt Laura als Finse de tekeningen helemaal niet te mogen zien en moet ze Ljoha om hulp vragen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hytti-nro-6-760705532.jpg",
-      "genre": "Drama",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219346552",
-      "channelId": "bbc2",
-      "title": "Signed: Ludwig",
-      "start": "2026-08-30T02:20:00.000Z",
-      "end": "2026-08-30T03:15:00.000Z",
-      "description": "De teruggetrokken puzzelontwerper John 'Ludwig' Taylor probeert het mysterie van de verdwijning van zijn tweelingbroer te ontrafelen. Hij neemt de identiteit van zijn tweelingbroer James aan, die in Cambridge als inspecteur bij de afdeling zware misdaden werkte.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/signed-ludwig-762350792.jpg",
-      "genre": "Detectiveserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "HE-qPIfsiUCH0g3QDslyYg",
-        "assetId": "213D0298B28751DA8DB29DC5198897A9",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
     },
     {
       "id": "219077372",
@@ -10776,7 +9170,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "oVMI5oFxS0iII8IHyn99hg",
+        "assetId": "DB56F3F89F69392D0DC9E179372FFC95",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219346402",
@@ -10925,7 +9326,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "QSeCQBkbfk2daKRghX91Gg",
+        "assetId": "C3CA92C546ECAD4BF018CC6485213133",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219346392",
@@ -10995,160 +9403,6 @@
         "assetId": "F255BEC90709ADF115A25B6BB9AA006E",
         "channelId": "bbctwo",
         "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741792",
-      "channelId": "npo1extra",
-      "title": "Families like ours",
-      "start": "2026-08-29T22:00:00.000Z",
-      "end": "2026-08-29T22:50:00.000Z",
-      "description": "De zeespiegel in Denemarken dreigt zo drastisch te gaan stijgen, dat iedereen het land moet verlaten en elders een onderkomen moet zoeken. Huizen worden onverkoopbaar en families worden verscheurd: alles verandert. Ook voor eindexamenkandidaat Laura, die voor een onmogelijke keuze komt te staan.",
-      "imageUrl": "https://tvgidsassets.nl/upload/f/families-like-ours-758527902.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "RB4DHFCe2UO3NxGDsI65fg",
-        "assetId": "2D973FCAF76243EB8E6D1D0436AD8621",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741702",
-      "channelId": "npo1extra",
-      "title": "Hotel Portofino",
-      "start": "2026-08-29T22:50:00.000Z",
-      "end": "2026-08-29T23:45:00.000Z",
-      "description": "Een Britse familie begint een hotel aan de Italiaanse Rivièra tijdens de roerige jaren twintig. De zoon van hoteleigenares Bella Ainsworth lijkt een geschikte huwelijkskandidaat voor een van haar gasten, maar al snel krijgt Bella te maken met grotere problemen.",
-      "imageUrl": null,
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TthuLVDs9kqj3z3YO1Iw9Q",
-        "assetId": "4D48E1536EE8C3BB1AC952CA79B653E3",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741712",
-      "channelId": "npo1extra",
-      "title": "Die Zweiflers",
-      "start": "2026-08-29T23:45:00.000Z",
-      "end": "2026-08-30T00:35:00.000Z",
-      "description": "Patriarch Symcha Zweifler wil zijn delicatessen-imperium van de hand doen, maar wordt geconfronteerd met gebeurtenissen uit het verleden. Dit leidt tot ruzie binnen de familie. Wanneer er een achterkleinkind op komst blijkt te zijn, laaien de gemoederen verder op.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/die-zweiflers-758528032.jpg",
-      "genre": "Komische dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "1JAyU5Vj6E-iI3TmKh4Vug",
-        "assetId": "477F5E1DBB54BEC826E843B0E1D157DB",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741722",
-      "channelId": "npo1extra",
-      "title": "Silent witness",
-      "start": "2026-08-30T00:35:00.000Z",
-      "end": "2026-08-30T01:25:00.000Z",
-      "description": "Britse dramaserie over de forensisch pathologe Nikki Alexander en haar collega's. In het laboratorium ontleden en analyseren ze lichamen om de ware doodsoorzaak te ontdekken. Ze spelen een belangrijke rol in het oplossen van moordzaken.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/silent-witness-756108152.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218741732",
-      "channelId": "npo1extra",
-      "title": "Orphan black: Echoes",
-      "start": "2026-08-30T01:25:00.000Z",
-      "end": "2026-08-30T02:10:00.000Z",
-      "description": "Lucy leidt een rustig leven op het platteland met haar vriend en zijn dochter, al heeft ze regelmatig nachtmerries over haar mysterieuze verleden. Als ze op een dag wordt opgespoord door een gewelddadige man, vlucht ze naar de stad, in de hoop daar meer informatie te vinden over haar identiteit.",
-      "imageUrl": "https://tvgidsassets.nl/upload/o/orphan-black-echoes-759832462.jpg",
-      "genre": "Dramaserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "6KoAEzs-tEOkjS0lbg5JaQ",
-        "assetId": "0B59D49C57D19AF3F0C35E0E2B7834FA",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741742",
-      "channelId": "npo1extra",
-      "title": "Time",
-      "start": "2026-08-30T02:10:00.000Z",
-      "end": "2026-08-30T02:55:00.000Z",
-      "description": "Dramaserie over het leven in de gevangenis, verteld vanuit het perspectief van drie vrouwen. Ze arriveren op dezelfde dag in Carlingford Prison.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/time-758528242.jpg",
-      "genre": "Miniserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Sd-AjR2-nEOwZBgWDzF1UA",
-        "assetId": "DCDAF0608F51D5CD06E28F2B891D7FC4",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741672",
-      "channelId": "npo1extra",
-      "title": "The excavation",
-      "start": "2026-08-30T02:55:00.000Z",
-      "end": "2026-08-30T03:35:00.000Z",
-      "description": "Ester Toksvig werkt als archeoloog bij een Vikingmuseum terwijl haar dominante echtgenoot Michael werkt bij het prestigieuze Nationaal Museum. Als Michael een gemene streek uithaalt, komt het privé en beroepshalve tot een botsing, waarbij Vikingkoning Harald Blauwtand een rol speelt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/the-excavation-762119962.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "k36VhW22qkeFVBpMYSpTeg",
-        "assetId": "FA0FF853B1F6BC76A6444D1FBDCD5A9F",
-        "channelId": "npo1extra",
-        "isReplayAllowed": true,
         "isRestartAllowed": true
       }
     },
@@ -11567,123 +9821,6 @@
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "218732512",
-      "channelId": "npo2extra",
-      "title": "Genesis: Three sides live",
-      "start": "2026-08-29T21:05:00.000Z",
-      "end": "2026-08-29T22:30:00.000Z",
-      "description": "Three Sides Live werd in 1981 gefilmd tijdens de Abacab-tournee in Noord-Amerika. Oorspronkelijk gefilmd op 16 mm zijn de beelden nu volledig hersteld en worden ze voor het eerst opnieuw uitgegeven.",
-      "imageUrl": "https://tvgidsassets.nl/upload/g/genesis-three-sides-live-758438302.jpg",
-      "genre": "Muziekdocumentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218732492",
-      "channelId": "npo2extra",
-      "title": "Teaches of Peaches",
-      "start": "2026-08-29T22:30:00.000Z",
-      "end": "2026-08-30T00:10:00.000Z",
-      "description": "Deze documentaire, gefilmd tijdens de Teaches of Peaches Anniversary Tour in 2022, verweeft naadloos exclusieve archiefstukken met dynamische tourbeelden om de transformerende reis van de Canadese Merrill Nisker tot de internationaal geprezen culturele krachtpatser Peaches vast te leggen. Van het begin van de show tot de strenge repetities en meeslepende optredens, geeft de film een kijkje in het reilen en zeilen van de tour. Als feministische muzikante, producer, regisseuse en performance artieste daagt Peaches al meer dan twee decennia lang genderverwachtingen uit en verstevigt ze haar status naast iconen uit de pop- en muziekindustrie.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/teaches-of-peaches-758438242.jpg",
-      "genre": "Documentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "bVe26fid10uQM-j41DLEVw",
-        "assetId": "7E6EC17C97F4A052A030C42991E09E7A",
-        "channelId": "npo2extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218732562",
-      "channelId": "npo2extra",
-      "title": "Podium dans",
-      "start": "2026-08-30T00:10:00.000Z",
-      "end": "2026-08-30T00:40:00.000Z",
-      "description": "Choreografen en artistiek leiders van dansgezelschappen uit Nederland en België vertellen over hun werk, maar ook nieuwe makers komen aan het woord.",
-      "imageUrl": "https://tvgidsassets.nl/upload/p/podium-dans-758438442.jpg",
-      "genre": "Dansprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "q_Pf7IG2tEa0rOTFzYHhOA",
-        "assetId": "44290186336C9227191606BD3DE1E7BF",
-        "channelId": "npo2extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218732462",
-      "channelId": "npo2extra",
-      "title": "Women make film",
-      "start": "2026-08-30T00:40:00.000Z",
-      "end": "2026-08-30T01:40:00.000Z",
-      "description": "Aan de hand van fragmenten uit films van 183 vrouwelijke regisseurs uit dertien decennia en vijf continenten concentreert deze reeks zich op de integrale rol van vrouwen in de ontwikkeling van filmkunst.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/women-make-film-758438152.jpg",
-      "genre": "Documentaireserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "9QewCZMeL0mDLfcjbV-emg",
-        "assetId": "5B69114397AC9F85332281CCA7E547AB",
-        "channelId": "npo2extra",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218732572",
-      "channelId": "npo2extra",
-      "title": "Close up",
-      "start": "2026-08-30T01:40:00.000Z",
-      "end": "2026-08-30T02:35:00.000Z",
-      "description": "De Chinees-Australische kunstenaar Jiawei Shen verliest na de Culturele Revolutie alle vertrouwen in zijn vaderland. In een vierluik genaamd Toren van Babel verwerkt hij de tragedie van het internationaal communisme. Gedurende zeven jaar werkt hij in zijn drie verdiepingen hoge studio aan dit magistrale kunstwerk. Hij verweeft honderden portretten van beroemdheden met honderddertig iconische kunstwerken van onder anderen Picasso, Matisse, Léger en Frida Kahlo. Het werk vormt een reconstructie van de utopie en de tragedie van het communisme van de 20e eeuw.",
-      "imageUrl": "https://tvgidsassets.nl/upload/j/jiawei-shen-s-toren-van-babel-758438472.jpg",
-      "genre": "Documentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "218732582",
-      "channelId": "npo2extra",
-      "title": "Nilas Traum im Garten Eden",
-      "start": "2026-08-30T02:35:00.000Z",
-      "end": "2026-08-30T04:10:00.000Z",
-      "description": "Leyla en haar zesjarige dochter Nila wonen in de heilige stad Mashhad, Iran. Nila is het product van een tijdelijk huwelijk, waardoor een man voor een vooraf bepaalde en beperkte tijd met een vrouw kan trouwen, zelfs als hij al getrouwd is. Kinderen geboren uit deze relaties bestaan juridisch gezien niet, met allerlei nare gevolgen. Tenzij de vader het bestaan ervan erkent, kan er geen geboorteakte worden afgegeven en zonder geboorteakte kan het kind bijvoorbeeld niet naar school.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nilas-traum-im-garten-eden-758438502.jpg",
-      "genre": "Documentaire",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "218769222",
@@ -12178,52 +10315,6 @@
       }
     },
     {
-      "id": "218741862",
-      "channelId": "npopolitiek",
-      "title": "Haagse politiek",
-      "start": "2026-08-29T22:00:00.000Z",
-      "end": "2026-08-30T01:00:00.000Z",
-      "description": "Themazender van de NPO. De zender belicht dagelijks ontwikkelingen in de landelijke politiek inclusief liveverslag van debatten in de Tweede Kamer en andere politieke gebeurtenissen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/haagse-politiek-759832772.jpg",
-      "genre": "Reportage",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Z0eR01DccUqimzHXqLeM4A",
-        "assetId": "A408316CAD9125390B96BFBBBF97BF48",
-        "channelId": "npopolitiek",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218741872",
-      "channelId": "npopolitiek",
-      "title": "Haagse politiek",
-      "start": "2026-08-30T01:00:00.000Z",
-      "end": "2026-08-30T04:00:00.000Z",
-      "description": "Themazender van de NPO. De zender belicht dagelijks ontwikkelingen in de landelijke politiek inclusief liveverslag van debatten in de Tweede Kamer en andere politieke gebeurtenissen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/haagse-politiek-759832772.jpg",
-      "genre": "Reportage",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Z0eR01DccUqimzHXqLeM4A",
-        "assetId": "E4F5CE8FDB43E79BFBAC02B86ADF8440",
-        "channelId": "npopolitiek",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
       "id": "218778402",
       "channelId": "npopolitiek",
       "title": "Haagse politiek",
@@ -12357,144 +10448,6 @@
         "contentItemId": "K6wfAuRyuUClSbm2Rp2njw",
         "assetId": "ECB5137CDB1E13EC4065F1FDEDB3CF16",
         "channelId": "npopolitiek",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712312",
-      "channelId": "ons",
-      "title": "Ons nostalgisch uur",
-      "start": "2026-08-29T22:00:00.000Z",
-      "end": "2026-08-29T23:00:00.000Z",
-      "description": "Gezondheidszorg - Special met archiefmateriaal rondom het thema gezondheidszorg.",
-      "imageUrl": "https://tvgidsassets.nl/upload/o/ons-nostalgisch-uur-760366172.jpg",
-      "genre": "Reportage",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "_-VcvsUDU0izDm2n5Ufddg",
-        "assetId": "32F900CF9D0480D6A7F4CDF9EB23C542",
-        "channelId": "ons",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712522",
-      "channelId": "ons",
-      "title": "Bergerac",
-      "start": "2026-08-29T23:00:00.000Z",
-      "end": "2026-08-30T00:04:00.000Z",
-      "description": "Britse misdaadserie over rechercheur Jim Bergerac, die na een scheiding en een alcoholverslaving terugkeert bij het Bureau des Étrangers op het eiland Jersey. Bergerac onderzoekt misdaden op geheel eigen wijze en ligt daarom regelmatig overhoop met zijn leidinggevende.",
-      "imageUrl": "https://tvgidsassets.nl/upload/b/bergerac-758330862.jpg",
-      "genre": "Detectiveserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "uK9aAhliKUC_uWiwtlLvBg",
-        "assetId": "10D9F46B000BA6658997FDD8F0638951",
-        "channelId": "ons",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712532",
-      "channelId": "ons",
-      "title": "Alarm für Cobra 11",
-      "start": "2026-08-30T00:04:00.000Z",
-      "end": "2026-08-30T01:02:00.000Z",
-      "description": "Ben en Semir zitten achter de voormalige mentalist Oliver Quin aan, die een hotelkluis met zijn trucs heeft leeggeroofd. Onder de spullen bevindt zich een harde schijf van een gangster die bereid is om te moorden om de schijf in handen te krijgen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/a/alarm-fur-cobra-11-758330932.jpg",
-      "genre": "Actieserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yEp6aXex5ECoWoN8xW-O_g",
-        "assetId": "D658C5EC0EE12A1F317F6F12ABF79F15",
-        "channelId": "ons",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712542",
-      "channelId": "ons",
-      "title": "Um Himmels Willen",
-      "start": "2026-08-30T01:02:00.000Z",
-      "end": "2026-08-30T02:02:00.000Z",
-      "description": "Serie over de nonnen van een klooster in het Beierse Kaltenthal.",
-      "imageUrl": "https://tvgidsassets.nl/upload/u/um-himmels-willen-758330992.jpg",
-      "genre": "Comedyserie",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "c4bhSmAe7UmcZC-g-awCqg",
-        "assetId": "A946E88247566F2C9668AF853F2AC13F",
-        "channelId": "ons",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712402",
-      "channelId": "ons",
-      "title": "Mijn nostalgisch Nederland",
-      "start": "2026-08-30T02:02:00.000Z",
-      "end": "2026-08-30T02:34:00.000Z",
-      "description": "In de serie Mijn Nostalgisch Nederland komt de recente geschiedenis van verschillende Nederlandse steden en streken aan bod. In deze aflevering: De Achterhoek: boerenbruiloften, Bronkhorst en ongerepte natuur. \"Mijn Achterhoek\" neemt u mee naar het verleden van deze streek",
-      "imageUrl": "https://tvgidsassets.nl/upload/m/mijn-nostalgisch-nederland-758330412.jpg",
-      "genre": "Reportage, Reisprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "ERDVrRH_Hk-LOqIKdXLYqw",
-        "assetId": "54309418D376E3E42BE1A21F60A385A1",
-        "channelId": "ons",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "218712552",
-      "channelId": "ons",
-      "title": "World's Greatest Ships",
-      "start": "2026-08-30T02:34:00.000Z",
-      "end": "2026-08-30T03:29:00.000Z",
-      "description": "World's Greatest Ships - Seizoen 1 Aflevering 2 - The Cutty Sark - Rob Bell onderzoekt de bijzondere theeklipper Cutty Sark - een schip dat dronken kapiteins en moordlustige bemanningen heeft doorstaan, een whisky inspireerde en de komst van het stoomtijdperk overleefde, om vervolgens haar grootste beproeving te ondergaan: een verwoestende brand die in 2007 's nachts door haar romp raasde. Op wonderbaarlijke wijze overleefde het houten schip de brand. Maar hoe?",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/world-s-greatest-ships-758331052.jpg",
-      "genre": "Geschiedenisprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "H1C26JEbiEi3e0qRXGzYBA",
-        "assetId": "087806638AFBC6885F51654C63E75DC8",
-        "channelId": "ons",
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
