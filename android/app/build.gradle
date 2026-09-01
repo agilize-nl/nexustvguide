@@ -111,6 +111,12 @@ android {
             }
         }
     }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "NexusTVGuide-v${variant.versionName}-${variant.buildType.name}.apk"
+        }
+    }
 }
 
 // Een debug-APK krijgt de versie uit version.properties. Na een geslaagde packaging

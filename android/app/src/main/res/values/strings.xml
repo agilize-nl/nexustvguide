@@ -36,7 +36,7 @@
     <string name="menu_item_check_updates">Zoeken naar updates</string>
     <string name="menu_item_about">Over NexusTVGuide</string>
     <string name="about_dialog_title">Over NexusTVGuide</string>
-    <string name="about_dialog_message">NexusTVGuide v%1$s (build %2$d)\n\nLive TV-gids voor Android TV met directe NLZIET-integratie.</string>
+    <string name="about_dialog_message">NexusTVGuide v%1$s (build %2$d)\nLive TV-gids voor Android TV met directe NLZIET-integratie.\n\nNLZIET-koppeling &amp; Beschikbaarheid:\nHet direct starten of terugkijken van programma\'s is afhankelijk van de beschikbaarheid en uitzendrechten binnen NLZIET. Hierdoor kan niet elk programma rechtstreeks via de gids worden geopend.\n\nHerkomst gegevens:\nProgrammagegevens worden automatisch verzameld uit externe, openbare bronnen. Tijden en inhoud zijn onder voorbehoud van wijzigingen door de omroepen.\n\nDisclaimer &amp; Aansprakelijkheid:\nHet gebruik van NexusTVGuide is op eigen risico. Het team en de makers zijn niet aansprakelijk voor eventuele onjuistheden, storingen of schade door het gebruik van deze app.\n\nNexusTVGuide is een onafhankelijk project en niet gelieerd aan NLZIET of zenders. Merknamen behoren toe aan hun eigenaren.</string>
     <string name="channel_order_coming_soon">Zenderordening is binnenkort beschikbaar.</string>
 
     <!-- In-app updates strings -->

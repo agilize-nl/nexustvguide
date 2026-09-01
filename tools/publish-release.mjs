@@ -9,7 +9,7 @@
  *   node tools/publish-release.mjs [--notes "Release notes text"] [--no-deploy] [--server root@100.88.166.57] [--dry-run]
  */
 
-import { existsSync, readFileSync, writeFileSync, renameSync, copyFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, renameSync, copyFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { execSync } from 'node:child_process';
@@ -111,7 +111,19 @@ if (!skipBuild) {
     console.error('ERROR: Gradle assembleRelease failed.');
     process.exit(1);
   }
-  apkPath = join(ANDROID_DIR, 'app', 'build', 'outputs', 'apk', 'release', 'app-release.apk');
+}
+
+if (!apkPath) {
+  const releaseOutputDir = join(ANDROID_DIR, 'app', 'build', 'outputs', 'apk', 'release');
+  if (existsSync(releaseOutputDir)) {
+    const apks = readdirSync(releaseOutputDir).filter(f => f.endsWith('.apk') && !f.includes('-unsigned'));
+    if (apks.length > 0) {
+      apkPath = join(releaseOutputDir, apks[0]);
+    }
+  }
+  if (!apkPath) {
+    apkPath = join(releaseOutputDir, 'app-release.apk');
+  }
 }
 
 if (!apkPath || !existsSync(apkPath)) {
