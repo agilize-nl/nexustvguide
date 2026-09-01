@@ -25,9 +25,11 @@
 
     <ImageView
         android:id="@+id/programguide_header_logo"
-        android:layout_width="32dp"
+        android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginStart="@dimen/programguide_page_left_padding"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
         android:src="@drawable/programguide_logo"
         android:contentDescription="@string/programguide_header_app_title"
         app:layout_constraintBottom_toTopOf="@id/programguide_time_row"
@@ -103,6 +105,7 @@
             tools:text="Vrijdag 29 augustus 2026" />
 
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/programguide_header_right_container"
@@ -304,7 +307,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/programguide_time_row_height"
         android:layout_marginStart="@dimen/programguide_channel_column_width"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/programguide_header_height"
         android:alpha="0"
         android:fadingEdgeLength="20dp"
         android:requiresFadingEdge="horizontal"
@@ -314,14 +317,6 @@
         tools:alpha="1"
         tools:listitem="@layout/programguide_item_time" />
 
-    <include
-        android:id="@+id/programguide_current_date"
-        layout="@layout/programguide_item_time"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/programguide_time_row_height"
-        android:layout_marginStart="@dimen/programguide_page_left_padding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/programguide_time_row" />
 
     <include
         android:id="@+id/programguide_current_time_indicator"

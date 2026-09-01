@@ -23,6 +23,7 @@
     android:layout_height="@dimen/programguide_program_row_height_with_empty_space"
     android:focusable="false"
     android:background="@drawable/programguide_channel_item_background"
+    android:paddingStart="@dimen/programguide_page_left_padding"
     android:paddingLeft="@dimen/programguide_page_left_padding">
 
     <TextView

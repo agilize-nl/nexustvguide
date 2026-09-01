@@ -48,7 +48,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     override val DISPLAY_MENU_BUTTON: Boolean = true
     override val USE_HUMAN_DATES: Boolean = true
     override val DATE_WITH_DAY_FORMATTER: DateTimeFormatter =
-        DateTimeFormatter.ofPattern("EEE d MMM", Locale("nl", "NL"))
+        DateTimeFormatter.ofPattern("EEE d MMMM", Locale("nl", "NL"))
 
     private val viewModel: GuideViewModel by viewModels()
     private val updateViewModel: UpdateViewModel by activityViewModels()

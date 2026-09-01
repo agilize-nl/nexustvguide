@@ -65,9 +65,12 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/programguide_channel_text_color</item>
         <item name="android:singleLine">true</item>
-        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:gravity">start|center_vertical</item>
         <item name="android:ellipsize">middle</item>
-        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
         <item name="android:layout_marginRight">4dp</item>
     </style>
 
@@ -87,7 +90,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">7dp</item>
         <item name="android:layout_marginBottom">7dp</item>
-        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:scaleType">fitStart</item>
     </style>

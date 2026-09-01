@@ -102,7 +102,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     protected open val SCROLL_SYNCING = false
 
     protected open val DATE_WITH_DAY_FORMATTER: DateTimeFormatter
-        get() = DateTimeFormatter.ofPattern("EEE d MMM").withLocale(DISPLAY_LOCALE)
+        get() = DateTimeFormatter.ofPattern("EEE d MMMM").withLocale(DISPLAY_LOCALE)
     protected open val GUIDE_DATE_FORMATTER: DateTimeFormatter
         get() = DateTimeFormatter.ofPattern("EEEE d MMMM yyyy").withLocale(DISPLAY_LOCALE)
     protected open val LIVE_DATETIME_FORMATTER: DateTimeFormatter
@@ -135,7 +135,6 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
 
     override val programGuideGrid get() = view?.findViewById<ProgramGuideGridView<T>>(R.id.programguide_grid)!!
     private val timeRow get() = view?.findViewById<ProgramGuideTimelineRow>(R.id.programguide_time_row)
-    private val currentDateView get() = view?.findViewById<TextView>(R.id.programguide_current_date)
     private val jumpToLive get() = view?.findViewById<TextView>(R.id.programguide_jump_to_live)
     private val currentTimeIndicator get() = view?.findViewById<FrameLayout>(R.id.programguide_current_time_indicator)
     private val timeOfDayFilter get() = view?.findViewById<View>(R.id.programguide_time_of_day_filter)
@@ -519,7 +518,6 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             it.adapter = adapter
         }
         programGuideManager.listeners.add(this)
-        currentDateView?.alpha = 0f
         timeRow.let { timelineRow ->
             timelineRow.scrollSyncEnabled = SCROLL_SYNCING
             val timelineAdapter = ProgramGuideTimeListAdapter(resources, DISPLAY_TIMEZONE)
@@ -572,7 +570,6 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         } else {
             setTopMarginVisibility(isTopMenuVisible())
             timeRow?.alpha = 1f
-            currentDateView?.alpha = 1f
             updateCurrentDateText()
             updateCurrentTimeIndicator()
             updateTimeOfDayFilter()
@@ -918,14 +915,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     }
 
     private fun updateCurrentDateText() {
-        // The day might have changed
-        val viewportStartTime =
-            Instant.ofEpochMilli(programGuideManager.getFromUtcMillis()).atZone(DISPLAY_TIMEZONE)
-        var dateText = DATE_WITH_DAY_FORMATTER.format(viewportStartTime)
-        if (dateText.endsWith(".")) {
-            dateText = dateText.dropLast(1)
-        }
-        currentDateView?.text = dateText.capitalize(DISPLAY_LOCALE)
+        // Corner date display is removed as requested
     }
 
     private fun updateTimeline() {
@@ -985,7 +975,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                 contentAnimator?.displayedChild = 0
             }
         }
-        listOf(currentDateView, timeRow, currentTimeIndicator).map {
+        listOf(timeRow, currentTimeIndicator).map {
             if (it == null) {
                 return
             }

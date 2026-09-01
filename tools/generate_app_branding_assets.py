@@ -225,12 +225,15 @@ def main():
     master_banner.save(os.path.join(base_res, "drawable", "tv_banner_nexus_beam.png"), "PNG")
     print("Saved master drawable/tv_banner.png (640x360)")
 
-    # In-app UI logo assets
-    in_app_logo = squircle.resize((128, 128), Image.Resampling.LANCZOS)
+    # In-app UI logo assets: tightly cropped emblem with transparent background
+    ew, eh = emblem.size
+    target_h = 128
+    target_w = int(ew * (target_h / eh))
+    in_app_logo = emblem.resize((target_w, target_h), Image.Resampling.LANCZOS)
     os.makedirs(os.path.join(lib_res, "drawable"), exist_ok=True)
     in_app_logo.save(os.path.join(lib_res, "drawable", "programguide_logo.png"), "PNG")
     in_app_logo.save(os.path.join(base_res, "drawable", "app_logo.png"), "PNG")
-    print("Saved in-app UI logos (128x128)")
+    print(f"Saved in-app UI logos ({target_w}x{target_h})")
 
     print("\nAll assets generated successfully!")
 
