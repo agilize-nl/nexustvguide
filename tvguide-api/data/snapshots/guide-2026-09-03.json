@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-02T22:00:00Z",
   "to": "2026-09-03T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -5352,14 +5352,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4HYa-CQvgkykuzkndKegfA",
-        "assetId": "F7C882C1C907516C6A516E61E24137EF",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219015532",
@@ -7542,8 +7535,8 @@
       "id": "218958682",
       "channelId": "veronica",
       "title": "Ocean's 8",
-      "start": "2026-09-02T20:55:00.000Z",
-      "end": "2026-09-02T23:05:00.000Z",
+      "start": "2026-09-02T20:59:00.000Z",
+      "end": "2026-09-02T23:10:00.000Z",
       "description": "Debbie Ocean heeft vijf jaar, acht maanden en twaalf dagen nagedacht over het perfecte plan voor een spectaculaire juwelenroof, de roof van haar leven. Hiervoor heeft ze wel een team van bijzonder bekwame mensen nodig. Allereerst haar voormalige partner Lou Miller, de juwelier Amita, de oplichtster Constance, de slotenspecialist Tammy, de hacker Nine Ball en de modeontwerpster Rose. Het doel is het stelen van een diamanten halsketting die 150 miljoen dollar waard is. Op het Met Gala zal deze voor één dag gedragen worden door de wereldberoemde actrice Daphne Kluger. Het plan is erg minutieus uitgedacht, maar om deze roof te laten slagen moet alles helemaal goed gaan.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/ocean-s-8-759935062.jpg",
       "genre": "Misdaadkomedie",
@@ -7558,8 +7551,8 @@
       "id": "220022302",
       "channelId": "veronica",
       "title": "Fugitives caught on tape",
-      "start": "2026-09-02T23:05:00.000Z",
-      "end": "2026-09-02T23:25:00.000Z",
+      "start": "2026-09-02T23:10:00.000Z",
+      "end": "2026-09-02T23:30:00.000Z",
       "description": "Wetshandhavers zetten de achtervolging in op voortvluchtige verdachten via camera's. Daarop is te zien hoe ze alles op alles zetten om hen op te sporen en te arresteren.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/fugitives-caught-on-tape-766843752.jpg",
       "genre": "Realityprogramma",
@@ -7581,8 +7574,8 @@
       "id": "218958702",
       "channelId": "veronica",
       "title": "Hart van Nederland",
-      "start": "2026-09-02T23:25:00.000Z",
-      "end": "2026-09-02T23:44:00.000Z",
+      "start": "2026-09-02T23:30:00.000Z",
+      "end": "2026-09-02T23:49:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -7597,7 +7590,7 @@
       "id": "218958672",
       "channelId": "veronica",
       "title": "Pause",
-      "start": "2026-09-02T23:44:00.000Z",
+      "start": "2026-09-02T23:49:00.000Z",
       "end": "2026-09-03T02:00:00.000Z",
       "description": null,
       "imageUrl": null,
@@ -8924,7 +8917,7 @@
       "channelId": "veronica",
       "title": "Two and a half men",
       "start": "2026-09-03T16:15:00.000Z",
-      "end": "2026-09-03T16:45:00.000Z",
+      "end": "2026-09-03T16:40:00.000Z",
       "description": "De hopeloze Alan Harper en zijn puberende zoon Jake wonen bij miljardair Charlie Harper in zijn strandhuis in Malibu. De drie kerels botsen vaak, maar zijn ook aan elkaar gehecht en leven samen als een gezin. Als Charlie het huis ontvlucht vanwege een date die hij wil ontlopen, belandt hij in een coffeeshop waar hij zijn oude liefde Lisa ziet.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/two-and-a-half-men-761224442.jpg",
       "genre": "Comedyserie",
@@ -8946,7 +8939,7 @@
       "id": "219014852",
       "channelId": "veronica",
       "title": "Two and a half men",
-      "start": "2026-09-03T16:45:00.000Z",
+      "start": "2026-09-03T16:40:00.000Z",
       "end": "2026-09-03T17:05:00.000Z",
       "description": "De hopeloze Alan Harper en zijn puberende zoon Jake wonen bij miljardair Charlie Harper in zijn strandhuis in Malibu. De drie kerels botsen vaak, maar zijn ook aan elkaar gehecht en leven samen als een gezin. Als Charlie het huis ontvlucht vanwege een date die hij wil ontlopen, belandt hij in een coffeeshop waar hij zijn oude liefde Lisa ziet.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/two-and-a-half-men-761224442.jpg",
@@ -9039,7 +9032,7 @@
       "channelId": "veronica",
       "title": "Tower Heist",
       "start": "2026-09-03T18:30:00.000Z",
-      "end": "2026-09-03T20:35:00.000Z",
+      "end": "2026-09-03T20:30:00.000Z",
       "description": "Josh is een overwerkte manager van een luxe appartementencomplex, die samen met de rest van het personeel al het geld uit hun pensioenfonds is kwijtgeraakt aan een Wall Street fraudeur. Deze miljardair woont in het penthouse van het gebouw, waar hij onder huisarrest staat. Samen met zijn collega's bedenkt Josh een plan om zowel de miljardair als hun zuurverdiende geld terug te pakken. Daarbij roepen ze de hulp in van crimineel Slide, die hen moet begeleiden bij de geplande overval.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/tower-heist-760328692.jpg",
       "genre": "Misdaadkomedie",
@@ -9061,7 +9054,7 @@
       "id": "219014842",
       "channelId": "veronica",
       "title": "Now You See Me",
-      "start": "2026-09-03T20:35:00.000Z",
+      "start": "2026-09-03T20:30:00.000Z",
       "end": "2026-09-03T22:45:00.000Z",
       "description": "Vier illusionisten halen in Las Vegas een enorme stunt uit. In het bijzijn van publiek beroven ze virtueel een bank in Parijs. Daarna laten ze het geld neerdalen op de hoofden van de toeschouwers. Het lijkt een geweldige truc, maar als de volgende dag blijkt dat de desbetreffende bank daadwerkelijk beroofd is, krijgt het viertal in één klap enorme bekendheid met hun briljante, onverklaarbare roof. Terwijl de illusionisten nieuwe stunts aankondigen, zit de FBI hen op de hielen en de Parijse bankdirecteur zint op wraak. Is het magie, een brutale roof of toch iets anders?",
       "imageUrl": "https://tvgidsassets.nl/upload/n/now-you-see-me-760331022.jpg",
@@ -9110,14 +9103,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "QB5iapJ3kUi1b_-l_gejAA",
-        "assetId": "60494DE0AD97DE0415B2CCBACD8ED3FC",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959602",
@@ -9133,14 +9119,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "M1Iad6u2bEKt2upi-5yIhg",
-        "assetId": "453B9892BBF5E2934932E139151DB963",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219015052",
@@ -9664,14 +9643,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4HYa-CQvgkykuzkndKegfA",
-        "assetId": "63D08C69CA39E05CF229C59E03615853",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219016432",
@@ -9710,14 +9682,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "maDrfrXeG06JzHjKw-hDgA",
-        "assetId": "ED09701C702B446C5B51600EE2DDA6DA",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219016492",
@@ -11466,8 +11431,8 @@
       "id": "218960992",
       "channelId": "sbs9",
       "title": "Police Academy 7: Mission to Moscow",
-      "start": "2026-09-02T20:50:00.000Z",
-      "end": "2026-09-02T22:30:00.000Z",
+      "start": "2026-09-02T20:56:00.000Z",
+      "end": "2026-09-02T22:36:00.000Z",
       "description": "Moskou is helemaal in de ban van de zogenaamde peetvader van de Russische maffia. Door middel van een nieuw videospelletje wil de schurk bij alle informaticabronnen ter wereld infiltreren. Zo hoopt hij de machtigste man op aarde te worden. Gelukkig zijn er nog de onvermeende klungelaars van de Police Academy. Ze worden naar Moskou gestuurd voor een speciale missie om een einde te maken aan de alleenheerschappij van de maffioso.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/policeacademydeelzevenoptvsbsnegen.jpg",
       "genre": "Komedie",
@@ -11482,8 +11447,8 @@
       "id": "218960902",
       "channelId": "sbs9",
       "title": "Vandaag inside",
-      "start": "2026-09-02T22:30:00.000Z",
-      "end": "2026-09-02T23:20:00.000Z",
+      "start": "2026-09-02T22:36:00.000Z",
+      "end": "2026-09-02T23:24:00.000Z",
       "description": "Wilfred Genee, Johan Derksen en René van der Gijp (behalve woensdag) geven hun kijk op het nieuws en de actualiteit.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vandaag-inside-757508732.jpg",
       "genre": "Talkshow",
@@ -11505,10 +11470,10 @@
       "id": "218960912",
       "channelId": "sbs9",
       "title": "Telvero",
-      "start": "2026-09-02T23:20:00.000Z",
-      "end": "2026-09-03T01:50:00.000Z",
+      "start": "2026-09-02T23:24:00.000Z",
+      "end": "2026-09-03T01:54:00.000Z",
       "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
       "genre": "Consumentenprogramma",
       "isLive": false,
       "isRerun": false,
@@ -11518,7 +11483,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "DHbpWqOsXUGyhmmFoobzBQ",
-        "assetId": "7491E61968B092FB7FBC686ECA24FFF1",
+        "assetId": "0CA78AC0A89B013B8C9B175209032ADD",
         "channelId": "sbs9",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -11528,7 +11493,7 @@
       "id": "218960922",
       "channelId": "sbs9",
       "title": "Hart van Nederland",
-      "start": "2026-09-03T01:50:00.000Z",
+      "start": "2026-09-03T01:54:00.000Z",
       "end": "2026-09-03T04:00:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -11561,7 +11526,7 @@
       "channelId": "sbs9",
       "title": "Telvero",
       "start": "2026-09-03T04:55:00.000Z",
-      "end": "2026-09-03T12:55:00.000Z",
+      "end": "2026-09-03T13:40:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
       "genre": "Consumentenprogramma",
@@ -11570,37 +11535,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "fR4URnfxVkyfSD5znCIGZQ",
-        "assetId": "0238C22CA1ABC56D03F9F7713D458EFA",
-        "channelId": "sbs9",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219016372",
-      "channelId": "sbs9",
-      "title": "The mentalist",
-      "start": "2026-09-03T12:55:00.000Z",
-      "end": "2026-09-03T13:40:00.000Z",
-      "description": "Patrick Jane begon zijn carrière als medium in een sensationele televisieshow, maar bleek een bedrieger. Hij werkt nu als adviseur voor het California Bureau of Investigation (CBI). Zijn afkeer voor elk protocol brengt hem vaak in de problemen. Toch dwingt hij respect af met zijn opmerkelijke talent om misdaden op te lossen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/the-mentalist-757921272.jpg",
-      "genre": "Misdaadserie",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "dsbMGLT6rE2L1h4haNL4sQ",
-        "assetId": "BE65E2F0164EF7395C04A79CE304FA36",
-        "channelId": "sbs9",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219016402",
@@ -11630,7 +11565,7 @@
       "channelId": "sbs9",
       "title": "Rizzoli & Isles",
       "start": "2026-09-03T14:35:00.000Z",
-      "end": "2026-09-03T15:30:00.000Z",
+      "end": "2026-09-03T15:25:00.000Z",
       "description": "Twee stoere vrouwen, rechercheur Jane Rizzoli en forensisch onderzoeker Maura Isles zijn hartsvriendinnen die moordzaken en andere misdaadzaken onderzoeken in Boston.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rizzoli-isles-756768212.jpg",
       "genre": "Misdaadserie",
@@ -11652,8 +11587,8 @@
       "id": "219016302",
       "channelId": "sbs9",
       "title": "Rizzoli & Isles",
-      "start": "2026-09-03T15:30:00.000Z",
-      "end": "2026-09-03T16:25:00.000Z",
+      "start": "2026-09-03T15:25:00.000Z",
+      "end": "2026-09-03T16:20:00.000Z",
       "description": "Twee stoere vrouwen, rechercheur Jane Rizzoli en forensisch onderzoeker Maura Isles zijn hartsvriendinnen die moordzaken en andere misdaadzaken onderzoeken in Boston.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rizzoli-isles-756768212.jpg",
       "genre": "Misdaadserie",
@@ -11675,7 +11610,7 @@
       "id": "219016382",
       "channelId": "sbs9",
       "title": "Een jaar van je leven",
-      "start": "2026-09-03T16:25:00.000Z",
+      "start": "2026-09-03T16:20:00.000Z",
       "end": "2026-09-03T17:30:00.000Z",
       "description": "Veertig deelnemers besteden een jaar van hun leven samen op een locatie, afgesloten van de buitenwereld. Met opdrachten kunnen ze geld verdienen of iemand elimineren. Wie als laatste overblijft, wint een miljoen euro.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/een-jaar-van-je-leven-759207892.jpg",

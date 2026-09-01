@@ -784,6 +784,8 @@ De architectuur is voorbereid op uitwijk:
 - [x] Bij tijdelijk netwerkverlies blijft de laatst bekende gids zichtbaar.
 - [x] Een klik op een programma opent betrouwbaar de NLZiet-app (of toont een nette melding indien niet aanwezig).
 - [x] Zendervolgorde en zichtbaarheid instelbaar via ordenscherm ([`plan-2026-08-31-channel-ordering.md`](plan-2026-08-31-channel-ordering.md)).
+- [x] Bij terugkeer uit NLZiet of instellingenmenu's blijft de gids exact op datum, tijdlijn en scrollpositie staan (geen sprong naar willekeurig tijdstip).
+- [x] Bij terugkeer uit NLZiet wordt het eerder geselecteerde programma automatisch hersteld als actieve selectie zonder NLZiet opnieuw te triggeren.
 
 ### Fase 3 is klaar wanneer:
 - [x] De geteste NLZiet-appversie en de ondersteunde VOD-deeplink-URI zijn vastgelegd.

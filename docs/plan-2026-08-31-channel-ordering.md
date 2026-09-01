@@ -448,22 +448,22 @@ hem via een backstack-/fragment-callback na sluiten, of direct wanneer `commit()
 gestart. Gebruik hier geen `runOnCommit`: die mag niet worden gecombineerd met
 `addToBackStack()`.
 
-Maak de terugkeer expliciet met een fragmentresultaat, bijvoorbeeld `channel_order_closed`, dat
+Maak de terugkeer expliciet met een fragmentresultaat (`channel_order_closed`) dat
 vóór de pop wordt gezet. Daarmee markeert het gidsfragment de interne terugkeer; na resume
-rendert de herstartende collector de nieuwste `uiState` één keer en focust daarna de laatst
-geselecteerde nog zichtbare channel-id (anders de eerste zichtbare zender). Het bestaande
-externe-terugkeerpad wordt voor deze interne navigatie eenmalig overgeslagen.
-Dat pad in `NexusProgramGuideFragment.onResume()` doet nu namelijk:
+rendert de collector via `Lifecycle.State.STARTED` de actuele `uiState` zonder onnodige `setData()`
+aanroepen als de data identiek is. Als de zenderordening wel gewijzigd is, wordt het grid bijgewerkt
+zonder dat de tijdlijn overschreven of gereset wordt naar een willekeurig tijdstip.
 
-- staat de app op een andere dag dan vandaag → `selectToday()`;
-- staat hij op vandaag → `jumpToLive(focus = true)` **en** `requestRefresh()`.
-
-Dat gedrag is bedoeld voor terugkeer uit NLZiet of naar de app, maar zou bij een intern scherm de
-gekozen dag veranderen en onnodig netwerkverkeer veroorzaken. Het fragmentresultaat zet daarom
-een eenmalige vlag vóór `onResume`; die slaat alleen de extra logica van de subclass over. De
-`ProgramGuideFragment`-basisklasse springt op vandaag bij resume nog steeds naar live, conform
-het bestaande librarygedrag. Door `setMaxLifecycle` is `onPause`/`onResume` hier deterministisch;
-we vertrouwen niet op `hide()` om lifecycle-callbacks te veroorzaken.
+De lifecycle- en focusafhandeling is als volgt geconsolideerd:
+- `ProgramGuideFragment.onResume()` en `NexusProgramGuideFragment.onResume()` forceren géén
+  `jumpToLive()` of `selectToday()` meer. Zowel bij terugkeer uit interne menu's (Zenderordening,
+  Updates, Over) als bij externe terugkeer uit NLZiet blijft de gids exact op de gekozen datum,
+  tijdlijnpositie en zender staan.
+- Bij terugkeer uit NLZiet wordt het eerder aangeklikte programma via `restoreSelection()`
+  onmiddellijk als actieve selectie gefocust en worden de detailgegevens in de kopbalk hersteld,
+  zónder dat NLZiet opnieuw wordt geactiveerd.
+- Door `setMaxLifecycle` is `onPause`/`onResume` hier deterministisch; we vertrouwen niet op `hide()`
+  om lifecycle-callbacks te veroorzaken.
 
 De `observe()`-flow blijft hoe dan ook de dragende route: die zorgt dat de nieuwe volgorde wordt
 toegepast ook als er geen netwerk is, want de resolver werkt op de al opgehaalde snapshot en niet

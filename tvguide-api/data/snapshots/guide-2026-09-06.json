@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-05T22:00:00Z",
   "to": "2026-09-06T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -9412,7 +9412,7 @@
       "start": "2026-09-06T06:10:00.000Z",
       "end": "2026-09-06T06:40:00.000Z",
       "description": "Vlaamse muzikale jeugdserie over de avonturen van een groep tieners op een middelbare school.",
-      "imageUrl": null,
+      "imageUrl": "https://tvgidsassets.nl/upload/l/likeme-767137252.jpg",
       "genre": "Jeugdserie",
       "isLive": false,
       "isRerun": true,

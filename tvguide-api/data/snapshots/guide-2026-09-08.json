@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-07T22:00:00Z",
   "to": "2026-09-08T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -11863,7 +11863,7 @@
       "start": "2026-09-08T04:55:00.000Z",
       "end": "2026-09-08T05:00:00.000Z",
       "description": "De videoclip van \"Lach naar mij\" uit aflevering 1",
-      "imageUrl": null,
+      "imageUrl": "https://tvgidsassets.nl/upload/l/likeme-767137222.jpg",
       "genre": "Overige",
       "isLive": false,
       "isRerun": false,

@@ -128,7 +128,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         private set
     protected var currentlySelectedTimeOfDayFilterIndex = -1 // Correct value will be set later
         private set
-    private var currentState: State = State.Loading
+    protected var currentState: State = State.Loading
+        private set
 
     private var created = false
 
@@ -753,7 +754,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
 
     /**
      * Called when the fragment will be resumed.
-     * Starts the progress updates for the programs and ensures the guide jumps to live view if showing today.
+     * Starts the progress updates for the programs and updates date/time displays without resetting position.
      */
     override fun onResume() {
         super.onResume()
@@ -762,10 +763,6 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         if (DISPLAY_SHOW_PROGRESS) {
             progressUpdateHandler.removeCallbacks(progressUpdateRunnable)
             progressUpdateHandler.post(progressUpdateRunnable)
-        }
-        val today = currentDateInDisplayTimeZone()
-        if (currentDate == today && currentState is State.Content) {
-            jumpToLive(focus = true)
         }
     }
 
@@ -798,10 +795,13 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
         newChannelEntries: Map<String, List<ProgramGuideSchedule<T>>>,
         selectedDate: LocalDate
     ) {
+        val dateChanged = currentDate != selectedDate
         currentDate = selectedDate
         updateDayFilterText()
         updateGuideDateDisplay()
-        didScrollToBestProgramme = false
+        if (dateChanged) {
+            didScrollToBestProgramme = false
+        }
         programGuideManager.setData(newChannels, newChannelEntries, selectedDate, DISPLAY_TIMEZONE)
     }
 

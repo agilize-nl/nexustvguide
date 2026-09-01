@@ -388,6 +388,15 @@ class ProgramGuideManager<T> {
         return bestMatch
     }
 
+    fun findChannelIndexForScheduleId(scheduleId: Long): Int? {
+        for ((channelId, schedules) in channelEntriesMap) {
+            if (schedules.any { it.id == scheduleId }) {
+                return getChannelIndex(channelId)
+            }
+        }
+        return null
+    }
+
     fun getChannelIndex(channelId: String): Int? {
         val index = channels.indexOfFirst { it.id == channelId }
         return if (index < 0) {

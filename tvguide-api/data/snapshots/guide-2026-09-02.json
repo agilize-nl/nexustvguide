@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-01T22:00:00Z",
   "to": "2026-09-02T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -5601,14 +5601,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4HYa-CQvgkykuzkndKegfA",
-        "assetId": "DCC77EBE3918009905C9DAA70BF0C4DB",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959802",
@@ -6155,7 +6148,7 @@
       "channelId": "sbs6",
       "title": "Shownieuws",
       "start": "2026-09-01T22:52:00.000Z",
-      "end": "2026-09-01T23:38:00.000Z",
+      "end": "2026-09-01T23:37:00.000Z",
       "description": "Het laatste nieuws uit de wereld van showbizz en entertainment.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/shownieuws-755374502.jpg",
       "genre": "Amusement",
@@ -6177,7 +6170,7 @@
       "id": "218903072",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-01T23:38:00.000Z",
+      "start": "2026-09-01T23:37:00.000Z",
       "end": "2026-09-02T04:00:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -8999,7 +8992,7 @@
       "channelId": "veronica",
       "title": "The big bang theory",
       "start": "2026-09-02T16:00:00.000Z",
-      "end": "2026-09-02T16:15:00.000Z",
+      "end": "2026-09-02T16:17:00.000Z",
       "description": "De vrienden Sheldon, Leonard, Raj en Howard zijn nerds met een voorliefde voor wiskunde en fysica. Ze snappen alles op het gebied van natuur- en scheikunde en van zwaartekracht tot atomen. Maar voeg atomen samen tot een vrouw en het bevattingsvermogen van de mannen komt tot stilstand. Gelukkig hebben ze hun blonde buurvrouw Penny, die lang niet zo slim is, maar wel de sociale vaardigheden beheerst.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-big-bang-theory-760031422.jpg",
       "genre": "Comedyserie",
@@ -9021,8 +9014,8 @@
       "id": "218959312",
       "channelId": "veronica",
       "title": "Two and a half men",
-      "start": "2026-09-02T16:15:00.000Z",
-      "end": "2026-09-02T16:40:00.000Z",
+      "start": "2026-09-02T16:17:00.000Z",
+      "end": "2026-09-02T16:43:00.000Z",
       "description": "De hopeloze Alan Harper en zijn puberende zoon Jake wonen bij miljardair Charlie Harper in zijn strandhuis in Malibu. De drie kerels botsen vaak, maar zijn ook aan elkaar gehecht en leven samen als een gezin. Als Charlie het huis ontvlucht vanwege een date die hij wil ontlopen, belandt hij in een coffeeshop waar hij zijn oude liefde Lisa ziet.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/two-and-a-half-men-760032902.jpg",
       "genre": "Comedyserie",
@@ -9044,8 +9037,8 @@
       "id": "218959302",
       "channelId": "veronica",
       "title": "Two and a half men",
-      "start": "2026-09-02T16:40:00.000Z",
-      "end": "2026-09-02T17:05:00.000Z",
+      "start": "2026-09-02T16:43:00.000Z",
+      "end": "2026-09-02T17:08:00.000Z",
       "description": "De hopeloze Alan Harper en zijn puberende zoon Jake wonen bij miljardair Charlie Harper in zijn strandhuis in Malibu. De drie kerels botsen vaak, maar zijn ook aan elkaar gehecht en leven samen als een gezin. Als Charlie het huis ontvlucht vanwege een date die hij wil ontlopen, belandt hij in een coffeeshop waar hij zijn oude liefde Lisa ziet.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/two-and-a-half-men-760032902.jpg",
       "genre": "Comedyserie",
@@ -9067,8 +9060,8 @@
       "id": "218959212",
       "channelId": "veronica",
       "title": "Two and a half men",
-      "start": "2026-09-02T17:05:00.000Z",
-      "end": "2026-09-02T17:35:00.000Z",
+      "start": "2026-09-02T17:08:00.000Z",
+      "end": "2026-09-02T17:34:00.000Z",
       "description": "De hopeloze Alan Harper en zijn puberende zoon Jake wonen bij miljardair Charlie Harper in zijn strandhuis in Malibu. De drie kerels botsen vaak, maar zijn ook aan elkaar gehecht en leven samen als een gezin. Als Charlie het huis ontvlucht vanwege een date die hij wil ontlopen, belandt hij in een coffeeshop waar hij zijn oude liefde Lisa ziet.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/two-and-a-half-men-760032902.jpg",
       "genre": "Comedyserie",
@@ -9090,7 +9083,7 @@
       "id": "218958982",
       "channelId": "veronica",
       "title": "The big bang theory",
-      "start": "2026-09-02T17:35:00.000Z",
+      "start": "2026-09-02T17:34:00.000Z",
       "end": "2026-09-02T18:00:00.000Z",
       "description": "De vrienden Sheldon, Leonard, Raj en Howard zijn nerds met een voorliefde voor wiskunde en fysica. Ze snappen alles op het gebied van natuur- en scheikunde en van zwaartekracht tot atomen. Maar voeg atomen samen tot een vrouw en het bevattingsvermogen van de mannen komt tot stilstand. Gelukkig hebben ze hun blonde buurvrouw Penny, die lang niet zo slim is, maar wel de sociale vaardigheden beheerst.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-big-bang-theory-760031422.jpg",
@@ -9114,7 +9107,7 @@
       "channelId": "veronica",
       "title": "The big bang theory",
       "start": "2026-09-02T18:00:00.000Z",
-      "end": "2026-09-02T18:30:00.000Z",
+      "end": "2026-09-02T18:26:00.000Z",
       "description": "De vrienden Sheldon, Leonard, Raj en Howard zijn nerds met een voorliefde voor wiskunde en fysica. Ze snappen alles op het gebied van natuur- en scheikunde en van zwaartekracht tot atomen. Maar voeg atomen samen tot een vrouw en het bevattingsvermogen van de mannen komt tot stilstand. Gelukkig hebben ze hun blonde buurvrouw Penny, die lang niet zo slim is, maar wel de sociale vaardigheden beheerst.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-big-bang-theory-760031422.jpg",
       "genre": "Comedyserie",
@@ -9136,8 +9129,8 @@
       "id": "218959292",
       "channelId": "veronica",
       "title": "Ocean's Thirteen",
-      "start": "2026-09-02T18:30:00.000Z",
-      "end": "2026-09-02T20:55:00.000Z",
+      "start": "2026-09-02T18:26:00.000Z",
+      "end": "2026-09-02T20:59:00.000Z",
       "description": "Casino-eigenaar Willie Bank staat op het punt om in Las Vegas een groot casino en hotel te openen. Maar wanneer hij Reuben Tishkoff belazert en Reuben daardoor met hartproblemen in het ziekenhuis komt te liggen, besluiten Danny Ocean en de rest van de bende om wraak te nemen op Bank. Ze besluiten om ervoor te zorgen dat de opening van Banks casino uitloopt op een ramp, zodat Bank veel geld zal verliezen. En daarnaast probeert de groep ook nog om de kostbare en zwaarbewaakte diamanten die Bank heeft gewonnen met zijn vorige hotels, te stelen.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/ocean-s-thirteen-759933702.jpg",
       "genre": "Misdaadkomedie",
@@ -9159,8 +9152,8 @@
       "id": "218958682",
       "channelId": "veronica",
       "title": "Ocean's 8",
-      "start": "2026-09-02T20:55:00.000Z",
-      "end": "2026-09-02T23:05:00.000Z",
+      "start": "2026-09-02T20:59:00.000Z",
+      "end": "2026-09-02T23:10:00.000Z",
       "description": "Debbie Ocean heeft vijf jaar, acht maanden en twaalf dagen nagedacht over het perfecte plan voor een spectaculaire juwelenroof, de roof van haar leven. Hiervoor heeft ze wel een team van bijzonder bekwame mensen nodig. Allereerst haar voormalige partner Lou Miller, de juwelier Amita, de oplichtster Constance, de slotenspecialist Tammy, de hacker Nine Ball en de modeontwerpster Rose. Het doel is het stelen van een diamanten halsketting die 150 miljoen dollar waard is. Op het Met Gala zal deze voor één dag gedragen worden door de wereldberoemde actrice Daphne Kluger. Het plan is erg minutieus uitgedacht, maar om deze roof te laten slagen moet alles helemaal goed gaan.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/ocean-s-8-759935062.jpg",
       "genre": "Misdaadkomedie",
@@ -9231,14 +9224,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Vg3gjREmUEewsyBnVK55DA",
-        "assetId": "A4A10807E6AB48C8C2A23C39997C25D3",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959592",
@@ -9254,14 +9240,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Vg3gjREmUEewsyBnVK55DA",
-        "assetId": "46458C533776E171FC0F95AD7B5666A0",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959622",
@@ -9279,8 +9258,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "SlvBmVRe-0GQz3MP1ZDTJw",
-        "assetId": "36DB19084318A4609D5FC7ECB6CF76A3",
+        "contentItemId": "MNlmRUCiJE2MVICOAkDIzA",
+        "assetId": "F521C28F2839A62D4E0F0175D0028A44",
         "channelId": "net5",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -9300,14 +9279,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yqusj740rUC9yjIrAaUmZA",
-        "assetId": "675B2933E57BA3675A7BAC53B0CAECE4",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959632",
@@ -9323,14 +9295,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "IWbsiU-NUEm8JxORpA7L1Q",
-        "assetId": "19508255EBA60A9C2CB57AF451221DFA",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959612",
@@ -9346,14 +9311,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "3EGTO_8tx0madUe9HB71Sg",
-        "assetId": "5240B246861E556FF75FCFB377B95C11",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959742",
@@ -9369,14 +9327,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "I4ubQi82GUiCtEhQwrXpSg",
-        "assetId": "03A9E265076A566A5D4CB9FAC34168ED",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959712",
@@ -9392,14 +9343,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yiohN2VRXUKqt8bS6rduhw",
-        "assetId": "C76DC72F481975A40E636E5DE389BF40",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959752",
@@ -9415,14 +9359,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "f1IOwIYiL0axQuXv8CaXQg",
-        "assetId": "2B60A639AD48E5C468BE17360D898511",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218959722",
@@ -9622,14 +9559,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "oQsrEiKpwEWiArBzc1eIgA",
-        "assetId": "4935EE12B75D0B3D74749D6FE4FAFE5F",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218903842",
@@ -11521,7 +11451,7 @@
       "channelId": "sbs9",
       "title": "Hart van Nederland",
       "start": "2026-09-02T01:59:00.000Z",
-      "end": "2026-09-02T04:00:00.000Z",
+      "end": "2026-09-02T03:57:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -11536,7 +11466,7 @@
       "id": "218960932",
       "channelId": "sbs9",
       "title": "Hart van Nederland",
-      "start": "2026-09-02T04:00:00.000Z",
+      "start": "2026-09-02T03:57:00.000Z",
       "end": "2026-09-02T04:55:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -11555,7 +11485,7 @@
       "start": "2026-09-02T04:55:00.000Z",
       "end": "2026-09-02T13:40:00.000Z",
       "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
       "genre": "Consumentenprogramma",
       "isLive": false,
       "isRerun": false,
@@ -11592,7 +11522,7 @@
       "channelId": "sbs9",
       "title": "Rizzoli & Isles",
       "start": "2026-09-02T14:35:00.000Z",
-      "end": "2026-09-02T15:30:00.000Z",
+      "end": "2026-09-02T15:28:00.000Z",
       "description": "Twee stoere vrouwen, rechercheur Jane Rizzoli en forensisch onderzoeker Maura Isles zijn hartsvriendinnen die moordzaken en andere misdaadzaken onderzoeken in Boston.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rizzoli-isles-756768212.jpg",
       "genre": "Misdaadserie",
@@ -11614,8 +11544,8 @@
       "id": "218960882",
       "channelId": "sbs9",
       "title": "Rizzoli & Isles",
-      "start": "2026-09-02T15:30:00.000Z",
-      "end": "2026-09-02T16:25:00.000Z",
+      "start": "2026-09-02T15:28:00.000Z",
+      "end": "2026-09-02T16:24:00.000Z",
       "description": "Twee stoere vrouwen, rechercheur Jane Rizzoli en forensisch onderzoeker Maura Isles zijn hartsvriendinnen die moordzaken en andere misdaadzaken onderzoeken in Boston.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rizzoli-isles-756768212.jpg",
       "genre": "Misdaadserie",
@@ -11637,8 +11567,8 @@
       "id": "218960962",
       "channelId": "sbs9",
       "title": "Een jaar van je leven",
-      "start": "2026-09-02T16:25:00.000Z",
-      "end": "2026-09-02T17:30:00.000Z",
+      "start": "2026-09-02T16:24:00.000Z",
+      "end": "2026-09-02T17:32:00.000Z",
       "description": "Veertig deelnemers besteden een jaar van hun leven samen op een locatie, afgesloten van de buitenwereld. Met opdrachten kunnen ze geld verdienen of iemand elimineren. Wie als laatste overblijft, wint een miljoen euro.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/een-jaar-van-je-leven-759207892.jpg",
       "genre": "Spelshow",
@@ -11660,7 +11590,7 @@
       "id": "218960972",
       "channelId": "sbs9",
       "title": "Wordt u al geholpen?",
-      "start": "2026-09-02T17:30:00.000Z",
+      "start": "2026-09-02T17:32:00.000Z",
       "end": "2026-09-02T18:30:00.000Z",
       "description": "Het dagelijkse spreekuur wordt uitgebreid. Naast de deuren van juridisch adviseurs mr. Frank Visser en mr. Reinier Groos, staan ook de deuren van een diëtist en een financieel expert open. Men kan ook terecht met vragen omtrent gewicht en voeding, maar ook voor financiële vragen. Hoe om te gaan met overgewicht? Waar moet je opletten als je een salaris onderhandeling in gaat? En hoe kan je na covid-19 je conditie weer opbouwen? Het loket van 'Wordt u al geholpen?' is zo uitgebreid met advies over uiteenlopende onderwerpen over voeding en gewicht. Daarnaast staat er ook een expert klaar voor financieel advies over bijvoorbeeld een lening, schuld of subsidie.",
       "imageUrl": "https://tvgidsassets.nl/upload/w/wordt-u-al-geholpen-759208072.jpg",
@@ -11684,7 +11614,7 @@
       "channelId": "sbs9",
       "title": "Lethal Weapon 3",
       "start": "2026-09-02T18:30:00.000Z",
-      "end": "2026-09-02T20:50:00.000Z",
+      "end": "2026-09-02T20:56:00.000Z",
       "description": "De eigenwijze Martin Riggs en zijn partner Roger Murtaugh zijn gedegradeerd tot straatagenten na een mislukte bomontmijning. Ze vervelen zich stierlijk en missen de actie van vroeger. Wanneer ze getuige zijn van een overval op een geldtransportwagen, zetten ze meteen de achtervolging in. Het duo slaagt erin Billy Phelps, een van de daders, te arresteren. Riggs en Murtaugh zijn vastbesloten de zaak tot op de draad uit te pluizen, maar het onderzoek is overgenomen door Interne Zaken. En dan wordt Phelps op het politiekantoor doodgeschoten door Jack Travis, een ex-politieman die in de criminaliteit is beland en gestolen politiewapens aan straatbendes verkoopt. Riggs en Murtaugh eisen hun badge terug en hebben vanaf nu één doel : Jack Travis inrekenen.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/lethal-weapon-3-759941782.jpg",
       "genre": "Actiekomedie",
@@ -11706,8 +11636,8 @@
       "id": "218960992",
       "channelId": "sbs9",
       "title": "Police Academy 7: Mission to Moscow",
-      "start": "2026-09-02T20:50:00.000Z",
-      "end": "2026-09-02T22:30:00.000Z",
+      "start": "2026-09-02T20:56:00.000Z",
+      "end": "2026-09-02T22:36:00.000Z",
       "description": "Moskou is helemaal in de ban van de zogenaamde peetvader van de Russische maffia. Door middel van een nieuw videospelletje wil de schurk bij alle informaticabronnen ter wereld infiltreren. Zo hoopt hij de machtigste man op aarde te worden. Gelukkig zijn er nog de onvermeende klungelaars van de Police Academy. Ze worden naar Moskou gestuurd voor een speciale missie om een einde te maken aan de alleenheerschappij van de maffioso.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/policeacademydeelzevenoptvsbsnegen.jpg",
       "genre": "Komedie",

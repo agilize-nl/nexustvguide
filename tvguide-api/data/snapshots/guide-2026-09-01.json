@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-31T22:00:00Z",
   "to": "2026-09-01T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -1628,14 +1628,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "bzbUtTqh_kuwi2pyrnPCww",
-        "assetId": "F53C33C637D5E0ADC045063C5C59BA08",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219197462",
@@ -1651,14 +1644,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "bzbUtTqh_kuwi2pyrnPCww",
-        "assetId": "F53C33C637D5E0ADC045063C5C59BA08",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219197452",
@@ -3398,7 +3384,7 @@
         "contentItemId": "tyiuoLQfXEqcKyDMCUbf8g",
         "assetId": "94BCD8B84508D4C3C84E91C629F657E8",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3421,7 +3407,7 @@
         "contentItemId": "7i084Q7MV0ueYfGWCm_2mw",
         "assetId": "EB9706002FA3EF910122DC17E5C720A1",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3467,7 +3453,7 @@
         "contentItemId": "bhIPfb7LF0ie5TB8nYduAA",
         "assetId": "8485F5707094E22D86EE7EF4661E97A4",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3513,7 +3499,7 @@
         "contentItemId": "6pnS3uW_qkK51ghoWVxvzQ",
         "assetId": "EC6B5FFEA9C2DDA98CF45537B27219C2",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3605,7 +3591,7 @@
         "contentItemId": "DR0S7fooDUWX2u6TEhViAQ",
         "assetId": "A15D5840110E62DA066F2AA607DE04BE",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3674,7 +3660,7 @@
         "contentItemId": "CeTR7BoIBUOnlKSuS0Np3g",
         "assetId": "D636CC6BA5867ABB521448C4380BF63C",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3697,7 +3683,7 @@
         "contentItemId": "PfcMC9Tlw0S0uGbB2bpo6Q",
         "assetId": "91A99A12ECA370088534A009EB17360C",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3720,7 +3706,7 @@
         "contentItemId": "EohJnOLjJ0WddD2MKYwBeg",
         "assetId": "16C654C6FBE367E94E64ACEC01CDF64D",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3743,7 +3729,7 @@
         "contentItemId": "_-26h1M4c0G_4L7PQ6nWKw",
         "assetId": "7FB493B645DF0B75B262F79A42CBC373",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -5317,14 +5303,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Gs5z_HmycEqYmdRxpgQylA",
-        "assetId": "5E5C736472C6AEA897D6DF14B690E2A1",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218902522",
@@ -6593,7 +6572,7 @@
       "channelId": "sbs6",
       "title": "Shownieuws",
       "start": "2026-09-01T08:25:00.000Z",
-      "end": "2026-09-01T09:18:00.000Z",
+      "end": "2026-09-01T09:17:00.000Z",
       "description": "Het laatste nieuws uit de wereld van showbizz en entertainment.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/shownieuws-755374502.jpg",
       "genre": "Amusement",
@@ -6615,7 +6594,7 @@
       "id": "218903052",
       "channelId": "sbs6",
       "title": "Nieuws van de dag",
-      "start": "2026-09-01T09:18:00.000Z",
+      "start": "2026-09-01T09:17:00.000Z",
       "end": "2026-09-01T10:15:00.000Z",
       "description": "Opinie- en actualiteitenprogramma waarin verslaggevers en opiniemakers van De Telegraaf en 'Hart van Nederland' het nieuws bespreken. Ze schuiven aan in de studio en doen liveverslag vanuit het land.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuws-van-de-dag-759205652.jpg",
@@ -6869,7 +6848,7 @@
       "channelId": "sbs6",
       "title": "Undercover in Nederland",
       "start": "2026-09-01T18:28:00.000Z",
-      "end": "2026-09-01T19:36:00.000Z",
+      "end": "2026-09-01T19:35:00.000Z",
       "description": "Alberto Stegeman gaat de strijd aan met oplichters en criminelen. Met de verborgen camera als wapen legt hij samen met zijn team misstanden bloot en pakt hij de boosdoeners hard aan.",
       "imageUrl": "https://tvgidsassets.nl/upload/u/undercover-in-nederland-759592212.jpg",
       "genre": "Realityprogramma",
@@ -6891,7 +6870,7 @@
       "id": "218903002",
       "channelId": "sbs6",
       "title": "Vandaag inside",
-      "start": "2026-09-01T19:36:00.000Z",
+      "start": "2026-09-01T19:35:00.000Z",
       "end": "2026-09-01T20:41:00.000Z",
       "description": "In 'Vandaag inside' geven Wilfred Genee, Johan Derksen en René van der Gijp hun kijk op het nieuws en de actualiteit. Met een wisselende terugkerende gast bespreekt het trio zaken die Nederland die dag bezighoudt.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vandaag-inside-756768302.jpg",
@@ -10924,14 +10903,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "BJzGAKA7qECbaKmr5iT9fQ",
-        "assetId": "5FCABEAB65AA4412B2EAEE37DAD524DA",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218856452",
@@ -10947,14 +10919,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "BJzGAKA7qECbaKmr5iT9fQ",
-        "assetId": "F23A36E240D9F4EEC56263B8D56AB770",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218856712",
@@ -11586,7 +11551,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "pCRr7tq-Kk2MCt9LZqwsiw",
+        "contentItemId": "UHS_cJ_6WEq6FQkNh63R7g",
         "assetId": "8BAE57289EFA82F67F4C5BE335881AB4",
         "channelId": "sbs9",
         "isReplayAllowed": true,

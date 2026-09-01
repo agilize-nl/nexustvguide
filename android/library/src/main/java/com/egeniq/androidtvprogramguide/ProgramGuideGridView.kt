@@ -341,7 +341,70 @@ class ProgramGuideGridView<T>(context: Context, attrs: AttributeSet?, defStyle: 
                 return true
             }
         }
+        val lastClicked = ProgramGuideUtil.lastClickedSchedule
+        if (lastClicked != null && !internalKeepCurrentProgramFocused) {
+            val channelIndex = programGuideManager.findChannelIndexForScheduleId(lastClicked.id)
+            if (channelIndex != null) {
+                if (selectedPosition != channelIndex) {
+                    selectedPosition = channelIndex
+                }
+                val rowViewHolder = findViewHolderForAdapterPosition(channelIndex)
+                val rowView = rowViewHolder?.itemView ?: getChildAt(channelIndex)
+                if (rowView != null) {
+                    val matchingProgram = ProgramGuideUtil.findNextFocusedProgram(
+                        rowView,
+                        focusRangeLeft,
+                        focusRangeRight,
+                        keepCurrentProgramFocused = false
+                    )
+                    if (matchingProgram != null && matchingProgram.requestFocus()) {
+                        return true
+                    }
+                }
+            }
+        }
         return super.onRequestFocusInDescendants(direction, previouslyFocusedRect)
+    }
+
+    fun restoreSelection(schedule: ProgramGuideSchedule<*>? = ProgramGuideUtil.lastClickedSchedule) {
+        if (schedule == null) return
+        val scheduleId = schedule.id
+        val channelIndex = programGuideManager.findChannelIndexForScheduleId(scheduleId) ?: return
+
+        internalKeepCurrentProgramFocused = false
+        if (selectedPosition != channelIndex) {
+            selectedPosition = channelIndex
+        }
+
+        val rowViewHolder = findViewHolderForAdapterPosition(channelIndex)
+        val rowView = rowViewHolder?.itemView ?: getChildAt(channelIndex)
+        if (rowView != null) {
+            val focusables = ArrayList<View>()
+            ProgramGuideUtil.findFocusables(rowView, focusables)
+            val targetView = focusables.firstOrNull {
+                it is ProgramGuideItemView<*> && it.schedule?.id == scheduleId
+            }
+            if (targetView != null) {
+                lastFocusedView = targetView
+                targetView.requestFocus()
+                return
+            }
+        }
+
+        post {
+            val deferredRow = findViewHolderForAdapterPosition(channelIndex)?.itemView ?: getChildAt(channelIndex)
+            if (deferredRow != null) {
+                val focusables = ArrayList<View>()
+                ProgramGuideUtil.findFocusables(deferredRow, focusables)
+                val targetView = focusables.firstOrNull {
+                    it is ProgramGuideItemView<*> && it.schedule?.id == scheduleId
+                }
+                if (targetView != null) {
+                    lastFocusedView = targetView
+                    targetView.requestFocus()
+                }
+            }
+        }
     }
 
     fun focusCurrentProgram(channelPosition: Int = 0) {

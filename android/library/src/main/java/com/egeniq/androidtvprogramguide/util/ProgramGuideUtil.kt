@@ -83,15 +83,13 @@ object ProgramGuideUtil {
         }
 
         if (lastClickedSchedule != null) {
-            // Select the current program if possible.
+            // Select the last clicked program if it is present in this row.
             for (i in focusables.indices) {
                 val focusable = focusables[i]
                 if (focusable is ProgramGuideItemView<*> && focusable.schedule?.id == lastClickedSchedule?.id) {
-                    lastClickedSchedule = null
                     return focusable
                 }
             }
-            lastClickedSchedule = null
         }
 
         // Find the largest focusable among fully overlapped focusables.
@@ -135,7 +133,7 @@ object ProgramGuideUtil {
         return view.schedule?.isCurrentProgram == true
     }
 
-    private fun findFocusables(v: View, outFocusable: ArrayList<View>) {
+    fun findFocusables(v: View, outFocusable: ArrayList<View>) {
         if (v.isFocusable) {
             outFocusable.add(v)
         }

@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-30T22:00:00Z",
   "to": "2026-08-31T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -2518,7 +2518,7 @@
         "contentItemId": "N_tZvpe92kKkeGY4UEpjfg",
         "assetId": "21E3AC3D890F1E83CDB5FF734069CAE1",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },

@@ -1,6 +1,7 @@
 package com.nexustvguide.app.ui
 
 import android.content.Context
+import android.text.SpannedString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +9,15 @@ import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.test.core.app.ApplicationProvider
+import com.egeniq.androidtvprogramguide.ProgramGuideGridView
+import com.egeniq.androidtvprogramguide.ProgramGuideManager
 import com.egeniq.androidtvprogramguide.R as LibraryR
+import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
 import com.egeniq.androidtvprogramguide.item.ProgramGuideItemView
 import com.egeniq.androidtvprogramguide.util.FixedLocalDateTime
 import com.egeniq.androidtvprogramguide.util.ProgramGuideUtil
+import com.nexustvguide.app.data.model.SimpleChannel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertSame
@@ -22,6 +27,8 @@ import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.threeten.bp.Instant
+import org.threeten.bp.LocalDate
+import org.threeten.bp.ZoneId
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28])
@@ -76,6 +83,105 @@ class NexusProgramGuideFocusTest {
     }
 
     @Test
+    fun testFindNextFocusedProgramPreservesLastClickedAcrossUnrelatedRows() {
+        val context = ApplicationProvider.getApplicationContext<Context>().apply { setTheme(com.nexustvguide.app.R.style.Theme_NexusTVGuide) }
+        val now = System.currentTimeMillis()
+
+        // Row 1 with programs A (id 201) & B (id 202)
+        val row1 = FrameLayout(context)
+        val schedA = ProgramGuideSchedule.createScheduleWithProgram(
+            id = 201L,
+            startsAt = Instant.ofEpochMilli(now - 3600_000),
+            endsAt = Instant.ofEpochMilli(now),
+            isClickable = true,
+            displayTitle = "Prog A",
+            program = "Data A"
+        )
+        val viewA = ProgramGuideItemView<String>(context).apply {
+            setValues(schedA, now - 3600_000, now + 7200_000, "Gap", false)
+        }
+        row1.addView(viewA)
+
+        // Row 2 with programs C (id 203) & D (id 204)
+        val row2 = FrameLayout(context)
+        val schedD = ProgramGuideSchedule.createScheduleWithProgram(
+            id = 204L,
+            startsAt = Instant.ofEpochMilli(now),
+            endsAt = Instant.ofEpochMilli(now + 3600_000),
+            isClickable = true,
+            displayTitle = "Prog D",
+            program = "Data D"
+        )
+        val viewD = ProgramGuideItemView<String>(context).apply {
+            setValues(schedD, now - 3600_000, now + 7200_000, "Gap", false)
+        }
+        row2.addView(viewD)
+
+        // Set lastClickedSchedule to Sched D (which is on Row 2)
+        ProgramGuideUtil.lastClickedSchedule = schedD
+
+        // Evaluating Row 1 (unrelated row) must NOT clear lastClickedSchedule
+        val focusedRow1 = ProgramGuideUtil.findNextFocusedProgram(
+            programRow = row1,
+            focusRangeLeft = 0,
+            focusRangeRight = 1000,
+            keepCurrentProgramFocused = false
+        )
+        assertEquals(schedD, ProgramGuideUtil.lastClickedSchedule)
+
+        // Evaluating Row 2 must match viewD
+        val focusedRow2 = ProgramGuideUtil.findNextFocusedProgram(
+            programRow = row2,
+            focusRangeLeft = 0,
+            focusRangeRight = 1000,
+            keepCurrentProgramFocused = false
+        )
+        assertSame(viewD, focusedRow2)
+    }
+
+    @Test
+    fun testProgramGuideManagerFindsChannelIndexForScheduleId() {
+        val manager = ProgramGuideManager<String>()
+        val date = LocalDate.of(2026, 9, 1)
+        val tz = ZoneId.of("Europe/Amsterdam")
+        val startInstant = date.atStartOfDay(tz).plusHours(1).toInstant()
+        val endInstant = date.atStartOfDay(tz).plusHours(2).toInstant()
+
+        val channels = listOf<ProgramGuideChannel>(
+            SimpleChannel("npo1", SpannedString("NPO 1"), null),
+            SimpleChannel("npo2", SpannedString("NPO 2"), null)
+        )
+
+        val sched1 = ProgramGuideSchedule.createScheduleWithProgram(
+            id = 301L,
+            startsAt = startInstant,
+            endsAt = endInstant,
+            isClickable = true,
+            displayTitle = "NPO1 Show",
+            program = "Data"
+        )
+        val sched2 = ProgramGuideSchedule.createScheduleWithProgram(
+            id = 302L,
+            startsAt = startInstant,
+            endsAt = endInstant,
+            isClickable = true,
+            displayTitle = "NPO2 Show",
+            program = "Data"
+        )
+
+        val entries = mapOf(
+            "npo1" to listOf(sched1),
+            "npo2" to listOf(sched2)
+        )
+
+        manager.setData(channels, entries, date, tz)
+
+        assertEquals(0, manager.findChannelIndexForScheduleId(301L))
+        assertEquals(1, manager.findChannelIndexForScheduleId(302L))
+        assertEquals(null, manager.findChannelIndexForScheduleId(999L))
+    }
+
+    @Test
     fun testTodaySelectionUpdatesDateToCurrentDay() {
         val today = FixedLocalDateTime.now().toLocalDate()
         assertNotNull(today)
@@ -113,6 +219,7 @@ class NexusProgramGuideFocusTest {
         val expectedHeightPx = (28 * density).toInt()
         assertEquals(expectedHeightPx, menuButton.layoutParams.height)
     }
+
     @Test
     fun testTimelineTimeLabelsAlignWithGridStartWithoutStaleOffset() {
         val context = ApplicationProvider.getApplicationContext<Context>().apply {

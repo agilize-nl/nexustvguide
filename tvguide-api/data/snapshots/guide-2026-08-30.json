@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-08-29T22:00:00Z",
   "to": "2026-08-30T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -516,14 +516,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "IX2wEvGjw0uydHTeyCaKIQ",
-        "assetId": "C782BAB22C339BE8BE8EF8058244DB83",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784482",
@@ -539,14 +532,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "mbwAm6K-1EitHHI7i9xEnw",
-        "assetId": "7FB59C9FB0C66F98FE7E8E1BF5993F59",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784432",
@@ -562,14 +548,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TeH8PLDow0a_16aJK-txQw",
-        "assetId": "3990FD9175A718FA673E78366365EE78",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "218784382",
@@ -2704,7 +2683,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "yIH_NAByE0ahmi-OiCvsag",
+        "assetId": "1483458B872053FF2A39B7AA215CAB75",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "218783132",
@@ -7521,7 +7507,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "pCRr7tq-Kk2MCt9LZqwsiw",
+        "contentItemId": "UHS_cJ_6WEq6FQkNh63R7g",
         "assetId": "DBDCE5EA96BAB0F6F6EE3DE13B3B4AB0",
         "channelId": "sbs9",
         "isReplayAllowed": true,

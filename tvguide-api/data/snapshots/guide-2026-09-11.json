@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-10T22:00:00Z",
   "to": "2026-09-11T22:00:00Z",
-  "sourceFetchedAt": "2026-09-01T10:08:55.691Z",
-  "publishedAt": "2026-09-01T10:08:55.691Z",
+  "sourceFetchedAt": "2026-09-01T12:38:56.856Z",
+  "publishedAt": "2026-09-01T12:38:56.856Z",
   "channels": [
     {
       "id": "npo1",
@@ -967,7 +967,7 @@
       "start": "2026-09-11T16:15:00.000Z",
       "end": "2026-09-11T16:30:00.000Z",
       "description": "Aandacht voor het laatste sportnieuws.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/sportjournaal-759211682.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/deportes-1-767027092.jpg",
       "genre": "Sportnieuws",
       "isLive": false,
       "isRerun": false,

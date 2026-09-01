@@ -18,6 +18,7 @@ import com.egeniq.androidtvprogramguide.ProgramGuideFragment
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
+import com.egeniq.androidtvprogramguide.util.ProgramGuideUtil
 import com.nexustvguide.app.BuildConfig
 import com.nexustvguide.app.R
 import com.nexustvguide.app.data.model.ProgrammeDto
@@ -54,6 +55,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 
     private var skipNextResumeRefresh = false
+    private var lastRenderedState: GuideUiState.Content? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,24 +71,32 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         super.onViewCreated(view, savedInstanceState)
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect { state ->
                     when (state) {
                         is GuideUiState.Loading -> {
                             setState(State.Loading)
                         }
                         is GuideUiState.Content -> {
-                            setData(state.channels, state.schedulesByChannel, state.date)
+                            val isSame = lastRenderedState?.date == state.date &&
+                                    lastRenderedState?.channels == state.channels &&
+                                    lastRenderedState?.schedulesByChannel == state.schedulesByChannel
+                            if (!isSame) {
+                                lastRenderedState = state
+                                setData(state.channels, state.schedulesByChannel, state.date)
+                            }
                             setState(State.Content)
                             if (state.isStale) {
                                 Log.i(TAG, "Displaying stale guide snapshot for ${state.date}")
                             }
                         }
                         is GuideUiState.AllChannelsHidden -> {
+                            lastRenderedState = null
                             setData(emptyList(), emptyMap(), state.date)
                             setState(State.Error(getString(R.string.programguide_all_channels_hidden)))
                         }
                         is GuideUiState.Error -> {
+                            lastRenderedState = null
                             setState(State.Error(state.message))
                         }
                     }
@@ -173,11 +183,9 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         super.onResume()
         if (skipNextResumeRefresh) {
             skipNextResumeRefresh = false
-            return
         }
-        val today = currentDateInDisplayTimeZone()
-        if (currentDate != today) {
-            selectToday()
+        if (currentState is State.Content) {
+            programGuideGrid.restoreSelection(ProgramGuideUtil.lastClickedSchedule)
         }
     }
 
