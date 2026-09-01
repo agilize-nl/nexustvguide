@@ -51,4 +51,5 @@
     <color name="programguide_title_text_color_in_past">#D0D0D0</color>
     <color name="programguide_title_text_color_default">#F0F0F0</color>
     <color name="programguide_header_label_color">#94A3B8</color>
+    <color name="programguide_header_app_title_color">#42a5f5</color>
 </resources>
