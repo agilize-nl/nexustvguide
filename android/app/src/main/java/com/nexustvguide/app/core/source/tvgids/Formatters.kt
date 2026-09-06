@@ -1,15 +1,16 @@
 package com.nexustvguide.app.core.source.tvgids
 
 import org.jsoup.parser.Parser
+import java.util.Locale
 
 object Formatters {
     private val VALID_AGE_RATINGS = setOf("AL", "6", "9", "12", "14", "16", "18")
     private val TAG_REGEX = Regex("<[^>]*>")
-    private val WHITESPACE_REGEX = Regex("[\\s\\u00A0]+")
+    private val WHITESPACE_REGEX = Regex("[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]+")
 
     /**
      * Verwijdert HTML tags en decodeert HTML entities (zoals &amp;, &eacute;, &#039;, &euro;).
-     * Exact gelijk aan he.decode() in Node.js.
+     * HTML5-decoder; pariteit met he wordt bewaakt met gedeelde fixtures.
      */
     fun htmlToText(html: String?): String? {
         if (html.isNullOrEmpty()) return null
@@ -26,7 +27,7 @@ object Formatters {
      */
     fun normalizeAgeRating(rawEi: String?): String? {
         if (rawEi.isNullOrBlank()) return null
-        val cleaned = rawEi.trim().uppercase()
+        val cleaned = rawEi.trim().uppercase(Locale.ROOT)
         return if (VALID_AGE_RATINGS.contains(cleaned)) cleaned else null
     }
 }

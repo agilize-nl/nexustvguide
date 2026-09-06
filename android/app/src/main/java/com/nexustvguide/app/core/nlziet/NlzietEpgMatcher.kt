@@ -38,17 +38,17 @@ object NlzietEpgMatcher {
     const val MAX_DURATION_DIFF_MS = 10 * 60 * 1000L  // 10 minuten
 
     private val PREFIX_REGEX = Regex(
-        "^(nos|avrotros|bnnvara|kro-ncrv|kro|ncrv|vpro|max|omroep max|eo|npo|rtl\\s*\\d*|sbs\\s*\\d*|viaplay|canvas|vrt|powned|wnl|human|veronica|net\\s*5|een)\\s*([:\\-–—]\\s*|\\s+)",
+        "^(nos|avrotros|bnnvara|kro-ncrv|kro|ncrv|vpro|max|omroep max|eo|npo|rtl[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*\\d*|sbs[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*\\d*|viaplay|canvas|vrt|powned|wnl|human|veronica|net[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*5|een)[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*([:\\-–—][\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*|[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]+)",
         RegexOption.IGNORE_CASE
     )
 
     private val SUFFIX_REGEX = Regex(
-        "\\s*[:\\-–—]\\s*(afl\\.?|aflevering|seizoen|season|s\\d+|deel|extra|special|live|herhaling|compilatie|serie|film).*$",
+        "[\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*[:\\-–—][\\t\\n\\u000B\\f\\r \\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*(afl\\.?|aflevering|seizoen|season|s\\d+|deel|extra|special|live|herhaling|compilatie|serie|film).*$",
         RegexOption.IGNORE_CASE
     )
 
     private val NON_ALPHANUMERIC = Regex("[^a-z0-9]+")
-    private val COMBINING_DIACRITICS = Regex("[\\p{InCombiningDiacriticalMarks}̀-ͯ]")
+    private val COMBINING_DIACRITICS = Regex("[\\u0300-\\u036f]")
 
     fun normalizeEpgTitle(title: String?): String {
         if (title.isNullOrBlank()) return ""

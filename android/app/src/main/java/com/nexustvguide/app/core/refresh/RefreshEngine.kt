@@ -11,6 +11,7 @@ import com.nexustvguide.app.core.source.tvgids.TvgidsClient
 import com.nexustvguide.app.core.source.tvgids.TvgidsParser
 import com.nexustvguide.app.core.source.tvgids.ValidationStats
 import com.nexustvguide.app.core.time.GuideTime
+import kotlinx.coroutines.ensureActive
 import org.threeten.bp.Instant
 import org.threeten.bp.OffsetDateTime
 
@@ -20,12 +21,16 @@ data class RefreshResult(
     val totalProgrammesIngested: Int,
     val totalExactTargets: Int,
     val epgFetchFailed: Boolean,
-    val sourceErrors: List<String> = emptyList()
+    val sourceErrors: List<String> = emptyList(),
+    val retryableSourceFailure: Boolean = false,
+    val skippedMalformedProgrammesCount: Int = 0,
+    val failedOffsets: List<Int> = emptyList(),
+    val epgErrors: List<String> = emptyList()
 )
 
 class RefreshEngine(
-    private val tvgidsClient: TvgidsClient,
-    private val epgClient: NlzietEpgClient,
+    private val tvgidsClient: com.nexustvguide.app.core.source.tvgids.ProgrammeSource,
+    private val epgClient: com.nexustvguide.app.core.nlziet.EpgSource,
     private val epgMatcher: NlzietEpgMatcher,
     private val storage: SnapshotStorage,
     private val nowFn: () -> Instant = { Instant.now() },
@@ -44,6 +49,12 @@ class RefreshEngine(
         activeChannels: List<Channel>,
         priorityDate: String? = null
     ): RefreshResult {
+        val cycleStart = nowFn()
+        val today = GuideTime.getAmsterdamDateString(cycleStart)
+        validationStats.skippedMalformedProgrammesCount = 0
+        val failedOffsets = mutableListOf<Int>()
+        val epgErrors = mutableListOf<String>()
+        var retryableSourceFailure = false
         val sourceIds = activeChannels.map { it.sourceId }
         val sourceIdToChannel = activeChannels.associateBy { it.sourceId }
         val channelOrderMap = activeChannels.associate { it.id to it.sortOrder }
@@ -53,6 +64,7 @@ class RefreshEngine(
 
         // 1. Haal alle offsets -2..13 op
         for (offset in MIN_PROVIDER_OFFSET..MAX_PROVIDER_OFFSET) {
+            kotlinx.coroutines.currentCoroutineContext().ensureActive()
             try {
                 val rawEnvelope = tvgidsClient.fetchPrograms(offset, sourceIds)
                 val channelBuckets = TvgidsParser.parseProgramsEnvelope(rawEnvelope, validationStats)
@@ -66,16 +78,22 @@ class RefreshEngine(
                     }
                 }
             } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+                failedOffsets.add(offset)
+                retryableSourceFailure = retryableSourceFailure || com.nexustvguide.app.core.http.isTransientSourceFailure(e)
                 val msg = "Warning: failed to fetch provider offset $offset: ${e.message}"
                 logger(msg)
                 sourceErrors.add(msg)
+                if (e is com.nexustvguide.app.core.http.HttpFailure && e.status == 429) {
+                    failedOffsets.addAll((offset + 1)..MAX_PROVIDER_OFFSET)
+                    break
+                }
             }
         }
 
         val allProgrammes = allProgrammesMap.values.toList()
         val nowInstant = nowFn()
         val nowUtcIso = GuideTime.formatUtcIso(nowInstant)
-        val today = GuideTime.getTodayAmsterdam(nowFn)
 
         // 2. Bepaal kalenderdagen -2..10
         val datesToProcess = mutableListOf<String>()
@@ -102,6 +120,7 @@ class RefreshEngine(
 
         // 3. Verdeel over lokale kalenderdagen en verrijk
         for (date in orderedDates) {
+            kotlinx.coroutines.currentCoroutineContext().ensureActive()
             val (fromInstant, toInstant) = GuideTime.getLocalDayUtcWindow(date)
             val fromMs = fromInstant.toEpochMilli()
             val toMs = toInstant.toEpochMilli()
@@ -115,7 +134,7 @@ class RefreshEngine(
                 } catch (e: Exception) {
                     false
                 }
-            }.sortedWith(Comparator { a, b ->
+            }.map { it.copy(nlziet = null, nlzietId = null) }.sortedWith(Comparator { a, b ->
                 val chOrderA = channelOrderMap[a.channelId] ?: 999
                 val chOrderB = channelOrderMap[b.channelId] ?: 999
                 if (chOrderA != chOrderB) {
@@ -165,8 +184,10 @@ class RefreshEngine(
 
                 if (isInWindow && nlzietChannelIds.isNotEmpty()) {
                     try {
-                        epgResponse = epgClient.fetchEpg(date, nlzietChannelIds)
+                        epgResponse = epgClient.fetchEpg(date, nlzietChannelIds, today)
                     } catch (e: Exception) {
+                        if (e is kotlinx.coroutines.CancellationException) throw e
+                        epgErrors.add("$date: ${e.message}")
                         logger("NLZIET EPG fetch failed for date $date: ${e.message}")
                         epgFetchFailed = true
                         anyEpgFailed = true
@@ -189,13 +210,15 @@ class RefreshEngine(
                     from = GuideTime.formatUtcIso(fromInstant),
                     to = GuideTime.formatUtcIso(toInstant),
                     sourceFetchedAt = nowUtcIso,
-                    publishedAt = nowUtcIso,
+                    publishedAt = GuideTime.formatUtcIso(nowFn()),
                     channels = activeChannels,
                     programmes = dayProgrammes
                 )
 
                 storage.saveDaySnapshot(snapshot)
                 successfulDays.add(date)
+            } else {
+                rejectedDays.add(date)
             }
         }
 
@@ -211,7 +234,11 @@ class RefreshEngine(
             totalProgrammesIngested = allProgrammes.size,
             totalExactTargets = totalExactTargets,
             epgFetchFailed = anyEpgFailed,
-            sourceErrors = sourceErrors
+            sourceErrors = sourceErrors,
+            retryableSourceFailure = retryableSourceFailure,
+            skippedMalformedProgrammesCount = validationStats.skippedMalformedProgrammesCount,
+            failedOffsets = failedOffsets,
+            epgErrors = epgErrors
         )
     }
 }

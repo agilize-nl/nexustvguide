@@ -32,9 +32,27 @@ sealed class ChannelOrderUiState {
 
 class ChannelOrderViewModel @JvmOverloads constructor(
     application: Application,
-    private val guideRepository: GuideRepository = GuideRepositoryProvider.getRepository(application),
+    guideRepository: GuideRepository? = null,
     private val orderRepository: ChannelOrderRepository = ChannelOrderRepository(application)
 ) : AndroidViewModel(application) {
+
+    private val followsProvider = guideRepository == null
+    private var guideRepository = guideRepository ?: GuideRepositoryProvider.getRepository(application)
+    private var date: String? = null
+    private var loadJob: kotlinx.coroutines.Job? = null
+
+    init {
+        if (followsProvider) viewModelScope.launch {
+            GuideRepositoryProvider.observeSource(application).collect {
+                val selected = GuideRepositoryProvider.getRepository(application)
+                if (selected !== this@ChannelOrderViewModel.guideRepository) {
+                    loadJob?.cancel()
+                    this@ChannelOrderViewModel.guideRepository = selected
+                    date?.let { loadChannels(it) }
+                }
+            }
+        }
+    }
 
     private val _uiState = MutableStateFlow<ChannelOrderUiState>(ChannelOrderUiState.Loading)
     val uiState: StateFlow<ChannelOrderUiState> = _uiState
@@ -43,8 +61,10 @@ class ChannelOrderViewModel @JvmOverloads constructor(
     private var cachedBackendChannels: List<ChannelDto> = emptyList()
 
     fun loadChannels(dateStr: String) {
+        date = dateStr
+        loadJob?.cancel()
         _uiState.value = ChannelOrderUiState.Loading
-        viewModelScope.launch {
+        loadJob = viewModelScope.launch {
             try {
                 val backendChannels = guideRepository.getChannelsForOrdering(dateStr)
                 if (backendChannels.isEmpty()) {
@@ -73,6 +93,7 @@ class ChannelOrderViewModel @JvmOverloads constructor(
                     totalChannels = items.size
                 )
             } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
                 _uiState.value = ChannelOrderUiState.Error("Fout bij laden van zenders: ${e.localizedMessage}")
             }
         }

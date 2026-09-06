@@ -2,6 +2,7 @@ package com.nexustvguide.app.work
 
 import android.content.Context
 import android.util.Log
+import kotlinx.coroutines.CancellationException
 import androidx.work.Constraints
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingPeriodicWorkPolicy
@@ -23,6 +24,10 @@ class GuideRefreshWorker(
         private const val TAG = "GuideRefreshWorker"
 
         fun schedule(context: Context) {
+            if (GuideRepositoryProvider.getGuideSource(context) != "LOCAL") {
+                WorkManager.getInstance(context).cancelUniqueWork(WORK_NAME)
+                return
+            }
             val constraints = Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.CONNECTED)
                 .build()
@@ -63,12 +68,15 @@ class GuideRefreshWorker(
                     )
                 }
                 val result = localRepo.refreshCoordinator.refresh(channels)
+                if (result.retryableSourceFailure) return if (runAttemptCount < 2) Result.retry() else Result.failure()
+                if (result.successfulDays.isEmpty()) return Result.failure()
                 Log.i(TAG, "Periodic refresh completed: ${result.successfulDays.size} days updated, ${result.totalExactTargets} exact targets")
             }
             Result.success()
         } catch (e: Exception) {
+            if (e is CancellationException) throw e
             Log.e(TAG, "Periodic guide refresh failed", e)
-            if (runAttemptCount < 3) {
+            if (com.nexustvguide.app.core.http.isTransientSourceFailure(e) && runAttemptCount < 2) {
                 Result.retry()
             } else {
                 Result.failure()

@@ -1,6 +1,8 @@
 # Uitvoeringsplan — Optie 1: volledig standalone Android-app ("serverless")
 
-Status: **geïmplementeerd en geverifieerd op de Android emulator**
+Status: **fase 1 en 2 geïmplementeerd; 126 JVM-unittests groen en de geminificeerde
+release bouwt. Fase 3 (validatie op de Shield) en de instrumentatietests uit §8.3
+staan nog open.**
 Datum: 31 augustus 2026
 Review: 6 september 2026, getoetst aan de huidige repository en Android-documentatie.
 Betreft: verhuizing van de `tvguide-api`-logica (ophalen `json.tvgids.nl/v4`, normalisatie,
@@ -827,7 +829,11 @@ Node-referentie; bedoelde afwijkingen apart getest. De app gebruikt nog `REMOTE`
 - [x] Repository-provider voor beide ViewModels, observatie van lokale wijzigingen,
       stale bij hervatten/tijdens gebruik en behoud van focus/zendervoorkeuren.
 - [x] Updatergedrag in `LOCAL` aanpassen volgens §7.6.
-- [x] Refresh-/stale-unittests uit §8.1 en Room-/integratietests uit §8.3 groen.
+- [x] Refresh-/stale-unittests uit §8.1 groen, inclusief HTTP-foutclassificatie,
+      gedeelde refresh bij gelijktijdige aanvragen en middernachtoverlap.
+- [ ] Instrumentatietests uit §8.3 (Room op apparaat, WorkManager `TestDriver`,
+      herstart van het proces). Er is nog geen `androidTest`-bronmap; de Room-dekking
+      loopt nu via Robolectric-unittests.
 
 *Oplevering: standalone modus is te kiezen; `REMOTE` blijft de default.*
 

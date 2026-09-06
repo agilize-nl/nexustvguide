@@ -87,4 +87,10 @@
     <string name="channel_order_a11y_moved">%1$s, positie %2$d van %3$d</string>
     <string name="channel_order_a11y_hide">Verberg %1$s</string>
     <string name="channel_order_a11y_show">Toon %1$s</string>
+    <string name="menu_item_guide_source">Gidsbron</string>
+    <string-array name="guide_sources">
+        <item>Zelfstandig (internet)</item>
+        <item>Eigen gidsserver (LAN)</item>
+    </string-array>
+    <string name="local_updates_require_server">Updates via de app vereisen een ingestelde updateserver. Kies de servermodus om die te gebruiken, of installeer een nieuwe APK handmatig.</string>
 </resources>

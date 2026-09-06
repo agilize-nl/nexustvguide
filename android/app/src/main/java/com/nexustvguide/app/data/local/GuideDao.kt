@@ -1,5 +1,7 @@
 package com.nexustvguide.app.data.local
 
+import androidx.room.Embedded
+import androidx.room.Relation
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -7,10 +9,23 @@ import androidx.room.Query
 import androidx.room.Transaction
 import kotlinx.coroutines.flow.Flow
 
+data class StoredDay(
+    @Embedded val meta: DayMetaEntity,
+    @Relation(parentColumn = "date", entityColumn = "date") val programmes: List<ProgrammeEntity>
+)
+
 @Dao
 interface GuideDao {
 
-    @Query("SELECT * FROM channels ORDER BY sortOrder ASC")
+    @Transaction
+    @Query("SELECT * FROM day_meta WHERE date = :date")
+    suspend fun getDay(date: String): StoredDay?
+
+    @Transaction
+    @Query("SELECT * FROM day_meta WHERE date = :date")
+    fun observeDay(date: String): Flow<StoredDay?>
+
+    @Query("SELECT * FROM channels WHERE inNlziet = 1 ORDER BY sortOrder ASC")
     suspend fun getChannels(): List<ChannelEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -57,6 +72,9 @@ interface GuideDao {
 
     @Transaction
     suspend fun replaceDay(date: String, dayMeta: DayMetaEntity, programmes: List<ProgrammeEntity>) {
+        require(dayMeta.date == date && programmes.all { it.date == date })
+        require(dayMeta.programmeCount == programmes.size)
+        require(programmes.map { it.channelId to it.id }.distinct().size == programmes.size)
         deleteProgrammesForDate(date)
         deleteDayMetaForDate(date)
         insertProgrammes(programmes)

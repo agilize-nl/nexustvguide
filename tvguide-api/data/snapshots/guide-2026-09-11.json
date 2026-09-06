@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-10T22:00:00Z",
   "to": "2026-09-11T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T16:43:06.536Z",
-  "publishedAt": "2026-09-06T16:43:06.536Z",
+  "sourceFetchedAt": "2026-09-06T21:43:06.531Z",
+  "publishedAt": "2026-09-06T21:43:06.531Z",
   "channels": [
     {
       "id": "npo1",
@@ -7621,7 +7621,7 @@
     {
       "id": "219471342",
       "channelId": "veronica",
-      "title": "Spidey en zijn Geweldige Vriendjes",
+      "title": "Spidey en zijn geweldige vriendjes",
       "start": "2026-09-11T03:10:00.000Z",
       "end": "2026-09-11T03:35:00.000Z",
       "description": "Rhino steelt een moedergans. Lockjaw stopt Black Cat.",
@@ -13553,14 +13553,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "YggYhEBV_EGC90a81zD9-g",
-        "assetId": "61F47C46D93FFE0CAC1B3A185BCA9138",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219803962",

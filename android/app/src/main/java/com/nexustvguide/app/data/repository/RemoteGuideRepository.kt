@@ -10,8 +10,12 @@ import com.nexustvguide.app.data.model.GuideResponseDto
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.emitAll
+import java.util.concurrent.ConcurrentHashMap
 import kotlinx.coroutines.withContext
 import java.io.File
 
@@ -22,6 +26,7 @@ class RemoteGuideRepository(
 ) : GuideRepository {
 
     private val gson = Gson()
+    private val observations = ConcurrentHashMap<String, MutableStateFlow<GuideResponseDto?>>()
     private val diskCacheDir = File(context.cacheDir, "guide_snapshots").apply { mkdirs() }
     private val etagPrefs = context.getSharedPreferences("guide_etags", Context.MODE_PRIVATE)
 
@@ -61,10 +66,10 @@ class RemoteGuideRepository(
     }
 
     override suspend fun getGuideForDate(date: String): GuideResponseDto? = withContext(ioDispatcher) {
-        val cachedEtag = etagPrefs.getString("etag_$date", null)
         val diskSnapshot = loadSnapshotFromDisk(date)
+        val cachedEtag = if (diskSnapshot == null) null else etagPrefs.getString("etag_$date", null)
 
-        try {
+        val result = try {
             val response = api.getGuideForDate(date, cachedEtag)
 
             when (response.code()) {
@@ -94,20 +99,14 @@ class RemoteGuideRepository(
             Log.w(TAG, "Network error fetching guide for $date, using fallback disk cache", e)
             diskSnapshot?.copy(meta = diskSnapshot.meta.copy(stale = true)) ?: diskSnapshot
         }
+        observations.getOrPut(date) { MutableStateFlow(null) }.value = result
+        result
     }
 
     override fun observeGuideForDate(date: String): Flow<GuideResponseDto?> = flow {
-        val cached = loadSnapshotFromDisk(date)
-        if (cached != null) {
-            emit(cached)
-        }
-        val fresh = getGuideForDate(date)
-        if (fresh != null && fresh != cached) {
-            emit(fresh)
-        } else if (cached == null) {
-            emit(null)
-        }
-    }
+        val state = observations.getOrPut(date) { MutableStateFlow(loadSnapshotFromDisk(date)) }
+        emitAll(state)
+    }.flowOn(ioDispatcher)
 
     private fun saveSnapshotToDisk(date: String, guide: GuideResponseDto) {
         try {

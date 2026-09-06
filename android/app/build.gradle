@@ -74,6 +74,8 @@ android {
         jvmTarget = "17"
     }
 
+    sourceSets.main.assets.srcDir(layout.buildDirectory.dir("generated/guideAssets"))
+
     buildFeatures {
         buildConfig true
     }
@@ -211,3 +213,10 @@ dependencies {
     testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1'
 }
+
+// The backend configuration is the single maintained source for both modes.
+def syncGuideChannels = tasks.register('syncGuideChannels', Sync) {
+    from(rootProject.file('../tvguide-api/config/channels.json'))
+    into(layout.buildDirectory.dir('generated/guideAssets'))
+}
+tasks.named('preBuild').configure { dependsOn(syncGuideChannels) }

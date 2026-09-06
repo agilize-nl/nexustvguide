@@ -20,6 +20,8 @@ import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
 import com.egeniq.androidtvprogramguide.util.ProgramGuideUtil
 import com.nexustvguide.app.BuildConfig
+import com.nexustvguide.app.data.repository.GuideRepositoryProvider
+import kotlinx.coroutines.delay
 import com.nexustvguide.app.R
 import com.nexustvguide.app.data.model.ProgrammeDto
 import com.nexustvguide.app.ui.update.UpdateDialogFragment
@@ -105,7 +107,13 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                launch {
+                    while (true) {
+                        delay(60_000)
+                        viewModel.loadGuideForDate(currentDate)
+                    }
+                }
                 updateViewModel.navEvents.collect { event ->
                     if (event is UpdateNavigationEvent.ShowUpdateDialog) {
                         showUpdateDialog()
@@ -128,7 +136,8 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         val menuItems = arrayOf(
             getString(R.string.menu_item_channel_order),
             getString(R.string.menu_item_check_updates),
-            getString(R.string.menu_item_about)
+            getString(R.string.menu_item_about),
+            getString(R.string.menu_item_guide_source)
         )
 
         var navigated = false
@@ -142,11 +151,16 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                         (activity as? MainActivity)?.showChannelOrder(currentDate)
                     }
                     1 -> {
-                        updateViewModel.checkForUpdates(isManual = true)
+                        if (GuideRepositoryProvider.getGuideSource(requireContext()) == "LOCAL") {
+                            AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+                                .setMessage(R.string.local_updates_require_server)
+                                .setPositiveButton(R.string.update_btn_ok, null).show()
+                        } else updateViewModel.checkForUpdates(isManual = true)
                     }
                     2 -> {
                         showAboutDialog(anchor)
                     }
+                    3 -> showGuideSourceDialog(anchor)
                 }
             }
             .setOnDismissListener {
@@ -154,6 +168,20 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                     anchor.post { anchor.requestFocus() }
                 }
             }
+            .show()
+    }
+
+    private fun showGuideSourceDialog(anchor: View) {
+        val sources = arrayOf("LOCAL", "REMOTE")
+        val selected = sources.indexOf(GuideRepositoryProvider.getGuideSource(requireContext()))
+        AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+            .setTitle(R.string.menu_item_guide_source)
+            .setSingleChoiceItems(R.array.guide_sources, selected) { dialog, which ->
+                GuideRepositoryProvider.setGuideSource(requireContext(), sources[which])
+                dialog.dismiss()
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .setOnDismissListener { anchor.post { anchor.requestFocus() } }
             .show()
     }
 
@@ -183,6 +211,8 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         super.onResume()
         if (skipNextResumeRefresh) {
             skipNextResumeRefresh = false
+        } else {
+            viewModel.loadGuideForDate(currentDate)
         }
         if (currentState is State.Content) {
             programGuideGrid.restoreSelection(ProgramGuideUtil.lastClickedSchedule)

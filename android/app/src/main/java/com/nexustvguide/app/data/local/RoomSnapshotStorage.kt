@@ -18,7 +18,8 @@ class RoomSnapshotStorage(
     }
 
     override suspend fun getSnapshot(date: String): DaySnapshot? {
-        val meta = guideDao.getDayMeta(date) ?: return null
+        val day = guideDao.getDay(date) ?: return null
+        val meta = day.meta
         val channels = guideDao.getChannels().map { c ->
             Channel(
                 id = c.id,
@@ -31,7 +32,7 @@ class RoomSnapshotStorage(
                 sortOrder = c.sortOrder
             )
         }
-        val programmeEntities = guideDao.getProgrammesForDate(date, meta.fromUtcMs, meta.toUtcMs)
+        val programmeEntities = day.programmes
         val programmes = programmeEntities.map { entityToDomainProgramme(it) }
 
         val fromIso = Instant.ofEpochMilli(meta.fromUtcMs).toString()

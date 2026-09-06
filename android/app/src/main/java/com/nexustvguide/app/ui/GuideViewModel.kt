@@ -21,6 +21,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
@@ -47,9 +48,13 @@ sealed class GuideUiState {
 
 class GuideViewModel @JvmOverloads constructor(
     application: Application,
-    private val repository: GuideRepository = GuideRepositoryProvider.getRepository(application),
+    repository: GuideRepository? = null,
     private val orderRepository: ChannelOrderRepository = ChannelOrderRepository(application)
 ) : AndroidViewModel(application) {
+
+    private val followsProvider = repository == null
+    private var repository = repository ?: GuideRepositoryProvider.getRepository(application)
+    private var prefetchJob: Job? = null
 
     private val _uiState = MutableStateFlow<GuideUiState>(GuideUiState.Loading)
     val uiState: StateFlow<GuideUiState> = _uiState
@@ -63,6 +68,19 @@ class GuideViewModel @JvmOverloads constructor(
     private var activeDate: LocalDate? = null
 
     init {
+        if (followsProvider) viewModelScope.launch {
+            GuideRepositoryProvider.observeSource(application).collect {
+                val selected = GuideRepositoryProvider.getRepository(application)
+                if (selected !== this@GuideViewModel.repository) {
+                    currentLoadJob?.cancel()
+                    currentObserveJob?.cancel()
+                    prefetchJob?.cancel()
+                    lastPreparedGuide = null
+                    this@GuideViewModel.repository = selected
+                    activeDate?.let { loadGuideForDate(it, forceLoadingState = true) }
+                }
+            }
+        }
         viewModelScope.launch {
             orderRepository.observe().collect { prefs ->
                 currentPrefs = prefs
@@ -78,6 +96,7 @@ class GuideViewModel @JvmOverloads constructor(
         activeDate = date
         currentLoadJob?.cancel()
         currentObserveJob?.cancel()
+        prefetchJob?.cancel()
 
         val currentState = _uiState.value
         val shouldShowLoading = forceLoadingState ||
@@ -93,7 +112,12 @@ class GuideViewModel @JvmOverloads constructor(
 
         // Observeer de lokale repository reactief (bijv. Room Flow updates bij eerste vulling of background refresh)
         currentObserveJob = viewModelScope.launch {
-            repository.observeGuideForDate(dateStr).collectLatest { guideResponse ->
+            repository.observeGuideForDate(dateStr).catch { e ->
+                Log.e("GuideViewModel", "Guide observation failed", e)
+                if (activeDate == date && _uiState.value !is GuideUiState.Content) {
+                    _uiState.value = GuideUiState.Error("Fout bij lezen van tv-gids.")
+                }
+            }.collectLatest { guideResponse ->
                 if (activeDate == date && guideResponse != null && guideResponse.channels.isNotEmpty()) {
                     val prepared = prepareGuide(guideResponse, date)
                     lastPreparedGuide = prepared
@@ -117,7 +141,7 @@ class GuideViewModel @JvmOverloads constructor(
 
                     prefetchAdjacentDays(date)
                 } else {
-                    if (activeDate == date && _uiState.value !is GuideUiState.Content) {
+                    if (activeDate == date && _uiState.value !is GuideUiState.Content && _uiState.value !is GuideUiState.AllChannelsHidden) {
                         _uiState.value = GuideUiState.Error("Geen zenders of programmadata beschikbaar voor $dateStr.")
                     }
                 }
@@ -192,13 +216,16 @@ class GuideViewModel @JvmOverloads constructor(
     }
 
     private fun prefetchAdjacentDays(centerDate: LocalDate) {
-        viewModelScope.launch {
+        prefetchJob?.cancel()
+        prefetchJob = viewModelScope.launch {
             try {
                 val yesterday = centerDate.minusDays(1).format(dateFormatter)
                 val tomorrow = centerDate.plusDays(1).format(dateFormatter)
                 repository.getGuideForDate(yesterday)
                 repository.getGuideForDate(tomorrow)
-            } catch (_: Exception) {}
+            } catch (e: Exception) {
+                if (e is CancellationException) throw e
+            }
         }
     }
 }

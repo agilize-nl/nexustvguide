@@ -18,85 +18,31 @@ data class TvgidsClientOptions(
     val okHttpClient: OkHttpClient? = null
 )
 
+fun interface ProgrammeSource {
+    suspend fun fetchPrograms(dayOffset: Int, channelSourceIds: List<String>?): String
+}
+
 class TvgidsClient(
     private val options: TvgidsClientOptions = TvgidsClientOptions()
-) {
-    private val client: OkHttpClient = options.okHttpClient ?: OkHttpClient.Builder()
+) : ProgrammeSource {
+    private val client = (options.okHttpClient ?: OkHttpClient()).newBuilder()
         .callTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
-        .connectTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
-        .readTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
+        .retryOnConnectionFailure(false)
         .build()
+    private val fetcher = com.nexustvguide.app.core.http.HttpFetcher(client, options.maxRetries, 1000, 3000)
+    private val baseUrl = options.baseUrl.trimEnd('/')
 
-    private val baseUrl: String = options.baseUrl.trimEnd('/')
-
-    private suspend fun fetchWithRetry(url: String): String {
-        var lastException: Exception? = null
-
-        for (attempt in 0..options.maxRetries) {
-            if (attempt > 0) {
-                val delayMs = min(1000.0 * 2.0.pow(attempt - 1), 3000.0).toLong()
-                delay(delayMs)
-            }
-
-            val request = Request.Builder()
-                .url(url)
-                .header("User-Agent", options.userAgent)
-                .header("Accept", "application/json")
-                .build()
-
-            var retryDelaySeconds: Long? = null
-            try {
-                var isSuccess = false
-                var bodyString: String? = null
-                var statusCode = 0
-                var statusMessage = ""
-
-                client.newCall(request).execute().use { response ->
-                    statusCode = response.code
-                    statusMessage = response.message
-                    if (response.isSuccessful) {
-                        isSuccess = true
-                        bodyString = response.body?.string()
-                            ?: throw IOException("Empty response body from $url")
-                    } else if (statusCode == 429) {
-                        retryDelaySeconds = response.header("Retry-After")?.toLongOrNull() ?: 3L
-                    }
-                }
-
-                if (isSuccess && bodyString != null) {
-                    return bodyString!!
-                }
-
-                if (statusCode == 429 && attempt < options.maxRetries) {
-                    delay((retryDelaySeconds ?: 3L) * 1000L)
-                    continue
-                }
-
-                if (statusCode in 500..599 && attempt < options.maxRetries) {
-                    lastException = IOException("Upstream HTTP 5xx error: $statusCode $statusMessage")
-                    continue
-                }
-
-                throw IOException("Upstream HTTP error: $statusCode $statusMessage")
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                lastException = e
-                if (attempt == options.maxRetries) {
-                    throw IOException("Failed to fetch $url after ${options.maxRetries + 1} attempts: ${e.message}", e)
-                }
-            }
-        }
-
-        throw lastException ?: IOException("Failed to fetch $url")
-    }
+    private suspend fun fetchWithRetry(url: String): String = fetcher.fetch(
+        Request.Builder().url(url).header("User-Agent", options.userAgent)
+            .header("Accept", "application/json").build()
+    )
 
     suspend fun fetchChannels(): String {
         val url = "$baseUrl/channels"
         return fetchWithRetry(url)
     }
 
-    suspend fun fetchPrograms(dayOffset: Int, channelSourceIds: List<String>? = null): String {
+    override suspend fun fetchPrograms(dayOffset: Int, channelSourceIds: List<String>?): String {
         val httpUrlBuilder = "$baseUrl/programs/".toHttpUrlOrNull()?.newBuilder()
             ?: throw IllegalArgumentException("Invalid base URL: $baseUrl")
 

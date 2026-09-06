@@ -28,18 +28,22 @@ private data class CacheEntry(
     val data: NlzietEpgResponse
 )
 
+interface EpgSource {
+    fun isDateInEpgWindow(dateStr: String, todayStr: String? = null): Boolean
+    suspend fun fetchEpg(dateStr: String, channelIds: List<String>, todayStr: String? = null): NlzietEpgResponse
+}
+
 class NlzietEpgClient(
     private val options: NlzietEpgClientOptions = NlzietEpgClientOptions()
-) {
-    private val client: OkHttpClient = options.okHttpClient ?: OkHttpClient.Builder()
+) : EpgSource {
+    private val client = (options.okHttpClient ?: OkHttpClient()).newBuilder()
         .callTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
-        .connectTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
-        .readTimeout(options.timeoutMs, TimeUnit.MILLISECONDS)
+        .retryOnConnectionFailure(false)
         .build()
+    private val fetcher = com.nexustvguide.app.core.http.HttpFetcher(client, options.maxRetries, 500, 2000)
+    private val cache = java.util.concurrent.ConcurrentHashMap<String, CacheEntry>()
 
-    private val cache = mutableMapOf<String, CacheEntry>()
-
-    fun isDateInEpgWindow(dateStr: String, todayStr: String? = null): Boolean {
+    override fun isDateInEpgWindow(dateStr: String, todayStr: String?): Boolean {
         val today = todayStr ?: GuideTime.getTodayAmsterdam(options.nowFn)
         val todayDate = LocalDate.parse(today)
         val targetDate = LocalDate.parse(dateStr)
@@ -59,19 +63,20 @@ class NlzietEpgClient(
         cache.clear()
     }
 
-    suspend fun fetchEpg(dateStr: String, channelIds: List<String>): NlzietEpgResponse {
+    override suspend fun fetchEpg(dateStr: String, channelIds: List<String>, todayStr: String?): NlzietEpgResponse {
         val validChannelIds = channelIds.filter { it.isNotBlank() }.distinct().sorted()
         if (validChannelIds.isEmpty()) {
             return NlzietEpgResponse(emptyList())
         }
 
-        val today = GuideTime.getTodayAmsterdam(options.nowFn)
+        val today = todayStr ?: GuideTime.getTodayAmsterdam(options.nowFn)
         if (!isDateInEpgWindow(dateStr, today)) {
             return NlzietEpgResponse(emptyList())
         }
 
         val cacheKey = "$dateStr:${validChannelIds.joinToString(",")}"
         val nowMs = options.nowFn().toEpochMilli()
+        cache.entries.forEach { if (it.value.expiresAtMs <= nowMs) cache.remove(it.key, it.value) }
         val cached = cache[cacheKey]
         if (cached != null && cached.expiresAtMs > nowMs) {
             return cached.data
@@ -85,54 +90,11 @@ class NlzietEpgClient(
             httpUrlBuilder.addQueryParameter("channel", chId)
         }
 
-        val url = httpUrlBuilder.build().toString()
-        var lastException: Exception? = null
-
-        for (attempt in 0..options.maxRetries) {
-            if (attempt > 0) {
-                val backoffMs = min(500.0 * 2.0.pow(attempt - 1), 2000.0).toLong()
-                delay(backoffMs)
-            }
-
-            val request = Request.Builder()
-                .url(url)
-                .header("User-Agent", options.userAgent)
-                .header("Accept", "application/json")
-                .build()
-
-            try {
-                client.newCall(request).execute().use { response ->
-                    val statusCode = response.code
-                    if (response.isSuccessful) {
-                        val bodyString = response.body?.string()
-                            ?: throw IOException("Empty body from NLZIET EPG")
-                        val validated = NlzietEpgParser.parseNlzietEpgResponse(bodyString)
-
-                        val ttlMs = calculateTtlMs(dateStr, today)
-                        cache[cacheKey] = CacheEntry(
-                            expiresAtMs = nowMs + ttlMs,
-                            data = validated
-                        )
-                        return validated
-                    }
-
-                    if (statusCode in 500..599 && attempt < options.maxRetries) {
-                        lastException = IOException("NLZIET EPG upstream HTTP 5xx: $statusCode ${response.message}")
-                        return@use
-                    }
-
-                    throw IOException("NLZIET EPG HTTP error: $statusCode ${response.message}")
-                }
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                lastException = e
-                if (attempt == options.maxRetries) {
-                    throw IOException("NLZIET EPG fetch failed for date $dateStr after ${options.maxRetries + 1} attempts: ${e.message}", e)
-                }
-            }
-        }
-
-        throw lastException ?: IOException("NLZIET EPG fetch failed for date $dateStr")
+        val request = Request.Builder().url(httpUrlBuilder.build())
+            .header("User-Agent", options.userAgent).header("Accept", "application/json").build()
+        // Validation stays outside the HTTP retry loop and precedes caching.
+        val validated = NlzietEpgParser.parseNlzietEpgResponse(fetcher.fetch(request))
+        cache[cacheKey] = CacheEntry(options.nowFn().toEpochMilli() + calculateTtlMs(dateStr, today), validated)
+        return validated
     }
 }

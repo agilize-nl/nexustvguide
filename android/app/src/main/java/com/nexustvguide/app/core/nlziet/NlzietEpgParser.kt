@@ -36,100 +36,56 @@ object NlzietEpgParser {
     private val ASSET_ID_REGEX = Regex("^[A-Fa-f0-9]{32}$")
 
     fun parseNlzietEpgResponse(jsonString: String): NlzietEpgResponse {
-        val rootElement = JsonParser.parseString(jsonString)
-        if (!rootElement.isJsonObject) {
-            throw IllegalArgumentException("Root must be a JSON object")
-        }
-        val root = rootElement.asJsonObject
-        val dataArray = root.getAsJsonArray("data") ?: throw IllegalArgumentException("Missing data array in NLZIET EPG")
-
-        val channelGroups = mutableListOf<NlzietEpgChannelGroup>()
-
-        for (groupElement in dataArray) {
-            if (!groupElement.isJsonObject) continue
-            val groupObj = groupElement.asJsonObject
-
-            val channelObj = groupObj.getAsJsonObject("channel") ?: continue
-            val channelContent = channelObj.getAsJsonObject("content") ?: continue
-            val chId = channelContent.get("id")?.asString ?: continue
-            if (chId.isEmpty()) continue
-
-            val chTitle = channelContent.get("title")?.asString
-
-            val locationsList = mutableListOf<NlzietEpgProgramLocation>()
-            val progLocationsArray = groupObj.getAsJsonArray("programLocations")
-            if (progLocationsArray != null) {
-                for (locElement in progLocationsArray) {
-                    if (!locElement.isJsonObject) continue
-                    val contentObj = locElement.asJsonObject.getAsJsonObject("content") ?: continue
-                    val content = parseContent(contentObj)
-                    if (content != null) {
-                        locationsList.add(NlzietEpgProgramLocation(content))
-                    }
-                }
-            }
-
-            channelGroups.add(
-                NlzietEpgChannelGroup(
-                    channelId = chId,
-                    channelTitle = chTitle,
-                    programLocations = locationsList
-                )
-            )
-        }
-
-        return NlzietEpgResponse(data = channelGroups)
+        val root = requireObject(JsonParser.parseString(jsonString))
+        val data = root.get("data")
+        require(data != null && data.isJsonArray) { "Missing EPG data array" }
+        return NlzietEpgResponse(data.asJsonArray.map { group ->
+            val obj = requireObject(group)
+            val channel = requireObject(requireObject(obj.get("channel")).get("content"))
+            val channelId = requireString(channel, "id")
+            require(channelId.isNotEmpty()) { "Empty channel ID" }
+            val title = if (channel.has("title")) requireString(channel, "title") else null
+            val locations = obj.get("programLocations")
+            require(locations == null || locations.isJsonArray) { "Invalid programLocations" }
+            NlzietEpgChannelGroup(channelId, title, locations?.asJsonArray?.map { location ->
+                NlzietEpgProgramLocation(parseContent(requireObject(requireObject(location).get("content"))))
+            } ?: emptyList())
+        })
     }
 
-    private fun parseContent(obj: JsonObject): NlzietEpgContent? {
-        val contentItemId = getString(obj, "contentItemId") ?: return null
-        val assetId = getString(obj, "assetId") ?: return null
-        val title = getString(obj, "title") ?: return null
-        val startAt = getString(obj, "startAt") ?: return null
-        val endAt = getString(obj, "endAt") ?: return null
-
-        if (!CONTENT_ITEM_ID_REGEX.matches(contentItemId)) return null
-        if (!ASSET_ID_REGEX.matches(assetId)) return null
-        if (title.isEmpty()) return null
-
-        try {
-            OffsetDateTime.parse(startAt)
-            OffsetDateTime.parse(endAt)
-        } catch (e: DateTimeParseException) {
-            return null
+    private fun parseContent(obj: JsonObject): NlzietEpgContent {
+        val contentItemId = requireString(obj, "contentItemId")
+        val assetId = requireString(obj, "assetId")
+        val title = requireString(obj, "title")
+        val startAt = requireString(obj, "startAt")
+        val endAt = requireString(obj, "endAt")
+        require(CONTENT_ITEM_ID_REGEX.matches(contentItemId)) { "Invalid contentItemId" }
+        require(ASSET_ID_REGEX.matches(assetId)) { "Invalid assetId" }
+        require(title.isNotEmpty()) { "Empty EPG title" }
+        for (time in listOf(startAt, endAt)) {
+            // Require seconds and an explicit offset, as in the source schema.
+            require(Regex(".*T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:?[0-9]{2})$").matches(time))
+            OffsetDateTime.parse(time)
         }
-
-        val isReplayAllowed = getBoolean(obj, "isReplayAllowed", false)
-        val isRestartAllowed = getBoolean(obj, "isRestartAllowed", false)
-        val seriesId = getString(obj, "seriesId")
-
-        return NlzietEpgContent(
-            contentItemId = contentItemId,
-            assetId = assetId,
-            title = title,
-            startAt = startAt,
-            endAt = endAt,
-            isReplayAllowed = isReplayAllowed,
-            isRestartAllowed = isRestartAllowed,
-            seriesId = seriesId
-        )
+        val seriesId = if (!obj.has("seriesId") || obj.get("seriesId").isJsonNull) null else requireString(obj, "seriesId")
+        return NlzietEpgContent(contentItemId, assetId, title, startAt, endAt,
+            booleanOrDefault(obj, "isReplayAllowed"), booleanOrDefault(obj, "isRestartAllowed"), seriesId)
     }
 
-    private fun getString(obj: JsonObject, key: String): String? {
-        val el: JsonElement? = obj.get(key)
-        if (el == null || el.isJsonNull) return null
-        if (el.isJsonPrimitive && el.asJsonPrimitive.isString) {
-            return el.asString
-        }
-        return null
+    private fun requireObject(element: JsonElement?): JsonObject {
+        require(element != null && element.isJsonObject) { "Expected EPG object" }
+        return element.asJsonObject
     }
 
-    private fun getBoolean(obj: JsonObject, key: String, default: Boolean): Boolean {
-        val el: JsonElement? = obj.get(key)
-        if (el == null || el.isJsonNull) return default
-        if (el.isJsonPrimitive && el.asJsonPrimitive.isBoolean) {
-            return el.asBoolean
-        }
-        return default
+    private fun requireString(obj: JsonObject, key: String): String {
+        val value = obj.get(key)
+        require(value != null && value.isJsonPrimitive && value.asJsonPrimitive.isString) { "Invalid EPG $key" }
+        return value.asString
+    }
+
+    private fun booleanOrDefault(obj: JsonObject, key: String): Boolean {
+        val value = obj.get(key) ?: return false
+        require(value.isJsonPrimitive && value.asJsonPrimitive.isBoolean) { "Invalid EPG $key" }
+        return value.asBoolean
     }
 }

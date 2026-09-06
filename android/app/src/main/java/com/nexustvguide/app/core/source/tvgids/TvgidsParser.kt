@@ -48,6 +48,9 @@ object TvgidsParser {
             throw IllegalArgumentException("Invalid programs envelope: missing or non-string version")
         }
 
+        require(!root.has("versionmessage") || root.get("versionmessage").isJsonObject) {
+            "Invalid versionmessage"
+        }
         if (!root.has("data")) {
             throw IllegalArgumentException("Invalid programs envelope: missing data")
         }
@@ -57,15 +60,13 @@ object TvgidsParser {
 
         if (dataElement.isJsonObject) {
             for ((_, value) in dataElement.asJsonObject.entrySet()) {
-                if (value.isJsonObject) {
-                    buckets.add(value.asJsonObject)
-                }
+                require(value.isJsonObject) { "Invalid channel bucket" }
+                buckets.add(value.asJsonObject)
             }
         } else if (dataElement.isJsonArray) {
             for (item in dataElement.asJsonArray) {
-                if (item.isJsonObject) {
-                    buckets.add(item.asJsonObject)
-                }
+                require(item.isJsonObject) { "Invalid channel bucket" }
+                buckets.add(item.asJsonObject)
             }
         } else {
             throw IllegalArgumentException("Invalid programs envelope: data must be an object or array")
@@ -76,13 +77,12 @@ object TvgidsParser {
         for (bucket in buckets) {
             val chIdElement = bucket.get("ch_id")
             if (chIdElement == null || !chIdElement.isJsonPrimitive || !chIdElement.asJsonPrimitive.isString) {
-                continue
+                throw IllegalArgumentException("Invalid channel ch_id")
             }
             val chId = chIdElement.asString
             val progElement = bucket.get("prog")
             if (progElement == null || !progElement.isJsonArray) {
-                result[chId] = emptyList()
-                continue
+                throw IllegalArgumentException("Invalid channel prog array")
             }
 
             val validProgrammes = mutableListOf<RawProgramme>()
@@ -116,11 +116,15 @@ object TvgidsParser {
 
         val sLong = sStr.toLongOrNull() ?: return null
         val eLong = eStr.toLongOrNull() ?: return null
-        val dbIdLong = dbIdStr.toLongOrNull() ?: return null
+        dbIdStr.toLongOrNull() ?: return null
 
-        if (sLong <= 0 || eLong <= sLong || dbIdLong <= 0) {
+        if (sLong <= 0 || eLong <= sLong || eLong > Long.MAX_VALUE / 1000) {
             return null
         }
+
+        val stringFields = listOf("title", "descr", "inhoud", "algemene_inhoud", "img", "g_id",
+            "subgenre", "tip", "rerun", "live", "is_premiere", "ei", "is_type")
+        if (stringFields.any { obj.has(it) && getStringProperty(obj, it) == null }) return null
 
         val title = getStringProperty(obj, "title") ?: "(Geen titel)"
         val descr = getStringProperty(obj, "descr")

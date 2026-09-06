@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-06T22:00:00Z",
   "to": "2026-09-07T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T16:43:06.536Z",
-  "publishedAt": "2026-09-06T16:43:06.536Z",
+  "sourceFetchedAt": "2026-09-06T21:43:06.531Z",
+  "publishedAt": "2026-09-06T21:43:06.531Z",
   "channels": [
     {
       "id": "npo1",
@@ -238,14 +238,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "hAcSsUH8bk-mDHMuoJONrg",
-        "assetId": "48B9CC110FBB587CDA55AF50BE5FA03F",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219144242",
@@ -261,14 +254,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "hgE8HNe3u0u3lTLDFssoyQ",
-        "assetId": "197BFB992F4F744E681B5CE003F86DC8",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219144252",
@@ -284,14 +270,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "8CqVxzAQz0O027DtvpdaAg",
-        "assetId": "0E72383D1E054DC452B9FBA90DE4DB02",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219144082",
@@ -307,14 +286,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-251s43WPU-_e5zQtDCkZg",
-        "assetId": "F3BC194BFD76E6578945D649112551A1",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219144272",
@@ -330,14 +302,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "hAcSsUH8bk-mDHMuoJONrg",
-        "assetId": "1260BC395ED0E2B73E36B465FD3E7495",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219670572",
@@ -353,14 +318,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "nvRk_hFIaEKLqWKjsm9yzg",
-        "assetId": "9816172CDE38EF764D05C66581CB89B9",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219205862",
@@ -11732,14 +11690,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "6jAW4gfISEOJf9FKm0bnGg",
-        "assetId": "D49063D6C114E651102A88B1B9A1ABD2",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219823342",
