@@ -130,7 +130,7 @@ class UpdateMetadataValidatorTest {
     // --- Release-kanaal (absolute downloadUrl + host-allowlist) ---
 
     private val releaseBaseUrl = "https://github.com/djawiz/NexusTVGuide/releases/latest/download/"
-    private val releaseAllowlist = setOf("github.com", "objects.githubusercontent.com")
+    private val releaseAllowlist = setOf("github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com")
 
     private fun releaseDto(
         downloadUrl: String? = "https://objects.githubusercontent.com/gh/nexus-tv-guide-0.7.0.apk",

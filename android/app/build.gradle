@@ -64,8 +64,9 @@ def resolveUpdateChannel = {
             baseUrl      : "https://example.invalid/",
             manifestPath : "version.json",
             // GitHub serveert version.json vanaf github.com en leidt het APK-asset door
-            // naar objects.githubusercontent.com. Beide hosts zijn nodig.
-            hostAllowlist: "github.com,objects.githubusercontent.com"
+            // naar een asset-host: objects.githubusercontent.com (ouder) of
+            // release-assets.githubusercontent.com (huidig). Alle drie zijn nodig.
+            hostAllowlist: "github.com,objects.githubusercontent.com,release-assets.githubusercontent.com"
         ]
     ]
 

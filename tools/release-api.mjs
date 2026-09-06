@@ -178,10 +178,25 @@ export class ReleaseApi {
     return `${host}/${this.repo}/releases/download/${encodedTag}/${encodedName}`;
   }
 
+  /**
+   * De basis-URL waaronder de assets van de nieuwste release te vinden zijn, zonder
+   * tag erin. Dit is wat in de APK als UPDATE_BASE_URL wordt vastgelegd: de app moet
+   * het manifest kunnen vinden zonder te weten welke versie de laatste is, anders zou
+   * elke nieuwe release een herbouw van de app vereisen.
+   *
+   * GitHub en Forgejo/Gitea gebruiken hier hetzelfde 'releases/latest/download/'-pad.
+   */
+  latestDownloadBase() {
+    const host = this.forge === FORGE_GITHUB
+      ? 'https://github.com'
+      : this.apiBase.replace(/\/+$/, '');
+    return `${host}/${this.repo}/releases/latest/download/`;
+  }
+
   /** De host die het asset serveert; nodig voor de allowlist in de app. */
   assetHosts() {
     if (this.forge === FORGE_GITHUB) {
-      return ['github.com', 'objects.githubusercontent.com'];
+      return ['github.com', 'objects.githubusercontent.com', 'release-assets.githubusercontent.com'];
     }
     return [new URL(this.apiBase).host];
   }

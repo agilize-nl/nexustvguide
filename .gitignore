@@ -44,3 +44,6 @@ android/keystore.properties
 tvguide-api/data/releases/*
 !tvguide-api/data/releases/.gitkeep
 *.part
+
+# Build-artefacten van tools/publish-release.mjs (release-kanaal)
+dist/

@@ -36,7 +36,7 @@ class PublishedManifestContractTest {
         val result = UpdateMetadataValidator.validate(
             dto = dto,
             updateBaseUrl = "https://github.com/djawiz/NexusTVGuide/releases/download/v0.8.23/",
-            allowlist = setOf("github.com", "objects.githubusercontent.com"),
+            allowlist = setOf("github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com"),
             allowInsecure = false
         )
 

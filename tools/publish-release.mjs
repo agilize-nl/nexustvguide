@@ -236,11 +236,30 @@ if (!testApkPath) {
 }
 
 // Step 2: Build assembleRelease
+//
+// Het updatekanaal moet in de APK zelf terechtkomen: BuildConfig.UPDATE_BASE_URL wordt
+// bij het compileren vastgelegd. Zonder deze parameters valt de build terug op het
+// LAN-kanaal en zou een release-APK alsnog bij .171 om updates vragen.
+//
+// De app leest het manifest bewust via de 'latest'-URL en niet via de tag-URL van deze
+// release: die is versie-onafhankelijk, dus al bekend vóórdat de versie uit de APK is
+// gelezen, en laat toekomstige releases vinden zonder de app opnieuw te bouwen. De
+// downloadUrl in het manifest blijft wel tag-specifiek, zodat een manifest altijd naar
+// precies het bijbehorende APK verwijst.
 let apkPath = testApkPath;
 if (!skipBuild) {
   console.log('\n[2/7] Building assembleRelease via Gradle...');
+  const gradleArgs = ['./gradlew', ':app:assembleRelease'];
+  if (channel === 'release') {
+    const manifestBase = releaseApi
+      ? releaseApi.latestDownloadBase()
+      : downloadBase;
+    gradleArgs.push('-PupdateChannel=release');
+    gradleArgs.push(`-PupdateBaseUrl=${manifestBase}`);
+    console.log(`  Updatekanaal in APK: release -> ${manifestBase}version.json`);
+  }
   try {
-    execSync('./gradlew :app:assembleRelease', {
+    execSync(gradleArgs.join(' '), {
       cwd: ANDROID_DIR,
       env: envWithJava,
       stdio: 'inherit'

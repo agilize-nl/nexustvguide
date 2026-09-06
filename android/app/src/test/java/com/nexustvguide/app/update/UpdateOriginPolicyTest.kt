@@ -7,7 +7,7 @@ import org.junit.Test
 
 class UpdateOriginPolicyTest {
 
-    private val allowlist = setOf("github.com", "objects.githubusercontent.com")
+    private val allowlist = setOf("github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com")
 
     private fun check(
         url: String,
@@ -42,6 +42,17 @@ class UpdateOriginPolicyTest {
     @Test
     fun `allows an allowlisted https host`() {
         assertTrue(check("https://objects.githubusercontent.com/x.apk") is UpdateOriginPolicy.Result.Allowed)
+    }
+
+    /**
+     * GitHub leidt een asset-download tegenwoordig door naar release-assets.githubusercontent.com
+     * in plaats van het oudere objects.githubusercontent.com. Beide moeten toegestaan blijven:
+     * ontbreekt de nieuwe host, dan breekt UpdateRedirectInterceptor elke download af.
+     */
+    @Test
+    fun `allows both the legacy and current GitHub asset hosts`() {
+        assertTrue(check("https://objects.githubusercontent.com/x.apk") is UpdateOriginPolicy.Result.Allowed)
+        assertTrue(check("https://release-assets.githubusercontent.com/x.apk") is UpdateOriginPolicy.Result.Allowed)
     }
 
     @Test
