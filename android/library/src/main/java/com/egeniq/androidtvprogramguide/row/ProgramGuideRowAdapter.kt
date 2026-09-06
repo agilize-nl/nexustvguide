@@ -22,6 +22,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -158,15 +159,19 @@ internal class ProgramGuideRowAdapter(
                 return
             }
             val imageUrl = channel.imageUrl
-            if (imageUrl == null) {
-                channelLogoView.visibility = View.GONE
-            } else {
+            val hasLogo = imageUrl != null
+            if (hasLogo) {
                 Glide.with(channelLogoView)
                     .load(imageUrl)
                     .fitCenter()
                     .into(channelLogoView)
                 channelLogoView.visibility = View.VISIBLE
+            } else {
+                channelLogoView.visibility = View.GONE
             }
+            val density = channelNameView.context.resources.displayMetrics.density
+            val nameStartMargin = if (hasLogo) (CHANNEL_NAME_START_MARGIN_WITH_LOGO_DP * density).toInt() else 0
+            (channelNameView.layoutParams as MarginLayoutParams).marginStart = nameStartMargin
             channelNameView.text = channel.name
             channelNameView.visibility = View.VISIBLE
             channelContainer.setOnClickListener {
@@ -178,6 +183,10 @@ internal class ProgramGuideRowAdapter(
             rowGridView.post {
                 rowGridView.updateChildVisibleArea()
             }
+        }
+
+        companion object {
+            private const val CHANNEL_NAME_START_MARGIN_WITH_LOGO_DP = 44
         }
     }
 }
