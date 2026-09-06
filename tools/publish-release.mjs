@@ -9,9 +9,13 @@
  *   LAN-kanaal (standaard, publiceert naar tvguide-api op .171):
  *     node tools/publish-release.mjs [--notes "..."] [--no-deploy] [--server root@...] [--dry-run]
  *
- *   Release-kanaal, zelf publiceren via de API (GitHub of Forgejo/Gitea):
+ *   Release-kanaal, zelf publiceren via de API (GitHub):
  *     RELEASE_TOKEN=<pat> node tools/publish-release.mjs --channel release \
- *       --repo <eigenaar>/<repo> [--forge github|forgejo] [--api-base <url>] [--dry-run]
+ *       --repo <eigenaar>/<repo> --forge github [--dry-run]
+ *
+ *   Forgejo/Gitea kunnen dit kanaal niet bedienen: hun release-assets staan onder
+ *   /attachments/<uuid>, dus er bestaat geen URL die vooraf in de APK past. De tool
+ *   weigert die combinatie; gebruik GitHub of --download-base met een eigen webserver.
  *
  *   Release-kanaal, alleen artefacten schrijven (handmatig uploaden):
  *     node tools/publish-release.mjs --channel release \
@@ -165,6 +169,22 @@ if (channel === 'release') {
       console.error('ERROR: geen token gevonden. Zet RELEASE_TOKEN (of GITHUB_TOKEN) in de omgeving.');
       console.error('  Bijv: RELEASE_TOKEN=$(cat ~/.config/nexustvguide/release-token) node tools/publish-release.mjs ...');
       console.error("  Benodigde scope: GitHub 'contents: write' (classic: repo); Forgejo: write:repository.");
+      process.exit(1);
+    }
+
+    // Een updatekanaal vereist een asset-URL die al vaststaat vóór de build, want die
+    // wordt in de APK gecompileerd. Forgejo/Gitea kennen die niet: assets krijgen daar
+    // per upload een UUID onder /attachments/. Zonder deze controle zou de tool een APK
+    // bouwen die naar een 404 wijst, en dat pas na het uploaden ontdekken.
+    if (forge !== FORGE_GITHUB) {
+      console.error(`ERROR: --forge ${forge} kan geen release-updatekanaal bedienen.`);
+      console.error('  Forgejo/Gitea serveren release-assets onder /attachments/<uuid>: er is geen');
+      console.error('  stabiele URL die vooraf in de APK vastgelegd kan worden, dus elke release');
+      console.error('  zou een herbouw van de app vereisen.');
+      console.error('');
+      console.error('  Gebruik GitHub voor de APK-distributie:');
+      console.error('    node tools/publish-release.mjs --channel release --repo <eigenaar>/<repo> --forge github');
+      console.error('  of publiceer handmatig met --download-base <url> naar een eigen webserver.');
       process.exit(1);
     }
 

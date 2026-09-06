@@ -167,6 +167,11 @@ export class ReleaseApi {
    * Deze wordt vooraf berekend omdat het manifest de URL van de APK moet bevatten terwijl
    * dat bestand nog geüpload moet worden. Na de upload wordt de voorspelling gecontroleerd
    * tegen wat de server teruggeeft; zie verifyAssetUrl.
+   *
+   * Let op: de Forgejo/Gitea-tak is een gok die in de praktijk niet uitkomt. Die serveren
+   * assets onder /attachments/<uuid>, dus het pad hieronder geeft daar een 404. De
+   * vergelijking met browser_download_url na het uploaden vangt dat af. Voor een
+   * release-updatekanaal is Forgejo daarmee ongeschikt; zie latestDownloadBase.
    */
   assetDownloadUrl(tag, fileName) {
     const encodedTag = encodeURIComponent(tag);
@@ -184,13 +189,23 @@ export class ReleaseApi {
    * het manifest kunnen vinden zonder te weten welke versie de laatste is, anders zou
    * elke nieuwe release een herbouw van de app vereisen.
    *
-   * GitHub en Forgejo/Gitea gebruiken hier hetzelfde 'releases/latest/download/'-pad.
+   * Alleen GitHub biedt zo'n pad. Forgejo/Gitea serveren release-assets uitsluitend
+   * onder /attachments/<uuid>: geen bestandsnaam, geen tag, en dus ook geen stabiele
+   * URL die vooraf in een build vastgelegd kan worden. Gemeten op Forgejo 16.0.3
+   * (gitea 1.22.0) geven zowel releases/latest/download/<naam> als
+   * releases/download/<tag>/<naam> een 404. Vandaar dat deze methode daar weigert in
+   * plaats van een URL terug te geven die naar niets wijst.
    */
   latestDownloadBase() {
-    const host = this.forge === FORGE_GITHUB
-      ? 'https://github.com'
-      : this.apiBase.replace(/\/+$/, '');
-    return `${host}/${this.repo}/releases/latest/download/`;
+    if (this.forge !== FORGE_GITHUB) {
+      throw new ReleaseApiError(
+        `${this.forge} heeft geen versie-onafhankelijke asset-URL; een release-updatekanaal ` +
+        'kan daar niet op gebaseerd worden.',
+        null,
+        null
+      );
+    }
+    return `https://github.com/${this.repo}/releases/latest/download/`;
   }
 
   /** De host die het asset serveert; nodig voor de allowlist in de app. */
