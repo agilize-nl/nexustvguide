@@ -15,10 +15,12 @@ import com.nexustvguide.app.data.model.ProgrammeDto
 import com.nexustvguide.app.data.model.SimpleChannel
 import com.nexustvguide.app.data.repository.ChannelOrderRepository
 import com.nexustvguide.app.data.repository.GuideRepository
+import com.nexustvguide.app.data.repository.GuideRepositoryProvider
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
@@ -45,7 +47,7 @@ sealed class GuideUiState {
 
 class GuideViewModel @JvmOverloads constructor(
     application: Application,
-    private val repository: GuideRepository = GuideRepository(application),
+    private val repository: GuideRepository = GuideRepositoryProvider.getRepository(application),
     private val orderRepository: ChannelOrderRepository = ChannelOrderRepository(application)
 ) : AndroidViewModel(application) {
 
@@ -55,6 +57,7 @@ class GuideViewModel @JvmOverloads constructor(
     private val dateFormatter = DateTimeFormatter.ISO_LOCAL_DATE
 
     private var currentLoadJob: Job? = null
+    private var currentObserveJob: Job? = null
     private var lastPreparedGuide: PreparedGuide? = null
     private var currentPrefs: ChannelOrderPreferences = orderRepository.load()
     private var activeDate: LocalDate? = null
@@ -74,6 +77,7 @@ class GuideViewModel @JvmOverloads constructor(
     fun loadGuideForDate(date: LocalDate, forceLoadingState: Boolean = false) {
         activeDate = date
         currentLoadJob?.cancel()
+        currentObserveJob?.cancel()
 
         val currentState = _uiState.value
         val shouldShowLoading = forceLoadingState ||
@@ -87,6 +91,18 @@ class GuideViewModel @JvmOverloads constructor(
 
         val dateStr = date.format(dateFormatter)
 
+        // Observeer de lokale repository reactief (bijv. Room Flow updates bij eerste vulling of background refresh)
+        currentObserveJob = viewModelScope.launch {
+            repository.observeGuideForDate(dateStr).collectLatest { guideResponse ->
+                if (activeDate == date && guideResponse != null && guideResponse.channels.isNotEmpty()) {
+                    val prepared = prepareGuide(guideResponse, date)
+                    lastPreparedGuide = prepared
+                    _uiState.value = projectGuide(prepared, currentPrefs)
+                }
+            }
+        }
+
+        // Voer de initiële/prioritaire ophaalactie uit
         currentLoadJob = viewModelScope.launch {
             try {
                 val guideResponse = repository.getGuideForDate(dateStr)
@@ -101,13 +117,13 @@ class GuideViewModel @JvmOverloads constructor(
 
                     prefetchAdjacentDays(date)
                 } else {
-                    if (activeDate == date) {
+                    if (activeDate == date && _uiState.value !is GuideUiState.Content) {
                         _uiState.value = GuideUiState.Error("Geen zenders of programmadata beschikbaar voor $dateStr.")
                     }
                 }
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
-                if (activeDate == date) {
+                if (activeDate == date && _uiState.value !is GuideUiState.Content) {
                     Log.e("GuideViewModel", "Failed to load guide for $dateStr", e)
                     _uiState.value = GuideUiState.Error("Fout bij laden van tv-gids: ${e.localizedMessage}")
                 }

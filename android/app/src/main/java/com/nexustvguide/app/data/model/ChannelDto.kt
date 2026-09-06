@@ -9,5 +9,6 @@ data class ChannelDto(
     @SerializedName("logoUrl") val logoUrl: String?,
     @SerializedName("inNlziet") val inNlziet: Boolean,
     @SerializedName("nlzietSlug") val nlzietSlug: String?,
-    @SerializedName("sortOrder") val sortOrder: Int
+    @SerializedName("sortOrder") val sortOrder: Int,
+    @SerializedName("nlzietChannelId") val nlzietChannelId: String? = null
 )

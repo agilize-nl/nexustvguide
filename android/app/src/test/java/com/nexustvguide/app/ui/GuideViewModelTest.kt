@@ -11,6 +11,7 @@ import com.nexustvguide.app.data.model.GuideResponseDto
 import com.nexustvguide.app.data.model.ProgrammeDto
 import com.nexustvguide.app.data.repository.ChannelOrderRepository
 import com.nexustvguide.app.data.repository.GuideRepository
+import com.nexustvguide.app.data.repository.RemoteGuideRepository
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -124,7 +125,7 @@ class GuideViewModelTest {
         val dateStr = "2026-08-31"
         fakeApi.responsesByDate[dateStr] = createGuideResponse(dateStr)
 
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = GuideViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadGuideForDate(date)
@@ -145,7 +146,7 @@ class GuideViewModelTest {
         val dateStr = "2026-08-31"
         fakeApi.responsesByDate[dateStr] = createGuideResponse(dateStr)
 
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = GuideViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadGuideForDate(date)
@@ -173,7 +174,7 @@ class GuideViewModelTest {
         val dateStr = "2026-08-31"
         fakeApi.responsesByDate[dateStr] = createGuideResponse(dateStr)
 
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = GuideViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadGuideForDate(date)
@@ -194,7 +195,7 @@ class GuideViewModelTest {
         val dateStr = "2026-08-31"
         fakeApi.responsesByDate[dateStr] = createGuideResponse(dateStr, channels = emptyList())
 
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = GuideViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadGuideForDate(date)
@@ -222,7 +223,7 @@ class GuideViewModelTest {
                 ifNoneMatch: String?
             ): Response<GuideResponseDto> = Response.error(404, "Not found".toResponseBody())
         }
-        val repository = GuideRepository(context, cancelledApi, testDispatcher)
+        val repository = RemoteGuideRepository(context, cancelledApi, testDispatcher)
 
         try {
             repository.getGuideForDate("2026-09-01")

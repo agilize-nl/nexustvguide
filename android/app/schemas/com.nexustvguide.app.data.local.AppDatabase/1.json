@@ -1,0 +1,268 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "777f938eada4cfc3140634b07d8cc2f2",
+    "entities": [
+      {
+        "tableName": "channels",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `sourceId` TEXT NOT NULL, `name` TEXT NOT NULL, `logoUrl` TEXT, `inNlziet` INTEGER NOT NULL, `nlzietSlug` TEXT, `nlzietChannelId` TEXT, `sortOrder` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceId",
+            "columnName": "sourceId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logoUrl",
+            "columnName": "logoUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inNlziet",
+            "columnName": "inNlziet",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nlzietSlug",
+            "columnName": "nlzietSlug",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietChannelId",
+            "columnName": "nlzietChannelId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sortOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "programmes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `id` TEXT NOT NULL, `channelId` TEXT NOT NULL, `title` TEXT NOT NULL, `startUtcMs` INTEGER NOT NULL, `endUtcMs` INTEGER NOT NULL, `description` TEXT, `imageUrl` TEXT, `genre` TEXT, `isLive` INTEGER NOT NULL, `isRerun` INTEGER NOT NULL, `isPremiere` INTEGER NOT NULL, `ageRating` TEXT, `nlzietKind` TEXT, `nlzietContentItemId` TEXT, `nlzietAssetId` TEXT, `nlzietChannelId` TEXT, `nlzietReplayAllowed` INTEGER NOT NULL, `nlzietRestartAllowed` INTEGER NOT NULL, PRIMARY KEY(`date`, `channelId`, `id`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelId",
+            "columnName": "channelId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startUtcMs",
+            "columnName": "startUtcMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endUtcMs",
+            "columnName": "endUtcMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "genre",
+            "columnName": "genre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isLive",
+            "columnName": "isLive",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isRerun",
+            "columnName": "isRerun",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isPremiere",
+            "columnName": "isPremiere",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ageRating",
+            "columnName": "ageRating",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietKind",
+            "columnName": "nlzietKind",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietContentItemId",
+            "columnName": "nlzietContentItemId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietAssetId",
+            "columnName": "nlzietAssetId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietChannelId",
+            "columnName": "nlzietChannelId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nlzietReplayAllowed",
+            "columnName": "nlzietReplayAllowed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nlzietRestartAllowed",
+            "columnName": "nlzietRestartAllowed",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date",
+            "channelId",
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_programmes_date_channelId_startUtcMs",
+            "unique": false,
+            "columnNames": [
+              "date",
+              "channelId",
+              "startUtcMs"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_programmes_date_channelId_startUtcMs` ON `${TABLE_NAME}` (`date`, `channelId`, `startUtcMs`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "day_meta",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `fromUtcMs` INTEGER NOT NULL, `toUtcMs` INTEGER NOT NULL, `sourceFetchedAtMs` INTEGER NOT NULL, `publishedAtMs` INTEGER NOT NULL, `programmeCount` INTEGER NOT NULL, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fromUtcMs",
+            "columnName": "fromUtcMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "toUtcMs",
+            "columnName": "toUtcMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceFetchedAtMs",
+            "columnName": "sourceFetchedAtMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publishedAtMs",
+            "columnName": "publishedAtMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programmeCount",
+            "columnName": "programmeCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '777f938eada4cfc3140634b07d8cc2f2')"
+    ]
+  }
+}

@@ -8,6 +8,7 @@ import com.nexustvguide.app.data.model.ChannelDto
 import com.nexustvguide.app.data.model.ChannelOrderPreferences
 import com.nexustvguide.app.data.repository.ChannelOrderRepository
 import com.nexustvguide.app.data.repository.GuideRepository
+import com.nexustvguide.app.data.repository.GuideRepositoryProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -31,7 +32,7 @@ sealed class ChannelOrderUiState {
 
 class ChannelOrderViewModel @JvmOverloads constructor(
     application: Application,
-    private val guideRepository: GuideRepository = GuideRepository(application),
+    private val guideRepository: GuideRepository = GuideRepositoryProvider.getRepository(application),
     private val orderRepository: ChannelOrderRepository = ChannelOrderRepository(application)
 ) : AndroidViewModel(application) {
 

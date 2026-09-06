@@ -9,6 +9,7 @@ import com.nexustvguide.app.data.model.ChannelOrderPreferences
 import com.nexustvguide.app.data.model.GuideResponseDto
 import com.nexustvguide.app.data.repository.ChannelOrderRepository
 import com.nexustvguide.app.data.repository.GuideRepository
+import com.nexustvguide.app.data.repository.RemoteGuideRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestScope
@@ -76,7 +77,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `loadChannels loads and formats items correctly`() = testScope.runTest {
         val fakeApi = FakeGuideApiService()
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadChannels("2026-08-31")
@@ -92,7 +93,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `visibility toggle updates hiddenIds without modifying orderedIds`() = testScope.runTest {
         val fakeApi = FakeGuideApiService()
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadChannels("2026-08-31")
@@ -122,7 +123,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `moveItem updates items order and immediately persists orderedIds`() = testScope.runTest {
         val fakeApi = FakeGuideApiService()
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadChannels("2026-08-31")
@@ -143,7 +144,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `cancelGrab restores and persists original order`() = testScope.runTest {
         val fakeApi = FakeGuideApiService()
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         viewModel.loadChannels("2026-08-31")
@@ -169,7 +170,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `resetToDefault clears preferences and restores default order`() = testScope.runTest {
         val fakeApi = FakeGuideApiService()
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         // Set initial modified preferences
@@ -198,7 +199,7 @@ class ChannelOrderViewModelTest {
     @Test
     fun `empty channels result in Error state and does not overwrite existing preferences`() = testScope.runTest {
         val fakeApi = FakeGuideApiService(channelsList = emptyList())
-        val guideRepo = GuideRepository(context, fakeApi, testDispatcher)
+        val guideRepo = RemoteGuideRepository(context, fakeApi, testDispatcher)
         val viewModel = ChannelOrderViewModel(application, guideRepo, orderRepository)
 
         val existingPrefs = ChannelOrderPreferences(orderedIds = listOf("preserved_channel"))

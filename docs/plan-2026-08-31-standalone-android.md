@@ -1,6 +1,6 @@
 # Uitvoeringsplan — Optie 1: volledig standalone Android-app ("serverless")
 
-Status: **voorstel, nog niet geïmplementeerd**
+Status: **geïmplementeerd en geverifieerd op de Android emulator**
 Datum: 31 augustus 2026
 Review: 6 september 2026, getoetst aan de huidige repository en Android-documentatie.
 Betreft: verhuizing van de `tvguide-api`-logica (ophalen `json.tvgids.nl/v4`, normalisatie,
@@ -804,30 +804,30 @@ Elke fase is los opleverbaar en eindigt in een toestand waarin de app werkt.
 
 ### Fase 1 — `core` port, framework-vrij
 
-- [ ] `core.domain`, `core.time`, `core.source.tvgids`, `core.nlziet` als pure Kotlin.
-- [ ] Frameworkvrije opslaginterface en refreshcontract; ThreeTen-TZDB-testbootstrap
+- [x] `core.domain`, `core.time`, `core.source.tvgids`, `core.nlziet` als pure Kotlin.
+- [x] Frameworkvrije opslaginterface en refreshcontract; ThreeTen-TZDB-testbootstrap
       zonder Robolectric werkend en HTML-decoder gekozen en geverifieerd.
-- [ ] `nlzietChannelId` toevoegen aan het `Channel`-model.
-- [ ] `channels.json` als Android-asset meeleveren met één onderhouden bronbestand.
-- [ ] JVM-unittests voor tijd, parser, formatters, matcher en clients uit
+- [x] `nlzietChannelId` toevoegen aan het `Channel`-model.
+- [x] `channels.json` als Android-asset meeleveren met één onderhouden bronbestand.
+- [x] JVM-unittests voor tijd, parser, formatters, matcher en clients uit
       [§8.1](#81-jvm-unittests); refresh-/stale-tests volgen in fase 2.
-- [ ] Gouden vergelijkingstest uit [§8.2](#82-gouden-vergelijkingstest) groen.
+- [x] Gouden vergelijkingstest uit [§8.2](#82-gouden-vergelijkingstest) groen.
 
 *Oplevering: ingest, normalisatie en matcher zijn voor gedeelde fixtures gelijk aan de
 Node-referentie; bedoelde afwijkingen apart getest. De app gebruikt nog `REMOTE`.*
 
 ### Fase 2 — Persistentie en verversing
 
-- [ ] Room-schema met dagsleutel, DAO's, schema-export, retentie en `@Transaction` per dag.
-- [ ] `RefreshEngine` inclusief twee blokkerende checks, NPO 1-waarschuwing en runstatus.
-- [ ] Gedeelde coordinator, cancellation, begrensde retries en prioriteit voor de actieve dag.
-- [ ] `GuideRepository` naar interface; `LocalGuideRepository` erbij.
-- [ ] `GUIDE_SOURCE`-schakelaar, default nog `REMOTE`.
-- [ ] `GuideRefreshWorker` + WorkManager-dependency.
-- [ ] Repository-provider voor beide ViewModels, observatie van lokale wijzigingen,
+- [x] Room-schema met dagsleutel, DAO's, schema-export, retentie en `@Transaction` per dag.
+- [x] `RefreshEngine` inclusief twee blokkerende checks, NPO 1-waarschuwing en runstatus.
+- [x] Gedeelde coordinator, cancellation, begrensde retries en prioriteit voor de actieve dag.
+- [x] `GuideRepository` naar interface; `LocalGuideRepository` erbij.
+- [x] `GUIDE_SOURCE`-schakelaar, default `LOCAL`.
+- [x] `GuideRefreshWorker` + WorkManager-dependency.
+- [x] Repository-provider voor beide ViewModels, observatie van lokale wijzigingen,
       stale bij hervatten/tijdens gebruik en behoud van focus/zendervoorkeuren.
-- [ ] Updatergedrag in `LOCAL` aanpassen volgens §7.6.
-- [ ] Refresh-/stale-unittests uit §8.1 en Room-/integratietests uit §8.3 groen.
+- [x] Updatergedrag in `LOCAL` aanpassen volgens §7.6.
+- [x] Refresh-/stale-unittests uit §8.1 en Room-/integratietests uit §8.3 groen.
 
 *Oplevering: standalone modus is te kiezen; `REMOTE` blijft de default.*
 
@@ -850,8 +850,8 @@ Node-referentie; bedoelde afwijkingen apart getest. De app gebruikt nog `REMOTE`
 
 ### Fase 4 — Omschakelen
 
-- [ ] Default naar `LOCAL`.
-- [ ] `REMOTE` blijft als terugval in de instellingen staan.
+- [x] Default naar `LOCAL`.
+- [x] `REMOTE` blijft als terugval in de instellingen staan.
 - [ ] `tvguide-api` alleen uitzetten als XMLTV én LAN-updates zijn afgehandeld
       (uitkomst fase 0). `REMOTE` vereist dan herstarten van de backend.
 
