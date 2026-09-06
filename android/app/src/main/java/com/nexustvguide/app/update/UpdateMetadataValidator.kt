@@ -28,10 +28,19 @@ object UpdateMetadataValidator {
     private const val MAX_VERSION_NAME_LENGTH = 64
     private const val MAX_RELEASE_NOTES_LENGTH = 8000
     private const val MAX_FILE_SIZE_BYTES = 100 * 1024 * 1024L // 100 MiB
-    private val DOWNLOAD_PATH_REGEX = Regex("^/api/v1/app/download/[a-zA-Z0-9._-]+\\.apk$")
+    private val LEGACY_DOWNLOAD_PATH_REGEX = Regex("^/api/v1/app/download/[a-zA-Z0-9._-]+\\.apk$")
     private val SHA256_REGEX = Regex("^[0-9a-fA-F]{64}$")
 
-    fun validate(dto: AppUpdateDto, updateBaseUrl: String): MetadataValidationResult {
+    /**
+     * @param allowlist hosts die naast de eigen origin een APK mogen leveren; zie [UpdateOriginPolicy].
+     * @param allowInsecure staat http toe (LAN-backend/emulator).
+     */
+    fun validate(
+        dto: AppUpdateDto,
+        updateBaseUrl: String,
+        allowlist: Set<String> = emptySet(),
+        allowInsecure: Boolean = false
+    ): MetadataValidationResult {
         if (dto.schemaVersion != 1) {
             return MetadataValidationResult.Invalid("Niet-ondersteunde schemaversie: ${dto.schemaVersion}")
         }
@@ -52,10 +61,6 @@ object UpdateMetadataValidator {
             return MetadataValidationResult.Invalid("Release notes overschrijden maximale lengte van $MAX_RELEASE_NOTES_LENGTH tekens")
         }
 
-        if (!DOWNLOAD_PATH_REGEX.matches(dto.downloadPath)) {
-            return MetadataValidationResult.Invalid("Ongeldig downloadPath: '${dto.downloadPath}'")
-        }
-
         if (!SHA256_REGEX.matches(dto.sha256)) {
             return MetadataValidationResult.Invalid("Ongeldige SHA-256 hash formaat")
         }
@@ -73,15 +78,25 @@ object UpdateMetadataValidator {
         val baseHttpUrl = updateBaseUrl.toHttpUrlOrNull()
             ?: return MetadataValidationResult.Invalid("Ongeldige UPDATE_BASE_URL: '$updateBaseUrl'")
 
-        val resolvedUrl = baseHttpUrl.resolve(dto.downloadPath)
-            ?: return MetadataValidationResult.Invalid("Kan downloadUrl niet resolven met downloadPath: '${dto.downloadPath}'")
+        val resolvedUrl = when (val resolution = resolveDownloadUrl(dto, baseHttpUrl)) {
+            is DownloadUrlResolution.Invalid -> return MetadataValidationResult.Invalid(resolution.reason)
+            is DownloadUrlResolution.Resolved -> resolution.url
+        }
 
-        // Same-origin verificatie
-        if (resolvedUrl.scheme != baseHttpUrl.scheme ||
-            resolvedUrl.host != baseHttpUrl.host ||
-            resolvedUrl.port != baseHttpUrl.port
-        ) {
-            return MetadataValidationResult.Invalid("Download URL schendt same-origin beleid: '${resolvedUrl}' vs '${baseHttpUrl}'")
+        if (!resolvedUrl.encodedPath.endsWith(".apk", ignoreCase = true)) {
+            return MetadataValidationResult.Invalid("Download-URL verwijst niet naar een .apk: '$resolvedUrl'")
+        }
+
+        // Hostbeleid vervangt de oude same-origin-eis: release-hosts leveren het asset vanaf
+        // een andere host dan de metadata. De eigen origin blijft altijd toegestaan.
+        val originCheck = UpdateOriginPolicy.check(
+            url = resolvedUrl,
+            allowlist = allowlist,
+            allowInsecure = allowInsecure,
+            sameOriginWith = baseHttpUrl
+        )
+        if (originCheck is UpdateOriginPolicy.Result.Rejected) {
+            return MetadataValidationResult.Invalid(originCheck.reason)
         }
 
         val validated = ValidatedUpdateMetadata(
@@ -97,5 +112,43 @@ object UpdateMetadataValidator {
         )
 
         return MetadataValidationResult.Success(validated)
+    }
+
+    private sealed class DownloadUrlResolution {
+        data class Resolved(val url: HttpUrl) : DownloadUrlResolution()
+        data class Invalid(val reason: String) : DownloadUrlResolution()
+    }
+
+    /**
+     * Kiest tussen het absolute [AppUpdateDto.downloadUrl] van een release-host en het
+     * relatieve [AppUpdateDto.downloadPath] van de eigen backend. Beide tegelijk is
+     * dubbelzinnig en wordt geweigerd, zodat een manifest nooit twee bronnen kan aanwijzen.
+     */
+    private fun resolveDownloadUrl(dto: AppUpdateDto, baseHttpUrl: HttpUrl): DownloadUrlResolution {
+        val hasUrl = !dto.downloadUrl.isNullOrBlank()
+        val hasPath = !dto.downloadPath.isNullOrBlank()
+
+        if (hasUrl && hasPath) {
+            return DownloadUrlResolution.Invalid("Manifest bevat zowel downloadUrl als downloadPath; precies één is vereist")
+        }
+        if (!hasUrl && !hasPath) {
+            return DownloadUrlResolution.Invalid("Manifest bevat geen downloadUrl of downloadPath")
+        }
+
+        if (hasUrl) {
+            val absolute = dto.downloadUrl!!.toHttpUrlOrNull()
+                ?: return DownloadUrlResolution.Invalid("Ongeldige downloadUrl: '${dto.downloadUrl}'")
+            return DownloadUrlResolution.Resolved(absolute)
+        }
+
+        // Legacy-pad van de LAN-backend blijft strikt: alleen het bekende downloadpad,
+        // zonder traversal of querystring.
+        val path = dto.downloadPath!!
+        if (!LEGACY_DOWNLOAD_PATH_REGEX.matches(path)) {
+            return DownloadUrlResolution.Invalid("Ongeldig downloadPath: '$path'")
+        }
+        val resolved = baseHttpUrl.resolve(path)
+            ?: return DownloadUrlResolution.Invalid("Kan downloadUrl niet resolven met downloadPath: '$path'")
+        return DownloadUrlResolution.Resolved(resolved)
     }
 }

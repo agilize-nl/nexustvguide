@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- Sta cleartext LAN verkeer toe voor development op het lokale netwerk -->
-    <base-config cleartextTrafficPermitted="true">
+    <!--
+      Standaard is onversleuteld verkeer verboden. De gidsbronnen (json.tvgids.nl,
+      api.nlziet.nl) en een release-updatekanaal gebruiken allemaal HTTPS.
+    -->
+    <base-config cleartextTrafficPermitted="false">
         <trust-anchors>
             <certificates src="system" />
         </trust-anchors>
     </base-config>
+
+    <!--
+      Uitzondering voor de LAN-backend: die serveert http en levert zowel de REMOTE-gidsdata
+      als het LAN-updatekanaal. 10.0.2.2 is de hostloopback vanaf de emulator.
+
+      Zodra REMOTE en het LAN-updatekanaal niet meer gebruikt worden, kan dit hele blok weg;
+      zie docs/plan-2026-08-31-standalone-android.md §7.5.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.2.171</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
 </network-security-config>

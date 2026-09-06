@@ -201,12 +201,77 @@ NexusTVGuide beschikt over een veilig, D-pad bedienbaar in-app updatesysteem vol
 - **Android Updater**: Single-flight downloader met 24-uurs passieve throttle, bestandsvalidatie (grootte en SHA-256), APK-preflight (package identity, monotone version codes en signing certificaten) en integratie via `PackageInstaller.Session`.
 - **Geautomatiseerde Publicatietooling**: `tools/publish-release.mjs` automatiseert de keystore-controle, `assembleRelease`, `apksigner verify`, SHA-256 berekening, atomaire publicatie en directe SCP-upload naar de server op .171.
 
+### Updatekanalen
+
+De app kent twee updatekanalen. Gidsdata staan hier los van: in `LOCAL` haalt de app die
+rechtstreeks bij de bron op, maar nieuwe APK-versies moeten altijd ergens vandaan komen.
+
+| Kanaal | Host | Manifest | Wanneer |
+|--------|------|----------|---------|
+| `lan` (standaard) | `tvguide-api` op .171 | `api/v1/app/version` | Huidige opstelling; vereist een draaiende backend |
+| `release` | GitHub/Forgejo releases | `version.json` | Volledig LAN-onafhankelijk; host nog niet gekozen |
+
+Instellen in `android/gradle.properties` of per build:
+
+```bash
+./gradlew :app:assembleRelease \
+  -PupdateChannel=release \
+  -PupdateBaseUrl=https://github.com/<user>/NexusTVGuide/releases/latest/download/
+```
+
+De build faalt als een release-kanaal geen host of geen HTTPS heeft. De app accepteert een
+APK alleen van de eigen origin of van een host op de ingebakken allowlist
+(`UPDATE_HOST_ALLOWLIST`), controleert elke redirect-hop opnieuw, en verifieert daarna
+SHA-256 én het signing-certificaat.
+
 ### Nieuwe Release Bouwen en Publiceren
 
 ```bash
-# 1. Bouwt productie-APK, verifieert handtekening en uploadt direct naar server .171:
+# LAN-kanaal — bouwt productie-APK, verifieert handtekening en uploadt naar server .171:
 node tools/publish-release.mjs --notes "• Wijzigingen in deze versie"
 
-# 2. Optioneel: alleen lokaal bouwen zonder upload naar server
+# Alleen lokaal bouwen zonder upload naar server:
 node tools/publish-release.mjs --notes "• Wijzigingen in deze versie" --no-deploy
+
+# Release-kanaal — bouwt, publiceert de release en uploadt APK + version.json.
+# Geen `gh` nodig; de tool praat rechtstreeks met de API.
+RELEASE_TOKEN=<pat> node tools/publish-release.mjs --channel release \
+  --repo <eigenaar>/NexusTVGuide \
+  --notes "• Wijzigingen in deze versie"
+
+# Tegen een eigen Forgejo/Gitea:
+RELEASE_TOKEN=<pat> node tools/publish-release.mjs --channel release \
+  --repo <eigenaar>/NexusTVGuide --forge forgejo --api-base https://forgejo.example.com \
+  --notes "• Wijzigingen in deze versie"
 ```
+
+### Zelf publiceren via de API
+
+`--repo` laat de tool de release aanmaken en beide assets uploaden. De tag is standaard
+`v<versionName>` uit de APK zelf, en de download-URL wordt daaruit afgeleid — die hoeft dus
+niet met de hand te kloppen. Na de upload vergelijkt de tool de URL die de server teruggeeft
+met wat in `version.json` staat, en faalt bij een afwijking in plaats van een kapotte release
+achter te laten.
+
+| Optie | Betekenis |
+|-------|-----------|
+| `--repo <eigenaar>/<repo>` | Publiceer zelf via de API (i.p.v. `--download-base`) |
+| `--forge github\|forgejo` | API-dialect; afgeleid uit `--api-base` als je het weglaat |
+| `--api-base <url>` | Standaard `https://api.github.com`; verplicht voor Forgejo |
+| `--tag <naam>` | Eigen tag i.p.v. `v<versionName>` |
+| `--draft`, `--prerelease` | Publiceer als concept of pre-release |
+
+**Het token komt uit de omgeving**, nooit uit een argument — argumenten belanden in
+shell-history en zijn zichtbaar in de procestabel. De tool weigert een `--token`-vlag
+expliciet. Gebruik `RELEASE_TOKEN` (of `GITHUB_TOKEN`):
+
+```bash
+RELEASE_TOKEN=$(cat ~/.config/nexustvguide/release-token) node tools/publish-release.mjs ...
+```
+
+Benodigde scope: GitHub fine-grained `contents: write` (classic: `repo`); Forgejo
+`write:repository`. Een bestaande tag wordt nooit overschreven — dat zou de assets van een
+al uitgerolde versie vervangen; verhoog `VERSION_NAME` of geef een andere `--tag`.
+
+Zonder `--repo` schrijft de tool alleen APK + `version.json` naar `dist/release/`; dan moet
+`--download-base` exact overeenkomen met de URL waar het asset belandt, en is de upload aan jou.

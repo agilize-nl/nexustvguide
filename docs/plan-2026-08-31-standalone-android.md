@@ -636,24 +636,79 @@ toegevoegde `ConnectionSpec`-workaround; zie §2.2.
 
 ### 7.5 `network_security_config.xml`
 
-De huidige configuratie staat cleartext **globaal** toe via `base-config`; er is geen
-uitzondering voor alleen het LAN-IP. Behoud benodigde HTTP-toegang zolang `REMOTE`
-of de LAN-updater bestaat. De directe gidsbronnen gebruiken HTTPS. Verwijder of beperk
-de toestemming pas na inventarisatie van beide backendgebruikers.
+**Aangepast op 6 september 2026.** De configuratie stond cleartext **globaal** toe via
+`base-config`. Dat is omgezet naar `cleartextTrafficPermitted="false"` met een expliciete
+`domain-config`-uitzondering voor alleen `192.168.2.171` en `10.0.2.2` (emulator-loopback).
+
+De directe gidsbronnen en een release-updatekanaal gebruiken HTTPS; alleen de LAN-backend
+is nog http. Het hele `domain-config`-blok kan weg zodra `REMOTE` en het LAN-updatekanaal
+niet meer gebruikt worden.
 
 ### 7.6 In-app-updates
 
 Sinds het oorspronkelijke plan heeft de app een updater. `MainActivity` start na het
-eerste frame een controle; `UPDATE_BASE_URL` wijst naar dezelfde LAN-server. Alleen
-gidsdata verplaatsen maakt de volledige app dus nog niet onafhankelijk.
+eerste frame een controle. Gidsdata verplaatsen maakt de app dus nog niet onafhankelijk:
+een APK kan zichzelf niet uitvinden, dus **iets** moet `version.json` en de `.apk` blijven
+serveren. Dat is een distributievraagstuk, los van de gidsdata.
 
-Voor deze migratie: sla in `LOCAL` de automatische LAN-updatecontrole over. Toon bij
-een handmatige controle dat de updatefunctie een ingestelde updateserver vereist;
-laat gidsgebruik nooit wachten op die server. APK-installatie via sideload blijft
-beschikbaar. Een extern HTTPS-updatekanaal is een aparte vervolgstap. Zolang de
-LAN-updatefunctie gewenst blijft, mag de backend daarvoor niet worden uitgezet.
-Neem dit mee in fase 0 en de test met geblokkeerd LAN. Zie ook
-[`plan-2026-08-31-in-app-updates.md`](plan-2026-08-31-in-app-updates.md).
+**Status: het updatekanaal is instelbaar gemaakt (6 september 2026).** De keuze van host
+is uitgesteld; de standaard is ongewijzigd `lan`, zodat de bestaande `.171`-opstelling
+exact blijft werken.
+
+| Kanaal | `UPDATE_BASE_URL` | Manifest | Downloadverwijzing |
+|--------|-------------------|----------|--------------------|
+| `lan` (standaard) | `http://192.168.2.171:3000/` | `api/v1/app/version` | relatief `downloadPath` |
+| `release` | eigen HTTPS-host, verplicht op te geven | `version.json` | absolute `downloadUrl` |
+
+Instellen via `gradle.properties` of `-PupdateChannel=release -PupdateBaseUrl=…`; de build
+faalt als een release-kanaal geen host of geen HTTPS heeft.
+
+#### Van same-origin naar een host-allowlist
+
+Een release-host serveert het APK-asset niet op de origin van de metadata: GitHub publiceert
+`version.json` op `github.com` en leidt de asset-download door naar
+`objects.githubusercontent.com`. De oorspronkelijke same-origin-eis in
+`UpdateMetadataValidator` maakte dat onmogelijk.
+
+Die eis is vervangen door [`UpdateOriginPolicy`](../android/app/src/main/java/com/nexustvguide/app/update/UpdateOriginPolicy.kt):
+HTTPS verplicht (tenzij het kanaal zelf http is), en de host moet exact op een ingebakken
+allowlist staan óf gelijk zijn aan de eigen origin. Subdomeinen erven geen vertrouwen.
+Omdat OkHttp nu redirects moet volgen, controleert
+[`UpdateRedirectInterceptor`](../android/app/src/main/java/com/nexustvguide/app/update/UpdateRedirectInterceptor.kt)
+elke hop opnieuw tegen dat beleid; een afgewezen hop breekt de download af.
+
+De allowlist is een aanvullende beperking, niet de garantie zelf. Die blijft liggen bij de
+SHA-256-vergelijking en `ApkVerifier`, die controleert dat de APK met dezelfde signing key
+is ondertekend als de geïnstalleerde app. Een release-host kan dus geen vreemde APK
+binnensmokkelen, ook niet als de metadata gemanipuleerd is.
+
+`AppUpdateDto` accepteert `downloadPath` en `downloadUrl`, maar precies één van beide;
+beide tegelijk wordt geweigerd zodat een manifest nooit twee bronnen aanwijst.
+
+#### Nog open
+
+- Er is nog **geen GitHub-repo**: `origin` is Forgejo op het LAN (`forgejo.home.arpa`),
+  wat dezelfde beschikbaarheidsbeperking heeft als `.171`. Zolang die keuze niet gemaakt is,
+  blijft `lan` het actieve kanaal en moet de backend blijven draaien.
+- `tools/publish-release.mjs --channel release --repo <eigenaar>/<repo>` publiceert zelf via
+  de releases-API: release aanmaken, APK en `version.json` uploaden. Werkt tegen GitHub en
+  tegen Forgejo/Gitea (`--forge forgejo --api-base <url>`), zonder `gh`-afhankelijkheid.
+  Zonder `--repo` schrijft de tool alleen de artefacten en blijft de upload handmatig.
+
+  Drie eigenschappen die een kapotte release voorkomen:
+  - De download-URL wordt afgeleid uit de tag (`v<versionName>`), niet met de hand getypt.
+  - Na de upload wordt de URL uit de serverrespons vergeleken met wat in `version.json`
+    staat; bij een afwijking faalt de tool in plaats van een 404 achter te laten.
+  - Een bestaande tag wordt geweigerd, zodat de assets van een uitgerolde versie nooit
+    stilzwijgend vervangen worden.
+
+  Het token komt uitsluitend uit `RELEASE_TOKEN`/`GITHUB_TOKEN` in de omgeving; een
+  `--token`-argument wordt expliciet geweigerd omdat argumenten in shell-history en de
+  procestabel belanden.
+- In `LOCAL` blijft gelden: geen automatische LAN-updatecontrole, en gidsgebruik wacht
+  nooit op de updateserver.
+
+Zie ook [`plan-2026-08-31-in-app-updates.md`](plan-2026-08-31-in-app-updates.md).
 
 ---
 
@@ -799,8 +854,9 @@ Elke fase is los opleverbaar en eindigt in een toestand waarin de app werkt.
 
 - [ ] Vaststellen of XMLTV nog in gebruik is (Jellyfin/TiviMate/Kodi). Dit bepaalt of
       `tvguide-api` uiteindelijk uit mag. **Blokkerend voor het einddoel, niet voor fase 1.**
-- [ ] Vastleggen of de LAN-updater behouden blijft; in `LOCAL` geen automatische
-      LAN-controles, later eventueel een extern updatekanaal.
+- [x] Updatekanaal instelbaar gemaakt (`lan` / `release`) met host-allowlist en
+      redirectcontrole; standaard blijft `lan`. Keuze van release-host staat nog open —
+      er is nog geen GitHub-repo. Zie §7.6.
 - [ ] Historische bronmetingen reproduceren en invoerfixtures vastleggen; TLS en
       dependencycompatibiliteit op API 21 controleren vóór die ondersteuning te claimen.
 

@@ -6,13 +6,28 @@
  * Automates the atomic build, verification, local publishing, and server deployment of production APKs.
  * 
  * Usage:
- *   node tools/publish-release.mjs [--notes "Release notes text"] [--no-deploy] [--server root@100.88.166.57] [--dry-run]
+ *   LAN-kanaal (standaard, publiceert naar tvguide-api op .171):
+ *     node tools/publish-release.mjs [--notes "..."] [--no-deploy] [--server root@...] [--dry-run]
+ *
+ *   Release-kanaal, zelf publiceren via de API (GitHub of Forgejo/Gitea):
+ *     RELEASE_TOKEN=<pat> node tools/publish-release.mjs --channel release \
+ *       --repo <eigenaar>/<repo> [--forge github|forgejo] [--api-base <url>] [--dry-run]
+ *
+ *   Release-kanaal, alleen artefacten schrijven (handmatig uploaden):
+ *     node tools/publish-release.mjs --channel release \
+ *       --download-base https://github.com/<user>/<repo>/releases/download/v<versie>/
+ *
+ *   Met --repo bepaalt de tool de download-URL zelf en uploadt het APK + version.json als
+ *   assets van dezelfde release. Het token komt uit de omgeving (RELEASE_TOKEN of
+ *   GITHUB_TOKEN), nooit uit een argument: argumenten belanden in shell-history en zijn
+ *   voor andere processen zichtbaar. `gh` is niet nodig.
  */
 
-import { existsSync, readFileSync, writeFileSync, renameSync, copyFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, renameSync, copyFileSync, readdirSync, mkdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { execSync } from 'node:child_process';
+import { ReleaseApi, ReleaseApiError, FORGE_GITHUB, FORGE_FORGEJO } from './release-api.mjs';
 
 const ROOT_DIR = resolve(new URL('.', import.meta.url).pathname, '..');
 const ANDROID_DIR = join(ROOT_DIR, 'android');
@@ -34,6 +49,14 @@ let remoteDir = DEFAULT_REMOTE_DIR;
 let dryRun = false;
 let skipBuild = false;
 let testApkPath = null;
+let channel = 'lan';
+let downloadBase = null;
+let repo = null;
+let forge = null;
+let apiBase = null;
+let releaseTag = null;
+let draft = false;
+let prerelease = false;
 
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--notes' && args[i + 1]) {
@@ -54,12 +77,127 @@ for (let i = 0; i < args.length; i++) {
   } else if (args[i] === '--apk' && args[i + 1]) {
     testApkPath = resolve(process.cwd(), args[++i]);
     skipBuild = true;
+  } else if (args[i] === '--channel' && args[i + 1]) {
+    channel = args[++i].trim();
+  } else if (args[i] === '--download-base' && args[i + 1]) {
+    downloadBase = args[++i].trim();
+  } else if (args[i] === '--repo' && args[i + 1]) {
+    repo = args[++i].trim();
+  } else if (args[i] === '--forge' && args[i + 1]) {
+    forge = args[++i].trim();
+  } else if (args[i] === '--api-base' && args[i + 1]) {
+    apiBase = args[++i].trim().replace(/\/+$/, '');
+  } else if (args[i] === '--tag' && args[i + 1]) {
+    releaseTag = args[++i].trim();
+  } else if (args[i] === '--draft') {
+    draft = true;
+  } else if (args[i] === '--prerelease') {
+    prerelease = true;
+  } else if (args[i] === '--token' || args[i] === '--token=') {
+    console.error('ERROR: geef het token niet als argument mee; gebruik RELEASE_TOKEN=<pat> in de omgeving.');
+    console.error('  Argumenten zijn zichtbaar in shell-history en in de procestabel.');
+    process.exit(1);
+  }
+}
+
+if (channel !== 'lan' && channel !== 'release') {
+  console.error(`ERROR: Onbekend --channel '${channel}'; kies 'lan' of 'release'.`);
+  process.exit(1);
+}
+
+// Token uitsluitend uit de omgeving; zie de --token-guard hierboven.
+const releaseToken = process.env.RELEASE_TOKEN || process.env.GITHUB_TOKEN || null;
+let releaseApi = null;
+
+if (channel === 'release') {
+  // Het release-kanaal publiceert via de release-host, niet via SCP naar .171.
+  deploy = false;
+  if (releasesDir === DEFAULT_RELEASES_DIR) {
+    releasesDir = join(ROOT_DIR, 'dist', 'release');
+  }
+
+  if (repo && downloadBase) {
+    console.error('ERROR: gebruik --repo (zelf publiceren) of --download-base (handmatig), niet allebei.');
+    process.exit(1);
+  }
+
+  if (repo) {
+    if (!/^[^/\s]+\/[^/\s]+$/.test(repo)) {
+      console.error(`ERROR: --repo moet de vorm 'eigenaar/repo' hebben, ontvangen: '${repo}'`);
+      process.exit(1);
+    }
+
+    // Forge afleiden uit --api-base als die niet expliciet is opgegeven. Een eigen host
+    // wordt als Forgejo/Gitea behandeld; die gebruiken /api/v1-paden. Voor GitHub
+    // Enterprise is dat verkeerd, dus dat vraagt om een expliciete --forge github.
+    let forgeInferred = false;
+    if (!forge) {
+      forge = (apiBase && !apiBase.includes('api.github.com')) ? FORGE_FORGEJO : FORGE_GITHUB;
+      forgeInferred = Boolean(apiBase);
+    }
+    if (forgeInferred) {
+      console.log(`Let op: --forge niet opgegeven; afgeleid als '${forge}' uit --api-base.`);
+      console.log("  Klopt dat niet (bijv. GitHub Enterprise), geef dan expliciet --forge github mee.");
+    }
+    if (forge !== FORGE_GITHUB && forge !== FORGE_FORGEJO) {
+      console.error(`ERROR: onbekende --forge '${forge}'; kies 'github' of 'forgejo'.`);
+      process.exit(1);
+    }
+    if (!apiBase) {
+      if (forge === FORGE_GITHUB) {
+        apiBase = 'https://api.github.com';
+      } else {
+        console.error('ERROR: --forge forgejo vereist --api-base <url>, bijv. https://forgejo.example.com');
+        process.exit(1);
+      }
+    }
+    // Het token gaat over deze verbinding mee; http zou het in platte tekst versturen.
+    // De ontsnapping is uitsluitend bedoeld voor de mockserver in de tests.
+    const allowInsecureApi = process.env.RELEASE_API_ALLOW_INSECURE === '1';
+    if (!apiBase.startsWith('https://') && !allowInsecureApi) {
+      console.error(`ERROR: --api-base moet HTTPS zijn, ontvangen: '${apiBase}'`);
+      process.exit(1);
+    }
+    if (allowInsecureApi && !apiBase.startsWith('https://')) {
+      console.warn(`WAARSCHUWING: onversleutelde API-verbinding naar ${apiBase}; het token gaat in platte tekst mee.`);
+    }
+    if (!releaseToken) {
+      console.error('ERROR: geen token gevonden. Zet RELEASE_TOKEN (of GITHUB_TOKEN) in de omgeving.');
+      console.error('  Bijv: RELEASE_TOKEN=$(cat ~/.config/nexustvguide/release-token) node tools/publish-release.mjs ...');
+      console.error("  Benodigde scope: GitHub 'contents: write' (classic: repo); Forgejo: write:repository.");
+      process.exit(1);
+    }
+
+    releaseApi = new ReleaseApi({ apiBase, repo, token: releaseToken, forge, dryRun });
+  } else {
+    // Handmatige modus: de asset-URL kan niet worden afgeleid, dus moet die expliciet mee.
+    if (!downloadBase) {
+      console.error('ERROR: --channel release vereist --repo <eigenaar>/<repo> (zelf publiceren)');
+      console.error('  of --download-base <url> (artefacten schrijven, handmatig uploaden).');
+      process.exit(1);
+    }
+    if (!downloadBase.startsWith('https://')) {
+      console.error(`ERROR: --download-base moet HTTPS zijn, ontvangen: '${downloadBase}'`);
+      process.exit(1);
+    }
+    if (!downloadBase.endsWith('/')) {
+      downloadBase += '/';
+    }
   }
 }
 
 console.log('=== NexusTVGuide Release Publisher ===');
 console.log(`Working Directory:  ${ROOT_DIR}`);
 console.log(`Releases Directory: ${releasesDir}`);
+console.log(`Update Channel:     ${channel}`);
+if (channel === 'release') {
+  if (releaseApi) {
+    console.log(`Release Target:     ${forge} ${repo} via ${apiBase}`);
+    console.log(`Token:              uit omgeving (${process.env.RELEASE_TOKEN ? 'RELEASE_TOKEN' : 'GITHUB_TOKEN'})`);
+  } else {
+    console.log(`Download Base:      ${downloadBase} (handmatige upload)`);
+  }
+}
 console.log(`Auto Deploy:        ${deploy ? `Enabled (${remoteHost}:${remoteDir})` : 'Disabled'}`);
 console.log(`Dry Run:            ${dryRun}`);
 
@@ -228,8 +366,22 @@ if (fileSizeBytes > 100 * 1024 * 1024) {
 // Step 6: Atomic local publication
 console.log('\n[6/7] Publishing release artifacts locally...');
 const targetApkName = `nexus-tv-guide-${packageInfo.versionName}.apk`;
+if (!existsSync(releasesDir)) {
+  mkdirSync(releasesDir, { recursive: true });
+}
 const targetApkPath = join(releasesDir, targetApkName);
-const targetDownloadPath = `/api/v1/app/download/${targetApkName}`;
+
+// Bij zelf publiceren is de tag de bron van de download-URL, dus die staat hier vast.
+if (channel === 'release') {
+  if (!releaseTag) {
+    releaseTag = `v${packageInfo.versionName}`;
+  }
+  if (releaseApi) {
+    // De URL wordt vooraf berekend omdat het manifest ernaar verwijst terwijl het APK nog
+    // geüpload moet worden. Na de upload wordt dit gecontroleerd tegen de serverrespons.
+    downloadBase = releaseApi.assetDownloadUrl(releaseTag, '').replace(/[^/]*$/, '');
+  }
+}
 
 const manifest = {
   schemaVersion: 1,
@@ -237,11 +389,18 @@ const manifest = {
   versionCode: packageInfo.versionCode,
   versionName: packageInfo.versionName,
   releaseNotes: releaseNotes,
-  downloadPath: targetDownloadPath,
   sha256: sha256,
   fileSizeBytes: fileSizeBytes,
   publishedAt: new Date().toISOString()
 };
+
+// De app accepteert precies één downloadverwijzing. De LAN-backend serveert het asset op
+// zijn eigen origin (relatief pad); een release-host serveert het vanaf een eigen URL.
+if (channel === 'release') {
+  manifest.downloadUrl = `${downloadBase}${targetApkName}`;
+} else {
+  manifest.downloadPath = `/api/v1/app/download/${targetApkName}`;
+}
 
 if (dryRun) {
   console.log('\n[DRY RUN] Manifest to publish:');
@@ -249,6 +408,12 @@ if (dryRun) {
   console.log(`[DRY RUN] APK would be copied to ${targetApkPath}`);
   if (deploy) {
     console.log(`[DRY RUN] Remote deployment to ${remoteHost}:${remoteDir}`);
+  }
+  if (releaseApi) {
+    console.log(`[DRY RUN] Release '${releaseTag}' zou worden aangemaakt op ${forge} ${repo}`);
+    console.log(`[DRY RUN] Assets: ${targetApkName} + version.json`);
+    console.log(`[DRY RUN] Verwachte download-URL: ${manifest.downloadUrl}`);
+    console.log(`[DRY RUN] Benodigde app-allowlist: ${releaseApi.assetHosts().join(',')}`);
   }
   console.log('\n✓ Dry run completed successfully.');
   process.exit(0);
@@ -285,6 +450,82 @@ if (deploy) {
     console.error('The local release is ready. You can manually copy it using:');
     console.error(`  scp "${currentManifestPath}" "${targetApkPath}" "${remoteHost}:${remoteDir}/"`);
   }
+} else if (channel === 'release' && releaseApi) {
+  console.log(`\n[7/7] Publishing release '${releaseTag}' to ${forge} ${repo}...`);
+  try {
+    const who = await releaseApi.whoami();
+    console.log(`  Geauthenticeerd als: ${who}`);
+
+    // Een bestaande tag opnieuw publiceren zou de assets van een al uitgerolde versie
+    // vervangen; dat is precies het geval waarin apparaten een verkeerde APK zouden halen.
+    const existing = await releaseApi.findReleaseByTag(releaseTag);
+    if (existing) {
+      console.error(`ERROR: release '${releaseTag}' bestaat al op ${repo}.`);
+      console.error(`  ${existing.html_url ?? ''}`);
+      console.error('  Verhoog VERSION_NAME in android/app/version.properties, of geef een andere --tag mee.');
+      console.error(`  De lokale artefacten staan klaar in ${releasesDir}.`);
+      process.exit(1);
+    }
+
+    const release = await releaseApi.createRelease({
+      tag: releaseTag,
+      name: `v${packageInfo.versionName}`,
+      body: releaseNotes,
+      draft,
+      prerelease
+    });
+    console.log(`  ✓ Release aangemaakt: ${release.html_url ?? releaseTag}`);
+
+    // APK eerst: version.json zonder bijbehorend APK zou apparaten naar een 404 sturen.
+    console.log(`  Uploaden: ${targetApkName} (${(fileSizeBytes / (1024 * 1024)).toFixed(2)} MB)...`);
+    const apkAsset = await releaseApi.uploadAsset(release, targetApkPath, 'application/vnd.android.package-archive');
+    console.log(`  ✓ APK geüpload`);
+
+    console.log('  Uploaden: version.json...');
+    await releaseApi.uploadAsset(release, currentManifestPath, 'application/json');
+    console.log('  ✓ Manifest geüpload');
+
+    // De URL in het manifest is vooraf berekend; hier controleren we die tegen wat de
+    // server werkelijk teruggeeft. Een stille afwijking zou pas op het apparaat opvallen.
+    const actualUrl = apkAsset.browser_download_url;
+    if (actualUrl && actualUrl !== manifest.downloadUrl) {
+      console.error('\nWAARSCHUWING: de download-URL wijkt af van wat in version.json staat!');
+      console.error(`  In manifest: ${manifest.downloadUrl}`);
+      console.error(`  Server zegt: ${actualUrl}`);
+      console.error('  De updater zal een 404 krijgen. Corrigeer version.json in de release.');
+      process.exit(1);
+    }
+
+    console.log(`\n✓ Release gepubliceerd: ${release.html_url ?? releaseTag}`);
+    console.log(`  Download-URL: ${manifest.downloadUrl}`);
+    console.log('\n  Bouw de app met dit updatekanaal:');
+    console.log(`    ./gradlew :app:assembleRelease -PupdateChannel=release \\`);
+    console.log(`      -PupdateBaseUrl=${downloadBase} \\`);
+    console.log(`      -PupdateHostAllowlist=${releaseApi.assetHosts().join(',')}`);
+  } catch (err) {
+    if (err instanceof ReleaseApiError) {
+      console.error(`\nERROR: publiceren mislukt: ${err.message}`);
+      if (err.status === 401 || err.status === 403) {
+        console.error("  Controleer het token en de scope ('contents: write' bij GitHub, write:repository bij Forgejo).");
+      } else if (err.status === 404) {
+        console.error(`  Bestaat de repo '${repo}' en heeft het token er toegang toe?`);
+      }
+    } else {
+      console.error(`\nERROR: publiceren mislukt: ${err.message}`);
+    }
+    console.error(`\n  De lokale artefacten staan klaar in ${releasesDir}; opnieuw draaien kan met --skip-build.`);
+    process.exit(1);
+  }
+} else if (channel === 'release') {
+  console.log('\n[7/7] Release-kanaal: upload de artefacten handmatig naar de release-host.');
+  console.log(`  Artefacten: ${targetApkPath}`);
+  console.log(`              ${currentManifestPath}`);
+  console.log('');
+  console.log('  Publiceer beide als assets van dezelfde release. Geef --repo <eigenaar>/<repo> mee');
+  console.log('  om dit door de tool zelf te laten doen (geen gh nodig).');
+  console.log('');
+  console.log(`  Let op: het manifest verwijst naar ${manifest.downloadUrl}`);
+  console.log('  Een mismatch met de werkelijke asset-URL laat de updater met een 404 falen.');
 } else {
   console.log('\n[7/7] Remote deployment skipped (--no-deploy).');
 }

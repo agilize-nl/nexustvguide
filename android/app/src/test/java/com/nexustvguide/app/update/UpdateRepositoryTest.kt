@@ -37,7 +37,11 @@ class FakeUpdateApiService : UpdateApiService {
     var dto: AppUpdateDto? = null
     var shouldThrow: Boolean = false
 
-    override suspend fun getLatestVersion(): AppUpdateDto {
+    /** Vastgelegd zodat een test kan controleren welk manifestpad is opgevraagd. */
+    var requestedPath: String? = null
+
+    override suspend fun getLatestVersion(manifestPath: String): AppUpdateDto {
+        requestedPath = manifestPath
         if (shouldThrow) {
             throw IOException("Simulated network error")
         }

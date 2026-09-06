@@ -33,6 +33,78 @@ def parseSemanticVersion = { String versionName ->
     [major: matcher.group(1).toInteger(), minor: matcher.group(2).toInteger(), patch: matcher.group(3).toInteger()]
 }
 
+/**
+ * Updatekanaal-configuratie.
+ *
+ * De app haalt gidsdata standaalone op, maar nieuwe APK-versies moeten van ergens komen.
+ * Twee kanalen worden ondersteund:
+ *
+ *  - "lan"     : de bestaande tvguide-api op het LAN (http, relatief downloadPath).
+ *  - "release" : een release-host zoals GitHub/Forgejo die een statisch version.json
+ *                publiceert met een absolute downloadUrl naar het APK-asset.
+ *
+ * Overrulen kan via gradle.properties of de command line:
+ *   ./gradlew :app:assembleRelease -PupdateChannel=release \
+ *       -PupdateBaseUrl=https://github.com/<user>/<repo>/releases/latest/download/
+ */
+def resolveUpdateChannel = {
+    def channel = (project.findProperty("updateChannel") ?: "lan").toString().trim()
+
+    def defaults = [
+        lan: [
+            baseUrl      : "http://192.168.2.171:3000/",
+            manifestPath : "api/v1/app/version",
+            // Leeg: de LAN-backend levert het asset op zijn eigen origin, die altijd
+            // is toegestaan. Een allowlist is daar dus niet nodig.
+            hostAllowlist: ""
+        ],
+        release: [
+            // Vul in met de eigen release-host, bijv.
+            // https://github.com/<user>/NexusTVGuide/releases/latest/download/
+            baseUrl      : "https://example.invalid/",
+            manifestPath : "version.json",
+            // GitHub serveert version.json vanaf github.com en leidt het APK-asset door
+            // naar objects.githubusercontent.com. Beide hosts zijn nodig.
+            hostAllowlist: "github.com,objects.githubusercontent.com"
+        ]
+    ]
+
+    def selected = defaults[channel]
+    if (selected == null) {
+        throw new GradleException("Onbekend updateChannel '${channel}'; kies 'lan' of 'release'")
+    }
+
+    def baseUrl = (project.findProperty("updateBaseUrl") ?: selected.baseUrl).toString().trim()
+    def manifestPath = (project.findProperty("updateManifestPath") ?: selected.manifestPath).toString().trim()
+    def hostAllowlist = (project.findProperty("updateHostAllowlist") ?: selected.hostAllowlist).toString().trim()
+
+    if (!baseUrl.endsWith("/")) {
+        // Retrofit vereist een base-URL met sluitende slash, anders valt het laatste segment weg.
+        throw new GradleException("updateBaseUrl moet op '/' eindigen, ontvangen: '${baseUrl}'")
+    }
+    if (!(baseUrl.startsWith("http://") || baseUrl.startsWith("https://"))) {
+        throw new GradleException("updateBaseUrl moet met http:// of https:// beginnen, ontvangen: '${baseUrl}'")
+    }
+    if (channel == "release" && baseUrl.startsWith("http://")) {
+        throw new GradleException("Een release-updatekanaal moet HTTPS gebruiken, ontvangen: '${baseUrl}'")
+    }
+    if (channel == "release" && baseUrl.contains("example.invalid")) {
+        throw new GradleException(
+            "Het release-updatekanaal heeft nog geen host. Geef -PupdateBaseUrl=<url> mee " +
+            "of zet updateBaseUrl in gradle.properties."
+        )
+    }
+    if (manifestPath.startsWith("/")) {
+        // Een leidende slash zou de base-URL-padcomponent wegvagen bij het resolven.
+        throw new GradleException("updateManifestPath moet relatief zijn (zonder leidende '/'), ontvangen: '${manifestPath}'")
+    }
+
+    [baseUrl: baseUrl, manifestPath: manifestPath, hostAllowlist: hostAllowlist, channel: channel]
+}
+
+def updateChannel = resolveUpdateChannel()
+logger.lifecycle("Updatekanaal: ${updateChannel.channel} -> ${updateChannel.baseUrl}${updateChannel.manifestPath}")
+
 def appVersion = loadAppVersion()
 
 // Signing-gegevens komen uit android/keystore.properties, dat buiten versiebeheer
@@ -61,8 +133,13 @@ android {
         versionName appVersion.name
 
         buildConfigField "String", "DEFAULT_BASE_URL", "\"http://192.168.2.171:3000/\""
-        buildConfigField "String", "UPDATE_BASE_URL", "\"http://192.168.2.171:3000/\""
         buildConfigField "String", "GUIDE_SOURCE", "\"LOCAL\""
+
+        // Updatekanaal. Zie gradle.properties voor de instelbare waarden en
+        // docs/plan-2026-08-31-standalone-android.md §7.6 voor de achtergrond.
+        buildConfigField "String", "UPDATE_BASE_URL", "\"${updateChannel.baseUrl}\""
+        buildConfigField "String", "UPDATE_MANIFEST_PATH", "\"${updateChannel.manifestPath}\""
+        buildConfigField "String", "UPDATE_HOST_ALLOWLIST", "\"${updateChannel.hostAllowlist}\""
     }
 
     compileOptions {

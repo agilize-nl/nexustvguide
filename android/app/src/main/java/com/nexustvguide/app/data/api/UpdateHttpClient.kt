@@ -1,8 +1,9 @@
 package com.nexustvguide.app.data.api
 
-import android.content.Context
 import android.os.Build
 import com.nexustvguide.app.BuildConfig
+import com.nexustvguide.app.update.UpdateOriginPolicy
+import com.nexustvguide.app.update.UpdateRedirectInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,6 +16,11 @@ object UpdateHttpClient {
     private var updateApiService: UpdateApiService? = null
     private var currentBaseUrl: String? = null
 
+    /** Hosts die naast de eigen origin een APK mogen leveren, uit `UPDATE_HOST_ALLOWLIST`. */
+    val allowlist: Set<String> by lazy {
+        UpdateOriginPolicy.parseAllowlist(BuildConfig.UPDATE_HOST_ALLOWLIST)
+    }
+
     private fun isEmulator(): Boolean {
         return (Build.FINGERPRINT.startsWith("generic")
                 || Build.FINGERPRINT.startsWith("unknown")
@@ -26,12 +32,20 @@ object UpdateHttpClient {
     }
 
     fun getUpdateBaseUrl(): String {
-        return if (isEmulator()) {
+        // De emulator-omleiding geldt alleen voor een lokale backend; een extern
+        // updatekanaal is vanaf de emulator gewoon bereikbaar.
+        return if (isEmulator() && !BuildConfig.UPDATE_BASE_URL.startsWith("https://")) {
             "http://10.0.2.2:3000/"
         } else {
             BuildConfig.UPDATE_BASE_URL
         }
     }
+
+    /**
+     * Of onversleuteld verkeer is toegestaan. Alleen waar het updatekanaal zelf nog http is
+     * (de LAN-backend of de emulator); een https-kanaal dwingt https af op elke hop.
+     */
+    fun allowsInsecureTransport(): Boolean = !getUpdateBaseUrl().startsWith("https://")
 
     fun getOkHttpClient(): OkHttpClient {
         if (okHttpClient == null) {
@@ -40,8 +54,17 @@ object UpdateHttpClient {
             }
 
             okHttpClient = OkHttpClient.Builder()
-                .followRedirects(false)
-                .followSslRedirects(false)
+                // Release-hosts leiden een asset door naar een aparte CDN-host. Redirects
+                // worden gevolgd, maar elke hop wordt tegen de allowlist gecontroleerd door
+                // UpdateRedirectInterceptor; zonder die controle zou dit een open doorgeefluik zijn.
+                .followRedirects(true)
+                .followSslRedirects(true)
+                .addNetworkInterceptor(
+                    UpdateRedirectInterceptor(
+                        allowlistProvider = { allowlist },
+                        allowInsecureProvider = { allowsInsecureTransport() }
+                    )
+                )
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .addInterceptor(logging)

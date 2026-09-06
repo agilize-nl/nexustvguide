@@ -125,8 +125,13 @@ class UpdateRepository(
         val baseUrl = customBaseUrl ?: UpdateHttpClient.getUpdateBaseUrl()
 
         try {
-            val dto = apiService.getLatestVersion()
-            val validation = UpdateMetadataValidator.validate(dto, baseUrl)
+            val dto = apiService.getLatestVersion(BuildConfig.UPDATE_MANIFEST_PATH)
+            val validation = UpdateMetadataValidator.validate(
+                dto = dto,
+                updateBaseUrl = baseUrl,
+                allowlist = UpdateHttpClient.allowlist,
+                allowInsecure = UpdateHttpClient.allowsInsecureTransport()
+            )
 
             when (validation) {
                 is MetadataValidationResult.Invalid -> {
