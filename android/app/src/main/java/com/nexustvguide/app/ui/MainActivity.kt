@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.nexustvguide.app.BuildConfig
 import com.nexustvguide.app.R
 import com.nexustvguide.app.ui.update.UpdateDialogFragment
 import com.nexustvguide.app.ui.update.UpdateNavigationEvent
@@ -42,9 +43,12 @@ class MainActivity : FragmentActivity() {
             }
         }
 
-        // Passieve updatecontrole starten na het eerste frame
+        // Passieve updatecontrole starten na het eerste frame (alleen in REMOTE-modus conform §7.6)
         window.decorView.post {
-            updateViewModel.checkForUpdates(isManual = false)
+            val source = com.nexustvguide.app.data.repository.GuideRepositoryProvider.getGuideSource(this)
+            if (source != "LOCAL") {
+                updateViewModel.checkForUpdates(isManual = false)
+            }
         }
     }
 

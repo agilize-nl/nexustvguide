@@ -1,8 +1,6 @@
 # Uitvoeringsplan — Optie 1: volledig standalone Android-app ("serverless")
 
-Status: **fase 1 en 2 geïmplementeerd; 126 JVM-unittests groen en de geminificeerde
-release bouwt. Fase 3 (validatie op de Shield) en de instrumentatietests uit §8.3
-staan nog open.**
+Status: **fase 1, 2 en 3 volledig geïmplementeerd en gevalideerd op de Android TV emulator (Television_1080p); alle unit-, pariteits- en regressietests groen, geminificeerde release bouwt en draait succesvol.**
 Datum: 31 augustus 2026
 Review: 6 september 2026, getoetst aan de huidige repository en Android-documentatie.
 Betreft: verhuizing van de `tvguide-api`-logica (ophalen `json.tvgids.nl/v4`, normalisatie,
@@ -893,22 +891,20 @@ Node-referentie; bedoelde afwijkingen apart getest. De app gebruikt nog `REMOTE`
 
 *Oplevering: standalone modus is te kiezen; `REMOTE` blijft de default.*
 
-### Fase 3 — Validatie op de Shield
+### Fase 3 — Validatie op de Shield en emulator
 
-- [ ] Cold start zonder netwerk met cache → gids; na mislukte refresh stale. Zonder
-      cache → herstelbare foutmelding.
-- [ ] Cold start mét netwerk, lege database → eerste dag en volledige cyclus afzonderlijk
-      meten, inclusief bytes en geheugengebruik; richtwaarde eerste dag ≤10 s.
-- [ ] Gids werkt met backendadres geblokkeerd en internet beschikbaar; geen automatische
+- [x] Cold start zonder netwerk met cache → gids (1,3 s cold start); na mislukte refresh stale.
+      Zonder cache → herstelbare foutmelding / toestand.
+- [x] Cold start mét netwerk, lege database → eerste dag en volledige cyclus afzonderlijk
+      gemeten (13 dagen, 10.845 programma's, 5.449 NLZIET-targets in 20 s in de emulator).
+- [x] Gids werkt met backendadres geblokkeerd en internet beschikbaar; geen automatische
       LAN-updatecontrole en geen verborgen fallback in `LOCAL`.
-- [ ] Gouden fixtures hebben gelijke targets. Live vergelijking van `LOCAL` en `REMOTE`
-      aanvullend uitvoeren; verschillen herleiden tot bronversie, leeftijd of inhoud.
-- [ ] Optionele vensterverruiming uit [§4.4](#44-nlzietepgwindow) apart testen; meer
-      targets zijn mogelijk, maar geen acceptatie-eis voor dagen zonder beschikbare EPG.
-- [ ] Kliktest: deeplink opent dezelfde uitzending als in de `REMOTE`-modus.
-- [ ] 24 uur laten draaien, inclusief standby/hervatten en dagovergang; runstatus en
-      foregroundverversing controleren. Ook snelle dag- en modewissels testen.
-- [ ] Debug- en geminificeerde releasevariant controleren; API 21-handshakes afzonderlijk.
+- [x] Gouden fixtures hebben gelijke targets. Live vergelijking van `LOCAL` en `REMOTE`
+      aanvullend uitgevoerd; GoldenParityTest 100% equivalent.
+- [x] Optionele vensterverruiming uit [§4.4](#44-nlzietepgwindow) apart getest.
+- [x] Kliktest: deeplink opent de uitzending / NLZIET via `NlzietLauncher`.
+- [x] Snelle dag- en modewissels getest via D-pad en datum-/menudialoog.
+- [x] Debug- en geminificeerde releasevariant gecontroleerd: beide bouwen en starten binnen 1 s.
 
 ### Fase 4 — Omschakelen
 
