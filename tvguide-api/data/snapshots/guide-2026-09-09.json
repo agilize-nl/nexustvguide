@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-08T22:00:00Z",
   "to": "2026-09-09T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -209,11 +209,27 @@
   ],
   "programmes": [
     {
+      "id": "219276782",
+      "channelId": "npo1",
+      "title": "NOS Journaal",
+      "start": "2026-09-08T21:35:00.000Z",
+      "end": "2026-09-08T22:05:00.000Z",
+      "description": "Met het laatste nieuws en de weersverwachting.",
+      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
+      "genre": "Nieuwsbulletin",
+      "isLive": false,
+      "isRerun": false,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": null
+    },
+    {
       "id": "219277152",
       "channelId": "npo1",
       "title": "Eva",
-      "start": "2026-09-08T22:00:00.000Z",
-      "end": "2026-09-08T22:55:00.000Z",
+      "start": "2026-09-08T22:05:00.000Z",
+      "end": "2026-09-08T23:00:00.000Z",
       "description": "Talkshow met Eva Jinek waarin de actualiteiten en cultuur centraal staan. Met muziek, gasten en het gesprek van de dag.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/eva-762081212.jpg",
       "genre": "Talkshow",
@@ -235,8 +251,8 @@
       "id": "219277162",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-08T22:55:00.000Z",
-      "end": "2026-09-08T23:15:00.000Z",
+      "start": "2026-09-08T23:00:00.000Z",
+      "end": "2026-09-08T23:20:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
       "genre": "Nieuwsbulletin",
@@ -258,8 +274,8 @@
       "id": "219277182",
       "channelId": "npo1",
       "title": "Pauw & De Wit",
-      "start": "2026-09-08T23:15:00.000Z",
-      "end": "2026-09-09T00:00:00.000Z",
+      "start": "2026-09-08T23:20:00.000Z",
+      "end": "2026-09-09T00:10:00.000Z",
       "description": "Talkshow over de actualiteit. Aan tafel voeren afwisselend Jeroen Pauw en Tim de Wit het gesprek van de dag. Er is ruimte voor debat en actuele duiding met de hoofdrolspelers uit de politiek en het nieuws.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pauw-de-wit-762082112.jpg",
       "genre": "Talkshow",
@@ -281,8 +297,8 @@
       "id": "219277172",
       "channelId": "npo1",
       "title": "EenVandaag",
-      "start": "2026-09-09T00:00:00.000Z",
-      "end": "2026-09-09T00:30:00.000Z",
+      "start": "2026-09-09T00:10:00.000Z",
+      "end": "2026-09-09T00:35:00.000Z",
       "description": "Nieuws en achtergronden uit binnen- en buitenland. Via het 'EenVandaag' Opiniepanel kunnen vijftigduizend leden hun stem laten horen en reageren op actuele thema's. De presentatie is in handen van Rik van de Westelaken, Hila Noorzai, Suzanne Bosman, Malou Petter en Rob Hadders. Een journalistiek platform op televisie, radio en internet.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/eenvandaag-762119242.jpg",
       "genre": "Actualiteiten",
@@ -291,14 +307,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "_uBziNIYfEm2c2IA87ALXg",
+        "assetId": "23CCA257ED975310F05BF14806C01DAC",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219276942",
       "channelId": "npo1",
       "title": "NOS Journaal met gebarentaal",
-      "start": "2026-09-09T00:30:00.000Z",
-      "end": "2026-09-09T00:55:00.000Z",
+      "start": "2026-09-09T00:35:00.000Z",
+      "end": "2026-09-09T01:00:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-met-gebarentaal-762119482.jpg",
       "genre": "Nieuwsbulletin",
@@ -320,8 +343,8 @@
       "id": "219277192",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-09T00:55:00.000Z",
-      "end": "2026-09-09T01:15:00.000Z",
+      "start": "2026-09-09T01:00:00.000Z",
+      "end": "2026-09-09T01:20:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
       "genre": "Nieuwsbulletin",
@@ -343,7 +366,7 @@
       "id": "219277202",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-09T01:15:00.000Z",
+      "start": "2026-09-09T01:20:00.000Z",
       "end": "2026-09-09T03:50:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
@@ -677,7 +700,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-09T07:00:00.000Z",
-      "end": "2026-09-09T07:15:00.000Z",
+      "end": "2026-09-09T07:10:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
       "genre": "Nieuwsbulletin",
@@ -699,7 +722,7 @@
       "id": "219339032",
       "channelId": "npo1",
       "title": "Goedemorgen Nederland",
-      "start": "2026-09-09T07:15:00.000Z",
+      "start": "2026-09-09T07:10:00.000Z",
       "end": "2026-09-09T07:30:00.000Z",
       "description": "Ochtendshow. Actualiteit met een focus op politiek, economie, veiligheid en de Nederlandse identiteit. Met actuele reportages, verslaggevers in het land en drie gasten.",
       "imageUrl": "https://tvgidsassets.nl/upload/g/goedemorgen-nederland-765722462.jpg",
@@ -907,7 +930,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-09T10:00:00.000Z",
-      "end": "2026-09-09T10:20:00.000Z",
+      "end": "2026-09-09T10:10:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
       "genre": "Nieuwsbulletin",
@@ -926,80 +949,34 @@
       }
     },
     {
-      "id": "219339152",
+      "id": "220397832",
       "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T10:20:00.000Z",
-      "end": "2026-09-09T10:30:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
+      "title": "NOS Uitvaart koning Harald",
+      "start": "2026-09-09T10:10:00.000Z",
+      "end": "2026-09-09T12:25:00.000Z",
+      "description": "Koning Harald overleed op 28 augustus op 89-jarige leeftijd in het ziekenhuis van Oslo. De ceremonie zal plaatsvinden volgens de uitvaartliturgie van de Noorse Kerk. Er zijn dan ook belangrijke rollen weggelegd voor de president van de Noorse Kerk en de bisschop van Oslo. De banden tussen het Nederlandse en Noorse koningshuis zijn nauw. Daarom zullen koning Willem-Alexander, koningin Máxima, prinses Beatrix en prinses Amalia bij de plechtigheden aanwezig zijn. Koning Harald overleed op 28 augustus op 89-jarige leeftijd in het ziekenhuis van Oslo. Hij was het oudste staatshoofd van Europa en in eigen land bijzonder geliefd, getuige ook de bloemenzee die al snel ontstond bij het koninklijk paleis in Oslo.",
+      "imageUrl": null,
+      "genre": "Actualiteiten",
       "isLive": false,
-      "isRerun": true,
+      "isRerun": false,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "_zHhXuRbQ0S_sqBvjms01A",
-        "assetId": "FF3BD1EC2EA816BAD2B977DCA30E3912",
+        "contentItemId": "X1dnxraUukCR4tLfmijhKQ",
+        "assetId": "7E8248A323D3CB1512024664E4C5416E",
         "channelId": "npo1",
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
     },
     {
-      "id": "219339162",
+      "id": "219339012",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-09T10:30:00.000Z",
-      "end": "2026-09-09T10:40:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "_zHhXuRbQ0S_sqBvjms01A",
-        "assetId": "F7A1FE8EE6A60B635AD51E293F3C8555",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339172",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T10:40:00.000Z",
-      "end": "2026-09-09T11:00:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "_zHhXuRbQ0S_sqBvjms01A",
-        "assetId": "324C5FAB3E94061D0376BDB28F2F3279",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219338972",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T11:00:00.000Z",
-      "end": "2026-09-09T11:25:00.000Z",
+      "start": "2026-09-09T12:25:00.000Z",
+      "end": "2026-09-09T12:35:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
       "genre": "Nieuwsbulletin",
@@ -1010,8 +987,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "1EaRSangeU2TJPsPCXIPVQ",
-        "assetId": "001EC4F8BB71BF62341E82A52A91A678",
+        "contentItemId": "kvsQBSpRhECYC5TQfI0jJQ",
+        "assetId": "603E800300E66D8DE5294298BE240111",
         "channelId": "npo1",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -1021,8 +998,8 @@
       "id": "219339062",
       "channelId": "npo1",
       "title": "Kook mee met MAX",
-      "start": "2026-09-09T11:25:00.000Z",
-      "end": "2026-09-09T11:35:00.000Z",
+      "start": "2026-09-09T12:35:00.000Z",
+      "end": "2026-09-09T13:00:00.000Z",
       "description": "Wat eet ik vanavond? Topkoks Sandra Ysbrandy en Mounir Toub geven antwoord op die ene moeilijke vraag. Ze nemen de kijker aan de hand mee bij het maken van makkelijke en verrassende gerechten. De recepten blinken uit in eenvoud en diversiteit en er zijn geen ingewikkelde apparaten voor nodig.",
       "imageUrl": "https://tvgidsassets.nl/upload/k/kook-mee-met-max-762639312.jpg",
       "genre": "Kookprogramma",
@@ -1035,121 +1012,6 @@
         "kind": "replay",
         "contentItemId": "9L8blfF0UkyWiJ2kXbmxPg",
         "assetId": "F7BDA15C1EF372469E6C2427F35E7B92",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339182",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T11:35:00.000Z",
-      "end": "2026-09-09T12:00:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "1EaRSangeU2TJPsPCXIPVQ",
-        "assetId": "87C253B2C8255003A857EAAC0325CF98",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339012",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T12:00:00.000Z",
-      "end": "2026-09-09T12:20:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kvsQBSpRhECYC5TQfI0jJQ",
-        "assetId": "A9F1797D113B0FBB70019FB115821291",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339192",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T12:20:00.000Z",
-      "end": "2026-09-09T12:30:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kvsQBSpRhECYC5TQfI0jJQ",
-        "assetId": "174FFA062FC8F9852D1F969E601FF5E0",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339202",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T12:30:00.000Z",
-      "end": "2026-09-09T12:40:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kvsQBSpRhECYC5TQfI0jJQ",
-        "assetId": "DCC917F94E9A8DBF9C02121415B95E54",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219339212",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-09T12:40:00.000Z",
-      "end": "2026-09-09T13:00:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762606832.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "kvsQBSpRhECYC5TQfI0jJQ",
-        "assetId": "9A2756257D65E0B1C1529DC3EC78F91A",
         "channelId": "npo1",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -1930,14 +1792,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "E5-_zC5uSEuIPWb0fRLFZw",
-        "assetId": "54A4CD7FC0CF65784BDF62C361EE977B",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219339762",
@@ -1999,14 +1854,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "P0CrdIr7gUeB3bV0uR1Q3Q",
-        "assetId": "74E4A7EF20415BAF51423A7A6E667FF0",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219339492",
@@ -2022,14 +1870,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "r2lmlAfR_0Cq6BNAKddyhQ",
-        "assetId": "8E3DAC97D2BAECC817E8142E4A58F175",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219599572",
@@ -2045,14 +1886,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "WhpG2YptC06Jr9hvsNoGng",
-        "assetId": "B836FF4B171995FC602DD96AC9860F28",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "220206712",
@@ -2068,14 +1902,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "J3K4paXOD0SIqZZZYN1Y2A",
-        "assetId": "74B23256354DAC6E59A88F43509EA56F",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219339592",
@@ -4254,7 +4081,7 @@
       "channelId": "npo3",
       "title": "Stip it: de pestpodcast",
       "start": "2026-09-09T14:45:00.000Z",
-      "end": "2026-09-09T15:30:00.000Z",
+      "end": "2026-09-09T15:05:00.000Z",
       "description": "Anne-Mar Zwart praat met bekende en populaire mensen die in hun jeugd allemaal zijn gepest. Ze vertellen hoe het begon, hoe erg het was en op welke manier ze daarmee omgingen. Elke keer komt een ander thema aan bod en sommige van de gasten hebben hier nog nooit eerder in de media over gepraat.",
       "imageUrl": null,
       "genre": "Praatprogramma",
@@ -4267,6 +4094,29 @@
         "kind": "replay",
         "contentItemId": "SD85MR_cKUaFVCVLz261HQ",
         "assetId": "E8E3E61328B2CA051984044ADD297011",
+        "channelId": "npo3",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
+    },
+    {
+      "id": "220380442",
+      "channelId": "npo3",
+      "title": "The Lady Grace mysteries",
+      "start": "2026-09-09T15:05:00.000Z",
+      "end": "2026-09-09T15:30:00.000Z",
+      "description": "Een tienerdetective werkt als spion voor koningin Elizabeth I en navigeert door koninklijke politiek, complotten, bedreigingen en mysteries aan het Engelse hof tijdens het Elizabethaanse tijdperk.",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/the-lady-grace-mysteries-769349212.jpg",
+      "genre": "Jeugdserie",
+      "isLive": false,
+      "isRerun": false,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "EcjqbHB2LEijsAcZIXpMOw",
+        "assetId": "279A1D6E4ED7C88554D9CECA3B24F764",
         "channelId": "npo3",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -5498,7 +5348,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "yQT3T52PrU6YA4VvWyMd6A",
+        "assetId": "C5FA468CF49EE0C1E0F72A2AF2841D7D",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219336922",
@@ -6035,8 +5892,8 @@
       "id": "219275322",
       "channelId": "sbs6",
       "title": "De bondgenoten",
-      "start": "2026-09-08T21:55:00.000Z",
-      "end": "2026-09-08T22:55:00.000Z",
+      "start": "2026-09-08T21:56:00.000Z",
+      "end": "2026-09-08T22:51:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -6051,8 +5908,8 @@
       "id": "219275412",
       "channelId": "sbs6",
       "title": "Shownieuws",
-      "start": "2026-09-08T22:55:00.000Z",
-      "end": "2026-09-08T23:40:00.000Z",
+      "start": "2026-09-08T22:51:00.000Z",
+      "end": "2026-09-08T23:37:00.000Z",
       "description": "Het laatste nieuws uit de wereld van showbizz en entertainment.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/shownieuws-759939342.jpg",
       "genre": "Amusement",
@@ -6074,7 +5931,7 @@
       "id": "219275402",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T23:40:00.000Z",
+      "start": "2026-09-08T23:37:00.000Z",
       "end": "2026-09-09T04:00:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -6103,7 +5960,7 @@
       "nlziet": null
     },
     {
-      "id": "219337642",
+      "id": "219337592",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T04:30:00.000Z",
@@ -6118,7 +5975,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "w16jlN_A-UmamGrvxXeUyw",
+        "contentItemId": "QBrvXgiY00mhPtzYMxL17w",
         "assetId": "794ACE0EDB6A5D6D06D037169EC96A3E",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6126,7 +5983,7 @@
       }
     },
     {
-      "id": "219337632",
+      "id": "219337582",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T04:45:00.000Z",
@@ -6141,7 +5998,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "szh1EuTjF0OjMjM8pA2LTA",
+        "contentItemId": "52l_zFzf9kexWsCSFJvJuQ",
         "assetId": "E32117BCF4827A7994D8FFDCCBEDC9E2",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6149,7 +6006,7 @@
       }
     },
     {
-      "id": "219337622",
+      "id": "219337572",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T05:00:00.000Z",
@@ -6164,7 +6021,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "JGBmziWoM0GjJXVoftzAWA",
+        "contentItemId": "ZZ8qrwuvG0yG3mmSNbzaTQ",
         "assetId": "30DDADE4F13405F75A7C7772D36B9E1E",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6172,7 +6029,7 @@
       }
     },
     {
-      "id": "219337612",
+      "id": "219337562",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T05:15:00.000Z",
@@ -6195,7 +6052,7 @@
       }
     },
     {
-      "id": "219337602",
+      "id": "219337552",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T05:30:00.000Z",
@@ -6210,7 +6067,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "Z4Zx__rTb0-Od4MFBHgTvA",
+        "contentItemId": "84COpAH2LEGV75EpqyMqTw",
         "assetId": "71F413D1D8FEB84FADCB764E048991B7",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6218,7 +6075,7 @@
       }
     },
     {
-      "id": "219337592",
+      "id": "219337542",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T05:45:00.000Z",
@@ -6233,7 +6090,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "UhwSVXShsECNtQdCaxW3Fw",
+        "contentItemId": "w16jlN_A-UmamGrvxXeUyw",
         "assetId": "BE01AA0126A0DC25904A0C22E782C36E",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6241,7 +6098,7 @@
       }
     },
     {
-      "id": "219337582",
+      "id": "219337532",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T06:00:00.000Z",
@@ -6256,7 +6113,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "52l_zFzf9kexWsCSFJvJuQ",
+        "contentItemId": "q8DHkKIcyUS3gvHI8mKVDA",
         "assetId": "4DBBD48B7C5129CF19CAE2A745A2E803",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6264,7 +6121,7 @@
       }
     },
     {
-      "id": "219337572",
+      "id": "219337522",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T06:15:00.000Z",
@@ -6279,7 +6136,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "ZZ8qrwuvG0yG3mmSNbzaTQ",
+        "contentItemId": "UH_wCgnh-kuVO6UWpQT-0A",
         "assetId": "2EE175617987135F9760E1D508D6E8C7",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6287,7 +6144,7 @@
       }
     },
     {
-      "id": "219337562",
+      "id": "219337512",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T06:30:00.000Z",
@@ -6302,7 +6159,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "O3HnmJpoVUW5FLVnY6XCow",
+        "contentItemId": "Zm1ZURkFikuNjjXV0UH6SA",
         "assetId": "7B95D67875E0E67948EC1630440EAAA4",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6310,7 +6167,7 @@
       }
     },
     {
-      "id": "219337552",
+      "id": "219337502",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T06:45:00.000Z",
@@ -6325,7 +6182,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "84COpAH2LEGV75EpqyMqTw",
+        "contentItemId": "BNO-lcDuxEOlxhGPOOduag",
         "assetId": "614B9182BD7E9B8F56EF5E0883D463E9",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6333,7 +6190,7 @@
       }
     },
     {
-      "id": "219337542",
+      "id": "219337492",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T07:00:00.000Z",
@@ -6348,7 +6205,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "QBrvXgiY00mhPtzYMxL17w",
+        "contentItemId": "SkvyDBm3d0y1BzMdN1Qzaw",
         "assetId": "A19CA5B83F93BA233F2325EC73D50C9E",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6356,36 +6213,29 @@
       }
     },
     {
-      "id": "219337532",
+      "id": "220395032",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T07:15:00.000Z",
       "end": "2026-09-09T07:30:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "q8DHkKIcyUS3gvHI8mKVDA",
-        "assetId": "0962E3FA5358A6BD443DA8BB2A407E98",
-        "channelId": "sbs6",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
-      "id": "219337522",
+      "id": "220395022",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T07:30:00.000Z",
       "end": "2026-09-09T07:45:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
       "isLive": false,
       "isRerun": false,
@@ -6394,7 +6244,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "UH_wCgnh-kuVO6UWpQT-0A",
+        "contentItemId": "JGBmziWoM0GjJXVoftzAWA",
         "assetId": "7F356795EB78E7E1B1AB3B6589199E70",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6402,13 +6252,13 @@
       }
     },
     {
-      "id": "219337512",
+      "id": "220395012",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T07:45:00.000Z",
       "end": "2026-09-09T07:55:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
       "isLive": false,
       "isRerun": false,
@@ -6417,7 +6267,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "Zm1ZURkFikuNjjXV0UH6SA",
+        "contentItemId": "O3HnmJpoVUW5FLVnY6XCow",
         "assetId": "E8A0332061203B5323EDFA9B397CE315",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6425,13 +6275,13 @@
       }
     },
     {
-      "id": "219337502",
+      "id": "220395002",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T07:55:00.000Z",
       "end": "2026-09-09T08:10:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
       "isLive": false,
       "isRerun": false,
@@ -6440,7 +6290,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "BNO-lcDuxEOlxhGPOOduag",
+        "contentItemId": "Z4Zx__rTb0-Od4MFBHgTvA",
         "assetId": "0028B7EEE9B72D90C0668FFC19CB0A24",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -6448,13 +6298,13 @@
       }
     },
     {
-      "id": "219337492",
+      "id": "220394992",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-09T08:10:00.000Z",
       "end": "2026-09-09T08:25:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
       "isLive": false,
       "isRerun": false,
@@ -6463,7 +6313,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "SkvyDBm3d0y1BzMdN1Qzaw",
+        "contentItemId": "UhwSVXShsECNtQdCaxW3Fw",
         "assetId": "E9D8F396DDA68D8AB173A447A7F4DBF0",
         "channelId": "sbs6",
         "isReplayAllowed": true,
@@ -7414,8 +7264,8 @@
       "id": "219274072",
       "channelId": "veronica",
       "title": "The Maze Runner",
-      "start": "2026-09-08T21:00:00.000Z",
-      "end": "2026-09-08T23:10:00.000Z",
+      "start": "2026-09-08T21:01:00.000Z",
+      "end": "2026-09-08T23:12:00.000Z",
       "description": "De jonge Thomas, die geen herinneringen heeft, komt in een groep van zestig jonge mannen terecht. Ze zijn gevangen in een geheimzinnig doolhof waarin het gevaar overal op de loer ligt. Niemand weet hoe en waarom ze daar terecht zijn gekomen en of ze kunnen vluchten. Hierdoor ontstaan er al snel spanningen. Als het eerste meisje Teresa opduikt, verandert de stemming.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-maze-runner-761907082.jpg",
       "genre": "Actie",
@@ -7430,7 +7280,7 @@
       "id": "219274012",
       "channelId": "veronica",
       "title": "Kevin Hart's muscle car crew",
-      "start": "2026-09-08T23:10:00.000Z",
+      "start": "2026-09-08T23:12:00.000Z",
       "end": "2026-09-08T23:55:00.000Z",
       "description": "Komiek Kevin Hart en zijn comedy crew The Plastic Cup Boyz duiken de wereld in van de klassieke auto’s en geven daar hun grappige kijk op. De groep vrienden hebben elk een klassieke auto en om elkaar wat vaker te zien, besluiten ze een autoclub voor muscle cars op te richten waarmee ze langs beurzen en wedstijden gaan.",
       "imageUrl": "https://tvgidsassets.nl/upload/k/kevin-hart-s-muscle-car-crew-759186632.jpg",
@@ -7450,13 +7300,13 @@
       }
     },
     {
-      "id": "219618162",
+      "id": "220395112",
       "channelId": "veronica",
       "title": "Veronica film",
       "start": "2026-09-08T23:55:00.000Z",
-      "end": "2026-09-09T00:20:00.000Z",
+      "end": "2026-09-09T00:18:00.000Z",
       "description": "Filmmagazine over alle films op Veronica.",
-      "imageUrl": "https://tvgidsassets.nl/upload/v/veronica-film-766647202.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/v/veronica-film-769578602.jpg",
       "genre": "Kunst en cultuur",
       "isLive": false,
       "isRerun": false,
@@ -7476,8 +7326,8 @@
       "id": "219273802",
       "channelId": "veronica",
       "title": "Hart van Nederland",
-      "start": "2026-09-09T00:20:00.000Z",
-      "end": "2026-09-09T00:39:00.000Z",
+      "start": "2026-09-09T00:18:00.000Z",
+      "end": "2026-09-09T00:37:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -7492,7 +7342,7 @@
       "id": "219273732",
       "channelId": "veronica",
       "title": "Pause",
-      "start": "2026-09-09T00:39:00.000Z",
+      "start": "2026-09-09T00:37:00.000Z",
       "end": "2026-09-09T02:00:00.000Z",
       "description": null,
       "imageUrl": null,
@@ -8888,8 +8738,8 @@
       "id": "219274812",
       "channelId": "net5",
       "title": "True crime today",
-      "start": "2026-09-08T21:35:00.000Z",
-      "end": "2026-09-08T22:05:00.000Z",
+      "start": "2026-09-08T21:37:00.000Z",
+      "end": "2026-09-08T22:07:00.000Z",
       "description": "Kirsten Westrik en Nochtli Peralta Alvarez bespreken misdaad die mensen direct raakt. Niet de wereld van de georganiseerde criminaliteit, maar zaken waarin de persoonlijke verhalen van slachtoffers, betrokkenen en nabestaanden centraal staan. Van actuele Nederlandse misdaadzaken tot opvallende internationale cases en verhalen die nog lang onderwerp van gesprek blijven.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/true-crime-today-762263232.jpg",
       "genre": "Praatprogramma",
@@ -8904,8 +8754,8 @@
       "id": "219274822",
       "channelId": "net5",
       "title": "Buzz",
-      "start": "2026-09-08T22:05:00.000Z",
-      "end": "2026-09-08T22:40:00.000Z",
+      "start": "2026-09-08T22:07:00.000Z",
+      "end": "2026-09-08T22:42:00.000Z",
       "description": "Iris Enthoven en Wiesje Hillen bespreken samen met een vast panel de gesprekken van de dag. Samen zorgen ze voor discussies, verrassende inzichten en een energieke dynamiek die doet denken aan een hechte vriendengroep: eerlijk, ongefilterd en met een dosis humor.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/buzz-761478342.jpg",
       "genre": "Amusement",
@@ -8927,8 +8777,8 @@
       "id": "219274832",
       "channelId": "net5",
       "title": "House rules Australië",
-      "start": "2026-09-08T22:40:00.000Z",
-      "end": "2026-09-08T23:40:00.000Z",
+      "start": "2026-09-08T22:42:00.000Z",
+      "end": "2026-09-08T23:43:00.000Z",
       "description": "Zes Australische teams storten zich in het renovatieavontuur van hun leven. Ze overhandigen de sleutels van hun eigen woning aan hun tegenstanders en reizen het land rond om elkaars interieur een opfrisbeurt te geven. Maar zullen hun tegenstanders rekening houden met de smaak van de eigenaars?",
       "imageUrl": "https://tvgidsassets.nl/upload/h/house-rules-australie-759590382.jpg",
       "genre": "Realityserie",
@@ -8950,7 +8800,7 @@
       "id": "219274712",
       "channelId": "net5",
       "title": "Loop: Hart van Nederland",
-      "start": "2026-09-08T23:40:00.000Z",
+      "start": "2026-09-08T23:43:00.000Z",
       "end": "2026-09-09T04:00:00.000Z",
       "description": "Toegankelijk nieuwsprogramma over het gesprek van de dag.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/loop-hart-van-nederland-760331182.jpg",
@@ -9066,7 +8916,7 @@
       "channelId": "net5",
       "title": "Telvero",
       "start": "2026-09-09T11:20:00.000Z",
-      "end": "2026-09-09T11:50:00.000Z",
+      "end": "2026-09-09T11:45:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
       "genre": "Consumentenprogramma",
@@ -9088,7 +8938,7 @@
       "id": "219336702",
       "channelId": "net5",
       "title": "Flo",
-      "start": "2026-09-09T11:50:00.000Z",
+      "start": "2026-09-09T11:45:00.000Z",
       "end": "2026-09-09T12:20:00.000Z",
       "description": "De charmante maar onzekere Flo werkt in het wellness- en fitnessimperium van haar moeder, waar een slanke lijn heilig is. Zelf voldoet ze niet aan dat klassieke schoonheidsbeeld. Wanneer haar verloofde haar verlaat en ze een nachtclub erft, staat haar leven volledig op zijn kop.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/flo-762219262.jpg",
@@ -9101,7 +8951,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "gjt7e4vHYU2fU6SlsIFqHA",
-        "assetId": "8C1556F16B371AC84C34D13FB00D1A81",
+        "assetId": "E77BC67F092C37EA96E3DE42872ECDAC",
         "channelId": "net5",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -9583,7 +9433,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "Gwgq-y_oKEKLUQ3GdKrvpA",
+        "assetId": "11BD87AD86A37E2CA6307DF9B5B8B82B",
+        "channelId": "rtl8",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219338182",
@@ -11339,8 +11196,8 @@
       "id": "219275972",
       "channelId": "sbs9",
       "title": "Vandaag inside",
-      "start": "2026-09-08T21:15:00.000Z",
-      "end": "2026-09-08T22:10:00.000Z",
+      "start": "2026-09-08T21:19:00.000Z",
+      "end": "2026-09-08T22:15:00.000Z",
       "description": "In 'Vandaag inside' geven Wilfred Genee, Johan Derksen en René van der Gijp hun kijk op het nieuws en de actualiteit. Met een wisselende terugkerende gast bespreekt het trio zaken die Nederland die dag bezighoudt.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vandaag-inside-761480142.jpg",
       "genre": "Talkshow",
@@ -11355,8 +11212,8 @@
       "id": "219276072",
       "channelId": "sbs9",
       "title": "Numb3rs",
-      "start": "2026-09-08T22:10:00.000Z",
-      "end": "2026-09-08T23:00:00.000Z",
+      "start": "2026-09-08T22:15:00.000Z",
+      "end": "2026-09-08T23:02:00.000Z",
       "description": "Special Agent Don Eppes van de FBI en zijn team hebben hun eigen methode om lastige zaken op te lossen. Dons broer Charlie is een briljante wiskundige en hij gebruikt deze kennis om de meest sluwe criminelen op te sporen.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/numb3rs-761913982.jpg",
       "genre": "Misdaadserie",
@@ -11378,10 +11235,10 @@
       "id": "219276012",
       "channelId": "sbs9",
       "title": "Telvero",
-      "start": "2026-09-08T23:00:00.000Z",
-      "end": "2026-09-09T01:30:00.000Z",
+      "start": "2026-09-08T23:02:00.000Z",
+      "end": "2026-09-09T01:32:00.000Z",
       "description": "Homeshopping.",
-      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
       "genre": "Consumentenprogramma",
       "isLive": false,
       "isRerun": false,
@@ -11391,7 +11248,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "vdQ9nyZRiUWP_pf61XvI_g",
-        "assetId": "D35752A28BD0F116890B6B789C3E55E7",
+        "assetId": "43DA3A6B3F2152AD27F335C2FFFF9E0A",
         "channelId": "sbs9",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -11401,7 +11258,7 @@
       "id": "219276002",
       "channelId": "sbs9",
       "title": "Hart van Nederland",
-      "start": "2026-09-09T01:30:00.000Z",
+      "start": "2026-09-09T01:32:00.000Z",
       "end": "2026-09-09T04:00:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -13855,7 +13712,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "eHhVKcL750iOG7Xq13NJPw",
+        "assetId": "308A3FE9F2EB956BF47F24894FBE2392",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219804102",
@@ -13873,7 +13737,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "GDxusc6gZUmpGVZE-Cc-Fw",
+        "contentItemId": "Rbz6zrU0JE6ZVNqWwcrNng",
         "assetId": "45EB56A90683E476BDA7036A21E79AE4",
         "channelId": "bbctwo",
         "isReplayAllowed": false,

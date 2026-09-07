@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-10T22:00:00Z",
   "to": "2026-09-11T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -493,7 +493,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-11T05:00:00.000Z",
-      "end": "2026-09-11T05:10:00.000Z",
+      "end": "2026-09-11T05:15:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
       "genre": "Nieuwsbulletin",
@@ -515,7 +515,7 @@
       "id": "219474382",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-11T05:10:00.000Z",
+      "start": "2026-09-11T05:15:00.000Z",
       "end": "2026-09-11T05:30:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
@@ -907,7 +907,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-11T10:00:00.000Z",
-      "end": "2026-09-11T10:15:00.000Z",
+      "end": "2026-09-11T10:20:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
       "genre": "Nieuwsbulletin",
@@ -929,7 +929,7 @@
       "id": "219474422",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-11T10:15:00.000Z",
+      "start": "2026-09-11T10:20:00.000Z",
       "end": "2026-09-11T10:30:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
@@ -999,7 +999,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-11T11:00:00.000Z",
-      "end": "2026-09-11T11:10:00.000Z",
+      "end": "2026-09-11T11:20:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
       "genre": "Nieuwsbulletin",
@@ -1016,22 +1016,6 @@
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
-    },
-    {
-      "id": "219474152",
-      "channelId": "npo1",
-      "title": "Sportjournaal",
-      "start": "2026-09-11T11:10:00.000Z",
-      "end": "2026-09-11T11:20:00.000Z",
-      "description": "Aandacht voor het laatste sportnieuws.",
-      "imageUrl": "https://tvgidsassets.nl/upload/s/sportjournaal-759211682.jpg",
-      "genre": "Sportnieuws",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
     },
     {
       "id": "219474322",
@@ -1185,7 +1169,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "vQEMfwarA0Cuwt-KcSnNFg",
+        "assetId": "3033AABF833FC9439A3832CAC43BFB8E",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "220218322",
@@ -1201,7 +1192,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "vQEMfwarA0Cuwt-KcSnNFg",
+        "assetId": "3033AABF833FC9439A3832CAC43BFB8E",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219474132",
@@ -2107,7 +2105,7 @@
       "channelId": "npo2",
       "title": "Politieke partijen",
       "start": "2026-09-11T14:55:00.000Z",
-      "end": "2026-09-11T15:05:00.000Z",
+      "end": "2026-09-11T15:00:00.000Z",
       "description": "Zendtijd voor politieke partijen in Nederland.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/politieke-partijen-768302302.jpg",
       "genre": "Politiek programma",
@@ -2116,20 +2114,13 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "8fQ-su1QZkCgWpVd_gdAyQ",
-        "assetId": "82BCEBB89C61DC6351A76B28AED6B6D9",
-        "channelId": "npo2",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219475042",
       "channelId": "npo2",
       "title": "Seven worlds, one planet",
-      "start": "2026-09-11T15:05:00.000Z",
+      "start": "2026-09-11T15:00:00.000Z",
       "end": "2026-09-11T16:00:00.000Z",
       "description": "Miljoenen jaren geleden scheurde de landmassa uiteen en werden er zeven verschillende continenten gevormd, met allemaal hun eigen klimaat, landschappen en flora en fauna. Maar hoe verschillend zijn deze continenten? Hoe heeft deze afscheiding invloed gehad op de flora en fauna aldaar? Een adembenemende reis langs alle continenten.",
       "imageUrl": null,
@@ -2261,7 +2252,7 @@
       "channelId": "npo2",
       "title": "2 voor 12",
       "start": "2026-09-11T18:25:00.000Z",
-      "end": "2026-09-11T19:05:00.000Z",
+      "end": "2026-09-11T19:10:00.000Z",
       "description": "Kennisquiz onder leiding van Astrid Joosten, waarin twee duo's het tegen elkaar opnemen in twaalf vragen. Wie heeft de meeste vragen goed en raadt het woord?",
       "imageUrl": "https://tvgidsassets.nl/upload/2/2-voor-12-763547002.jpg",
       "genre": "Quiz",
@@ -2283,7 +2274,7 @@
       "id": "219474962",
       "channelId": "npo2",
       "title": "Café Kockelmann",
-      "start": "2026-09-11T19:05:00.000Z",
+      "start": "2026-09-11T19:10:00.000Z",
       "end": "2026-09-11T20:00:00.000Z",
       "description": "Haagse hoofdrolspelers en smaakmakers schuiven aan om terug- en vooruit te blikken op de debatten, nieuws uit de wandelgangen en verhaallijnen van de Nederlandse politiek. Sven Kockelmann bespreekt de laatste ontwikkelingen in politiek Den Haag en ondervraagt politici.",
       "imageUrl": "https://tvgidsassets.nl/upload/c/cafe-kockelmann-763150402.jpg",
@@ -4210,7 +4201,7 @@
       "channelId": "npo3",
       "title": "Kinderen voor Kinderen - Spot aan",
       "start": "2026-09-11T15:05:00.000Z",
-      "end": "2026-09-11T15:35:00.000Z",
+      "end": "2026-09-11T15:10:00.000Z",
       "description": null,
       "imageUrl": "https://tvgidsassets.nl/upload/k/kinderen-voor-kinderen-spot-aan-768506382.jpg",
       "genre": "Kinderprogramma",
@@ -4223,6 +4214,29 @@
         "kind": "replay",
         "contentItemId": "D9fGJbRWp06Zs0VPvmviyg",
         "assetId": "CD9F1243442B8C8377EA69DFC35ED4FB",
+        "channelId": "npo3",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
+    },
+    {
+      "id": "220380262",
+      "channelId": "npo3",
+      "title": "The Lady Grace mysteries",
+      "start": "2026-09-11T15:10:00.000Z",
+      "end": "2026-09-11T15:35:00.000Z",
+      "description": "Een tienerdetective werkt als spion voor koningin Elizabeth I en navigeert door koninklijke politiek, complotten, bedreigingen en mysteries aan het Engelse hof tijdens het Elizabethaanse tijdperk.",
+      "imageUrl": "https://tvgidsassets.nl/upload/t/the-lady-grace-mysteries-769513752.jpg",
+      "genre": "Jeugdserie",
+      "isLive": false,
+      "isRerun": false,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "h5CIemB0pUKVyMUbUqk5zw",
+        "assetId": "F88BFE073B6C35FFDB8F31E7B427C1FE",
         "channelId": "npo3",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -14521,7 +14535,7 @@
       "channelId": "npo1extra",
       "title": "NOS Radio 1 Journaal",
       "start": "2026-09-11T14:00:00.000Z",
-      "end": "2026-09-11T15:00:00.000Z",
+      "end": "2026-09-11T16:00:00.000Z",
       "description": "Elke ochtend tussen 06:00 en 09:30 uur: het NOS Radio 1 Journaal. In de uitzendingen komen het laatste nieuws, achtergronden, reacties, analyses en sport aan bod.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-radio-1-journaal-762963122.jpg",
       "genre": "Programma",
@@ -14533,21 +14547,21 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "WXMtoWIOv0iRMNj6OL5mkQ",
-        "assetId": "9B83BA795241449226BABE19C4280778",
+        "assetId": "8CA961EC3B417E2B6C87FE0A3019126A",
         "channelId": "npo1extra",
         "isReplayAllowed": true,
         "isRestartAllowed": true
       }
     },
     {
-      "id": "219976742",
+      "id": "220376982",
       "channelId": "npo1extra",
-      "title": "NOS Herdenking 11 september",
-      "start": "2026-09-11T15:00:00.000Z",
+      "title": "Dit is de dag",
+      "start": "2026-09-11T16:00:00.000Z",
       "end": "2026-09-11T17:00:00.000Z",
-      "description": null,
-      "imageUrl": null,
-      "genre": "Actualiteiten",
+      "description": "Dit is de Dag is een stevig opiniërend programma van de EO. Hier hoor je iedere werkdag hét debat van de dag met zoveel mogelijk verschillende stemmen en perspectieven. Na de discussie van de dag interviewt Margje Fikse of Jan-Willem Wesselink een belangrijke of interessante nieuwsgast.",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/dit-is-de-dag-769497052.jpg",
+      "genre": "Nieuws/actualiteiten",
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
@@ -14555,8 +14569,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "z40jmWB0V06qi9NYpStshA",
-        "assetId": "D5A6AFDAEDD0D819DFD4D94B0D1E7425",
+        "contentItemId": "ACLEQ6erJE-Txl8iiVr-Bw",
+        "assetId": "CCECB631275AD0E0E64D5D1EFE237B72",
         "channelId": "npo1extra",
         "isReplayAllowed": true,
         "isRestartAllowed": true

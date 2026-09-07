@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-16T22:00:00Z",
   "to": "2026-09-17T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -7542,8 +7542,8 @@
       "title": "De wereld van...",
       "start": "2026-09-17T08:30:00.000Z",
       "end": "2026-09-17T09:00:00.000Z",
-      "description": "Een kijkje achter de schermen bij diverse onderwerpen. Met onder andere: hockey, barbecue, kickboksen, extreme sports, wijn, hardlopen en darten. Verschillende betrokkenen komen aan het woord.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/de-wereld-van-764903702.jpg",
+      "description": "Informatief programma waarin energiespecialist Peter Desmet de wereld over reist op zoek naar oplossingen voor de energietransitie. Van baanbrekende innovaties in Shanghai tot technologische doorbraken in München: overal ontdekt hij hoe slimme opslag en nieuwe vormen van zonne-energie de toekomst veranderen. En wat betekenen die ontwikkelingen voor Nederland?",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/de-wereld-van-769333222.jpg",
       "genre": "Reportage",
       "isLive": false,
       "isRerun": true,

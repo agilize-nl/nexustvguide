@@ -134,10 +134,10 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
 
     override fun onMenuButtonClicked(anchor: View) {
         val menuItems = arrayOf(
-            getString(R.string.menu_item_channel_order),
             getString(R.string.menu_item_check_updates),
-            getString(R.string.menu_item_about),
-            getString(R.string.menu_item_guide_source)
+            getString(R.string.menu_item_channel_order),
+            getString(R.string.menu_item_guide_source),
+            getString(R.string.menu_item_about)
         )
 
         var navigated = false
@@ -147,20 +147,14 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
             .setItems(menuItems) { _, which ->
                 when (which) {
                     0 -> {
+                        updateViewModel.checkForUpdates(isManual = true)
+                    }
+                    1 -> {
                         navigated = true
                         (activity as? MainActivity)?.showChannelOrder(currentDate)
                     }
-                    1 -> {
-                        if (GuideRepositoryProvider.getGuideSource(requireContext()) == "LOCAL") {
-                            AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
-                                .setMessage(R.string.local_updates_require_server)
-                                .setPositiveButton(R.string.update_btn_ok, null).show()
-                        } else updateViewModel.checkForUpdates(isManual = true)
-                    }
-                    2 -> {
-                        showAboutDialog(anchor)
-                    }
-                    3 -> showGuideSourceDialog(anchor)
+                    2 -> showGuideSourceDialog(anchor)
+                    3 -> showAboutDialog(anchor)
                 }
             }
             .setOnDismissListener {
@@ -186,7 +180,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     }
 
     private fun showAboutDialog(anchor: View) {
-        AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
+        val dialog = AlertDialog.Builder(requireContext(), R.style.Theme_NexusTVGuide_Dialog)
             .setIcon(R.drawable.app_logo)
             .setTitle(R.string.about_dialog_title)
             .setMessage(getString(R.string.about_dialog_message, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE))
@@ -197,6 +191,8 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                 }
             }
             .show()
+
+        dialog.findViewById<TextView>(android.R.id.message)?.isFocusable = true
     }
 
     override fun requestingProgramGuideFor(localDate: LocalDate) {

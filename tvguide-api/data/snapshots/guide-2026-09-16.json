@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-15T22:00:00Z",
   "to": "2026-09-16T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -8855,7 +8855,7 @@
       "start": "2026-09-16T12:30:00.000Z",
       "end": "2026-09-16T12:50:00.000Z",
       "description": "Documentaireserie over de faculteit Diergeneeskunde in Merelbeke. Hier worden jaarlijks twintigduizend dieren behandeld in de stallen en klinieken. Bijna tweeduizend studenten volgen er de opleiding tot dierenarts.",
-      "imageUrl": null,
+      "imageUrl": "https://tvgidsassets.nl/upload/d/dierendokters-24-7-769616382.jpg",
       "genre": "Documentaireserie",
       "isLive": false,
       "isRerun": true,
@@ -9960,7 +9960,7 @@
       "end": "2026-09-15T22:40:00.000Z",
       "description": "Verslag en hoogtepunten van de T20-cricketwedstrijden.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/today-at-the-test-763173462.jpg",
-      "genre": "Rechtstreeks verslag/Verslag",
+      "genre": "Verslag",
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
@@ -11299,7 +11299,7 @@
     {
       "id": "219699612",
       "channelId": "npo2extra",
-      "title": "Expat Cinema: The Gullspång Miracle",
+      "title": "The Gullspång Miracle",
       "start": "2026-09-16T18:30:00.000Z",
       "end": "2026-09-16T20:15:00.000Z",
       "description": "Twee Noorse zussen, zeventigers Kari en May, kopen een huis in het Zweedse Gullspång. Als ze verkoopster Olaug ontmoeten, zijn ze met stomheid geslagen. Ze lijkt precies op hun in 1988 door zelfmoord overleden oudere zus. Ook hun geboortedatum is hetzelfde. De gelovige zussen kunnen dit niet anders zien dan als een wonder. Ze gaan terug in de familiegeschiedenis en vallen van de ene in de andere verbazing. De werkelijkheid is soms vreemder dan fictie en niets is wat het lijkt. Documentaire over de complexiteit van familiebanden, verlangen, verwachtingen en identiteit.",

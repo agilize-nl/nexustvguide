@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-11T22:00:00Z",
   "to": "2026-09-12T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -275,7 +275,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal met gebarentaal",
       "start": "2026-09-11T23:30:00.000Z",
-      "end": "2026-09-12T00:00:00.000Z",
+      "end": "2026-09-11T23:55:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763225072.jpg",
       "genre": "Nieuwsbulletin",
@@ -297,7 +297,7 @@
       "id": "219474482",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-12T00:00:00.000Z",
+      "start": "2026-09-11T23:55:00.000Z",
       "end": "2026-09-12T00:20:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
@@ -433,8 +433,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "H4EDS0vCWE6De6vwScVYJg",
-        "assetId": "0DCE51235F1C462E5A4FDD61B2FBDEED",
+        "contentItemId": "YbLXpYW7tUmOs_qK4Tvy3Q",
+        "assetId": "5BA1E1525851F634CD8BD1269DF9ABEE",
         "channelId": "npo1",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -861,14 +861,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "nrDRmodpBECZXU587Y2Mnw",
-        "assetId": "04D126FA120630975E00C07642B72715",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513732",
@@ -884,14 +877,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Rie4rOPgmEaEX0OdRBka4A",
-        "assetId": "5535243DBAC5F3299A82DBCE436F4335",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513822",
@@ -907,14 +893,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5v76DvoPs0mnA7ciiBhEhw",
-        "assetId": "ABC84E1D6B9A91CE44C0D6E20E27482E",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219474992",

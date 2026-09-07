@@ -34,9 +34,9 @@
     <string name="menu_title">Menu</string>
     <string name="menu_item_channel_order">Zenders ordenen</string>
     <string name="menu_item_check_updates">Zoeken naar updates</string>
-    <string name="menu_item_about">Over NexusTVGuide</string>
-    <string name="about_dialog_title">Over NexusTVGuide</string>
-    <string name="about_dialog_message">NexusTVGuide v%1$s (build %2$d)\nLive TV-gids voor Android TV met directe NLZIET-integratie.\n\nNLZIET-koppeling &amp; Beschikbaarheid:\nHet direct starten of terugkijken van programma\'s is afhankelijk van de beschikbaarheid en uitzendrechten binnen NLZIET. Hierdoor kan niet elk programma rechtstreeks via de gids worden geopend.\n\nHerkomst gegevens:\nProgrammagegevens worden automatisch verzameld uit externe, openbare bronnen. Tijden en inhoud zijn onder voorbehoud van wijzigingen door de omroepen.\n\nDisclaimer &amp; Aansprakelijkheid:\nHet gebruik van NexusTVGuide is op eigen risico. Het team en de makers zijn niet aansprakelijk voor eventuele onjuistheden, storingen of schade door het gebruik van deze app.\n\nNexusTVGuide is een onafhankelijk project en niet gelieerd aan NLZIET of zenders. Merknamen behoren toe aan hun eigenaren.</string>
+    <string name="menu_item_about">Over Nexus TV Gids</string>
+    <string name="about_dialog_title">Over Nexus TV Gids</string>
+    <string name="about_dialog_message">Nexus TV Gids v%1$s (build %2$d)\nLive TV-gids voor Android TV met directe NLZIET-integratie.\n\nHerkomst programmagegevens:\nDe programmagegevens en gidsinformatie worden automatisch opgehaald via de openbare bronnen van TVgids.nl (of via een eigen lokale gidsserver). Uitzendtijden, programma-informatie en afbeeldingen worden aangeleverd door de respectievelijke omroepen en televisiezenders. Programmering en uitzendtijden zijn te allen tijde onder voorbehoud van wijzigingen door de omroepen.\n\nAuteursrechten &amp; Copyright:\nAlle auteursrechten, merkrechten en beeldrechten op programma\'s, titels, beschrijvingen, afbeeldingen en zenderlogo\'s behoren toe aan de respectievelijke televisiezenders, omroepen en rechthebbenden (waaronder TVgids.nl / DPG Media). Deze gegevens worden uitsluitend ter identificatie en informatieve doeleinden getoond.\n\nNLZIET-koppeling &amp; Beschikbaarheid:\nHet direct starten of terugkijken van programma\'s is afhankelijk van de beschikbaarheid en uitzendrechten binnen NLZIET. Hierdoor kan niet elk programma rechtstreeks via de gids worden geopend.\n\nDisclaimer &amp; Aansprakelijkheid:\nNexus TV Gids is een onafhankelijk open-source hobbyproject en is op geen enkele wijze gelieerd aan, gesponsord door of goedgekeurd door NLZIET, TVgids.nl of de omroepen. NLZIET is een geregistreerd handelsmerk van NLziet. Alle merknamen en logo\'s behoren toe aan hun respectievelijke eigenaren.\n\nHet gebruik van Nexus TV Gids is geheel op eigen risico. De makers aanvaarden geen enkele aansprakelijkheid voor eventuele onjuistheden, storingen of schade door het gebruik van deze app.\n\nOpen-source software: gebaseerd op android-tv-program-guide (© Egeniq, Apache 2.0-licentie).</string>
     <string name="channel_order_coming_soon">Zenderordening is binnenkort beschikbaar.</string>
 
     <!-- In-app updates strings -->
@@ -87,7 +87,7 @@
     <string name="channel_order_a11y_moved">%1$s, positie %2$d van %3$d</string>
     <string name="channel_order_a11y_hide">Verberg %1$s</string>
     <string name="channel_order_a11y_show">Toon %1$s</string>
-    <string name="menu_item_guide_source">Gidsbron</string>
+    <string name="menu_item_guide_source">Gidsbronnen aanpassen</string>
     <string-array name="guide_sources">
         <item>Zelfstandig (internet)</item>
         <item>Eigen gidsserver (LAN)</item>

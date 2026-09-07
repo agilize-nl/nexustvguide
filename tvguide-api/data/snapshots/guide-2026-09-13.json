@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-12T22:00:00Z",
   "to": "2026-09-13T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
-  "publishedAt": "2026-09-07T09:43:07.209Z",
+  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
+  "publishedAt": "2026-09-07T15:13:06.863Z",
   "channels": [
     {
       "id": "npo1",
@@ -222,14 +222,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "DicSUTugZUWsUtWpKlP7vA",
-        "assetId": "6AA482B44650F4CDE5EB5AA966EB8E75",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513932",
@@ -245,14 +238,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "PTKfBCyDs0err7GlWlc31A",
-        "assetId": "F98570F4029AE5E819A4F2E022F848EC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513942",
@@ -268,14 +254,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5v76DvoPs0mnA7ciiBhEhw",
-        "assetId": "BDB115C018462FEB08FF01AC3971E42A",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513952",
@@ -291,14 +270,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "uuwftx2ZoEKbBom_q5zsOQ",
-        "assetId": "19111B46F37DC9A04EA5FCFC079DCC07",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513762",
@@ -314,14 +286,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "loQg2rppLEWeIZZH2g7DfA",
-        "assetId": "90CF9A7DF99408C8B78808CF329D792A",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513962",
@@ -337,21 +302,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "5v76DvoPs0mnA7ciiBhEhw",
-        "assetId": "D0CCA393DC0DE619BE340E3379FBD37B",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219513972",
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-13T00:50:00.000Z",
-      "end": "2026-09-13T04:20:00.000Z",
+      "end": "2026-09-13T04:15:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
       "genre": "Nieuwsbulletin",
@@ -366,8 +324,8 @@
       "id": "219544442",
       "channelId": "npo1",
       "title": "Nederland in beweging",
-      "start": "2026-09-13T04:20:00.000Z",
-      "end": "2026-09-13T04:35:00.000Z",
+      "start": "2026-09-13T04:15:00.000Z",
+      "end": "2026-09-13T04:30:00.000Z",
       "description": "Beweeg mee met 'Nederland in beweging'. Meedoen betekent al een kwartier beweging van het aanbevolen dagelijkse half uur.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nederland-in-beweging-763795482.jpg",
       "genre": "Gymnastiekprogramma",
@@ -389,8 +347,8 @@
       "id": "219544512",
       "channelId": "npo1",
       "title": "Dit was het nieuws",
-      "start": "2026-09-13T04:35:00.000Z",
-      "end": "2026-09-13T05:25:00.000Z",
+      "start": "2026-09-13T04:30:00.000Z",
+      "end": "2026-09-13T05:20:00.000Z",
       "description": "Harm Edens, Jan Jaap van der Wal en Peter Pannekoek leggen het nieuws van de afgelopen week onder de satirische loep.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/dit-was-het-nieuws-768815342.jpg",
       "genre": "Amusement",
@@ -412,8 +370,8 @@
       "id": "219544502",
       "channelId": "npo1",
       "title": "Triviant",
-      "start": "2026-09-13T05:25:00.000Z",
-      "end": "2026-09-13T06:15:00.000Z",
+      "start": "2026-09-13T05:20:00.000Z",
+      "end": "2026-09-13T06:10:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763795572.jpg",
       "genre": "Quiz",
@@ -435,7 +393,7 @@
       "id": "219544492",
       "channelId": "npo1",
       "title": "Beste zangers",
-      "start": "2026-09-13T06:15:00.000Z",
+      "start": "2026-09-13T06:10:00.000Z",
       "end": "2026-09-13T07:10:00.000Z",
       "description": "Nederlandse zangers/zangeressen reizen af naar Sevilla en zingen elkaars werk.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/beste-zangers-760904822.jpg",
@@ -544,7 +502,7 @@
       "channelId": "npo1",
       "title": "Buitenhof",
       "start": "2026-09-13T10:10:00.000Z",
-      "end": "2026-09-13T11:10:00.000Z",
+      "end": "2026-09-13T11:15:00.000Z",
       "description": "Interviewprogramma waar de actualiteit met vooraanstaande opiniemakers en politici besproken wordt, live gepresenteerd vanuit de Veemvloer in Amsterdam.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/buitenhof-764831732.jpg",
       "genre": "Interviewprogramma",
@@ -566,7 +524,7 @@
       "id": "219544352",
       "channelId": "npo1",
       "title": "Studio sport live",
-      "start": "2026-09-13T11:10:00.000Z",
+      "start": "2026-09-13T11:15:00.000Z",
       "end": "2026-09-13T13:15:00.000Z",
       "description": "Livebeelden en/of samenvattingen van de belangrijkste sportwedstrijden en -evenementen van de dag. Met interviews en reportages.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-763400552.jpg",
@@ -590,7 +548,7 @@
       "channelId": "npo1",
       "title": "Studio sport live",
       "start": "2026-09-13T13:15:00.000Z",
-      "end": "2026-09-13T14:20:00.000Z",
+      "end": "2026-09-13T14:25:00.000Z",
       "description": "Livebeelden en/of samenvattingen van de belangrijkste sportwedstrijden en -evenementen van de dag. Met interviews en reportages.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-763400552.jpg",
       "genre": "Rechtstreeks verslag/Verslag",
@@ -612,7 +570,7 @@
       "id": "219544332",
       "channelId": "npo1",
       "title": "Studio sport live",
-      "start": "2026-09-13T14:20:00.000Z",
+      "start": "2026-09-13T14:25:00.000Z",
       "end": "2026-09-13T16:00:00.000Z",
       "description": "Livebeelden en/of samenvattingen van de belangrijkste sportwedstrijden en -evenementen van de dag. Met interviews en reportages.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-763400552.jpg",
@@ -774,7 +732,7 @@
       "channelId": "npo1",
       "title": "Pauw & De Wit",
       "start": "2026-09-13T20:10:00.000Z",
-      "end": "2026-09-13T21:00:00.000Z",
+      "end": "2026-09-13T21:05:00.000Z",
       "description": "Talkshow over de actualiteit. Aan tafel voeren afwisselend Jeroen Pauw en Tim de Wit het gesprek van de dag. Er is ruimte voor debat en actuele duiding met de hoofdrolspelers uit de politiek en het nieuws.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pauw-de-wit-763795602.jpg",
       "genre": "Talkshow",
@@ -796,8 +754,8 @@
       "id": "219544462",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-13T21:00:00.000Z",
-      "end": "2026-09-13T21:20:00.000Z",
+      "start": "2026-09-13T21:05:00.000Z",
+      "end": "2026-09-13T21:25:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763794702.jpg",
       "genre": "Nieuwsbulletin",
@@ -819,8 +777,8 @@
       "id": "219544362",
       "channelId": "npo1",
       "title": "De Bauers, een nieuwe fase",
-      "start": "2026-09-13T21:20:00.000Z",
-      "end": "2026-09-13T22:05:00.000Z",
+      "start": "2026-09-13T21:25:00.000Z",
+      "end": "2026-09-13T22:10:00.000Z",
       "description": "Er is veel veranderd in het leven van Frans en Mariska Bauer. Frans is niet langer de enige zanger in de familie en het gezin is uitgebreid met nieuwe relaties en met kleinzoon Jan. Frans en Mariska zijn nu trotse opa en oma en belanden in een nieuwe levensfase.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bauers-een-nieuwe-fase-763400402.jpg",
       "genre": "Realityserie",
@@ -5454,8 +5412,8 @@
       "title": "De wereld van...",
       "start": "2026-09-13T08:00:00.000Z",
       "end": "2026-09-13T08:30:00.000Z",
-      "description": "Een kijkje achter de schermen bij diverse onderwerpen. Met onder andere: hockey, barbecue, kickboksen, extreme sports, wijn, hardlopen en darten. Verschillende betrokkenen komen aan het woord.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/de-wereld-van-764903702.jpg",
+      "description": "Informatief programma waarin energiespecialist Peter Desmet de wereld over reist op zoek naar oplossingen voor de energietransitie. Van baanbrekende innovaties in Shanghai tot technologische doorbraken in München: overal ontdekt hij hoe slimme opslag en nieuwe vormen van zonne-energie de toekomst veranderen. En wat betekenen die ontwikkelingen voor Nederland?",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/de-wereld-van-769333222.jpg",
       "genre": "Reportage",
       "isLive": false,
       "isRerun": false,
@@ -9868,13 +9826,13 @@
       "nlziet": null
     },
     {
-      "id": "219919122",
+      "id": "220400992",
       "channelId": "een",
       "title": "Kinderen van Dewindt",
       "start": "2026-09-13T12:05:00.000Z",
       "end": "2026-09-13T12:55:00.000Z",
       "description": "Over een familie van ondernemers die actief is in de Antwerpse haven, de modewereld en de landbouw.",
-      "imageUrl": "https://tvgidsassets.nl/upload/k/kinderen-van-dewindt-766048442.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/k/kinderen-van-dewindt-769616072.jpg",
       "genre": "Dramaserie",
       "isLive": false,
       "isRerun": true,
