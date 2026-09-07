@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 # Synchroniseer main van deze checkout naar GitHub (leidend) en Forgejo (spiegel).
 # Dit script gebruikt nooit force-pushes en stopt bij afwijkende historie.
+#
+# GitHub is niet alleen als eerste aan de beurt, het is ook de enige van de twee die
+# de app-updates kan bedienen: Forgejo serveert release-assets onder /attachments/<uuid>,
+# dus zonder URL die vooraf in een APK past. Zie tools/release-api.mjs. Forgejo is
+# daarmee puur een code-spiegel; raakt die achter, dan blijft de updateketen intact.
 
 set -euo pipefail
 
@@ -17,12 +22,17 @@ Met --check worden alleen de versies vergeleken; er wordt niets gepusht.
 EOF
 }
 
-case "${1:-}" in
-  "") ;;
-  --check) check_only=true ;;
-  -h|--help) usage; exit 0 ;;
-  *) usage >&2; exit 2 ;;
-esac
+# Alle argumenten aflopen, niet alleen $1: een tweede argument mag nooit stilzwijgend
+# genegeerd worden. Deed het dat wel, dan zou './sync-remotes.sh iets --check' pushen
+# terwijl de gebruiker om een droogloop vroeg.
+check_only=false
+for arg in "$@"; do
+  case "$arg" in
+    --check) check_only=true ;;
+    -h|--help) usage; exit 0 ;;
+    *) echo "Onbekend argument: '$arg'" >&2; usage >&2; exit 2 ;;
+  esac
+done
 
 git rev-parse --is-inside-work-tree >/dev/null
 
@@ -71,7 +81,7 @@ echo "Lokale $BRANCH : $local_sha"
 echo "GitHub $BRANCH : $primary_sha"
 echo "Forgejo $BRANCH: $mirror_sha"
 
-if [[ "${check_only:-false}" == true ]]; then
+if [[ "$check_only" == true ]]; then
   exit 0
 fi
 
