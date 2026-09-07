@@ -29,3 +29,12 @@
 # --- ThreeTenABP ---
 -dontwarn org.threeten.bp.**
 -keep class org.threeten.bp.zone.** { *; }
+
+# Gson leidt het element-type af uit de generic superclass van anonieme
+# TypeToken-subclasses (object : TypeToken<List<ChannelDto>>() {}). De optimizer in
+# proguard-android-optimize.txt mag zulke klassen mergen of inlinen; dan verdwijnt
+# die superclass-info en faalt Gson met "TypeToken must be created with a type
+# argument". -keepattributes Signature alleen is niet genoeg: de klasse zelf moet
+# blijven bestaan. Dit zijn de rules die Gson zelf als consumer-rules meelevert.
+-keep,allowobfuscation,allowoptimization class com.google.gson.reflect.TypeToken
+-keep,allowobfuscation,allowoptimization class * extends com.google.gson.reflect.TypeToken
