@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  De zenderlogo's worden via Resources.getIdentifier() opgezocht (zie
+  ChannelLogoResolver), niet via R.drawable.*. shrinkResources ziet daardoor geen
+  enkele verwijzing en zou ze allemaal verwijderen. Deze keep-lijst voorkomt dat.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/channel_logo_*" />

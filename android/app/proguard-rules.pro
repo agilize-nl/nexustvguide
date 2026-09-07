@@ -38,3 +38,11 @@
 # blijven bestaan. Dit zijn de rules die Gson zelf als consumer-rules meelevert.
 -keep,allowobfuscation,allowoptimization class com.google.gson.reflect.TypeToken
 -keep,allowobfuscation,allowoptimization class * extends com.google.gson.reflect.TypeToken
+
+# --- Zenderlogo's ---
+# ChannelLogoResolver zoekt de drawables op via Resources.getIdentifier(); die
+# lookup is onzichtbaar voor R8, dus zonder deze regel schrapt shrinkResources
+# alle channel_logo_*.png als ongebruikt.
+-keepclassmembers class **.R$drawable {
+    public static final int channel_logo_*;
+}

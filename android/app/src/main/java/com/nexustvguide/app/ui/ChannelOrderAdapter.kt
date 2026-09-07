@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.nexustvguide.app.R
+import com.nexustvguide.app.data.ChannelLogoResolver
 
 class ChannelOrderAdapter(
     private val onItemGrabbed: (position: Int) -> Unit,
@@ -189,9 +190,12 @@ class ChannelOrderAdapter(
             tvPosition.text = (position + 1).toString()
             tvName.text = item.channel.name
 
-            if (!item.channel.logoUrl.isNullOrBlank()) {
+            val logoSource = ChannelLogoResolver.resolve(
+                ivLogo.context, item.channel.id, item.channel.logoUrl
+            )
+            if (!logoSource.isNullOrBlank()) {
                 Glide.with(ivLogo)
-                    .load(item.channel.logoUrl)
+                    .load(logoSource)
                     .placeholder(LibraryR.drawable.programguide_icon_placeholder)
                     .error(LibraryR.drawable.programguide_icon_placeholder)
                     .into(ivLogo)

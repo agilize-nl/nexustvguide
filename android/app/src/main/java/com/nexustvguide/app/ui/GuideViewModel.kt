@@ -7,6 +7,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
+import com.nexustvguide.app.data.ChannelLogoResolver
 import com.nexustvguide.app.data.ChannelOrderResolver
 import com.nexustvguide.app.data.model.ChannelDto
 import com.nexustvguide.app.data.model.ChannelOrderPreferences
@@ -200,7 +201,7 @@ class GuideViewModel @JvmOverloads constructor(
             SimpleChannel(
                 id = it.id,
                 name = SpannedString(it.name),
-                imageUrl = it.logoUrl
+                imageUrl = ChannelLogoResolver.resolve(getApplication(), it.id, it.logoUrl)
             )
         }
 
