@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-10T22:00:00Z",
   "to": "2026-09-11T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T22:43:06.971Z",
-  "publishedAt": "2026-09-06T22:43:06.971Z",
+  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
+  "publishedAt": "2026-09-07T09:43:07.209Z",
   "channels": [
     {
       "id": "npo1",
@@ -1031,14 +1031,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Na81ZVbj70a08c-Ym8sSgQ",
-        "assetId": "B888FB8F6BDFE3798EB167CE87D720F8",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219474322",
@@ -2123,7 +2116,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "8fQ-su1QZkCgWpVd_gdAyQ",
+        "assetId": "82BCEBB89C61DC6351A76B28AED6B6D9",
+        "channelId": "npo2",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219475042",
@@ -14530,7 +14530,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "WXMtoWIOv0iRMNj6OL5mkQ",
+        "assetId": "9B83BA795241449226BABE19C4280778",
+        "channelId": "npo1extra",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219976742",

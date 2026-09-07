@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-06T22:00:00Z",
   "to": "2026-09-07T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T22:43:06.971Z",
-  "publishedAt": "2026-09-06T22:43:06.971Z",
+  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
+  "publishedAt": "2026-09-07T09:43:07.209Z",
   "channels": [
     {
       "id": "npo1",
@@ -2543,7 +2543,7 @@
         "contentItemId": "J2eKMeb8kEmS8SXaIYdynw",
         "assetId": "5DF047988EB47A807EDBC7738517DC7E",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2589,7 +2589,7 @@
         "contentItemId": "w605biwlvE64PeGhImuE3A",
         "assetId": "4627400F79B38247675473C8E2A08BEF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2612,7 +2612,7 @@
         "contentItemId": "ErIh7X2dIEOnvmQy0EiDFA",
         "assetId": "7A2C7EE1BB3BCE6ABA6076B6233FA13C",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2697,7 +2697,7 @@
         "contentItemId": "Q4aLasRV9keyctSQxoiXiA",
         "assetId": "830EC10B7171AADC1DBFE8F5F76E20DA",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2720,7 +2720,7 @@
         "contentItemId": "jcCmnPTikEK_ixxY3hczJg",
         "assetId": "1ABCD21D78B93C97A0E38F7B4AE7E566",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2867,7 +2867,7 @@
         "contentItemId": "P7IUJRp4JkOv1WqhBh1miA",
         "assetId": "FE3E556DE6A547B45F18D0D3BA4AC51A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2945,7 +2945,7 @@
         "contentItemId": "SXon7TGtVkWpNo6cYLFZuA",
         "assetId": "F2E754BB84812E2184AB43FCFAB1B388",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2968,7 +2968,7 @@
         "contentItemId": "QtEICPWI_0qInRqQJmUJrQ",
         "assetId": "8C50EC4786AFF82D6B47AA06AF1C7E63",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2991,7 +2991,7 @@
         "contentItemId": "i5fJPCNfUUGFhckDY21UbA",
         "assetId": "CA81877640E6844A759DE135DA2E6B17",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3037,7 +3037,7 @@
         "contentItemId": "ifhmT_RgCkGTmh_xFrpccw",
         "assetId": "72A4C790AF78C970C273AF5C5C017B8A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3060,7 +3060,7 @@
         "contentItemId": "wXBULkQvPUeGf61wR_ytlw",
         "assetId": "F097018D85E98EF51994F82B04E718A5",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4170,14 +4170,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "0aWZqXduM0ud3MQl0aa-Cg",
-        "assetId": "3C6219216D5794D253347F1D3DB23A31",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219207582",
@@ -4379,7 +4372,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "tHO9kbEV40OtUzAMlpkd4Q",
+        "contentItemId": "u2iFqz7TnUKVnimdefPBTQ",
         "assetId": "DC4C89B30AAEAE357DAE02CF5FF6AEBA",
         "channelId": "npo3",
         "isReplayAllowed": true,
@@ -5168,14 +5161,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "KhPi97e-Dk2JBvEVD5k9Rg",
-        "assetId": "9FA74282575B44C4D2AEBFC250C4865C",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203822",
@@ -6511,7 +6497,7 @@
       "channelId": "sbs6",
       "title": "De bondgenoten",
       "start": "2026-09-07T11:11:00.000Z",
-      "end": "2026-09-07T12:06:00.000Z",
+      "end": "2026-09-07T12:07:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -6533,8 +6519,8 @@
       "id": "219204592",
       "channelId": "sbs6",
       "title": "De bondgenoten",
-      "start": "2026-09-07T12:06:00.000Z",
-      "end": "2026-09-07T12:39:00.000Z",
+      "start": "2026-09-07T12:07:00.000Z",
+      "end": "2026-09-07T12:40:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -6556,7 +6542,7 @@
       "id": "219204632",
       "channelId": "sbs6",
       "title": "Droomhuis op het platteland",
-      "start": "2026-09-07T12:39:00.000Z",
+      "start": "2026-09-07T12:40:00.000Z",
       "end": "2026-09-07T13:38:00.000Z",
       "description": "Avontuurlijke mensen geven hun leven in de stad op voor een nieuw bestaan op het platteland. De presentatoren helpen deze potentiële kopers om hun droomhuis te vinden.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/escape-to-the-country-761147552.jpg",
@@ -6649,7 +6635,7 @@
       "channelId": "sbs6",
       "title": "Nieuws van de dag",
       "start": "2026-09-07T16:05:00.000Z",
-      "end": "2026-09-07T16:57:00.000Z",
+      "end": "2026-09-07T16:58:00.000Z",
       "description": "Opinie- en actualiteitenprogramma waarin verslaggevers en opiniemakers van De Telegraaf en 'Hart van Nederland' het nieuws bespreken. Ze schuiven aan in de studio en doen liveverslag vanuit het land.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuws-van-de-dag-759205652.jpg",
       "genre": "Actualiteiten",
@@ -6671,7 +6657,7 @@
       "id": "219204382",
       "channelId": "sbs6",
       "title": "Overtreders",
-      "start": "2026-09-07T16:57:00.000Z",
+      "start": "2026-09-07T16:58:00.000Z",
       "end": "2026-09-07T17:30:00.000Z",
       "description": "Het werk van handhavers op straat, in de natuur en in het openbaar vervoer wordt gevolgd.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/overtreders-761829452.jpg",
@@ -6916,7 +6902,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "pJ1eCZ96l02w-1g4gFdEWA",
-        "assetId": "FE517B8D5D304676FF2C6E3604911989",
+        "assetId": "F98A9594E5040F593484B9717FD07D4F",
         "channelId": "rtl7",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -7938,7 +7924,7 @@
     {
       "id": "219203022",
       "channelId": "veronica",
-      "title": "Spidey en zijn Geweldige Vriendjes",
+      "title": "Spidey en zijn geweldige vriendjes",
       "start": "2026-09-07T06:09:00.000Z",
       "end": "2026-09-07T06:34:00.000Z",
       "description": "Rhino krijgt tentakels. Spidey's pompoen is een bedreiging.",
@@ -8959,14 +8945,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TGfJiNQOwku4gTDOpDcMvg",
-        "assetId": "0C086AA1FEDA8B3BCF281ED7D772001A",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219142322",
@@ -9021,14 +9000,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "eOSndSSUwEqn-pEy8-on_Q",
-        "assetId": "E3AB3294E6E3ECDE0D411104FC8F42B7",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203682",
@@ -9044,14 +9016,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "eOSndSSUwEqn-pEy8-on_Q",
-        "assetId": "D6651E5059DF0EE9126A03C752A940C8",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203672",
@@ -9067,14 +9032,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "ffE8vLHROEG5YBkhVAIMew",
-        "assetId": "87B52E95DA769D50487F08D0AB0E08DF",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203702",
@@ -9090,14 +9048,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-ufROttvdEerF5m_cxxsFQ",
-        "assetId": "8581D7DA635A98C9450E4833838A2832",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203692",
@@ -9113,14 +9064,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "HUSh2PPuNkG__Va9w0Gjmg",
-        "assetId": "6D58651AB9DF5A00E7C3C97E760B31EE",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203662",
@@ -9136,14 +9080,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "mdlzgfpIzU-DRz0cfLf3hw",
-        "assetId": "00A6451AEF1385D32D8CA92E38BB5F61",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203752",
@@ -9159,14 +9096,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "rrOxPQ_OvE-gKZFg8GNh0g",
-        "assetId": "C9A7E328A4017EC39D149F8D45BF3736",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203722",
@@ -9182,14 +9112,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "_0dXWw_6qE-D6FadOJIE0w",
-        "assetId": "2AF6191B5C320A612BE6C77CD504A4D1",
-        "channelId": "net5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219203762",
@@ -9506,14 +9429,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Rk6HFxQN4UmJa6o9QrFmKA",
-        "assetId": "9B78E3C05118970189FA9FC25F43331E",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219205172",
@@ -9837,14 +9753,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Dw4n3p35oEmbt-szZlV8TA",
-        "assetId": "A88C6DF83C57B8048F14BEFCA3CB3273",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117732",
@@ -9860,14 +9769,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JjeTv_OjQkCtyjXYFS1hwQ",
-        "assetId": "F959FBFDD3870FF7B1B3CDAD506F2EC0",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117722",
@@ -9883,14 +9785,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Dw4n3p35oEmbt-szZlV8TA",
-        "assetId": "38A1CA5FC3BD2FCAF7BD333FC8635F58",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117742",
@@ -9906,14 +9801,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JjeTv_OjQkCtyjXYFS1hwQ",
-        "assetId": "E1610EF941AE425132E474CEA73F6484",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117762",
@@ -9929,14 +9817,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Dw4n3p35oEmbt-szZlV8TA",
-        "assetId": "F368E83AD1B4A9F161825A29E6318281",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117752",
@@ -9952,14 +9833,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JjeTv_OjQkCtyjXYFS1hwQ",
-        "assetId": "4241C495175FF66D4C32EE4B68A3E79F",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219117782",
@@ -9998,14 +9872,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JjeTv_OjQkCtyjXYFS1hwQ",
-        "assetId": "22F2C7A56FAEAFE07CD526B58F31AEE2",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149432",
@@ -10113,14 +9980,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JjeTv_OjQkCtyjXYFS1hwQ",
-        "assetId": "0E8A0FCDC34A0B81EF1DD9AF012789D2",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149192",
@@ -12294,14 +12154,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "zPrKopxpUU-sTQ-Pg4yBEA",
-        "assetId": "D45E0B2E57ABCE35E8557F552607AB1E",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219597492",
@@ -12349,7 +12202,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "BoT2fOmE80uBY3Yy8rkmiA",
+        "assetId": "9E92B9BBEF8C69C00FE6C2270FF03047",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597442",
@@ -12365,7 +12225,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "2Xlt30rg4ECj_T6Y25fH-g",
+        "assetId": "FD7D35240C9C4013544FF89AF57DC63B",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "220078772",
@@ -12657,7 +12524,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "2Xlt30rg4ECj_T6Y25fH-g",
+        "assetId": "47436DC64E4EC4F50CE4ACA1E5DE0AB2",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597292",
@@ -12673,7 +12547,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "AV2c9j2p80yy7vzRfeyz8A",
+        "assetId": "605012D7274891A85FAB093CBCB1CEFF",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597562",
@@ -12689,7 +12570,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "7D2tkUnHZE2sUawW5fMCIg",
+        "assetId": "DBFED2A909DF598458450D507E25F4D8",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219419302",
@@ -13646,7 +13534,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "rKxMBU9LYEyP6-MMXwPmqg",
+        "assetId": "0E74722E521F9552AA153572D5123FA3",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219479412",

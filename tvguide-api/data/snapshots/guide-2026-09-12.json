@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-11T22:00:00Z",
   "to": "2026-09-12T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T22:43:06.971Z",
-  "publishedAt": "2026-09-06T22:43:06.971Z",
+  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
+  "publishedAt": "2026-09-07T09:43:07.209Z",
   "channels": [
     {
       "id": "npo1",
@@ -5977,7 +5977,7 @@
     {
       "id": "219511292",
       "channelId": "veronica",
-      "title": "Spidey en zijn Geweldige Vriendjes",
+      "title": "Spidey en zijn geweldige vriendjes",
       "start": "2026-09-12T03:10:00.000Z",
       "end": "2026-09-12T03:35:00.000Z",
       "description": "De Spidey's redden de kerstman. Er missen Chanoeka-latkes.",
@@ -9662,7 +9662,7 @@
       "title": "Urbanus van binnen",
       "start": "2026-09-12T19:05:00.000Z",
       "end": "2026-09-12T19:40:00.000Z",
-      "description": "De leukste verhalen, grappen en liedjes van Urbanus.",
+      "description": "De leukste verhalen, grappen en liedjes van komiek Urbanus.",
       "imageUrl": "https://tvgidsassets.nl/upload/u/urbanus-van-binnen-768090582.jpg",
       "genre": "Cabaret",
       "isLive": false,

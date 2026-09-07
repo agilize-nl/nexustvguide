@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-07T22:00:00Z",
   "to": "2026-09-08T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T22:43:06.971Z",
-  "publishedAt": "2026-09-06T22:43:06.971Z",
+  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
+  "publishedAt": "2026-09-07T09:43:07.209Z",
   "channels": [
     {
       "id": "npo1",
@@ -2396,7 +2396,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "tHO9kbEV40OtUzAMlpkd4Q",
+        "contentItemId": "u2iFqz7TnUKVnimdefPBTQ",
         "assetId": "B62F46D38046DB9F7CB5E31BD69C5971",
         "channelId": "npo3",
         "isReplayAllowed": true,
@@ -8420,7 +8420,7 @@
       "channelId": "veronica",
       "title": "Mickey Mouse Clubhouse+",
       "start": "2026-09-08T11:31:00.000Z",
-      "end": "2026-09-08T11:56:00.000Z",
+      "end": "2026-09-08T11:57:00.000Z",
       "description": "Mickey en zijn vriendjes zoeken naar ingrediënten voor pizza",
       "imageUrl": "https://tvgidsassets.nl/upload/m/mickey-mouse-clubhouse-762015362.jpg",
       "genre": "Animatieserie",
@@ -8435,8 +8435,8 @@
       "id": "219273922",
       "channelId": "veronica",
       "title": "Super Katjes",
-      "start": "2026-09-08T11:56:00.000Z",
-      "end": "2026-09-08T12:21:00.000Z",
+      "start": "2026-09-08T11:57:00.000Z",
+      "end": "2026-09-08T12:22:00.000Z",
       "description": "Een neppe Sparks steelt. SuperKitties redden de honden.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/super-katjes-762015942.jpg",
       "genre": "Animatieserie",
@@ -8458,7 +8458,7 @@
       "id": "219274492",
       "channelId": "veronica",
       "title": "Sofia het Prinsesje: Koninklijke Magie",
-      "start": "2026-09-08T12:21:00.000Z",
+      "start": "2026-09-08T12:22:00.000Z",
       "end": "2026-09-08T12:46:00.000Z",
       "description": "Sofia en Amber in het dorp. Sofia's magische plant.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/sofia-het-prinsesje-koninklijke-magie-762015092.jpg",
@@ -8505,7 +8505,7 @@
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
       "start": "2026-09-08T13:11:00.000Z",
-      "end": "2026-09-08T13:34:00.000Z",
+      "end": "2026-09-08T13:35:00.000Z",
       "description": "Doc Ock steelt van Spin! Gobby neemt een brug over!",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-762015982.jpg",
       "genre": "Animatieserie",
@@ -8527,7 +8527,7 @@
       "id": "219273912",
       "channelId": "veronica",
       "title": "Spidey en zijn Geweldige Vriendjes",
-      "start": "2026-09-08T13:34:00.000Z",
+      "start": "2026-09-08T13:35:00.000Z",
       "end": "2026-09-08T13:49:00.000Z",
       "description": "De schat van Web-Beard.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/spidey-en-zijn-geweldige-vriendjes-762015982.jpg",
@@ -11491,7 +11491,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "Tx28fBYU9kWaN5Qhi0Bqag",
+        "contentItemId": "GkWT2jFtFUqjxfA-1OYsfA",
         "assetId": "6AC4F0AC4B9E0FAC49E493B53FA4A7F9",
         "channelId": "sbs9",
         "isReplayAllowed": true,
@@ -11767,7 +11767,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "l4ZKv3VN9UOAdO6TSokVWA",
+        "assetId": "F4436ABB48574D439FE9F7B2A2FBCB49",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597722",
@@ -11783,7 +11790,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "NUHKqLYdxUmQOv8PKPWkpQ",
+        "assetId": "113E13DEC7EEDDB847A25494E64CC139",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597792",

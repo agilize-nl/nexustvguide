@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-09T22:00:00Z",
   "to": "2026-09-10T22:00:00Z",
-  "sourceFetchedAt": "2026-09-06T22:43:06.971Z",
-  "publishedAt": "2026-09-06T22:43:06.971Z",
+  "sourceFetchedAt": "2026-09-07T09:43:07.209Z",
+  "publishedAt": "2026-09-07T09:43:07.209Z",
   "channels": [
     {
       "id": "npo1",
@@ -1261,7 +1261,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "8fQ-su1QZkCgWpVd_gdAyQ",
+        "assetId": "C4CA9C14C0D595B5915064E2B5D8B5B5",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219410782",
