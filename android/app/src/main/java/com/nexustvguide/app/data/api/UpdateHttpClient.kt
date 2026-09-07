@@ -2,6 +2,7 @@ package com.nexustvguide.app.data.api
 
 import android.os.Build
 import com.nexustvguide.app.BuildConfig
+import com.nexustvguide.app.update.UpdateChannel
 import com.nexustvguide.app.update.UpdateOriginPolicy
 import com.nexustvguide.app.update.UpdateRedirectInterceptor
 import okhttp3.OkHttpClient
@@ -13,8 +14,16 @@ import java.util.concurrent.TimeUnit
 object UpdateHttpClient {
 
     private var okHttpClient: OkHttpClient? = null
-    private var updateApiService: UpdateApiService? = null
-    private var currentBaseUrl: String? = null
+    private val serviceCache = mutableMapOf<String, UpdateApiService>()
+
+    /**
+     * Het kanaal dat de gedeelde OkHttp-client op dit moment bedient. De
+     * redirect-interceptor leest hieruit welke allowlist en welk transport gelden, zodat
+     * één client beide kanalen kan bedienen zonder dat het https-kanaal ooit de
+     * http-toestemming van het LAN-kanaal overneemt.
+     */
+    @Volatile
+    private var activeChannel: UpdateChannel? = null
 
     /** Hosts die naast de eigen origin een APK mogen leveren, uit `UPDATE_HOST_ALLOWLIST`. */
     val allowlist: Set<String> by lazy {
@@ -47,6 +56,31 @@ object UpdateHttpClient {
      */
     fun allowsInsecureTransport(): Boolean = !getUpdateBaseUrl().startsWith("https://")
 
+    /** Het kanaal uit de buildconfiguratie, met de emulator-omleiding toegepast. */
+    fun primaryChannel(): UpdateChannel = UpdateChannel.primary(getUpdateBaseUrl())
+
+    /** Het LAN-noodkanaal. */
+    fun lanChannel(): UpdateChannel = UpdateChannel.lanFallback()
+
+    /**
+     * De kanalen die een updatecontrole achtereenvolgens mag proberen. Staat de build al op
+     * het LAN, dan is er niets om op terug te vallen en blijft het bij dat ene kanaal.
+     */
+    fun channels(): List<UpdateChannel> {
+        val primary = primaryChannel()
+        val lan = lanChannel()
+        return if (primary.baseUrl.trimEnd('/') == lan.baseUrl.trimEnd('/')) {
+            listOf(primary)
+        } else {
+            listOf(primary, lan)
+        }
+    }
+
+    /** Stelt het kanaal in dat de gedeelde client bedient; zie [activeChannel]. */
+    fun setActiveChannel(channel: UpdateChannel) {
+        activeChannel = channel
+    }
+
     fun getOkHttpClient(): OkHttpClient {
         if (okHttpClient == null) {
             val logging = HttpLoggingInterceptor().apply {
@@ -61,8 +95,8 @@ object UpdateHttpClient {
                 .followSslRedirects(true)
                 .addNetworkInterceptor(
                     UpdateRedirectInterceptor(
-                        allowlistProvider = { allowlist },
-                        allowInsecureProvider = { allowsInsecureTransport() }
+                        allowlistProvider = { activeChannel?.allowlist ?: allowlist },
+                        allowInsecureProvider = { activeChannel?.allowInsecure ?: allowsInsecureTransport() }
                     )
                 )
                 .connectTimeout(10, TimeUnit.SECONDS)
@@ -75,17 +109,15 @@ object UpdateHttpClient {
 
     fun getService(customBaseUrl: String? = null): UpdateApiService {
         val targetUrl = customBaseUrl ?: getUpdateBaseUrl()
-        if (updateApiService == null || currentBaseUrl != targetUrl) {
-            val client = getOkHttpClient()
-            val retrofit = Retrofit.Builder()
-                .baseUrl(targetUrl)
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-
-            updateApiService = retrofit.create(UpdateApiService::class.java)
-            currentBaseUrl = targetUrl
+        return synchronized(serviceCache) {
+            serviceCache.getOrPut(targetUrl) {
+                Retrofit.Builder()
+                    .baseUrl(targetUrl)
+                    .client(getOkHttpClient())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
+                    .create(UpdateApiService::class.java)
+            }
         }
-        return updateApiService!!
     }
 }

@@ -6,6 +6,7 @@ import com.nexustvguide.app.BuildConfig
 import com.nexustvguide.app.data.api.UpdateApiService
 import com.nexustvguide.app.data.api.UpdateHttpClient
 import com.nexustvguide.app.update.MetadataValidationResult
+import com.nexustvguide.app.update.UpdateChannel
 import com.nexustvguide.app.update.Sha256Checksum
 import com.nexustvguide.app.update.UpdateMetadataValidator
 import com.nexustvguide.app.update.ValidatedUpdateMetadata
@@ -34,7 +35,11 @@ class SystemTimeProvider : TimeProvider {
 }
 
 sealed class UpdateCheckResult {
-    data class UpdateAvailable(val metadata: ValidatedUpdateMetadata, val isSnoozed: Boolean) : UpdateCheckResult()
+    data class UpdateAvailable(
+        val metadata: ValidatedUpdateMetadata,
+        val isSnoozed: Boolean,
+        val channel: UpdateChannel? = null
+    ) : UpdateCheckResult()
     data class UpToDate(val currentVersionCode: Long, val currentVersionName: String) : UpdateCheckResult()
     data class Throttled(val remainingTimeMs: Long) : UpdateCheckResult()
     data class Error(val message: String, val isContractError: Boolean) : UpdateCheckResult()
@@ -62,7 +67,14 @@ class UpdateRepository(
     private val okHttpClient: OkHttpClient = UpdateHttpClient.getOkHttpClient(),
     private val timeProvider: TimeProvider = SystemTimeProvider(),
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE),
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
+    /**
+     * De bronnen die een controle achtereenvolgens probeert: eerst het geconfigureerde
+     * kanaal, dan het LAN-noodkanaal. Injecteerbaar zodat tests de volgorde kunnen sturen.
+     */
+    private val channelProvider: () -> List<UpdateChannel> = { UpdateHttpClient.channels() },
+    /** Levert de client voor een kanaal; per bron een eigen Retrofit-instantie. */
+    private val serviceProvider: (UpdateChannel) -> UpdateApiService = { UpdateHttpClient.getService(it.baseUrl) }
 ) {
 
     companion object {
@@ -78,6 +90,10 @@ class UpdateRepository(
     }
 
     private val downloadMutex = Mutex()
+
+    /** Het kanaal waar de laatst gevonden update vandaan kwam; de download volgt diezelfde bron. */
+    @Volatile
+    private var activeChannel: UpdateChannel? = null
 
     fun getUpdatesDir(): File {
         val dir = File(context.cacheDir, "updates")
@@ -122,53 +138,87 @@ class UpdateRepository(
             }
         }
 
-        val baseUrl = customBaseUrl ?: UpdateHttpClient.getUpdateBaseUrl()
+        // Een expliciete customBaseUrl (tests, handmatige override) verslaat de
+        // kanaalvolgorde; anders proberen we het geconfigureerde kanaal en daarna het LAN.
+        val channels = if (customBaseUrl != null) {
+            listOf(UpdateChannel.primary(customBaseUrl).copy(allowInsecure = true))
+        } else {
+            channelProvider()
+        }
 
-        try {
-            val dto = apiService.getLatestVersion(BuildConfig.UPDATE_MANIFEST_PATH)
-            val validation = UpdateMetadataValidator.validate(
-                dto = dto,
-                updateBaseUrl = baseUrl,
-                allowlist = UpdateHttpClient.allowlist,
-                allowInsecure = UpdateHttpClient.allowsInsecureTransport()
-            )
+        var lastError: UpdateCheckResult.Error? = null
 
-            when (validation) {
-                is MetadataValidationResult.Invalid -> {
-                    UpdateCheckResult.Error("Ongeldige release metadata: ${validation.reason}", isContractError = true)
+        for (channel in channels) {
+            UpdateHttpClient.setActiveChannel(channel)
+            val service = if (customBaseUrl != null) apiService else serviceProvider(channel)
+
+            val outcome = try {
+                val dto = service.getLatestVersion(channel.manifestPath)
+                val validation = UpdateMetadataValidator.validate(
+                    dto = dto,
+                    updateBaseUrl = channel.baseUrl,
+                    allowlist = channel.allowlist,
+                    allowInsecure = channel.allowInsecure
+                )
+
+                when (validation) {
+                    is MetadataValidationResult.Invalid ->
+                        UpdateCheckResult.Error(
+                            "Ongeldige release metadata: ${validation.reason}",
+                            isContractError = true
+                        )
+                    is MetadataValidationResult.Success -> {
+                        val metadata = validation.metadata
+                        val currentVersionCode = BuildConfig.VERSION_CODE.toLong()
+
+                        if (!isManual) {
+                            sharedPreferences.edit().putLong(KEY_LAST_PASSIVE_CHECK_TIME, now).apply()
+                        }
+
+                        if (metadata.versionCode <= currentVersionCode) {
+                            UpdateCheckResult.UpToDate(currentVersionCode, BuildConfig.VERSION_NAME)
+                        } else {
+                            val snoozedVersion = sharedPreferences.getLong(KEY_SNOOZED_VERSION, 0L)
+                            UpdateCheckResult.UpdateAvailable(
+                                metadata,
+                                isSnoozed = (snoozedVersion == metadata.versionCode),
+                                channel = channel
+                            )
+                        }
+                    }
                 }
-                is MetadataValidationResult.Success -> {
-                    val metadata = validation.metadata
-                    val currentVersionCode = BuildConfig.VERSION_CODE.toLong()
-
+            } catch (e: HttpException) {
+                if (e.code() == 503) {
                     if (!isManual) {
-                        // Alleen bij succesvol contact stempelen we de 24-uurs klok af
                         sharedPreferences.edit().putLong(KEY_LAST_PASSIVE_CHECK_TIME, now).apply()
                     }
+                    UpdateCheckResult.UpToDate(BuildConfig.VERSION_CODE.toLong(), BuildConfig.VERSION_NAME)
+                } else {
+                    UpdateCheckResult.Error("HTTP fout: ${e.code()} ${e.message()}", isContractError = false)
+                }
+            } catch (e: IOException) {
+                UpdateCheckResult.Error(
+                    "Kan updatebron (${channel.label}) niet bereiken: ${e.localizedMessage ?: "Netwerkfout"}",
+                    isContractError = false
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                UpdateCheckResult.Error("Onverwachte fout: ${e.localizedMessage ?: "Fout"}", isContractError = false)
+            }
 
-                    if (metadata.versionCode <= currentVersionCode) {
-                        UpdateCheckResult.UpToDate(currentVersionCode, BuildConfig.VERSION_NAME)
-                    } else {
-                        val snoozedVersion = sharedPreferences.getLong(KEY_SNOOZED_VERSION, 0L)
-                        val isSnoozed = (snoozedVersion == metadata.versionCode)
-                        UpdateCheckResult.UpdateAvailable(metadata, isSnoozed)
-                    }
+            // Een bereikte bron is beslissend: alleen als het kanaal zelf onbruikbaar is
+            // (netwerk- of contractfout) schuiven we door naar het volgende.
+            if (outcome !is UpdateCheckResult.Error) {
+                if (outcome is UpdateCheckResult.UpdateAvailable) {
+                    activeChannel = outcome.channel
                 }
+                return@withContext outcome
             }
-        } catch (e: HttpException) {
-            if (e.code() == 503) {
-                if (!isManual) {
-                    sharedPreferences.edit().putLong(KEY_LAST_PASSIVE_CHECK_TIME, now).apply()
-                }
-                UpdateCheckResult.UpToDate(BuildConfig.VERSION_CODE.toLong(), BuildConfig.VERSION_NAME)
-            } else {
-                UpdateCheckResult.Error("HTTP fout: ${e.code()} ${e.message()}", isContractError = false)
-            }
-        } catch (e: IOException) {
-            UpdateCheckResult.Error("Kan updatebron niet bereiken: ${e.localizedMessage ?: "Netwerkfout"}", isContractError = false)
-        } catch (e: Exception) {
-            UpdateCheckResult.Error("Onverwachte fout: ${e.localizedMessage ?: "Fout"}", isContractError = false)
+            lastError = outcome
         }
+
+        lastError ?: UpdateCheckResult.Error("Geen updatebron beschikbaar", isContractError = false)
     }
 
     fun snoozeUpdate(versionCode: Long) {
@@ -248,7 +298,11 @@ class UpdateRepository(
                 partFile.delete()
             }
 
-            // 4. Download starten via OkHttp
+            // 4. Download starten via OkHttp. Zet eerst het kanaal terug dat deze metadata
+            // leverde, zodat de redirect-interceptor de juiste allowlist en transportregels
+            // hanteert -- een LAN-download over http mag niet de https-eis van het publieke
+            // kanaal omzeilen en andersom.
+            activeChannel?.let { UpdateHttpClient.setActiveChannel(it) }
             val request = Request.Builder()
                 .url(metadata.downloadUrl)
                 .build()
