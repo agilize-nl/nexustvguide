@@ -122,6 +122,9 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     private var timelineAdjustmentPixels = 0
     private var isInitialScroll = true
     private var isJumpingGridInTime = false
+    // After "Nu live" the filter describes the actual part of the current day, rather than
+    // the left edge of the viewport (which deliberately starts a little before "now").
+    private var isShowingLiveTimeOfDay = false
 
     @Suppress("LeakingThis")
     protected var currentlySelectedFilterIndex = SELECTABLE_DAYS_IN_PAST
@@ -359,6 +362,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     dayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
                         currentOptions[currentlySelectedFilterIndex].displayTitle
                     didScrollToBestProgramme = false
+                    isShowingLiveTimeOfDay = false
                     setJumpToLiveButtonEnabled(false)
                     currentDate =
                         LocalDate.parse(currentOptions[position].value, FILTER_DATE_FORMATTER)
@@ -389,6 +393,7 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
                     currentlySelectedTimeOfDayFilterIndex
                 ) { dialogInterface, position ->
                     currentlySelectedTimeOfDayFilterIndex = position
+                    isShowingLiveTimeOfDay = false
                     timeOfDayFilter.findViewById<TextView>(R.id.programguide_filter_title).text =
                         currentOptions[currentlySelectedTimeOfDayFilterIndex].displayTitle
                     dialogInterface.dismiss()
@@ -728,6 +733,8 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
      * Jumps the program guide to the current live broadcast and focuses the current program.
      */
     fun jumpToLive(focus: Boolean = true) {
+        selectCurrentTimeOfDayFilter()
+        isShowingLiveTimeOfDay = true
         val today = currentDateInDisplayTimeZone()
         if (currentDate != today) {
             selectToday()
@@ -892,13 +899,15 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
     }
 
     private fun updateTimeOfDayFilter() {
-        val leftHour =
-            Instant.ofEpochMilli(programGuideManager.getFromUtcMillis()).atZone(DISPLAY_TIMEZONE)
-                .hour
-        val selectedItemPosition = when {
-            leftHour < MORNING_UNTIL_HOUR -> 0
-            leftHour < AFTERNOON_UNTIL_HOUR -> 1
-            else -> 2
+        val selectedItemPosition = if (
+            isShowingLiveTimeOfDay && currentDate == currentDateInDisplayTimeZone()
+        ) {
+            currentTimeOfDayFilterIndex()
+        } else {
+            val leftHour =
+                Instant.ofEpochMilli(programGuideManager.getFromUtcMillis()).atZone(DISPLAY_TIMEZONE)
+                    .hour
+            timeOfDayFilterIndexForHour(leftHour)
         }
         if (currentlySelectedTimeOfDayFilterIndex != selectedItemPosition) {
             currentlySelectedTimeOfDayFilterIndex = selectedItemPosition
@@ -912,6 +921,25 @@ abstract class ProgramGuideFragment<T> : Fragment(), ProgramGuideManager.Listene
             timeOfDayFilter?.findViewById<TextView>(R.id.programguide_filter_title)?.text =
                 displayText
         }
+    }
+
+    private fun selectCurrentTimeOfDayFilter() {
+        currentlySelectedTimeOfDayFilterIndex = currentTimeOfDayFilterIndex()
+        val options = getTimeOfDayFilterOptions()
+        timeOfDayFilter?.findViewById<TextView>(R.id.programguide_filter_title)?.text =
+            options[currentlySelectedTimeOfDayFilterIndex].displayTitle
+    }
+
+    private fun currentTimeOfDayFilterIndex(): Int {
+        return getTimeOfDayFilterOptions().indexOfFirst { it.isDefaultValue }
+            .takeIf { it >= 0 }
+            ?: 2
+    }
+
+    private fun timeOfDayFilterIndexForHour(hour: Int): Int = when {
+        hour < MORNING_UNTIL_HOUR -> 0
+        hour < AFTERNOON_UNTIL_HOUR -> 1
+        else -> 2
     }
 
     private fun updateCurrentDateText() {

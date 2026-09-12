@@ -18,7 +18,6 @@ import com.egeniq.androidtvprogramguide.ProgramGuideFragment
 import com.egeniq.androidtvprogramguide.R as LibraryR
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideChannel
 import com.egeniq.androidtvprogramguide.entity.ProgramGuideSchedule
-import com.egeniq.androidtvprogramguide.util.ProgramGuideUtil
 import com.nexustvguide.app.BuildConfig
 import com.nexustvguide.app.data.repository.GuideRepositoryProvider
 import kotlinx.coroutines.delay
@@ -56,7 +55,6 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
     private val updateViewModel: UpdateViewModel by activityViewModels()
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 
-    private var skipNextResumeRefresh = false
     private var lastRenderedState: GuideUiState.Content? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,8 +62,11 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
         // ProgramGuideFragment is timezone-neutral by default; initialize the first request in
         // the guide's explicit Amsterdam timezone as well.
         currentDate = currentDateInDisplayTimeZone()
-        setFragmentResultListener(ChannelOrderFragment.RESULT_KEY) { _, _ ->
-            skipNextResumeRefresh = true
+        parentFragmentManager.setFragmentResultListener(
+            UpdateDialogFragment.DISMISS_RESULT_KEY,
+            this
+        ) { _, _ ->
+            returnToLiveGuide()
         }
     }
 
@@ -158,6 +159,9 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                 }
             }
             .setOnDismissListener {
+                if (!navigated) {
+                    returnToLiveGuide()
+                }
                 if (!navigated && anchor.isShown) {
                     anchor.post { anchor.requestFocus() }
                 }
@@ -175,7 +179,10 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
                 dialog.dismiss()
             }
             .setNegativeButton(android.R.string.cancel, null)
-            .setOnDismissListener { anchor.post { anchor.requestFocus() } }
+            .setOnDismissListener {
+                returnToLiveGuide()
+                anchor.post { anchor.requestFocus() }
+            }
             .show()
     }
 
@@ -186,6 +193,7 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
             .setMessage(getString(R.string.about_dialog_message, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE))
             .setPositiveButton(R.string.update_btn_ok, null)
             .setOnDismissListener {
+                returnToLiveGuide()
                 if (anchor.isShown) {
                     anchor.post { anchor.requestFocus() }
                 }
@@ -205,14 +213,17 @@ class NexusProgramGuideFragment : ProgramGuideFragment<ProgrammeDto>() {
 
     override fun onResume() {
         super.onResume()
-        if (skipNextResumeRefresh) {
-            skipNextResumeRefresh = false
-        } else {
-            viewModel.loadGuideForDate(currentDate)
-        }
-        if (currentState is State.Content) {
-            programGuideGrid.restoreSelection(ProgramGuideUtil.lastClickedSchedule)
-        }
+        returnToLiveGuide()
+    }
+
+    /**
+     * A guide that becomes visible again must never retain a user-selected historical position.
+     * [jumpToLive] also restores today's date and the current time-of-day filter.
+     */
+    private fun returnToLiveGuide() {
+        if (view == null) return
+        jumpToLive()
+        viewModel.loadGuideForDate(currentDate)
     }
 
     override fun isTopMenuVisible(): Boolean = false

@@ -25,6 +25,7 @@ class UpdateDialogFragment : DialogFragment() {
 
     companion object {
         const val TAG = "UpdateDialogFragment"
+        const val DISMISS_RESULT_KEY = "update_dialog_dismissed"
 
         fun newInstance(): UpdateDialogFragment {
             return UpdateDialogFragment()
@@ -120,6 +121,7 @@ class UpdateDialogFragment : DialogFragment() {
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
+        parentFragmentManager.setFragmentResult(DISMISS_RESULT_KEY, Bundle())
         onDismissCallback?.invoke()
     }
 
