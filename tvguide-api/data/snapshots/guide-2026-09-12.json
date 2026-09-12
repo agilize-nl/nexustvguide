@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-11T22:00:00Z",
   "to": "2026-09-12T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
-  "publishedAt": "2026-09-07T15:13:06.863Z",
+  "sourceFetchedAt": "2026-09-08T20:43:07.300Z",
+  "publishedAt": "2026-09-08T20:43:07.300Z",
   "channels": [
     {
       "id": "npo1",
@@ -560,7 +560,7 @@
       "channelId": "npo1",
       "title": "Strijders",
       "start": "2026-09-12T12:05:00.000Z",
-      "end": "2026-09-12T13:00:00.000Z",
+      "end": "2026-09-12T13:05:00.000Z",
       "description": "Onder het toeziend oog van presentator Jeroen van Koningsbrugge zetten ex-commando’s Ray Klaassens en Dai Carter alles op alles om hun eigen team naar de overwinning te loodsen in een militair kampioenschap. Een competitie waar het niet alleen draait om fysieke kracht, maar ook om persoonlijke ontwikkeling, doorzettingsvermogen en teamwork.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/strijders-765041292.jpg",
       "genre": "Realityserie",
@@ -582,8 +582,8 @@
       "id": "219513892",
       "channelId": "npo1",
       "title": "Keuringsdienst van waarde",
-      "start": "2026-09-12T13:00:00.000Z",
-      "end": "2026-09-12T13:25:00.000Z",
+      "start": "2026-09-12T13:05:00.000Z",
+      "end": "2026-09-12T13:30:00.000Z",
       "description": "Klopt het wat fabrikanten de consumenten vertellen? Is het waar wat ze claimen en wat ze in reclames verkopen? De verslaggevers nemen de telefoon ter hand en komen tot bijzondere ontdekkingen. Ze stellen simpele vragen en krijgen de meest verbazingwekkende antwoorden op food-, non-food- en nieuwsgerelateerde kwesties.",
       "imageUrl": "https://tvgidsassets.nl/upload/k/keuringsdienst-van-waarde-764216292.jpg",
       "genre": "Consumentenprogramma",
@@ -605,7 +605,7 @@
       "id": "220131402",
       "channelId": "npo1",
       "title": "Nieuw Nederland",
-      "start": "2026-09-12T13:25:00.000Z",
+      "start": "2026-09-12T13:30:00.000Z",
       "end": "2026-09-12T14:20:00.000Z",
       "description": "Presentator Kefah Allush stapt virtueel het jaar 2126 binnen om te ontdekken hoe Nederland er mogelijk uitziet over honderd jaar. Een panel van bekende en minder bekende Nederlanders en wetenschappers, onder wie André Kuipers, Jan Jaap van de Wal, Reinier van den Berg, Maarten van Rossem, Marjolijn Haasnoot en Diederik Jekel, voorziet de verhalen en scenario’s die voorbijkomen van commentaar en toelichting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuw-nederland-767615932.jpg",
@@ -806,7 +806,7 @@
       "channelId": "npo1",
       "title": "Wolven",
       "start": "2026-09-12T18:30:00.000Z",
-      "end": "2026-09-12T19:20:00.000Z",
+      "end": "2026-09-12T19:25:00.000Z",
       "description": "Spel over vertrouwen, strategie en misleiding. Dertien Burgers, met ieder een eigen specialisme, komen in een afgelegen bos samen voor een spel waarin niets is wat het lijkt. Onder hen bevinden zich ook Wolven: lukt het de wolven om de andere spelers één voor één te verslinden? Terwijl de spanning oploopt en het wantrouwen groeit, blijft één vraag centraal staan: weten de Burgers de Wolven op tijd te ontmaskeren?",
       "imageUrl": "https://tvgidsassets.nl/upload/w/wolvenmetdoloresleeuwinbnnvara.jpg",
       "genre": "Spel",
@@ -828,8 +828,8 @@
       "id": "219513722",
       "channelId": "npo1",
       "title": "Beste zangers",
-      "start": "2026-09-12T19:20:00.000Z",
-      "end": "2026-09-12T20:20:00.000Z",
+      "start": "2026-09-12T19:25:00.000Z",
+      "end": "2026-09-12T20:30:00.000Z",
       "description": "Nederlandse zangers/zangeressen reizen af naar Sevilla en zingen elkaars werk.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bizzeybestezangershoofdgastavrotrostv.jpg",
       "genre": "Muziekprogramma",
@@ -851,8 +851,8 @@
       "id": "219513672",
       "channelId": "npo1",
       "title": "Studio sport voetbal",
-      "start": "2026-09-12T20:20:00.000Z",
-      "end": "2026-09-12T21:15:00.000Z",
+      "start": "2026-09-12T20:30:00.000Z",
+      "end": "2026-09-12T21:25:00.000Z",
       "description": "Samenvattingen van de voetbalwedstrijden in de Eredivisie, met analyses van experts.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-voetbal-763547742.jpg",
       "genre": "Sportprogramma",
@@ -861,14 +861,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "nrDRmodpBECZXU587Y2Mnw",
+        "assetId": "04D126FA120630975E00C07642B72715",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219513732",
       "channelId": "npo1",
       "title": "Studio sport",
-      "start": "2026-09-12T21:15:00.000Z",
-      "end": "2026-09-12T21:45:00.000Z",
+      "start": "2026-09-12T21:25:00.000Z",
+      "end": "2026-09-12T22:00:00.000Z",
       "description": "Met livebeelden en samenvattingen van de belangrijkste sportwedstrijden en -evenementen van de dag. Ook met interviews en reportages.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/studio-sport-763400552.jpg",
       "genre": "Sportnieuws",
@@ -877,23 +884,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
-    },
-    {
-      "id": "219513822",
-      "channelId": "npo1",
-      "title": "NOS Journaal",
-      "start": "2026-09-12T21:45:00.000Z",
-      "end": "2026-09-12T22:00:00.000Z",
-      "description": "Met het laatste nieuws en de weersverwachting.",
-      "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-763445182.jpg",
-      "genre": "Nieuwsbulletin",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "Rie4rOPgmEaEX0OdRBka4A",
+        "assetId": "5535243DBAC5F3299A82DBCE436F4335",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219474992",
@@ -1723,14 +1721,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4wNHUgFj6EaD9uO7V_yiww",
-        "assetId": "A9D13283E7FE578C21D260663FEB92AC",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219475502",
@@ -3166,7 +3157,7 @@
       "start": "2026-09-11T21:55:00.000Z",
       "end": "2026-09-11T22:55:00.000Z",
       "description": "Talkshow waarin Renze Klamer iedere werkdag met relevante gasten het nieuws van de dag uit binnen- en buitenland bespreekt. Actuele onderwerpen, scherpe gesprekken en een gezellige, ontspannen sfeer komen daarin samen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-759205472.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-769778902.jpg",
       "genre": "Talkshow",
       "isLive": false,
       "isRerun": true,
@@ -3419,7 +3410,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "5Sq4ajYIPkq127lgQZLJvA",
+        "assetId": "87DF26E4600C2D6639508F642AF64F88",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219512412",
@@ -3481,7 +3479,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "L1qBYfdZeE2DS9_zsqHZPA",
+        "assetId": "84363FD76B7BE45CFB02892EF122FECE",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219512352",
@@ -3497,7 +3502,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "D-5o1nc7kkSPXp5h_FBT_w",
+        "assetId": "979ADE573A7AE64F2D9FA6CB9677D346",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219512332",
@@ -5289,7 +5301,7 @@
       "id": "219473092",
       "channelId": "rtl7",
       "title": "Teleshop",
-      "start": "2026-09-12T00:00:00.000Z",
+      "start": "2026-09-12T00:10:00.000Z",
       "end": "2026-09-12T04:00:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-764362512.jpg",
@@ -5979,7 +5991,7 @@
     {
       "id": "219511372",
       "channelId": "veronica",
-      "title": "Spidey en zijn Geweldige Vriendjes",
+      "title": "Spidey en zijn geweldige vriendjes",
       "start": "2026-09-12T03:35:00.000Z",
       "end": "2026-09-12T04:00:00.000Z",
       "description": "Doc Ock verstoort de oceaan. Ghosty redt minigolf.",
@@ -7783,7 +7795,7 @@
       "start": "2026-09-11T21:10:00.000Z",
       "end": "2026-09-11T22:10:00.000Z",
       "description": "Brits realityprogramma waarin gerechtsdeurwaarders uit Engeland en Wales worden gevolgd tijdens hun dagelijkse werkzaamheden. Terwijl de deurwaarders overgaan over tot beslagleggingen en uitzettingen, vertellen de wanbetalers hun vaak hartverscheurende verhaal.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/deurwaarders-uk-763654232.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/deurwaarders-uk-763654222.jpg",
       "genre": "Realityserie",
       "isLive": false,
       "isRerun": true,
@@ -9486,7 +9498,7 @@
       "channelId": "een",
       "title": "VRT NWS update",
       "start": "2026-09-12T15:50:00.000Z",
-      "end": "2026-09-12T16:00:00.000Z",
+      "end": "2026-09-12T16:05:00.000Z",
       "description": "Kort nieuwsoverzicht.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vrt-nws-update-766666672.jpg",
       "genre": "Actualiteiten",
@@ -9505,13 +9517,13 @@
       }
     },
     {
-      "id": "219598512",
+      "id": "220405332",
       "channelId": "een",
       "title": "Down the road",
-      "start": "2026-09-12T16:00:00.000Z",
+      "start": "2026-09-12T16:05:00.000Z",
       "end": "2026-09-12T17:00:00.000Z",
       "description": "Dieter Coppens gaat met begeleidster Saar Pelgrims op avontuur met zes jongvolwassenen met het syndroom van Down.",
-      "imageUrl": "https://tvgidsassets.nl/upload/d/down-the-road-763909082.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/d/down-the-road-769717052.jpg",
       "genre": "Reportageserie",
       "isLive": false,
       "isRerun": true,
@@ -9520,8 +9532,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "XBj9Mop4d0ma-XghK5fi2A",
-        "assetId": "2C37042CA932FA57EF6C24E26331CF16",
+        "contentItemId": "CBqqkt93_0KeVoeTdQpK8w",
+        "assetId": "1802849EE9724B7E6B631EEA20DADCFB",
         "channelId": "een",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -10647,14 +10659,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "EOulEJI8s021GTSjMxjS5Q",
-        "assetId": "38C8CE6CF9550020C912D3AF8757AFB9",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "220146222",
@@ -10762,14 +10767,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "C6lGjqO1rE6md-QSKCc_CQ",
-        "assetId": "7EA151F81EFFABB4DF416E384058289E",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "220146192",
@@ -11270,7 +11268,7 @@
       "channelId": "npo1extra",
       "title": "Triviant",
       "start": "2026-09-12T09:00:00.000Z",
-      "end": "2026-09-12T09:45:00.000Z",
+      "end": "2026-09-12T09:40:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763344062.jpg",
       "genre": "Quiz",
@@ -11292,8 +11290,8 @@
       "id": "219507512",
       "channelId": "npo1extra",
       "title": "Triviant",
-      "start": "2026-09-12T09:45:00.000Z",
-      "end": "2026-09-12T10:30:00.000Z",
+      "start": "2026-09-12T09:40:00.000Z",
+      "end": "2026-09-12T10:20:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763344032.jpg",
       "genre": "Quiz",
@@ -11315,8 +11313,8 @@
       "id": "219507502",
       "channelId": "npo1extra",
       "title": "Triviant",
-      "start": "2026-09-12T10:30:00.000Z",
-      "end": "2026-09-12T11:15:00.000Z",
+      "start": "2026-09-12T10:20:00.000Z",
+      "end": "2026-09-12T11:05:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763344002.jpg",
       "genre": "Quiz",
@@ -11338,8 +11336,8 @@
       "id": "219507492",
       "channelId": "npo1extra",
       "title": "Triviant",
-      "start": "2026-09-12T11:15:00.000Z",
-      "end": "2026-09-12T12:00:00.000Z",
+      "start": "2026-09-12T11:05:00.000Z",
+      "end": "2026-09-12T11:45:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763343972.jpg",
       "genre": "Quiz",
@@ -11361,8 +11359,8 @@
       "id": "219507482",
       "channelId": "npo1extra",
       "title": "Triviant",
-      "start": "2026-09-12T12:00:00.000Z",
-      "end": "2026-09-12T12:45:00.000Z",
+      "start": "2026-09-12T11:45:00.000Z",
+      "end": "2026-09-12T12:30:00.000Z",
       "description": "Vijf bekende Nederlanders nemen het tegen elkaar op. Een quiz vol verrassende vragen en interessante weetjes over de meest uiteenlopende onderwerpen die elkaar in rap tempo opvolgen. Van geschiedenis tot sport en van wetenschap tot cultuur: alles kan voorbijkomen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/triviant-763343942.jpg",
       "genre": "Quiz",
@@ -11375,6 +11373,29 @@
         "kind": "replay",
         "contentItemId": "O5TM8x-hykSQ_P0IWa75ow",
         "assetId": "74B7CF34C01158A72FBF6DA05FC1614A",
+        "channelId": "npo1extra",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
+    },
+    {
+      "id": "220441572",
+      "channelId": "npo1extra",
+      "title": "Andere tijden kort",
+      "start": "2026-09-12T12:30:00.000Z",
+      "end": "2026-09-12T12:45:00.000Z",
+      "description": "Geschiedenisprogramma over ontwikkelingen en gebeurtenissen in de moderne geschiedenis, naar aanleiding van de actualiteit.",
+      "imageUrl": "https://tvgidsassets.nl/upload/a/andere-tijden-kort-770004522.jpg",
+      "genre": "Geschiedenisprogramma",
+      "isLive": false,
+      "isRerun": true,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "k1FCdhGBFk6vdbOiHdPbNg",
+        "assetId": "D6270DA638AFF4CE9310EE1CF1C6DA3D",
         "channelId": "npo1extra",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -11638,7 +11659,7 @@
       "channelId": "npo1extra",
       "title": "Bergerac",
       "start": "2026-09-12T19:10:00.000Z",
-      "end": "2026-09-12T19:55:00.000Z",
+      "end": "2026-09-12T19:50:00.000Z",
       "description": "Inspecteur Jim Bergerac heeft het moeilijk na de dood van zijn vrouw en zoekt zijn toevlucht in drank, ook al moet hij ook nog voor zijn dochter zorgen. Als er een rijke jonge vrouw vermoord wordt, hoopt Bergerac zijn leven en carrière weer op de rit te krijgen, maar zo simpel is dat nog niet.",
       "imageUrl": "https://tvgidsassets.nl/upload/b/bergerac-763344652.jpg",
       "genre": "Misdaadserie",
@@ -11653,7 +11674,7 @@
       "id": "219507642",
       "channelId": "npo1extra",
       "title": "Families like ours",
-      "start": "2026-09-12T19:55:00.000Z",
+      "start": "2026-09-12T19:50:00.000Z",
       "end": "2026-09-12T21:00:00.000Z",
       "description": "De zeespiegel in Denemarken dreigt zo drastisch te gaan stijgen, dat iedereen het land moet verlaten en elders een onderkomen moet zoeken. Huizen worden onverkoopbaar en families worden verscheurd: alles verandert. Ook voor eindexamenkandidaat Laura, die voor een onmogelijke keuze komt te staan.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/families-like-ours-763344722.jpg",

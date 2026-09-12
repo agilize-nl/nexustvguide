@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-07T22:00:00Z",
   "to": "2026-09-08T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
-  "publishedAt": "2026-09-07T15:13:06.863Z",
+  "sourceFetchedAt": "2026-09-08T20:43:07.300Z",
+  "publishedAt": "2026-09-08T20:43:07.300Z",
   "channels": [
     {
       "id": "npo1",
@@ -344,7 +344,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-08T01:10:00.000Z",
-      "end": "2026-09-08T03:50:00.000Z",
+      "end": "2026-09-08T03:55:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-761678242.jpg",
       "genre": "Nieuwsbulletin",
@@ -353,20 +353,13 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "srWpPAhNsEeC8jRQROdqcA",
-        "assetId": "B2B640F5896F91D2385463E481A743FC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219276732",
       "channelId": "npo1",
       "title": "Nederland in beweging",
-      "start": "2026-09-08T03:50:00.000Z",
+      "start": "2026-09-08T03:55:00.000Z",
       "end": "2026-09-08T04:10:00.000Z",
       "description": "Beweeg mee met 'Nederland in beweging'. Meedoen betekent al een kwartier beweging van het aanbevolen dagelijkse half uur.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nederland-in-beweging-762081452.jpg",
@@ -454,7 +447,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "OLc5HmyVPUuwszLt9NqyhA",
+        "assetId": "82006D32F6FA27F31AA27B7F5CCE222F",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219277062",
@@ -470,7 +470,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "OLc5HmyVPUuwszLt9NqyhA",
+        "assetId": "9D59751FD4B0145931BED370319724A5",
+        "channelId": "npo1",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219277072",
@@ -1008,14 +1015,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "icvlTUC_XUymcDyntIiGnw",
-        "assetId": "9FA59D0C9DF5F7D6539950FF1D1A43D3",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219276852",
@@ -1045,7 +1045,7 @@
       "channelId": "npo1",
       "title": "NOS Journaal",
       "start": "2026-09-08T13:00:00.000Z",
-      "end": "2026-09-08T13:20:00.000Z",
+      "end": "2026-09-08T13:25:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
       "genre": "Nieuwsbulletin",
@@ -1067,8 +1067,8 @@
       "id": "219277132",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-08T13:20:00.000Z",
-      "end": "2026-09-08T13:35:00.000Z",
+      "start": "2026-09-08T13:25:00.000Z",
+      "end": "2026-09-08T13:40:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
       "genre": "Nieuwsbulletin",
@@ -1077,20 +1077,13 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "NXD-vb_yIkSEAQRTYk9btw",
-        "assetId": "8980A196923CE51B937CF39FD99057EC",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219277142",
       "channelId": "npo1",
       "title": "NOS Journaal",
-      "start": "2026-09-08T13:35:00.000Z",
+      "start": "2026-09-08T13:40:00.000Z",
       "end": "2026-09-08T14:05:00.000Z",
       "description": "Met het laatste nieuws en de weersverwachting.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nos-journaal-762149852.jpg",
@@ -1100,14 +1093,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "NXD-vb_yIkSEAQRTYk9btw",
-        "assetId": "AB3EEBFB2BB4DEB50846BED183577B26",
-        "channelId": "npo1",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "220197052",
@@ -1707,7 +1693,7 @@
       "channelId": "npo2",
       "title": "Nieuwsuur",
       "start": "2026-09-08T07:55:00.000Z",
-      "end": "2026-09-08T08:40:00.000Z",
+      "end": "2026-09-08T08:45:00.000Z",
       "description": "Het nieuws met achtergronden, duiding en analyse. Presentatie door Mariëlle Tweebeeke of Jeroen Wollaars, of door invalpresentatoren Eelco Bosch van Rosenthal of Petra Grijzen.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuwsuur-762080832.jpg",
       "genre": "Actualiteiten",
@@ -1729,7 +1715,7 @@
       "id": "219277502",
       "channelId": "npo2",
       "title": "Expeditie Nederland",
-      "start": "2026-09-08T08:40:00.000Z",
+      "start": "2026-09-08T08:45:00.000Z",
       "end": "2026-09-08T09:20:00.000Z",
       "description": "Regionale verslaggevers duiken in uiteenlopende thema’s op het gebied van de zorg voor elkaar, duurzaamheid, geschiedenis, cultuur en tradities. Rond deze thema’s gaan de verslaggevers op zoek naar bijzondere, spraakmakende en ontroerende verhalen. En zo schetsen ze een eigen beeld van Nederland.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/expeditie-nederland-763546882.jpg",
@@ -1928,7 +1914,7 @@
         "contentItemId": "rDp_yzebiUONZw1M9lY6jg",
         "assetId": "63DD04E562CBFB5CEC60CA14236F4571",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -1999,7 +1985,7 @@
       "channelId": "npo2",
       "title": "Per seconde wijzer",
       "start": "2026-09-08T14:30:00.000Z",
-      "end": "2026-09-08T14:56:00.000Z",
+      "end": "2026-09-08T14:55:00.000Z",
       "description": "Twee kandidaten testen onder hoge druk hun kennis in verschillende categorieën. Hoe zetten zij hun jokers in, hoeveel rondes zullen de spelers het volhouden en met welk bedrag gaan de spelers uiteindelijk naar huis? Met elke dag aan het begin van de uitzending de kijkersvraag.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/per-seconde-wijzer-762081102.jpg",
       "genre": "Quiz",
@@ -2021,7 +2007,7 @@
       "id": "220227122",
       "channelId": "npo2",
       "title": "Politieke partijen",
-      "start": "2026-09-08T14:56:00.000Z",
+      "start": "2026-09-08T14:55:00.000Z",
       "end": "2026-09-08T14:57:00.000Z",
       "description": "Zendtijd voor politieke partijen in Nederland.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/politieke-partijen-768302302.jpg",
@@ -2068,7 +2054,7 @@
         "contentItemId": "C3eqqxyaVUyj4yF2zpZCvw",
         "assetId": "243FF519A1870ED04F880D8A54ED1855",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2233,7 +2219,7 @@
       "start": "2026-09-08T19:20:00.000Z",
       "end": "2026-09-08T20:00:00.000Z",
       "description": "Een drone met ingebouwde mitrailleur, de nieuwste generatie tanks en de Oekraïense FP5-Flamingo-raket. Op de grootste wapenbeurs Eurosatory is het allemaal te zien en te koop. Vanuit hier onderzoekt journalist Petra Grijzen de rol van wetenschap in een wereld waarin vrede steeds minder vanzelfsprekend is.",
-      "imageUrl": "https://tvgidsassets.nl/upload/k/klaar-voor-de-oorlog-762210372.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/k/klaar-voor-de-oorlog-763584542.jpg",
       "genre": "Documentaireserie",
       "isLive": false,
       "isRerun": false,
@@ -2279,7 +2265,7 @@
       "start": "2026-09-08T20:35:00.000Z",
       "end": "2026-09-08T21:05:00.000Z",
       "description": "Rutger Castricum doet verslag van politieke en maatschappelijke kwesties. Met experts scherpt hij zijn verhaal en confronteert hij politici met kritische vragen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rutgers-lobby-769295092.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rutgercastricumpownedtweedeseizoenlobby.jpg",
       "genre": "Reportageserie",
       "isLive": false,
       "isRerun": false,
@@ -2394,14 +2380,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "u2iFqz7TnUKVnimdefPBTQ",
-        "assetId": "B62F46D38046DB9F7CB5E31BD69C5971",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219552582",
@@ -2417,14 +2396,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "R0Etvqn69kWVpXm6m17gfw",
-        "assetId": "7BBA92D2C994ABFD4ECD942A907CDB6B",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219206932",
@@ -2440,14 +2412,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "RIgrVyV87UStf-ZhKIcqww",
-        "assetId": "427668345A0640201CDEC71F517D9A5C",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219206922",
@@ -2463,14 +2428,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "RIgrVyV87UStf-ZhKIcqww",
-        "assetId": "4C0FB7BE98802D3707881D60FD77BE07",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219207092",
@@ -2509,14 +2467,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "yY1RhCQye0ehJzOWtgOjlQ",
-        "assetId": "AF5B9128F4AC8D4FD9CE01986E5C85E9",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219278022",
@@ -2537,7 +2488,7 @@
         "contentItemId": "v2TZaxngXkKeSGKMlgDkGw",
         "assetId": "751F4DA199CFCEAF7BD3366B3F5CB5C0",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2583,7 +2534,7 @@
         "contentItemId": "fBOHxJO18UmE6f7C2_C8Nw",
         "assetId": "8235E9CE57BED4CF80967FBFB873E8F0",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2606,7 +2557,7 @@
         "contentItemId": "U1oj57c9xU-u0LSsmnt4aQ",
         "assetId": "0FB574E0C8A456F5576B041E9427EEEA",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2675,7 +2626,7 @@
         "contentItemId": "uTIJhBK0FEuoxO2Acdc9Ng",
         "assetId": "40A5B0CCA3274CA1BF61D391B2655D03",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2698,7 +2649,7 @@
         "contentItemId": "LUu3uYh9Ok-m2W-0_bCb1g",
         "assetId": "E484FDBAC63A58338B7F7EDB9E78632E",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2721,7 +2672,7 @@
         "contentItemId": "Av5m8U32ck-LCdYrlqWqfQ",
         "assetId": "2C453285D56F06CE4B9AE01D0D74A2C9",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2868,7 +2819,7 @@
         "contentItemId": "EUTjCxpy4kCd-y8WKln82g",
         "assetId": "F34E438E8C455EE5A7EC9AA93ABEF6E3",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2946,7 +2897,7 @@
         "contentItemId": "d2AHiVtwnker14h8janH-A",
         "assetId": "3745EA23A75F00EDAE54CB47B2701837",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2969,7 +2920,7 @@
         "contentItemId": "hFUMkddVGUqFiA0rE7MP1A",
         "assetId": "F59D5227BDF98D2E74A0E1736755F5E5",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2992,7 +2943,7 @@
         "contentItemId": "kzOfUTmi1k6pGJuRRG1WqA",
         "assetId": "37533331092505FE719E834FEAEDA95A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3038,7 +2989,7 @@
         "contentItemId": "azqF-zfaXUeTjWZ7NfCGXg",
         "assetId": "91894F88F412C9C906E113991A2B8D41",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3061,7 +3012,7 @@
         "contentItemId": "JWgFUv-tZk28K7OZ1C81dw",
         "assetId": "33438505991CE56E4BC599EA156C3A72",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3176,7 +3127,7 @@
         "contentItemId": "Djt8NH2vFEypDiSq3Bm_AA",
         "assetId": "B9D57E697E6C17C814447B6266216871",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3245,7 +3196,7 @@
         "contentItemId": "4KlE7MsgG0WNYFMzrFeAXg",
         "assetId": "FCB43FC57278970831BF7AB55EA4F4BF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3268,7 +3219,7 @@
         "contentItemId": "R8AFwez5ZUGzn0ZBjfTEfg",
         "assetId": "69B8D4943758424800AD24AD8EC04560",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3314,7 +3265,7 @@
         "contentItemId": "Xq_5L5pR-kihsDSLJ1t0IA",
         "assetId": "50464429DFA3AED002936CA8D05763FC",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3360,7 +3311,7 @@
         "contentItemId": "fNqXq9tR2EGb43tBLcCwdw",
         "assetId": "14D09B7EF91F61C28B18AC732E3D1934",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3383,7 +3334,7 @@
         "contentItemId": "AVbG_kNZW0ymqJ7v4lM1pQ",
         "assetId": "2C196455487748397AD085654898ED1F",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3452,7 +3403,7 @@
         "contentItemId": "Ml7xwctutUmmfu5kRDX81Q",
         "assetId": "EE0BD149408DA64EF9EF1A9A6A1ADC79",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3521,7 +3472,7 @@
         "contentItemId": "O8ZoPu9hMkiG6SMYA2lFFA",
         "assetId": "761B1AABFB2EF46AC7D2592C33507DAF",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3567,7 +3518,7 @@
         "contentItemId": "KwY_FNgThk-tT7kcqYL_wg",
         "assetId": "B52945628630255E267B9FB2AC6A94B3",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3590,7 +3541,7 @@
         "contentItemId": "8b4BTmPAB0OYS_LdHGXOfQ",
         "assetId": "2039381351096922D49E384134CF5178",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3613,7 +3564,7 @@
         "contentItemId": "AoWyuyVqcUCJd4-yscTeJQ",
         "assetId": "EDF2FC2E42E74DFFB756A05196C759B7",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3668,7 +3619,7 @@
         "contentItemId": "M7vGxVOevkKA2W_iSGFkHQ",
         "assetId": "1F764AF8816CE251A19B73B51F1A40E8",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3808,7 +3759,7 @@
         "contentItemId": "vpqNY0Jl2UO5qNlxU6RZTw",
         "assetId": "0D6BAB416732EC24B9FA8C37978BFAFC",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3831,7 +3782,7 @@
         "contentItemId": "wYGO-QN8Jk2GV3gCYuisKQ",
         "assetId": "E2D870BB0FF649F23AE00B4AC034781A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3854,7 +3805,7 @@
         "contentItemId": "0fRBm_VuQ0-5oVMzs03rCw",
         "assetId": "8CC0F832A5E4591BB394DD1B79FC9A1C",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3877,7 +3828,7 @@
         "contentItemId": "WOgw3lehyEKU2_Qe8kOxRQ",
         "assetId": "C015277C486123CC3DC88DC42CA3C1DA",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3900,7 +3851,7 @@
         "contentItemId": "hPz9Us1pqEqa7gFFUjyuLg",
         "assetId": "8D68452AF68D5302DE223080BF49C359",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3923,7 +3874,7 @@
         "contentItemId": "UeclXVcb2E6mYy92oJnG-w",
         "assetId": "FF721413E668AF34049A65EB48C40634",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3992,7 +3943,7 @@
         "contentItemId": "cDVI5gcKP0OHeoaRtcTyyw",
         "assetId": "4B98F46E693BBE9C0138424D261B68C2",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4015,7 +3966,7 @@
         "contentItemId": "SQALgdtMt0iWi49gRHqivA",
         "assetId": "E2A32098BA47B1F62E30C1D1E50A920A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4038,7 +3989,7 @@
         "contentItemId": "LchSiKH6VkOdsW_l0Gy4LQ",
         "assetId": "0BBF3561127AAE77196E508573A6623A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4061,7 +4012,7 @@
         "contentItemId": "VbU9NmSKskC2rTD7yxjE8w",
         "assetId": "3F9023EF62343AF87D02E8CA9C24F5C9",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4084,7 +4035,7 @@
         "contentItemId": "6ErpMU6GjEeI9w51ASlaaw",
         "assetId": "C9BB531CA362604D8C50857284FB12A9",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4130,7 +4081,7 @@
         "contentItemId": "x61f6In5M02l04PHW4eu9A",
         "assetId": "8E252795B938D0FB6A393CD2B0F0E085",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4153,7 +4104,7 @@
         "contentItemId": "f4-NVxxAzEWL-bW_pu1Nwg",
         "assetId": "4E12CBF93EC7ECE98EAFDB50D8CDF85A",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4509,14 +4460,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "4fvuycAr_EaK0a9qSDcywA",
-        "assetId": "E2ACBBD021B825700F5D4D17A5BCA476",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219204152",
@@ -4532,21 +4476,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "TtAiAAC9fEyhlLl2eWqspA",
-        "assetId": "FF7F65984D698820CEB4CF96A11DA4EC",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219275082",
       "channelId": "rtl4",
       "title": "EditieNL",
-      "start": "2026-09-08T04:00:00.000Z",
-      "end": "2026-09-08T04:15:00.000Z",
+      "start": "2026-09-08T03:58:00.000Z",
+      "end": "2026-09-08T04:14:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761953792.jpg",
       "genre": "Actualiteiten",
@@ -4568,7 +4505,7 @@
       "id": "219275182",
       "channelId": "rtl4",
       "title": "EditieNL",
-      "start": "2026-09-08T04:15:00.000Z",
+      "start": "2026-09-08T04:14:00.000Z",
       "end": "2026-09-08T04:30:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761953792.jpg",
@@ -4592,7 +4529,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T04:30:00.000Z",
-      "end": "2026-09-08T04:37:00.000Z",
+      "end": "2026-09-08T04:36:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -4614,7 +4551,7 @@
       "id": "219274972",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T04:37:00.000Z",
+      "start": "2026-09-08T04:36:00.000Z",
       "end": "2026-09-08T04:45:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -4638,7 +4575,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T04:45:00.000Z",
-      "end": "2026-09-08T04:53:00.000Z",
+      "end": "2026-09-08T04:51:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -4660,7 +4597,7 @@
       "id": "219275202",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T04:53:00.000Z",
+      "start": "2026-09-08T04:51:00.000Z",
       "end": "2026-09-08T05:00:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -4868,7 +4805,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:00:00.000Z",
-      "end": "2026-09-08T06:15:00.000Z",
+      "end": "2026-09-08T06:12:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -4890,7 +4827,7 @@
       "id": "219274912",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:15:00.000Z",
+      "start": "2026-09-08T06:12:00.000Z",
       "end": "2026-09-08T06:20:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -4914,7 +4851,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:20:00.000Z",
-      "end": "2026-09-08T06:35:00.000Z",
+      "end": "2026-09-08T06:32:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -4936,7 +4873,7 @@
       "id": "219274952",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:35:00.000Z",
+      "start": "2026-09-08T06:32:00.000Z",
       "end": "2026-09-08T06:40:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -4960,7 +4897,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:40:00.000Z",
-      "end": "2026-09-08T06:55:00.000Z",
+      "end": "2026-09-08T06:52:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -4982,7 +4919,7 @@
       "id": "219275262",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:55:00.000Z",
+      "start": "2026-09-08T06:52:00.000Z",
       "end": "2026-09-08T07:00:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -5075,7 +5012,7 @@
       "channelId": "rtl4",
       "title": "RTL Weer",
       "start": "2026-09-08T07:50:00.000Z",
-      "end": "2026-09-08T08:00:00.000Z",
+      "end": "2026-09-08T07:59:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
       "genre": "Weerbericht",
@@ -5097,8 +5034,8 @@
       "id": "219275102",
       "channelId": "rtl4",
       "title": "RTL Boulevard",
-      "start": "2026-09-08T08:00:00.000Z",
-      "end": "2026-09-08T08:55:00.000Z",
+      "start": "2026-09-08T07:59:00.000Z",
+      "end": "2026-09-08T08:53:00.000Z",
       "description": "Dagelijkse mix van actualiteiten, vermaak en opinies met een of twee deskundigen, gasten of andere nieuwsmakers. In hoog tempo volgen afwisselende items en reportages elkaar op met de thema's showbizz, misdaad, koningshuis en lifestyle.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-boulevard-760333222.jpg",
       "genre": "Amusement",
@@ -5120,8 +5057,8 @@
       "id": "219275162",
       "channelId": "rtl4",
       "title": "Eigen huis & tuin: Lekker leven",
-      "start": "2026-09-08T08:55:00.000Z",
-      "end": "2026-09-08T09:55:00.000Z",
+      "start": "2026-09-08T08:53:00.000Z",
+      "end": "2026-09-08T09:56:00.000Z",
       "description": "Dagelijkse inspiratie voor in en om het huis. Presentatrice Froukje de Both, kok Hugo Kennis en een team van experts, onder wie tuinman Tom Groot, geven praktische tips op het gebied van wonen, lifestyle, tuinieren en koken.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/eigen-huis-tuin-lekker-leven-759205112.jpg",
       "genre": "Lifestyleprogramma",
@@ -5143,7 +5080,7 @@
       "id": "219275142",
       "channelId": "rtl4",
       "title": "Goede tijden, slechte tijden",
-      "start": "2026-09-08T09:55:00.000Z",
+      "start": "2026-09-08T09:56:00.000Z",
       "end": "2026-09-08T10:25:00.000Z",
       "description": "De perikelen rondom verschillende families in het plaatsje Meerdijk.",
       "imageUrl": "https://tvgidsassets.nl/upload/g/goede-tijden-slechte-tijden-762019862.jpg",
@@ -5153,14 +5090,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "h7W9RM0OSkuq1dq4nj3q9Q",
+        "assetId": "C481585F605382C3E84E4B7BCA7A7B24",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219275132",
       "channelId": "rtl4",
       "title": "The bold and the beautiful",
       "start": "2026-09-08T10:25:00.000Z",
-      "end": "2026-09-08T11:00:00.000Z",
+      "end": "2026-09-08T11:03:00.000Z",
       "description": "Amerikaanse soapserie over de rijke families Forrester, Logan en Spencer in Los Angeles, Californië.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-bold-and-the-beautiful-762019432.jpg",
       "genre": "Soap",
@@ -5169,21 +5113,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "13xAZgQrLEKWogObK-l6kw",
-        "assetId": "67253BECDE3B2331155F26753A94420C",
-        "channelId": "rtl4",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219275172",
       "channelId": "rtl4",
       "title": "Love's Secret Ingredient",
-      "start": "2026-09-08T11:00:00.000Z",
-      "end": "2026-09-08T13:00:00.000Z",
+      "start": "2026-09-08T11:03:00.000Z",
+      "end": "2026-09-08T12:58:00.000Z",
       "description": "De eigenaresse van een biologische winkel ziet zich gedwongen samen te werken met een beroemde chef-kok om een lijn maaltijdpakketten samen te stellen. De samenwerking verloopt stroef, tot ze elkaar beter leren kennen.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/love-s-secret-ingredient-761910752.jpg",
       "genre": "Romantische komedie",
@@ -5205,10 +5142,10 @@
       "id": "219275112",
       "channelId": "rtl4",
       "title": "Renze",
-      "start": "2026-09-08T13:00:00.000Z",
-      "end": "2026-09-08T13:55:00.000Z",
+      "start": "2026-09-08T12:58:00.000Z",
+      "end": "2026-09-08T13:58:00.000Z",
       "description": "Talkshow waarin Renze Klamer iedere werkdag met relevante gasten het nieuws van de dag uit binnen- en buitenland bespreekt. Actuele onderwerpen, scherpe gesprekken en een gezellige, ontspannen sfeer komen daarin samen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-759205472.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-769778902.jpg",
       "genre": "Talkshow",
       "isLive": false,
       "isRerun": true,
@@ -5228,8 +5165,8 @@
       "id": "219275072",
       "channelId": "rtl4",
       "title": "Lubach",
-      "start": "2026-09-08T13:55:00.000Z",
-      "end": "2026-09-08T14:30:00.000Z",
+      "start": "2026-09-08T13:58:00.000Z",
+      "end": "2026-09-08T14:33:00.000Z",
       "description": "Satirische latenightshow waarin actuele thema’s en nieuws op humoristische wijze worden besproken. Met scherpe monologen, diepgravende verhalen en ludieke sketches bieden Arjen Lubach en zijn team een kritische blik op politiek, media en maatschappij. Gasten, muziek en comedy vormen de basis van de show.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/lubach-759204242.jpg",
       "genre": "Talkshow",
@@ -5251,7 +5188,7 @@
       "id": "219275092",
       "channelId": "rtl4",
       "title": "B&B vol liefde",
-      "start": "2026-09-08T14:30:00.000Z",
+      "start": "2026-09-08T14:33:00.000Z",
       "end": "2026-09-08T16:00:00.000Z",
       "description": "Alleenstaande eigenaren van een B&B in het buitenland gaan op zoek naar de liefde van hun leven. Welke Nederlandse partner durft over de grens te kijken en maakt het avontuur van de B&B-eigenaren compleet?",
       "imageUrl": "https://tvgidsassets.nl/upload/b/b-b-vol-liefde-759204302.jpg",
@@ -5275,7 +5212,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T16:00:00.000Z",
-      "end": "2026-09-08T16:15:00.000Z",
+      "end": "2026-09-08T16:17:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -5297,8 +5234,8 @@
       "id": "219274862",
       "channelId": "rtl4",
       "title": "EditieNL",
-      "start": "2026-09-08T16:15:00.000Z",
-      "end": "2026-09-08T16:30:00.000Z",
+      "start": "2026-09-08T16:17:00.000Z",
+      "end": "2026-09-08T16:33:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761953792.jpg",
       "genre": "Actualiteiten",
@@ -5320,7 +5257,7 @@
       "id": "219274932",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T16:30:00.000Z",
+      "start": "2026-09-08T16:33:00.000Z",
       "end": "2026-09-08T16:35:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
@@ -5367,7 +5304,7 @@
       "channelId": "rtl4",
       "title": "RTL Nieuws",
       "start": "2026-09-08T17:30:00.000Z",
-      "end": "2026-09-08T17:55:00.000Z",
+      "end": "2026-09-08T17:57:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
       "genre": "Nieuwsprogramma",
@@ -5389,8 +5326,8 @@
       "id": "219275062",
       "channelId": "rtl4",
       "title": "RTL Weer",
-      "start": "2026-09-08T17:55:00.000Z",
-      "end": "2026-09-08T18:00:00.000Z",
+      "start": "2026-09-08T17:57:00.000Z",
+      "end": "2026-09-08T18:01:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
       "genre": "Weerbericht",
@@ -5412,8 +5349,8 @@
       "id": "219275122",
       "channelId": "rtl4",
       "title": "Goede tijden, slechte tijden",
-      "start": "2026-09-08T18:00:00.000Z",
-      "end": "2026-09-08T18:30:00.000Z",
+      "start": "2026-09-08T18:01:00.000Z",
+      "end": "2026-09-08T18:31:00.000Z",
       "description": "De perikelen rondom verschillende families in het plaatsje Meerdijk.",
       "imageUrl": "https://tvgidsassets.nl/upload/g/goede-tijden-slechte-tijden-762019862.jpg",
       "genre": "Soap",
@@ -5435,8 +5372,8 @@
       "id": "219274852",
       "channelId": "rtl4",
       "title": "B&B vol liefde",
-      "start": "2026-09-08T18:30:00.000Z",
-      "end": "2026-09-08T20:00:00.000Z",
+      "start": "2026-09-08T18:31:00.000Z",
+      "end": "2026-09-08T19:59:00.000Z",
       "description": "Alleenstaande eigenaren van een B&B in het buitenland gaan op zoek naar de liefde van hun leven. Welke Nederlandse partner durft over de grens te kijken en maakt het avontuur van de B&B-eigenaren compleet?",
       "imageUrl": "https://tvgidsassets.nl/upload/b/b-b-vol-liefde-759204302.jpg",
       "genre": "Realityprogramma",
@@ -5458,10 +5395,10 @@
       "id": "219274922",
       "channelId": "rtl4",
       "title": "Renze",
-      "start": "2026-09-08T20:00:00.000Z",
-      "end": "2026-09-08T21:00:00.000Z",
+      "start": "2026-09-08T19:59:00.000Z",
+      "end": "2026-09-08T20:56:00.000Z",
       "description": "Talkshow waarin Renze Klamer iedere werkdag met relevante gasten het nieuws van de dag uit binnen- en buitenland bespreekt. Actuele onderwerpen, scherpe gesprekken en een gezellige, ontspannen sfeer komen daarin samen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-759205472.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-769778902.jpg",
       "genre": "Talkshow",
       "isLive": false,
       "isRerun": false,
@@ -5481,8 +5418,8 @@
       "id": "219274842",
       "channelId": "rtl4",
       "title": "Lubach",
-      "start": "2026-09-08T21:00:00.000Z",
-      "end": "2026-09-08T21:30:00.000Z",
+      "start": "2026-09-08T20:56:00.000Z",
+      "end": "2026-09-08T21:29:00.000Z",
       "description": "Satirische latenightshow waarin actuele thema’s en nieuws op humoristische wijze worden besproken. Met scherpe monologen, diepgravende verhalen en ludieke sketches bieden Arjen Lubach en zijn team een kritische blik op politiek, media en maatschappij. Gasten, muziek en comedy vormen de basis van de show.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/lubach-759204242.jpg",
       "genre": "Talkshow",
@@ -5504,7 +5441,7 @@
       "id": "219274982",
       "channelId": "rtl4",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T21:30:00.000Z",
+      "start": "2026-09-08T21:29:00.000Z",
       "end": "2026-09-08T21:45:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-762256942.jpg",
@@ -5528,7 +5465,7 @@
       "channelId": "rtl4",
       "title": "RTL Weer",
       "start": "2026-09-08T21:45:00.000Z",
-      "end": "2026-09-08T21:50:00.000Z",
+      "end": "2026-09-08T21:48:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
       "genre": "Weerbericht",
@@ -5550,10 +5487,10 @@
       "id": "219275292",
       "channelId": "rtl4",
       "title": "Renze",
-      "start": "2026-09-08T21:50:00.000Z",
-      "end": "2026-09-08T22:50:00.000Z",
+      "start": "2026-09-08T21:48:00.000Z",
+      "end": "2026-09-08T22:54:00.000Z",
       "description": "Talkshow waarin Renze Klamer iedere werkdag met relevante gasten het nieuws van de dag uit binnen- en buitenland bespreekt. Actuele onderwerpen, scherpe gesprekken en een gezellige, ontspannen sfeer komen daarin samen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-759205472.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/renze-769778902.jpg",
       "genre": "Talkshow",
       "isLive": false,
       "isRerun": true,
@@ -5583,7 +5520,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "aetQtKVg8EWBDjAUydl1Mw",
+        "assetId": "E9C0A976BDC16039FE2C433CE90B8254",
+        "channelId": "rtl5",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219206302",
@@ -5644,8 +5588,8 @@
       "id": "219277252",
       "channelId": "rtl5",
       "title": "Teleshop 5: Telvero",
-      "start": "2026-09-08T03:30:00.000Z",
-      "end": "2026-09-08T05:00:00.000Z",
+      "start": "2026-09-08T03:40:00.000Z",
+      "end": "2026-09-08T05:10:00.000Z",
       "description": "Homeshoppingprogramma.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-5-telvero-761487612.jpg",
       "genre": "Overige",
@@ -5667,8 +5611,8 @@
       "id": "219277322",
       "channelId": "rtl5",
       "title": "Teleshop 5: Tommy teleshopping",
-      "start": "2026-09-08T05:00:00.000Z",
-      "end": "2026-09-08T08:30:00.000Z",
+      "start": "2026-09-08T05:10:00.000Z",
+      "end": "2026-09-08T08:40:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-762214932.jpg",
       "genre": "Overige",
@@ -5690,8 +5634,8 @@
       "id": "219277332",
       "channelId": "rtl5",
       "title": "Teleshop 5: Telvero",
-      "start": "2026-09-08T08:30:00.000Z",
-      "end": "2026-09-08T10:30:00.000Z",
+      "start": "2026-09-08T08:40:00.000Z",
+      "end": "2026-09-08T10:40:00.000Z",
       "description": "Homeshoppingprogramma.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-5-telvero-761487612.jpg",
       "genre": "Overige",
@@ -5713,8 +5657,8 @@
       "id": "219277342",
       "channelId": "rtl5",
       "title": "Teleshop 5: Tommy teleshopping",
-      "start": "2026-09-08T10:30:00.000Z",
-      "end": "2026-09-08T12:30:00.000Z",
+      "start": "2026-09-08T10:40:00.000Z",
+      "end": "2026-09-08T12:40:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-762214932.jpg",
       "genre": "Overige",
@@ -5736,8 +5680,8 @@
       "id": "219277352",
       "channelId": "rtl5",
       "title": "Teleshop 5: Telvero",
-      "start": "2026-09-08T12:30:00.000Z",
-      "end": "2026-09-08T14:30:00.000Z",
+      "start": "2026-09-08T12:40:00.000Z",
+      "end": "2026-09-08T14:40:00.000Z",
       "description": "Homeshoppingprogramma.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-5-telvero-761487612.jpg",
       "genre": "Overige",
@@ -5759,8 +5703,8 @@
       "id": "219277272",
       "channelId": "rtl5",
       "title": "Politie in het holst van de nacht",
-      "start": "2026-09-08T14:30:00.000Z",
-      "end": "2026-09-08T15:35:00.000Z",
+      "start": "2026-09-08T14:40:00.000Z",
+      "end": "2026-09-08T15:38:00.000Z",
       "description": "Britse politieagenten worden gevolgd tijdens hun nachtdienst.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/politie-in-het-holst-van-de-nacht-759213132.jpg",
       "genre": "Realityserie",
@@ -5782,8 +5726,8 @@
       "id": "219277242",
       "channelId": "rtl5",
       "title": "Ontvoerd",
-      "start": "2026-09-08T15:35:00.000Z",
-      "end": "2026-09-08T17:05:00.000Z",
+      "start": "2026-09-08T15:38:00.000Z",
+      "end": "2026-09-08T17:06:00.000Z",
       "description": "Internationale kinderontvoeringszaken komen aan de orde. Het betreft gevallen waarbij de ene ouder zonder toestemming van de andere ouder, of van de rechter, hun kind meeneemt naar het buitenland. Het doel van het programma is om te bemiddelen en het kind op legale wijze terug te brengen naar de eerder door de rechter aangewezen woonplaats.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/ontvoerd-759599302.jpg",
       "genre": "Reportages",
@@ -5805,8 +5749,8 @@
       "id": "219277302",
       "channelId": "rtl5",
       "title": "De Pfaff's",
-      "start": "2026-09-08T17:05:00.000Z",
-      "end": "2026-09-08T17:45:00.000Z",
+      "start": "2026-09-08T17:06:00.000Z",
+      "end": "2026-09-08T17:48:00.000Z",
       "description": "Vlaamse celebrity-docusoap over voetbalheld Jean-Marie Pfaff, zijn vrouw Carmen, Bompa, de drie zussen Debby, Kelly en Lyndsey en hun aanhang.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-pfaff-s-759213172.jpg",
       "genre": "Realityserie",
@@ -5828,7 +5772,7 @@
       "id": "219277292",
       "channelId": "rtl5",
       "title": "De Pfaff's",
-      "start": "2026-09-08T17:45:00.000Z",
+      "start": "2026-09-08T17:48:00.000Z",
       "end": "2026-09-08T18:30:00.000Z",
       "description": "Vlaamse celebrity-docusoap over voetbalheld Jean-Marie Pfaff, zijn vrouw Carmen, Bompa, de drie zussen Debby, Kelly en Lyndsey en hun aanhang.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-pfaff-s-759213172.jpg",
@@ -5875,7 +5819,7 @@
       "channelId": "rtl5",
       "title": "112 vandaag",
       "start": "2026-09-08T19:55:00.000Z",
-      "end": "2026-09-08T20:25:00.000Z",
+      "end": "2026-09-08T20:18:00.000Z",
       "description": "Reportages over de meldingen en calamiteiten die bij het nationale noodnummer binnenkomen. Verslaggevers duiken in de verhalen achter de noodmeldingen bij de politie, brandweer, ambulance en reddingsdiensten.",
       "imageUrl": "https://tvgidsassets.nl/upload/1/112-vandaag-767151152.jpg",
       "genre": "Reportage",
@@ -5897,8 +5841,8 @@
       "id": "219277222",
       "channelId": "rtl5",
       "title": "RTL Weer",
-      "start": "2026-09-08T20:25:00.000Z",
-      "end": "2026-09-08T20:35:00.000Z",
+      "start": "2026-09-08T20:18:00.000Z",
+      "end": "2026-09-08T20:29:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
       "genre": "Weerbericht",
@@ -5920,8 +5864,8 @@
       "id": "219277312",
       "channelId": "rtl5",
       "title": "24 uur in de ER",
-      "start": "2026-09-08T20:35:00.000Z",
-      "end": "2026-09-08T21:35:00.000Z",
+      "start": "2026-09-08T20:29:00.000Z",
+      "end": "2026-09-08T21:34:00.000Z",
       "description": "Realityserie over de eerstehulpafdeling van St. George's Hospital in Zuid-Londen, een van de grootste ziekenhuizen van Groot-Brittannië. De artsen en hulpbehoevende patiënten worden 24 uur per dag van dichtbij gevolgd.",
       "imageUrl": "https://tvgidsassets.nl/upload/2/24-uur-in-de-er-759213292.jpg",
       "genre": "Realityserie",
@@ -5930,21 +5874,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "mLdP-VUDO0a60rbzYFagAQ",
-        "assetId": "0C663729A2F02B4C4FAD4057D8191284",
-        "channelId": "rtl5",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219277362",
       "channelId": "rtl5",
       "title": "112 vandaag",
-      "start": "2026-09-08T21:35:00.000Z",
-      "end": "2026-09-08T22:00:00.000Z",
+      "start": "2026-09-08T21:34:00.000Z",
+      "end": "2026-09-08T21:57:00.000Z",
       "description": "Reportages over de meldingen en calamiteiten die bij het nationale noodnummer binnenkomen. Verslaggevers duiken in de verhalen achter de noodmeldingen bij de politie, brandweer, ambulance en reddingsdiensten.",
       "imageUrl": "https://tvgidsassets.nl/upload/1/112-vandaag-767151152.jpg",
       "genre": "Reportage",
@@ -5957,6 +5894,29 @@
         "kind": "replay",
         "contentItemId": "ii3dkQmQaEGwRZSEkxCaPA",
         "assetId": "BA717272495F17242AD838E9C610B7D9",
+        "channelId": "rtl5",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
+    },
+    {
+      "id": "219277372",
+      "channelId": "rtl5",
+      "title": "RTL Weer",
+      "start": "2026-09-08T21:57:00.000Z",
+      "end": "2026-09-08T22:01:00.000Z",
+      "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-762344622.jpg",
+      "genre": "Weerbericht",
+      "isLive": false,
+      "isRerun": true,
+      "isPremiere": false,
+      "ageRating": null,
+      "nlzietId": null,
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "kEy4l8pvgUWGdmd_cAqgkA",
+        "assetId": "3DFB244E4072BAB7DE33368ABE30F6F9",
         "channelId": "rtl5",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -5976,7 +5936,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "fnBbL3ZGkUqavsEn-6nkSw",
+        "assetId": "3AD3AF35DD536A52E6FF456D1DD9CA29",
+        "channelId": "sbs6",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219204352",
@@ -6061,7 +6028,7 @@
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-08T04:44:00.000Z",
-      "end": "2026-09-08T04:59:00.000Z",
+      "end": "2026-09-08T05:00:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -6083,7 +6050,7 @@
       "id": "219275552",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T04:59:00.000Z",
+      "start": "2026-09-08T05:00:00.000Z",
       "end": "2026-09-08T05:14:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -6245,7 +6212,7 @@
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-08T06:43:00.000Z",
-      "end": "2026-09-08T06:58:00.000Z",
+      "end": "2026-09-08T06:57:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -6267,8 +6234,8 @@
       "id": "219275472",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T06:58:00.000Z",
-      "end": "2026-09-08T07:12:00.000Z",
+      "start": "2026-09-08T06:57:00.000Z",
+      "end": "2026-09-08T07:11:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -6290,7 +6257,7 @@
       "id": "220395082",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T07:12:00.000Z",
+      "start": "2026-09-08T07:11:00.000Z",
       "end": "2026-09-08T07:26:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
@@ -6337,7 +6304,7 @@
       "channelId": "sbs6",
       "title": "Hart van Nederland",
       "start": "2026-09-08T07:40:00.000Z",
-      "end": "2026-09-08T07:55:00.000Z",
+      "end": "2026-09-08T07:54:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
       "genre": "Actualiteiten",
@@ -6359,7 +6326,7 @@
       "id": "220395052",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T07:55:00.000Z",
+      "start": "2026-09-08T07:54:00.000Z",
       "end": "2026-09-08T08:09:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-769575952.jpg",
@@ -6429,7 +6396,7 @@
       "channelId": "sbs6",
       "title": "Nieuws van de dag",
       "start": "2026-09-08T09:16:00.000Z",
-      "end": "2026-09-08T10:15:00.000Z",
+      "end": "2026-09-08T10:14:00.000Z",
       "description": "Opinie- en actualiteitenprogramma waarin verslaggevers en opiniemakers van De Telegraaf en 'Hart van Nederland' het nieuws bespreken. Ze schuiven aan in de studio en doen liveverslag vanuit het land.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuws-van-de-dag-759205652.jpg",
       "genre": "Actualiteiten",
@@ -6451,7 +6418,7 @@
       "id": "219275642",
       "channelId": "sbs6",
       "title": "Overtreders",
-      "start": "2026-09-08T10:15:00.000Z",
+      "start": "2026-09-08T10:14:00.000Z",
       "end": "2026-09-08T10:46:00.000Z",
       "description": "Het werk van handhavers op straat, in de natuur en in het openbaar vervoer wordt gevolgd.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/overtreders-761829452.jpg",
@@ -6498,7 +6465,7 @@
       "channelId": "sbs6",
       "title": "De bondgenoten",
       "start": "2026-09-08T11:45:00.000Z",
-      "end": "2026-09-08T12:40:00.000Z",
+      "end": "2026-09-08T12:41:00.000Z",
       "description": "Een maand lang hebben de bondgenoten elkaar nodig om kans te maken op honderdduizend euro. Maar laten ze elkaar aan het einde van de maand net zo hard weer vallen als ze er zelf vandoor kunnen gaan met de hoofdprijs? Een boeiende strijd vol strategie, teamwork en manipulatie volgt.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-bondgenoten-759205622.jpg",
       "genre": "Realityserie",
@@ -6520,7 +6487,7 @@
       "id": "219275672",
       "channelId": "sbs6",
       "title": "Droomhuis op het platteland",
-      "start": "2026-09-08T12:40:00.000Z",
+      "start": "2026-09-08T12:41:00.000Z",
       "end": "2026-09-08T13:39:00.000Z",
       "description": "Avontuurlijke mensen geven hun leven in de stad op voor een nieuw bestaan op het platteland. De presentatoren helpen deze potentiële kopers om hun droomhuis te vinden.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/escape-to-the-country-761147552.jpg",
@@ -6567,7 +6534,7 @@
       "channelId": "sbs6",
       "title": "Droomhuis op het platteland",
       "start": "2026-09-08T14:50:00.000Z",
-      "end": "2026-09-08T15:49:00.000Z",
+      "end": "2026-09-08T15:50:00.000Z",
       "description": "Avontuurlijke mensen geven hun leven in de stad op voor een nieuw bestaan op het platteland. De presentatoren helpen deze potentiële kopers om hun droomhuis te vinden.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/escape-to-the-country-761147552.jpg",
       "genre": "Woonprogramma",
@@ -6589,7 +6556,7 @@
       "id": "219275452",
       "channelId": "sbs6",
       "title": "Hart van Nederland",
-      "start": "2026-09-08T15:49:00.000Z",
+      "start": "2026-09-08T15:50:00.000Z",
       "end": "2026-09-08T16:05:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
@@ -6613,7 +6580,7 @@
       "channelId": "sbs6",
       "title": "Nieuws van de dag",
       "start": "2026-09-08T16:05:00.000Z",
-      "end": "2026-09-08T16:56:00.000Z",
+      "end": "2026-09-08T16:57:00.000Z",
       "description": "Opinie- en actualiteitenprogramma waarin verslaggevers en opiniemakers van De Telegraaf en 'Hart van Nederland' het nieuws bespreken. Ze schuiven aan in de studio en doen liveverslag vanuit het land.",
       "imageUrl": "https://tvgidsassets.nl/upload/n/nieuws-van-de-dag-759205652.jpg",
       "genre": "Actualiteiten",
@@ -6635,7 +6602,7 @@
       "id": "219275442",
       "channelId": "sbs6",
       "title": "Overtreders",
-      "start": "2026-09-08T16:56:00.000Z",
+      "start": "2026-09-08T16:57:00.000Z",
       "end": "2026-09-08T17:30:00.000Z",
       "description": "Het werk van handhavers op straat, in de natuur en in het openbaar vervoer wordt gevolgd.",
       "imageUrl": "https://tvgidsassets.nl/upload/o/overtreders-761829452.jpg",
@@ -6836,7 +6803,7 @@
       "channelId": "rtl7",
       "title": "Teleshop",
       "start": "2026-09-07T23:12:00.000Z",
-      "end": "2026-09-08T00:01:00.000Z",
+      "end": "2026-09-08T00:10:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshopping-761825452.jpg",
       "genre": "Overige",
@@ -6867,7 +6834,7 @@
       "id": "219275702",
       "channelId": "rtl7",
       "title": "Teleshop 7: Telvero",
-      "start": "2026-09-08T04:00:00.000Z",
+      "start": "2026-09-08T03:59:00.000Z",
       "end": "2026-09-08T04:30:00.000Z",
       "description": "Homeshoppingprogramma.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198312.jpg",
@@ -6893,7 +6860,7 @@
       "start": "2026-09-08T04:30:00.000Z",
       "end": "2026-09-08T07:30:00.000Z",
       "description": null,
-      "imageUrl": "https://tvgidsassets.nl/upload/q/qmusic-hey-mattie-768511302.jpg",
+      "imageUrl": null,
       "genre": "Muziekprogramma",
       "isLive": false,
       "isRerun": true,
@@ -6914,7 +6881,7 @@
       "channelId": "rtl7",
       "title": "Vis tv",
       "start": "2026-09-08T07:30:00.000Z",
-      "end": "2026-09-08T08:00:00.000Z",
+      "end": "2026-09-08T07:59:00.000Z",
       "description": "Hengelsportprogramma waarin sportvissers en presentatoren Marco Kraal, Tamme Smit, Nathalie van den Berg, Anja Groot en Regina Procee visavonturen beleven. Dat doen ze op bekende stekken in Nederland, vol verhalen over de geschiedenis.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vis-tv-759207362.jpg",
       "genre": "Informatief programma",
@@ -6936,8 +6903,8 @@
       "id": "219275792",
       "channelId": "rtl7",
       "title": "Vis tv",
-      "start": "2026-09-08T08:00:00.000Z",
-      "end": "2026-09-08T08:30:00.000Z",
+      "start": "2026-09-08T07:59:00.000Z",
+      "end": "2026-09-08T08:28:00.000Z",
       "description": "Hengelsportprogramma waarin sportvissers en presentatoren Marco Kraal, Tamme Smit, Nathalie van den Berg, Anja Groot en Regina Procee visavonturen beleven. Dat doen ze op bekende stekken in Nederland, vol verhalen over de geschiedenis.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vis-tv-759207362.jpg",
       "genre": "Informatief programma",
@@ -6959,8 +6926,8 @@
       "id": "219275832",
       "channelId": "rtl7",
       "title": "Stop! Politie",
-      "start": "2026-09-08T08:30:00.000Z",
-      "end": "2026-09-08T09:30:00.000Z",
+      "start": "2026-09-08T08:28:00.000Z",
+      "end": "2026-09-08T09:29:00.000Z",
       "description": "De mannen en vrouwen van de verkeerspolitie zijn dagelijks onderweg om het verkeer veilig te houden. Deze realityserie volgt hen tijdens hun werk. Camera's in politievoertuigen registreren al een aantal deccenia het rijgedrag van automobilisten. Dat niet iedereen zich aan de regels houdt, is duidelijk.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/stop-politie-761481582.jpg",
       "genre": "Realityprogramma",
@@ -6982,8 +6949,8 @@
       "id": "219275842",
       "channelId": "rtl7",
       "title": "Idioten op de weg",
-      "start": "2026-09-08T09:30:00.000Z",
-      "end": "2026-09-08T09:55:00.000Z",
+      "start": "2026-09-08T09:29:00.000Z",
+      "end": "2026-09-08T09:49:00.000Z",
       "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
       "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
       "genre": "Realityprogramma",
@@ -7002,34 +6969,11 @@
       }
     },
     {
-      "id": "219275872",
-      "channelId": "rtl7",
-      "title": "Idioten op de weg",
-      "start": "2026-09-08T09:55:00.000Z",
-      "end": "2026-09-08T10:00:00.000Z",
-      "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
-      "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "GGLajXsiXUKUfFChj8Cj_A",
-        "assetId": "4991AE4670C25C434A4CCBE9D87C5178",
-        "channelId": "rtl7",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
       "id": "219275882",
       "channelId": "rtl7",
       "title": "Idioten op de weg",
-      "start": "2026-09-08T10:00:00.000Z",
-      "end": "2026-09-08T10:25:00.000Z",
+      "start": "2026-09-08T09:49:00.000Z",
+      "end": "2026-09-08T10:20:00.000Z",
       "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
       "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
       "genre": "Realityprogramma",
@@ -7048,34 +6992,11 @@
       }
     },
     {
-      "id": "219275892",
-      "channelId": "rtl7",
-      "title": "Idioten op de weg",
-      "start": "2026-09-08T10:25:00.000Z",
-      "end": "2026-09-08T10:30:00.000Z",
-      "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
-      "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
-      "genre": "Realityprogramma",
-      "isLive": false,
-      "isRerun": true,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "wRmnXkPt_0-oT_CHRhUc-Q",
-        "assetId": "610040E76539B94B662E00F158CDF2E4",
-        "channelId": "rtl7",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
       "id": "219275862",
       "channelId": "rtl7",
       "title": "Idioten op de weg",
-      "start": "2026-09-08T10:30:00.000Z",
-      "end": "2026-09-08T11:00:00.000Z",
+      "start": "2026-09-08T10:20:00.000Z",
+      "end": "2026-09-08T10:40:00.000Z",
       "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
       "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
       "genre": "Realityprogramma",
@@ -7097,8 +7018,8 @@
       "id": "219275852",
       "channelId": "rtl7",
       "title": "Idioten op de weg",
-      "start": "2026-09-08T11:00:00.000Z",
-      "end": "2026-09-08T11:30:00.000Z",
+      "start": "2026-09-08T10:40:00.000Z",
+      "end": "2026-09-08T11:11:00.000Z",
       "description": "Realityserie over de meest bizarre en gevaarlijke situaties op de weg. Het gaat regelmatig helemaal mis, doordat niet iedereen zich aan de verkeersregels houdt. Automobilisten leggen met hun eigen camera's de domste acties vast die ooit op het asfalt zijn vertoond. Van een gekantelde vrachtwagen die beide weghelften blokkeert, tot een bestuurder die de kiepwagen een nieuwe invulling geeft.",
       "imageUrl": "https://tvgidsassets.nl/upload/i/idioten-op-de-weg-762642732.jpg",
       "genre": "Realityprogramma",
@@ -7120,8 +7041,8 @@
       "id": "219275732",
       "channelId": "rtl7",
       "title": "De sterkste man van Nederland",
-      "start": "2026-09-08T11:30:00.000Z",
-      "end": "2026-09-08T12:30:00.000Z",
+      "start": "2026-09-08T11:11:00.000Z",
+      "end": "2026-09-08T12:11:00.000Z",
       "description": "De allersterkste mannen nemen het tegen elkaar op. Tijdens dit kampioenschap zullen er zes verschillende onderdelen uitgevoerd worden.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/de-sterkste-man-van-nederland-761481722.jpg",
       "genre": "Rechtstreeks verslag/Verslag",
@@ -7143,8 +7064,8 @@
       "id": "219275692",
       "channelId": "rtl7",
       "title": "Flodder",
-      "start": "2026-09-08T12:30:00.000Z",
-      "end": "2026-09-08T13:00:00.000Z",
+      "start": "2026-09-08T12:11:00.000Z",
+      "end": "2026-09-08T12:46:00.000Z",
       "description": "Het leven van de asociale familie Flodder, die in de sjieke wijk Zonnedael woont, staat centraal. De familie komt in de gekste en grappigste situaties terecht.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/flodder-762209892.jpg",
       "genre": "Comedyserie",
@@ -7159,8 +7080,8 @@
       "id": "219275682",
       "channelId": "rtl7",
       "title": "Flodder",
-      "start": "2026-09-08T13:00:00.000Z",
-      "end": "2026-09-08T13:30:00.000Z",
+      "start": "2026-09-08T12:46:00.000Z",
+      "end": "2026-09-08T13:21:00.000Z",
       "description": "Het leven van de asociale familie Flodder, die in de sjieke wijk Zonnedael woont, staat centraal. De familie komt in de gekste en grappigste situaties terecht.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/flodder-762209892.jpg",
       "genre": "Comedyserie",
@@ -7175,8 +7096,8 @@
       "id": "219275772",
       "channelId": "rtl7",
       "title": "Flodder",
-      "start": "2026-09-08T13:30:00.000Z",
-      "end": "2026-09-08T14:00:00.000Z",
+      "start": "2026-09-08T13:21:00.000Z",
+      "end": "2026-09-08T13:56:00.000Z",
       "description": "Het leven van de asociale familie Flodder, die in de sjieke wijk Zonnedael woont, staat centraal. De familie komt in de gekste en grappigste situaties terecht.",
       "imageUrl": "https://tvgidsassets.nl/upload/f/flodder-762209892.jpg",
       "genre": "Comedyserie",
@@ -7191,8 +7112,8 @@
       "id": "219275902",
       "channelId": "rtl7",
       "title": "Pawn stars",
-      "start": "2026-09-08T14:00:00.000Z",
-      "end": "2026-09-08T14:05:00.000Z",
+      "start": "2026-09-08T13:56:00.000Z",
+      "end": "2026-09-08T14:16:00.000Z",
       "description": "Drie generaties van de familie Harrison worden gevolgd tijdens hun werkzaamheden in het pandjeshuis Gold & Silver Pawn Shop in Las Vegas. Grootvader Richard, zoon Rick, kleinzoon Corey en diens jeugdvriend Austin Russell beoordelen zorgvuldig de waarde van de grote diversiteit aan artikelen die hun kleurrijke klanten bij ze binnenbrengen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-760633202.jpg",
       "genre": "Realityserie",
@@ -7214,8 +7135,8 @@
       "id": "219275922",
       "channelId": "rtl7",
       "title": "Pawn stars",
-      "start": "2026-09-08T14:05:00.000Z",
-      "end": "2026-09-08T15:05:00.000Z",
+      "start": "2026-09-08T14:16:00.000Z",
+      "end": "2026-09-08T15:10:00.000Z",
       "description": "Drie generaties van de familie Harrison worden gevolgd tijdens hun werkzaamheden in het pandjeshuis Gold & Silver Pawn Shop in Las Vegas. Grootvader Richard, zoon Rick, kleinzoon Corey en diens jeugdvriend Austin Russell beoordelen zorgvuldig de waarde van de grote diversiteit aan artikelen die hun kleurrijke klanten bij ze binnenbrengen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-760633202.jpg",
       "genre": "Realityserie",
@@ -7237,8 +7158,8 @@
       "id": "219275762",
       "channelId": "rtl7",
       "title": "Pawn stars hit the road",
-      "start": "2026-09-08T15:05:00.000Z",
-      "end": "2026-09-08T16:00:00.000Z",
+      "start": "2026-09-08T15:10:00.000Z",
+      "end": "2026-09-08T16:07:00.000Z",
       "description": "Rick Harrison, Corey Harrison en Austin Russell van de Gold & Silver Pawn Shop in Las Vegas reizen door Amerika. In acht grote steden gaan ze op zoek naar bijzondere artikelen die ze in hun pandjeshuis kunnen verkopen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-hit-the-road-759593432.jpg",
       "genre": "Realityserie",
@@ -7260,8 +7181,8 @@
       "id": "219275812",
       "channelId": "rtl7",
       "title": "Pawn stars",
-      "start": "2026-09-08T16:00:00.000Z",
-      "end": "2026-09-08T16:30:00.000Z",
+      "start": "2026-09-08T16:07:00.000Z",
+      "end": "2026-09-08T16:35:00.000Z",
       "description": "Drie generaties van de familie Harrison worden gevolgd tijdens hun werkzaamheden in het pandjeshuis Gold & Silver Pawn Shop in Las Vegas. Grootvader Richard, zoon Rick, kleinzoon Corey en diens jeugdvriend Austin Russell beoordelen zorgvuldig de waarde van de grote diversiteit aan artikelen die hun kleurrijke klanten bij ze binnenbrengen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-760633202.jpg",
       "genre": "Realityserie",
@@ -7283,8 +7204,8 @@
       "id": "219275782",
       "channelId": "rtl7",
       "title": "Pawn stars",
-      "start": "2026-09-08T16:30:00.000Z",
-      "end": "2026-09-08T17:30:00.000Z",
+      "start": "2026-09-08T16:35:00.000Z",
+      "end": "2026-09-08T17:31:00.000Z",
       "description": "Drie generaties van de familie Harrison worden gevolgd tijdens hun werkzaamheden in het pandjeshuis Gold & Silver Pawn Shop in Las Vegas. Grootvader Richard, zoon Rick, kleinzoon Corey en diens jeugdvriend Austin Russell beoordelen zorgvuldig de waarde van de grote diversiteit aan artikelen die hun kleurrijke klanten bij ze binnenbrengen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-760633202.jpg",
       "genre": "Realityserie",
@@ -7306,8 +7227,8 @@
       "id": "219275742",
       "channelId": "rtl7",
       "title": "Pawn stars hit the road",
-      "start": "2026-09-08T17:30:00.000Z",
-      "end": "2026-09-08T18:25:00.000Z",
+      "start": "2026-09-08T17:31:00.000Z",
+      "end": "2026-09-08T18:27:00.000Z",
       "description": "Rick Harrison, Corey Harrison en Austin Russell van de Gold & Silver Pawn Shop in Las Vegas reizen door Amerika. In acht grote steden gaan ze op zoek naar bijzondere artikelen die ze in hun pandjeshuis kunnen verkopen.",
       "imageUrl": "https://tvgidsassets.nl/upload/p/pawn-stars-hit-the-road-759593432.jpg",
       "genre": "Realityserie",
@@ -7329,8 +7250,8 @@
       "id": "219275822",
       "channelId": "rtl7",
       "title": "The Unbearable Weight of Massive Talent",
-      "start": "2026-09-08T18:25:00.000Z",
-      "end": "2026-09-08T20:35:00.000Z",
+      "start": "2026-09-08T18:27:00.000Z",
+      "end": "2026-09-08T20:34:00.000Z",
       "description": "Acteur Nick Cage wacht op die ene rol die zijn carrière nieuw leven zal inblazen. Intussen lopen zijn schulden hoog op. Wanneer hem een miljoen dollar aangeboden wordt om de verjaardag van een superfan bij te wonen, kan hij niet weigeren. De zaken nemen een onverwachte wending als Cage wordt gerekruteerd door de CIA om de criminele activiteiten van zijn gastheer te onderzoeken.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-unbearable-weight-of-massive-talent-761913122.jpg",
       "genre": "Komedie",
@@ -7352,8 +7273,8 @@
       "id": "219275912",
       "channelId": "rtl7",
       "title": "Kill Chain",
-      "start": "2026-09-08T20:35:00.000Z",
-      "end": "2026-09-08T22:30:00.000Z",
+      "start": "2026-09-08T20:34:00.000Z",
+      "end": "2026-09-08T22:31:00.000Z",
       "description": "Araña runt een hotel, waar een vrouw genaamd Renata een nachtje wil verblijven. Niet veel later duiken er enkele gewapende mannen op die haar zoeken. Araña besluit Renata te helpen en moet hierbij zijn verleden onder ogen zien.",
       "imageUrl": "https://tvgidsassets.nl/upload/k/kill-chain-761913342.jpg",
       "genre": "Thriller",
@@ -8360,14 +8281,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "7HFUhp7CNEyBv4caYIYvJA",
-        "assetId": "5D86F81445C4A648676C2F64B177E077",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219274302",
@@ -8383,14 +8297,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "zxmxiJdLwkmLQilMtoQiDA",
-        "assetId": "796E9C5E4039F3D81E8C73D8364BDE2D",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219274292",
@@ -8406,14 +8313,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "U6HjKNQhtE2HLesL7FqXkA",
-        "assetId": "7F528A477AD211E878A2F8D46E39B4A0",
-        "channelId": "veronica",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219274482",
@@ -9217,7 +9117,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "4aXI7cQbEEuLuKhKePDiPw",
+        "contentItemId": "JnTnNqS-DEe7smA7gVU33g",
         "assetId": "17DB2EEB1DA7E3A4D944E79E8E33EBE7",
         "channelId": "net5",
         "isReplayAllowed": true,
@@ -9608,21 +9508,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Wrtr3kCMOkStiBY3-FcUVg",
-        "assetId": "84E90CCD660564F9377357B9C51F62EB",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219276202",
       "channelId": "rtl8",
       "title": "Teleshop 8: Telvero",
       "start": "2026-09-08T09:30:00.000Z",
-      "end": "2026-09-08T14:30:00.000Z",
+      "end": "2026-09-08T14:34:00.000Z",
       "description": "Homeshoppingprogramma.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/teleshop-8-telvero-761483232.jpg",
       "genre": "Overige",
@@ -9631,21 +9524,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "Wrtr3kCMOkStiBY3-FcUVg",
-        "assetId": "DAD62EEBB7B61AFF7E9175FC1C662BEC",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219276142",
       "channelId": "rtl8",
       "title": "Goede tijden, slechte tijden",
-      "start": "2026-09-08T14:30:00.000Z",
-      "end": "2026-09-08T15:00:00.000Z",
+      "start": "2026-09-08T14:34:00.000Z",
+      "end": "2026-09-08T15:03:00.000Z",
       "description": "De perikelen rondom verschillende families in het plaatsje Meerdijk.",
       "imageUrl": "https://tvgidsassets.nl/upload/g/goede-tijden-slechte-tijden-762019862.jpg",
       "genre": "Soap",
@@ -9654,14 +9540,21 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "h7W9RM0OSkuq1dq4nj3q9Q",
+        "assetId": "6DC28DF8339B1F8D1BCF5D14777C893E",
+        "channelId": "rtl8",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219276102",
       "channelId": "rtl8",
       "title": "Undercover boss USA",
-      "start": "2026-09-08T15:00:00.000Z",
-      "end": "2026-09-08T16:05:00.000Z",
+      "start": "2026-09-08T15:03:00.000Z",
+      "end": "2026-09-08T16:00:00.000Z",
       "description": "Directieleden gaan undercover in hun eigen bedrijf. Zo komen ze er achter hoe de medewerkers echt over hen denken en hoe hard er daadwerkelijk wordt gewerkt.",
       "imageUrl": "https://tvgidsassets.nl/upload/u/undercover-boss-usa-760336702.jpg",
       "genre": "Realityserie",
@@ -9683,8 +9576,8 @@
       "id": "219276132",
       "channelId": "rtl8",
       "title": "The bold and the beautiful",
-      "start": "2026-09-08T16:05:00.000Z",
-      "end": "2026-09-08T16:30:00.000Z",
+      "start": "2026-09-08T16:00:00.000Z",
+      "end": "2026-09-08T16:29:00.000Z",
       "description": "Amerikaanse soapserie over de rijke families Forrester, Logan en Spencer in Los Angeles, Californië.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-bold-and-the-beautiful-762019432.jpg",
       "genre": "Soap",
@@ -9706,8 +9599,8 @@
       "id": "219276172",
       "channelId": "rtl8",
       "title": "The bold and the beautiful - The beginning",
-      "start": "2026-09-08T16:30:00.000Z",
-      "end": "2026-09-08T17:00:00.000Z",
+      "start": "2026-09-08T16:29:00.000Z",
+      "end": "2026-09-08T16:57:00.000Z",
       "description": "Amerikaanse soapserie over de rijke families Forrester, Logan en Spencer in Los Angeles, Californië.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-bold-and-the-beautiful-762019432.jpg",
       "genre": "Soap",
@@ -9729,7 +9622,7 @@
       "id": "219276182",
       "channelId": "rtl8",
       "title": "The bold and the beautiful - The beginning",
-      "start": "2026-09-08T17:00:00.000Z",
+      "start": "2026-09-08T16:57:00.000Z",
       "end": "2026-09-08T17:25:00.000Z",
       "description": "Amerikaanse soapserie over de rijke families Forrester, Logan en Spencer in Los Angeles, Californië.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-bold-and-the-beautiful-762019432.jpg",
@@ -9753,12 +9646,12 @@
       "channelId": "rtl8",
       "title": "Dokter Deen",
       "start": "2026-09-08T17:25:00.000Z",
-      "end": "2026-09-08T18:25:00.000Z",
+      "end": "2026-09-08T18:29:00.000Z",
       "description": "Huisarts Maria Deen betekent veel voor de inwoners van Vlieland. Zij heeft een praktijk aan huis, met een apotheek en een kleine operatiekamer waar ze kleine ingrepen kan uitvoeren.",
       "imageUrl": "https://tvgidsassets.nl/upload/d/dokter-deen-764141302.jpg",
       "genre": "Dramaserie",
       "isLive": false,
-      "isRerun": false,
+      "isRerun": true,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
@@ -9775,8 +9668,8 @@
       "id": "219276152",
       "channelId": "rtl8",
       "title": "Kopen zonder kijken",
-      "start": "2026-09-08T18:25:00.000Z",
-      "end": "2026-09-08T19:55:00.000Z",
+      "start": "2026-09-08T18:29:00.000Z",
+      "end": "2026-09-08T19:56:00.000Z",
       "description": "Na maanden of zelfs jaren zoeken naar het perfecte huis, geven de deelnemers hun zoektocht uit handen aan wisselende bekende presentator, taxateur Alex van Keulen, bouwkundige Bob Sikkes en stylist Roos Reedijk. De deelnemers vertrouwen volledig op deze experts en kopen een huis zonder het ooit te hebben gezien. Met als voice-over Martijn Krabbé.",
       "imageUrl": "https://tvgidsassets.nl/upload/k/kopen-zonder-kijken-761914332.jpg",
       "genre": "Realityprogramma",
@@ -9798,8 +9691,8 @@
       "id": "219276092",
       "channelId": "rtl8",
       "title": "Law & order: Special victims unit",
-      "start": "2026-09-08T19:55:00.000Z",
-      "end": "2026-09-08T20:50:00.000Z",
+      "start": "2026-09-08T19:56:00.000Z",
+      "end": "2026-09-08T20:53:00.000Z",
       "description": "Deze serie laat de duistere kant van New York zien, wanneer een speciaal team van detectives, de Special Victims Unit, zedendelicten onderzoekt. Elke aflevering is er een nieuwe zaak om op te lossen, nieuwe slachtoffers om te troosten en tevens een constante strijd om de emoties en druk die bij het werk komt kijken geen invloed op hun persoonlijke levens te laten hebben.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/law-order-special-victims-unit-762208912.jpg",
       "genre": "Misdaadserie",
@@ -9814,8 +9707,8 @@
       "id": "219276082",
       "channelId": "rtl8",
       "title": "Law & order: Special victims unit",
-      "start": "2026-09-08T20:50:00.000Z",
-      "end": "2026-09-08T21:50:00.000Z",
+      "start": "2026-09-08T20:53:00.000Z",
+      "end": "2026-09-08T21:49:00.000Z",
       "description": "Deze serie laat de duistere kant van New York zien, wanneer een speciaal team van detectives, de Special Victims Unit, zedendelicten onderzoekt. Elke aflevering is er een nieuwe zaak om op te lossen, nieuwe slachtoffers om te troosten en tevens een constante strijd om de emoties en druk die bij het werk komt kijken geen invloed op hun persoonlijke levens te laten hebben.",
       "imageUrl": "https://tvgidsassets.nl/upload/l/law-order-special-victims-unit-762208912.jpg",
       "genre": "Misdaadserie",
@@ -9830,8 +9723,8 @@
       "id": "219276162",
       "channelId": "rtl8",
       "title": "Crime scene investigation",
-      "start": "2026-09-08T21:50:00.000Z",
-      "end": "2026-09-08T22:50:00.000Z",
+      "start": "2026-09-08T21:49:00.000Z",
+      "end": "2026-09-08T22:52:00.000Z",
       "description": "Een eliteteam van forensische detectives van het Crime Scene Investigations bureau zorgt ervoor dat geen moord in Las Vegas onopgelost blijft.",
       "imageUrl": "https://tvgidsassets.nl/upload/c/crime-scene-investigation-762111732.jpg",
       "genre": "Misdaadserie",
@@ -9916,7 +9809,7 @@
       "channelId": "rtlz",
       "title": "RTL Nieuws",
       "start": "2026-09-08T00:10:00.000Z",
-      "end": "2026-09-08T00:40:00.000Z",
+      "end": "2026-09-08T00:30:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -9938,8 +9831,8 @@
       "id": "219149152",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T00:40:00.000Z",
-      "end": "2026-09-08T01:50:00.000Z",
+      "start": "2026-09-08T00:30:00.000Z",
+      "end": "2026-09-08T01:53:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -9948,21 +9841,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "C79CA2D13986E568DB574DFD905856E0",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149112",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T01:50:00.000Z",
-      "end": "2026-09-08T02:10:00.000Z",
+      "start": "2026-09-08T01:53:00.000Z",
+      "end": "2026-09-08T02:13:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -9971,21 +9857,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "tPgf_fQFRkyaUP5qOYPLvg",
-        "assetId": "2B0F61B1FCE576B2621D56C56D08278A",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149132",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T02:10:00.000Z",
-      "end": "2026-09-08T02:20:00.000Z",
+      "start": "2026-09-08T02:13:00.000Z",
+      "end": "2026-09-08T02:23:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -9994,21 +9873,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "11597954ABE50BBAE2134D1A0E3AF3A4",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149162",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T02:20:00.000Z",
-      "end": "2026-09-08T02:40:00.000Z",
+      "start": "2026-09-08T02:23:00.000Z",
+      "end": "2026-09-08T02:43:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -10017,21 +9889,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "tPgf_fQFRkyaUP5qOYPLvg",
-        "assetId": "26B3C49C193CE5F3BD1FB160D293A304",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149142",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T02:40:00.000Z",
-      "end": "2026-09-08T02:50:00.000Z",
+      "start": "2026-09-08T02:43:00.000Z",
+      "end": "2026-09-08T02:53:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -10040,21 +9905,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "2465134E4FF1FF9BE1956CC6B932917D",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219149172",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T02:50:00.000Z",
-      "end": "2026-09-08T03:10:00.000Z",
+      "start": "2026-09-08T02:53:00.000Z",
+      "end": "2026-09-08T03:13:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761453572.jpg",
       "genre": "Nieuwsprogramma",
@@ -10063,21 +9921,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "tPgf_fQFRkyaUP5qOYPLvg",
-        "assetId": "0CF5F2DEC9697AA47D09E580445263B3",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219212132",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T03:10:00.000Z",
-      "end": "2026-09-08T03:20:00.000Z",
+      "start": "2026-09-08T03:13:00.000Z",
+      "end": "2026-09-08T03:23:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10086,21 +9937,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "94AB8A908746AE2078C57D2FE6CDA10D",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219212182",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T03:20:00.000Z",
-      "end": "2026-09-08T03:40:00.000Z",
+      "start": "2026-09-08T03:23:00.000Z",
+      "end": "2026-09-08T03:43:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10109,21 +9953,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "tPgf_fQFRkyaUP5qOYPLvg",
-        "assetId": "8C18CAB301F1F39302B369CAADE2DA8A",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211882",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T03:40:00.000Z",
-      "end": "2026-09-08T03:50:00.000Z",
+      "start": "2026-09-08T03:43:00.000Z",
+      "end": "2026-09-08T03:53:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10132,21 +9969,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "A6698BBA605738789D3080E6D142EDD7",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219212122",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T03:50:00.000Z",
-      "end": "2026-09-08T04:10:00.000Z",
+      "start": "2026-09-08T03:53:00.000Z",
+      "end": "2026-09-08T04:13:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10155,21 +9985,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "tPgf_fQFRkyaUP5qOYPLvg",
-        "assetId": "BA14B55597F4033483A4FA5B42C27EAF",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211872",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T04:10:00.000Z",
-      "end": "2026-09-08T04:20:00.000Z",
+      "start": "2026-09-08T04:13:00.000Z",
+      "end": "2026-09-08T04:23:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10178,21 +10001,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "40B036D3C43BDF779CEEB39D3E57B60E",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211972",
       "channelId": "rtlz",
       "title": "RTL Nieuws",
-      "start": "2026-09-08T04:20:00.000Z",
-      "end": "2026-09-08T04:30:00.000Z",
+      "start": "2026-09-08T04:23:00.000Z",
+      "end": "2026-09-08T04:33:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10201,21 +10017,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "-I20iiGjyk-0U3-9Hy1AMQ",
-        "assetId": "7691D5371E2552D0FE52C435CFABC5F6",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211792",
       "channelId": "rtlz",
       "title": "EditieNL",
-      "start": "2026-09-08T04:30:00.000Z",
-      "end": "2026-09-08T04:50:00.000Z",
+      "start": "2026-09-08T04:33:00.000Z",
+      "end": "2026-09-08T04:54:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761517022.jpg",
       "genre": "Actualiteiten",
@@ -10224,21 +10033,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "gF3vQ_bC9Eafpfkk7mx17Q",
-        "assetId": "B43B2FEFA5716BA5DEB67C9B36303564",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211782",
       "channelId": "rtlz",
       "title": "EditieNL",
-      "start": "2026-09-08T04:50:00.000Z",
-      "end": "2026-09-08T05:10:00.000Z",
+      "start": "2026-09-08T04:54:00.000Z",
+      "end": "2026-09-08T05:15:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761516992.jpg",
       "genre": "Actualiteiten",
@@ -10247,21 +10049,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "gF3vQ_bC9Eafpfkk7mx17Q",
-        "assetId": "452A9E2004BE541E723204F69086E8A7",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211772",
       "channelId": "rtlz",
       "title": "EditieNL",
-      "start": "2026-09-08T05:10:00.000Z",
-      "end": "2026-09-08T05:35:00.000Z",
+      "start": "2026-09-08T05:15:00.000Z",
+      "end": "2026-09-08T05:37:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761516962.jpg",
       "genre": "Actualiteiten",
@@ -10283,7 +10078,7 @@
       "id": "219211802",
       "channelId": "rtlz",
       "title": "EditieNL",
-      "start": "2026-09-08T05:35:00.000Z",
+      "start": "2026-09-08T05:37:00.000Z",
       "end": "2026-09-08T06:00:00.000Z",
       "description": "Nieuwsprogramma met aandacht voor achtergronden bij het binnenlands nieuws en onderwerpen die meestal niet in de reguliere nieuwsuitzending te zien zijn.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/editienl-761517052.jpg",
@@ -10307,7 +10102,7 @@
       "channelId": "rtlz",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:00:00.000Z",
-      "end": "2026-09-08T06:10:00.000Z",
+      "end": "2026-09-08T06:12:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10329,7 +10124,7 @@
       "id": "219212112",
       "channelId": "rtlz",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:10:00.000Z",
+      "start": "2026-09-08T06:12:00.000Z",
       "end": "2026-09-08T06:20:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-761517412.jpg",
@@ -10353,7 +10148,7 @@
       "channelId": "rtlz",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:20:00.000Z",
-      "end": "2026-09-08T06:30:00.000Z",
+      "end": "2026-09-08T06:32:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10375,7 +10170,7 @@
       "id": "219211922",
       "channelId": "rtlz",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:30:00.000Z",
+      "start": "2026-09-08T06:32:00.000Z",
       "end": "2026-09-08T06:40:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-761517412.jpg",
@@ -10399,7 +10194,7 @@
       "channelId": "rtlz",
       "title": "RTL Nieuws",
       "start": "2026-09-08T06:40:00.000Z",
-      "end": "2026-09-08T06:50:00.000Z",
+      "end": "2026-09-08T06:52:00.000Z",
       "description": "Dagelijks het laatste nieuws uit binnen- en buitenland.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-nieuws-761876912.jpg",
       "genre": "Nieuwsprogramma",
@@ -10421,7 +10216,7 @@
       "id": "219211852",
       "channelId": "rtlz",
       "title": "RTL Weer",
-      "start": "2026-09-08T06:50:00.000Z",
+      "start": "2026-09-08T06:52:00.000Z",
       "end": "2026-09-08T07:00:00.000Z",
       "description": "Een uitgebreide blik op de actuele weerkaart. Met de weersverwachtingen op de korte en lange termijn in eigen land en in Europa.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-weer-761517202.jpg",
@@ -10537,7 +10332,7 @@
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
       "start": "2026-09-08T08:15:00.000Z",
-      "end": "2026-09-08T08:30:00.000Z",
+      "end": "2026-09-08T08:29:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
       "genre": "Nieuwsprogramma",
@@ -10559,8 +10354,8 @@
       "id": "219212052",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T08:30:00.000Z",
-      "end": "2026-09-08T08:45:00.000Z",
+      "start": "2026-09-08T08:29:00.000Z",
+      "end": "2026-09-08T08:44:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
       "genre": "Nieuwsprogramma",
@@ -10582,7 +10377,7 @@
       "id": "219212162",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T08:45:00.000Z",
+      "start": "2026-09-08T08:44:00.000Z",
       "end": "2026-09-08T09:00:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
@@ -10629,7 +10424,7 @@
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
       "start": "2026-09-08T09:15:00.000Z",
-      "end": "2026-09-08T09:30:00.000Z",
+      "end": "2026-09-08T09:29:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517382.jpg",
       "genre": "Nieuwsprogramma",
@@ -10651,7 +10446,7 @@
       "id": "219212002",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T09:30:00.000Z",
+      "start": "2026-09-08T09:29:00.000Z",
       "end": "2026-09-08T09:45:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
@@ -10721,7 +10516,7 @@
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
       "start": "2026-09-08T10:15:00.000Z",
-      "end": "2026-09-08T10:30:00.000Z",
+      "end": "2026-09-08T10:29:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517502.jpg",
       "genre": "Nieuwsprogramma",
@@ -10743,8 +10538,8 @@
       "id": "219212082",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T10:30:00.000Z",
-      "end": "2026-09-08T10:45:00.000Z",
+      "start": "2026-09-08T10:29:00.000Z",
+      "end": "2026-09-08T10:44:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
       "genre": "Nieuwsprogramma",
@@ -10766,7 +10561,7 @@
       "id": "219211942",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T10:45:00.000Z",
+      "start": "2026-09-08T10:44:00.000Z",
       "end": "2026-09-08T11:00:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517472.jpg",
@@ -10928,7 +10723,7 @@
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
       "start": "2026-09-08T12:30:00.000Z",
-      "end": "2026-09-08T12:45:00.000Z",
+      "end": "2026-09-08T12:44:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
       "genre": "Nieuwsprogramma",
@@ -10950,7 +10745,7 @@
       "id": "219212032",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T12:45:00.000Z",
+      "start": "2026-09-08T12:44:00.000Z",
       "end": "2026-09-08T13:00:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
@@ -10993,14 +10788,14 @@
       }
     },
     {
-      "id": "219212202",
+      "id": "219212022",
       "channelId": "rtlz",
-      "title": "Wekelijks gesprek met de minister van Financiën",
+      "title": "RTL Z Nieuws",
       "start": "2026-09-08T13:15:00.000Z",
-      "end": "2026-09-08T13:30:00.000Z",
-      "description": "Wekelijks livegesprek met de minister van Financiën. Elke dinsdagmiddag wordt er een tien minuten durend gesprek gehouden met de Chief Financial Officer (CFO) van Nederland. In het wekelijkse gesprek met de minister van Financiën, dat live wordt uitgezonden vanuit de Haagse studio, wordt ingegaan op financieel-economische onderwerpen en alles wat daaraan raakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/wekelijks-gesprek-met-de-minister-van-financien-761518902.jpg",
-      "genre": "Praatprogramma",
+      "end": "2026-09-08T13:29:00.000Z",
+      "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
+      "genre": "Nieuwsprogramma",
       "isLive": false,
       "isRerun": false,
       "isPremiere": false,
@@ -11008,7 +10803,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "PCRdURKDsECI5bmfKi5rGQ",
+        "contentItemId": "n4D1uEYi00udmAt57BBqoQ",
         "assetId": "2A68B11A0B7601CBE8999F9E3FA3FB39",
         "channelId": "rtlz",
         "isReplayAllowed": true,
@@ -11016,11 +10811,11 @@
       }
     },
     {
-      "id": "219212022",
+      "id": "219212192",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T13:30:00.000Z",
-      "end": "2026-09-08T13:45:00.000Z",
+      "start": "2026-09-08T13:29:00.000Z",
+      "end": "2026-09-08T13:44:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
       "genre": "Nieuwsprogramma",
@@ -11039,13 +10834,13 @@
       }
     },
     {
-      "id": "219212192",
+      "id": "220403662",
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
-      "start": "2026-09-08T13:45:00.000Z",
+      "start": "2026-09-08T13:44:00.000Z",
       "end": "2026-09-08T14:00:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-769706362.jpg",
       "genre": "Nieuwsprogramma",
       "isLive": false,
       "isRerun": false,
@@ -11075,37 +10870,23 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "vPORVFCkhEC1D4o-IOy1dg",
-        "assetId": "CFA07072888042BB887E17C572146611",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
-      "id": "219212332",
+      "id": "220403672",
       "channelId": "rtlz",
-      "title": "Wekelijks gesprek met de minister van Financiën",
+      "title": "RTL Z Nieuws",
       "start": "2026-09-08T14:15:00.000Z",
       "end": "2026-09-08T14:30:00.000Z",
-      "description": "Wekelijks livegesprek met de minister van Financiën. Elke dinsdagmiddag wordt er een tien minuten durend gesprek gehouden met de Chief Financial Officer (CFO) van Nederland. In het wekelijkse gesprek met de minister van Financiën, dat live wordt uitgezonden vanuit de Haagse studio, wordt ingegaan op financieel-economische onderwerpen en alles wat daaraan raakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/wekelijks-gesprek-met-de-minister-van-financien-761518902.jpg",
-      "genre": "Praatprogramma",
+      "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-769706362.jpg",
+      "genre": "Nieuwsprogramma",
       "isLive": false,
-      "isRerun": true,
+      "isRerun": false,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "PCRdURKDsECI5bmfKi5rGQ",
-        "assetId": "8885EB68A7436422CC37E9BA24D99437",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219211682",
@@ -11146,7 +10927,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "ydRpjBXLTk6sc2I0vsONZg",
+        "contentItemId": "ZxaSdZrFC0yFAxMl7YzPlQ",
         "assetId": "E4E853196E079D78EA09FEBC935C4E8F",
         "channelId": "rtlz",
         "isReplayAllowed": true,
@@ -11154,22 +10935,22 @@
       }
     },
     {
-      "id": "219212342",
+      "id": "220403652",
       "channelId": "rtlz",
-      "title": "Wekelijks gesprek met de minister van Financiën",
+      "title": "RTL Z Nieuws",
       "start": "2026-09-08T15:15:00.000Z",
       "end": "2026-09-08T15:30:00.000Z",
-      "description": "Wekelijks livegesprek met de minister van Financiën. Elke dinsdagmiddag wordt er een tien minuten durend gesprek gehouden met de Chief Financial Officer (CFO) van Nederland. In het wekelijkse gesprek met de minister van Financiën, dat live wordt uitgezonden vanuit de Haagse studio, wordt ingegaan op financieel-economische onderwerpen en alles wat daaraan raakt.",
-      "imageUrl": "https://tvgidsassets.nl/upload/w/wekelijks-gesprek-met-de-minister-van-financien-761518902.jpg",
-      "genre": "Praatprogramma",
+      "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
+      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-769706362.jpg",
+      "genre": "Nieuwsprogramma",
       "isLive": false,
-      "isRerun": true,
+      "isRerun": false,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "PCRdURKDsECI5bmfKi5rGQ",
+        "contentItemId": "ZxaSdZrFC0yFAxMl7YzPlQ",
         "assetId": "DFC7B1E6DD0C4501A2849479FD454213",
         "channelId": "rtlz",
         "isReplayAllowed": true,
@@ -11181,7 +10962,7 @@
       "channelId": "rtlz",
       "title": "RTL Z Nieuws",
       "start": "2026-09-08T15:30:00.000Z",
-      "end": "2026-09-08T15:45:00.000Z",
+      "end": "2026-09-08T15:48:00.000Z",
       "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517322.jpg",
       "genre": "Nieuwsprogramma",
@@ -11192,31 +10973,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "xEbVaeNMNEmS2AfJmYhRrg",
+        "contentItemId": "eVLkES_OUkCSg1BecH0yyg",
         "assetId": "62FAD2CC69EF6742C789A4449347515C",
-        "channelId": "rtlz",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
-    },
-    {
-      "id": "219212072",
-      "channelId": "rtlz",
-      "title": "RTL Z Nieuws",
-      "start": "2026-09-08T15:45:00.000Z",
-      "end": "2026-09-08T15:50:00.000Z",
-      "description": "Live nieuwsupdate met het laatste nieuws uit binnen- en buitenland, het financieel-economische nieuws en de actuele beurskoersen.",
-      "imageUrl": "https://tvgidsassets.nl/upload/r/rtl-z-nieuws-761517622.jpg",
-      "genre": "Nieuwsprogramma",
-      "isLive": false,
-      "isRerun": false,
-      "isPremiere": false,
-      "ageRating": null,
-      "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "xEbVaeNMNEmS2AfJmYhRrg",
-        "assetId": "ECFFB6A13EF7DABD3EC9AC2E930BCEB4",
         "channelId": "rtlz",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -11226,8 +10984,8 @@
       "id": "219212262",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T15:50:00.000Z",
-      "end": "2026-09-08T16:05:00.000Z",
+      "start": "2026-09-08T15:48:00.000Z",
+      "end": "2026-09-08T16:09:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11249,8 +11007,8 @@
       "id": "219212242",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T16:05:00.000Z",
-      "end": "2026-09-08T16:30:00.000Z",
+      "start": "2026-09-08T16:09:00.000Z",
+      "end": "2026-09-08T16:37:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11272,8 +11030,8 @@
       "id": "219212252",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T16:30:00.000Z",
-      "end": "2026-09-08T17:00:00.000Z",
+      "start": "2026-09-08T16:37:00.000Z",
+      "end": "2026-09-08T17:05:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11295,8 +11053,8 @@
       "id": "219212232",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T17:00:00.000Z",
-      "end": "2026-09-08T17:30:00.000Z",
+      "start": "2026-09-08T17:05:00.000Z",
+      "end": "2026-09-08T17:32:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11318,8 +11076,8 @@
       "id": "219211672",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T17:30:00.000Z",
-      "end": "2026-09-08T18:00:00.000Z",
+      "start": "2026-09-08T17:32:00.000Z",
+      "end": "2026-09-08T18:01:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11341,8 +11099,8 @@
       "id": "219211662",
       "channelId": "rtlz",
       "title": "Storage wars",
-      "start": "2026-09-08T18:00:00.000Z",
-      "end": "2026-09-08T18:30:00.000Z",
+      "start": "2026-09-08T18:01:00.000Z",
+      "end": "2026-09-08T18:29:00.000Z",
       "description": "Amerikaans realityprogramma dat professionele kopers volgt, die gespecialiseerd zijn in het opkopen van de inhoud van opslagboxen. Voorafgaand aan de veiling krijgen de kopers vijf minuten de tijd om vanuit de deuropening de inhoud van de box te bekijken. De box mag niet worden betreden. Uiteindelijk zijn alle spullen te zien die de hoogste bieder buit heeft gemaakt. De waarde van de spullen wordt vastgesteld. Dan wordt duidelijk wordt hoeveel winst of verlies de koper heeft gemaakt.",
       "imageUrl": "https://tvgidsassets.nl/upload/s/storage-wars-761518502.jpg",
       "genre": "Realityprogramma",
@@ -11364,8 +11122,8 @@
       "id": "219212292",
       "channelId": "rtlz",
       "title": "The cruise: All at sea",
-      "start": "2026-09-08T18:30:00.000Z",
-      "end": "2026-09-08T19:30:00.000Z",
+      "start": "2026-09-08T18:29:00.000Z",
+      "end": "2026-09-08T19:27:00.000Z",
       "description": "Documentaireserie over de cruiseschepen Scarlet Lady en Valiant van Virgin Voyages. De passagiers en de bemanning aan boord worden gevolgd. Scarlet Lady vaart vanuit Miami rond het Caribisch gebied en Valiant vaart vanuit Barcelona naar havens als Ibiza, Cannes en Ajaccio.",
       "imageUrl": null,
       "genre": "Documentaireserie",
@@ -11387,8 +11145,8 @@
       "id": "219212272",
       "channelId": "rtlz",
       "title": "The cruise: All at sea",
-      "start": "2026-09-08T19:30:00.000Z",
-      "end": "2026-09-08T20:30:00.000Z",
+      "start": "2026-09-08T19:27:00.000Z",
+      "end": "2026-09-08T20:25:00.000Z",
       "description": "Documentaireserie over de cruiseschepen Scarlet Lady en Valiant van Virgin Voyages. De passagiers en de bemanning aan boord worden gevolgd. Scarlet Lady vaart vanuit Miami rond het Caribisch gebied en Valiant vaart vanuit Barcelona naar havens als Ibiza, Cannes en Ajaccio.",
       "imageUrl": null,
       "genre": "Documentaireserie",
@@ -11410,8 +11168,8 @@
       "id": "219212282",
       "channelId": "rtlz",
       "title": "The cruise: All at sea",
-      "start": "2026-09-08T20:30:00.000Z",
-      "end": "2026-09-08T21:30:00.000Z",
+      "start": "2026-09-08T20:25:00.000Z",
+      "end": "2026-09-08T21:24:00.000Z",
       "description": "Documentaireserie over de cruiseschepen Scarlet Lady en Valiant van Virgin Voyages. De passagiers en de bemanning aan boord worden gevolgd. Scarlet Lady vaart vanuit Miami rond het Caribisch gebied en Valiant vaart vanuit Barcelona naar havens als Ibiza, Cannes en Ajaccio.",
       "imageUrl": null,
       "genre": "Documentaireserie",
@@ -11433,8 +11191,8 @@
       "id": "219212322",
       "channelId": "rtlz",
       "title": "Een nieuw leven in de zon",
-      "start": "2026-09-08T21:30:00.000Z",
-      "end": "2026-09-08T22:30:00.000Z",
+      "start": "2026-09-08T21:24:00.000Z",
+      "end": "2026-09-08T22:22:00.000Z",
       "description": "Britten worden gevolgd die naar het vasteland van Europa trekken om hun droom te verwezenlijken. Zij wagen de sprong in het diepe en starten hun eigen bedrijf.",
       "imageUrl": "https://tvgidsassets.nl/upload/e/een-nieuw-leven-in-de-zon-761518792.jpg",
       "genre": "Realityprogramma",
@@ -11507,8 +11265,8 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "GkWT2jFtFUqjxfA-1OYsfA",
-        "assetId": "6AC4F0AC4B9E0FAC49E493B53FA4A7F9",
+        "contentItemId": "Nk9l9LF2S0mLIBmBa8IMXw",
+        "assetId": "4AFCBA21E7DF082F9B9584187B495AB5",
         "channelId": "sbs9",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -11535,7 +11293,7 @@
       "channelId": "sbs9",
       "title": "Hart van Nederland",
       "start": "2026-09-08T03:57:00.000Z",
-      "end": "2026-09-08T04:56:00.000Z",
+      "end": "2026-09-08T04:55:00.000Z",
       "description": "'Waar praat Nederland vandaag over?' Toegankelijk nieuwsprogramma dat het gesprek van de dag op verrassende wijze in beeld brengt.",
       "imageUrl": "https://tvgidsassets.nl/upload/h/hart-van-nederland-759589042.jpg",
       "genre": "Actualiteiten",
@@ -11550,8 +11308,8 @@
       "id": "219275992",
       "channelId": "sbs9",
       "title": "Telvero",
-      "start": "2026-09-08T04:56:00.000Z",
-      "end": "2026-09-08T13:41:00.000Z",
+      "start": "2026-09-08T04:55:00.000Z",
+      "end": "2026-09-08T13:40:00.000Z",
       "description": "Homeshopping.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/telvero-759198292.jpg",
       "genre": "Consumentenprogramma",
@@ -11566,8 +11324,8 @@
       "id": "219276062",
       "channelId": "sbs9",
       "title": "The mentalist",
-      "start": "2026-09-08T13:41:00.000Z",
-      "end": "2026-09-08T14:34:00.000Z",
+      "start": "2026-09-08T13:40:00.000Z",
+      "end": "2026-09-08T14:33:00.000Z",
       "description": "Patrick Jane begon zijn carrière als medium in een sensationele televisieshow, maar bleek een bedrieger. Hij werkt nu als adviseur voor het California Bureau of Investigation (CBI). Zijn afkeer voor elk protocol brengt hem vaak in de problemen. Toch dwingt hij respect af met zijn opmerkelijke talent om misdaden op te lossen.",
       "imageUrl": "https://tvgidsassets.nl/upload/t/the-mentalist-757921272.jpg",
       "genre": "Misdaadserie",
@@ -11589,7 +11347,7 @@
       "id": "219275952",
       "channelId": "sbs9",
       "title": "Rizzoli & Isles",
-      "start": "2026-09-08T14:34:00.000Z",
+      "start": "2026-09-08T14:33:00.000Z",
       "end": "2026-09-08T15:28:00.000Z",
       "description": "Twee stoere vrouwen, rechercheur Jane Rizzoli en forensisch onderzoeker Maura Isles zijn hartsvriendinnen die moordzaken en andere misdaadzaken onderzoeken in Boston.",
       "imageUrl": "https://tvgidsassets.nl/upload/r/rizzoli-isles-761482352.jpg",
@@ -11751,7 +11509,7 @@
       "channelId": "sbs9",
       "title": "Vandaag inside",
       "start": "2026-09-08T21:19:00.000Z",
-      "end": "2026-09-08T22:15:00.000Z",
+      "end": "2026-09-08T22:16:00.000Z",
       "description": "In 'Vandaag inside' geven Wilfred Genee, Johan Derksen en René van der Gijp hun kijk op het nieuws en de actualiteit. Met een wisselende terugkerende gast bespreekt het trio zaken die Nederland die dag bezighoudt.",
       "imageUrl": "https://tvgidsassets.nl/upload/v/vandaag-inside-761480142.jpg",
       "genre": "Talkshow",
@@ -11988,27 +11746,20 @@
       }
     },
     {
-      "id": "220012012",
+      "id": "220454542",
       "channelId": "een",
-      "title": "#LikeMe",
+      "title": "Clips #LikeMe",
       "start": "2026-09-08T04:55:00.000Z",
       "end": "2026-09-08T05:00:00.000Z",
-      "description": "De videoclip van \"Lach naar mij\" uit aflevering 1",
-      "imageUrl": "https://tvgidsassets.nl/upload/l/likeme-767137222.jpg",
-      "genre": "Overige",
+      "description": "Clip uit de jeugdserie '#LikeMe'.",
+      "imageUrl": null,
+      "genre": "Muziekprogramma",
       "isLive": false,
-      "isRerun": false,
+      "isRerun": true,
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "0Wk1Y2zpNUu00aN57Wx9oQ",
-        "assetId": "CB2FB98CD9CC58752AB7A4694D611DFC",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219596912",
@@ -12640,14 +12391,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "mmZZyz38OEyi5OXSjVJhLg",
-        "assetId": "04DBBF3817315AE9783794A95F491B13",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219596832",
@@ -12778,14 +12522,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "84vUmKRdoUuiYNmkQj3-fA",
-        "assetId": "13F903D6A1C4D82E15D5E6D84FE9A58D",
-        "channelId": "een",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219597012",
@@ -12801,7 +12538,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "U5XRFwQRTUayzS-dAXvZvA",
+        "assetId": "A013332BF08D378ED6ED9A4C2A3822BB",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597092",
@@ -12817,7 +12561,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "Jpl3Su-VY0Kn1iy3EhkWAg",
+        "assetId": "AEB6452ADBCC2C9DB82C3AFA430F668E",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219596942",
@@ -12833,7 +12584,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "ykG8zqXfWkOLDpUsoU1dHw",
+        "assetId": "D94915BB01A36DB234E42CF9B627C26E",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219596932",
@@ -12849,7 +12607,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "Z696hVuZjkW3BuoQvbeZwQ",
+        "assetId": "BE9FEFD0AE630E2E0FFB33BBE22D1857",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219597232",
@@ -12865,7 +12630,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "njDA-W596UmE6LNsThQCuQ",
+        "assetId": "6A91615D78EA211AE3764E6D309E276F",
+        "channelId": "een",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219551402",
@@ -13207,14 +12979,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "x4mfU4gob0-novkKpOITSg",
-        "assetId": "FE9C173D15AF43080787568DAEA06537",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219552442",
@@ -13230,14 +12995,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "m9v6s4uGgUqApZoQ1txsnA",
-        "assetId": "12F2EAF6D351E4EA0F2E88E8889417D7",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219552452",
@@ -13253,14 +13011,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "zby9qjW4nEKLwhG2Ybnasw",
-        "assetId": "D504565B72E7A2D2685704F2387AC981",
-        "channelId": "canvas",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219552482",
@@ -13276,14 +13027,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "I2lythPXAkWkBf4EX4HuHA",
-        "assetId": "CD5B6E330EABD46837414D8B06A263E9",
-        "channelId": "canvas",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219762442",
@@ -13354,7 +13098,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "_eYjODPYZ0uwK7_Tv_5VNg",
+        "assetId": "DCB1E02EE67B80D302BB8CFE82E9D4BE",
+        "channelId": "bbcone",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219759802",
@@ -13921,7 +13672,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "mQzf6Eh_r0aWFhPoNiGR_Q",
+        "assetId": "DE8E3AA27F132D948057F416E99D3759",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219762252",
@@ -13937,7 +13695,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "YHVm6VpDCUeNWJA3TuGc9A",
+        "assetId": "FBFEA9CAEA1FB8D3ACA3F7DD62FD9D8E",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219762282",
@@ -14048,15 +13813,15 @@
       }
     },
     {
-      "id": "219478812",
+      "id": "220450312",
       "channelId": "bbc2",
       "title": "Politics live",
       "start": "2026-09-08T11:15:00.000Z",
       "end": "2026-09-08T12:00:00.000Z",
       "description": "De actualiteiten van de dag worden besproken.",
-      "imageUrl": "https://tvgidsassets.nl/upload/p/politics-live-760703262.jpg",
+      "imageUrl": "https://tvgidsassets.nl/upload/p/politics-live-770043332.jpg",
       "genre": "Actualiteiten",
-      "isLive": true,
+      "isLive": false,
       "isRerun": false,
       "isPremiere": false,
       "ageRating": null,
@@ -14330,7 +14095,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "1tIUTJsB_0iu5bwe9kVbKQ",
+        "assetId": "DDF2B1F5394874D4D46366BE43D26DC1",
+        "channelId": "bbctwo",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219762112",

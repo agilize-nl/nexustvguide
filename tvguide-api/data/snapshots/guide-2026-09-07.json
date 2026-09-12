@@ -3,8 +3,8 @@
   "timeZone": "Europe/Amsterdam",
   "from": "2026-09-06T22:00:00Z",
   "to": "2026-09-07T22:00:00Z",
-  "sourceFetchedAt": "2026-09-07T15:13:06.863Z",
-  "publishedAt": "2026-09-07T15:13:06.863Z",
+  "sourceFetchedAt": "2026-09-08T20:43:07.300Z",
+  "publishedAt": "2026-09-08T20:43:07.300Z",
   "channels": [
     {
       "id": "npo1",
@@ -939,7 +939,7 @@
       "nlziet": {
         "kind": "replay",
         "contentItemId": "xNo61O4_J0qPRo9yxE7kHg",
-        "assetId": "32F51F3BDDC8EA503461AA4064AA5B36",
+        "assetId": "E3D7F79DA6559E5BC083553789C813D2",
         "channelId": "npo1",
         "isReplayAllowed": true,
         "isRestartAllowed": true
@@ -1472,7 +1472,7 @@
         "contentItemId": "8EQA0zIf4kOQC-JLV3mceA",
         "assetId": "5A0D1F9FE2D262397570B558BBB2B235",
         "channelId": "npo1",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2203,7 +2203,7 @@
         "contentItemId": "6lu63Ze3v0-GzWhKjtySTw",
         "assetId": "7208FB378E4E8A9BBFEA788522BBE135",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -2357,7 +2357,7 @@
         "contentItemId": "rDp_yzebiUONZw1M9lY6jg",
         "assetId": "F2E01E4D4D7E6E514F59500886721893",
         "channelId": "npo2",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -3984,7 +3984,7 @@
         "contentItemId": "SioPOfHkikuCe69ZLNPkJw",
         "assetId": "A66B0469FCEC0EE8DCDDC7B8A4A208EB",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4007,7 +4007,7 @@
         "contentItemId": "CB7eBJJBEkabUmmVKZHN4g",
         "assetId": "C8C318C3EECE8A81EA67457740209933",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4030,7 +4030,7 @@
         "contentItemId": "Zu9ka8tAC0O7t164RTGmmw",
         "assetId": "668AFF8565B791478DF6D9BC1145F4C4",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4053,7 +4053,7 @@
         "contentItemId": "IyVR2wz9EE6eK5a_65hLgg",
         "assetId": "6B6DD48A06556AAAFB9403E43F3C90AA",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4076,7 +4076,7 @@
         "contentItemId": "PSScJsr60Ei4STvxrLf5pA",
         "assetId": "1C69FA1C04C509B63D9E97053CA0A1D9",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4122,7 +4122,7 @@
         "contentItemId": "Vy49YHh3HU64X3GWZD2zsQ",
         "assetId": "DAB14D78D008288C4C74B611199B9417",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4145,7 +4145,7 @@
         "contentItemId": "rMQqQvQtrU6Mvqf55WI-iA",
         "assetId": "CB0F63897822A86CFEE7C11C14696ED1",
         "channelId": "npo3",
-        "isReplayAllowed": true,
+        "isReplayAllowed": false,
         "isRestartAllowed": true
       }
     },
@@ -4439,14 +4439,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "JtR7XPVeKUuvtJacyK-0Yw",
-        "assetId": "DF8983B5C4AE0A6A89931F3F8900CABB",
-        "channelId": "npo3",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219142532",
@@ -5184,7 +5177,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "KhPi97e-Dk2JBvEVD5k9Rg",
+        "assetId": "9FA74282575B44C4D2AEBFC250C4865C",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219203822",
@@ -5430,7 +5430,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "h7W9RM0OSkuq1dq4nj3q9Q",
+        "assetId": "0AB6C0E144711D06524284FA9083B2DD",
+        "channelId": "rtl4",
+        "isReplayAllowed": true,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219203852",
@@ -9064,7 +9071,7 @@
       "nlzietId": null,
       "nlziet": {
         "kind": "replay",
-        "contentItemId": "ffE8vLHROEG5YBkhVAIMew",
+        "contentItemId": "i28vGpWjBEyIPCMg8tR4fA",
         "assetId": "87B52E95DA769D50487F08D0AB0E08DF",
         "channelId": "net5",
         "isReplayAllowed": true,
@@ -9556,14 +9563,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "13xAZgQrLEKWogObK-l6kw",
-        "assetId": "9887D4B2B097740CB0E7941915847365",
-        "channelId": "rtl8",
-        "isReplayAllowed": true,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219205122",
@@ -12258,7 +12258,7 @@
       "start": "2026-09-07T12:44:00.000Z",
       "end": "2026-09-07T13:12:00.000Z",
       "description": "Documentaireserie over de faculteit Diergeneeskunde in Merelbeke. Hier worden jaarlijks twintigduizend dieren behandeld in de stallen en klinieken. Bijna tweeduizend studenten volgen er de opleiding tot dierenarts.",
-      "imageUrl": null,
+      "imageUrl": "https://tvgidsassets.nl/upload/d/dierendokters-24-7-769616382.jpg",
       "genre": "Documentaireserie",
       "isLive": false,
       "isRerun": true,
@@ -13501,7 +13501,14 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": null
+      "nlziet": {
+        "kind": "replay",
+        "contentItemId": "EOulEJI8s021GTSjMxjS5Q",
+        "assetId": "7DC3261F0DC339B80A0B88774EBA2A6C",
+        "channelId": "bbcone",
+        "isReplayAllowed": false,
+        "isRestartAllowed": true
+      }
     },
     {
       "id": "219482182",
@@ -14112,14 +14119,7 @@
       "isPremiere": false,
       "ageRating": null,
       "nlzietId": null,
-      "nlziet": {
-        "kind": "replay",
-        "contentItemId": "y5CJpb-5M0u5m6M2S6tt-g",
-        "assetId": "413FA13C6906FF9B8E9D58245FF72491",
-        "channelId": "bbctwo",
-        "isReplayAllowed": false,
-        "isRestartAllowed": true
-      }
+      "nlziet": null
     },
     {
       "id": "219479172",
