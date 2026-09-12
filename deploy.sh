@@ -16,6 +16,22 @@ readonly GITHUB_REMOTE="github"
 readonly BRANCH="main"
 readonly UPDATE_MANIFEST_URL="http://192.168.2.171:3000/api/v1/app/version"
 
+usage() {
+    cat <<'EOF'
+Gebruik: ./deploy.sh [release notes]
+
+Verhoogt altijd VERSION_CODE en de patchversie, commit en push naar GitHub,
+bouwt een ondertekende release en publiceert die naar de updateserver op .171.
+EOF
+}
+
+case "${1:-}" in
+    -h|--help)
+        usage
+        exit 0
+        ;;
+esac
+
 release_notes="${*:-Onderhoudsupdate en prestatieverbeteringen.}"
 
 fail() {

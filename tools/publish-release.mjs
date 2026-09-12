@@ -292,13 +292,16 @@ if (!skipBuild) {
 
 if (!apkPath) {
   const releaseOutputDir = join(ANDROID_DIR, 'app', 'build', 'outputs', 'apk', 'release');
-  if (existsSync(releaseOutputDir)) {
-    const apks = readdirSync(releaseOutputDir).filter(f => f.endsWith('.apk') && !f.includes('-unsigned'));
-    if (apks.length > 0) {
-      apkPath = join(releaseOutputDir, apks[0]);
-    }
-  }
-  if (!apkPath) {
+  const versionProperties = readFileSync(join(ANDROID_DIR, 'app', 'version.properties'), 'utf8');
+  const versionName = versionProperties.match(/^VERSION_NAME=(.+)$/m)?.[1]?.trim();
+  const expectedApkName = versionName ? `NexusTVGuide-v${versionName}-release.apk` : null;
+  const expectedApkPath = expectedApkName ? join(releaseOutputDir, expectedApkName) : null;
+
+  // Gradle geeft release-APK's een versiegebonden naam. Gebruik die exact; een willekeurig
+  // bestand uit deze directory kon bij achtergebleven artefacten de vorige versie publiceren.
+  if (expectedApkPath && existsSync(expectedApkPath)) {
+    apkPath = expectedApkPath;
+  } else {
     apkPath = join(releaseOutputDir, 'app-release.apk');
   }
 }
