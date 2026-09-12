@@ -13,15 +13,22 @@ set -euo pipefail
 readonly ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly VERSION_FILE="$ROOT_DIR/android/app/version.properties"
 readonly GITHUB_REMOTE="github"
+readonly GITHUB_REPO="agilize-nl/nexustvguide"
 readonly BRANCH="main"
+readonly GITHUB_MANIFEST_URL="https://github.com/$GITHUB_REPO/releases/latest/download/version.json"
 readonly UPDATE_MANIFEST_URL="http://192.168.2.171:3000/api/v1/app/version"
+readonly RELEASE_TOKEN_FILE="/home/djawiz/.config/nexustvguide/release-token"
 
 usage() {
     cat <<'EOF'
 Gebruik: ./deploy.sh [release notes]
 
 Verhoogt altijd VERSION_CODE en de patchversie, commit en push naar GitHub,
-bouwt een ondertekende release en publiceert die naar de updateserver op .171.
+  bouwt een ondertekende internet-release, publiceert die als GitHub Release én
+  publiceert exact dezelfde APK naar de updateserver op .171.
+
+Vereist een GitHub-token met contents:write in RELEASE_TOKEN of GITHUB_TOKEN.
+Als die variabelen ontbreken, wordt $RELEASE_TOKEN_FILE gebruikt.
 EOF
 }
 
@@ -49,6 +56,14 @@ git rev-parse --is-inside-work-tree >/dev/null || fail "Geen git-repository."
 [[ "$(git branch --show-current)" == "$BRANCH" ]] || fail "Deploy alleen vanaf '$BRANCH'."
 git remote get-url "$GITHUB_REMOTE" >/dev/null || fail "GitHub-remote '$GITHUB_REMOTE' ontbreekt."
 
+# De GitHub-release moet vóór de LAN-publicatie slagen. Lees het token niet uit de
+# commandline (die kan in shell-history en proceslijsten terechtkomen).
+if [[ -z "${RELEASE_TOKEN:-}" && -z "${GITHUB_TOKEN:-}" && -r "$RELEASE_TOKEN_FILE" ]]; then
+    export RELEASE_TOKEN="$(<"$RELEASE_TOKEN_FILE")"
+fi
+[[ -n "${RELEASE_TOKEN:-}" || -n "${GITHUB_TOKEN:-}" ]] \
+    || fail "GitHub-token ontbreekt; zet RELEASE_TOKEN/GITHUB_TOKEN of maak $RELEASE_TOKEN_FILE leesbaar."
+
 # Voorkom dat een releasecommit bovenop een inmiddels gewijzigde GitHub-main wordt gemaakt.
 git fetch --quiet "$GITHUB_REMOTE" "$BRANCH"
 if ! git merge-base --is-ancestor "refs/remotes/$GITHUB_REMOTE/$BRANCH" HEAD; then
@@ -72,19 +87,35 @@ git commit -m "chore: release $next_name"
 git push "$GITHUB_REMOTE" "HEAD:refs/heads/$BRANCH"
 echo "GitHub staat op $(git rev-parse --short=12 HEAD)."
 
-# publish-release bouwt uitsluitend een gesigneerde release-APK, valideert package,
-# versie en handtekening, en uploadt APK plus manifest atomair naar .171.
-node "$ROOT_DIR/tools/publish-release.mjs" --notes "$release_notes"
+# Bouw één release-APK met GitHub als primair updatekanaal. Die APK kan buiten het LAN
+# nieuwe releases vinden; .171 blijft de ingebouwde noodbron.
+node "$ROOT_DIR/tools/publish-release.mjs" \
+    --channel release \
+    --repo "$GITHUB_REPO" \
+    --forge github \
+    --notes "$release_notes"
 
-# De publisher bewaart een lokale release wanneer SCP faalt. Een succesvolle deploy mag
-# echter pas worden gemeld wanneer de actieve servermetadata de zojuist gebouwde versie toont.
-remote_manifest="$(curl --fail --silent --show-error --connect-timeout 10 --max-time 30 "$UPDATE_MANIFEST_URL")" \
-    || fail "De updateserver op .171 is niet bereikbaar na publicatie."
+release_apk="$ROOT_DIR/dist/release/nexus-tv-guide-$next_name.apk"
+[[ -f "$release_apk" ]] || fail "GitHub-publicatie leverde de verwachte APK niet op: $release_apk"
 
-EXPECTED_VERSION_CODE="$next_code" \
-EXPECTED_VERSION_NAME="$next_name" \
-REMOTE_MANIFEST="$remote_manifest" \
-node --input-type=module <<'NODE'
+# Publiceer daarna precies dezelfde, al gevalideerde APK naar .171. --apk voorkomt
+# een tweede build die een afwijkend updatekanaal in de APK zou kunnen vastleggen.
+node "$ROOT_DIR/tools/publish-release.mjs" \
+    --apk "$release_apk" \
+    --notes "$release_notes"
+
+verify_manifest() {
+    local channel_name="$1"
+    local manifest_url="$2"
+    local manifest
+
+    manifest="$(curl --location --fail --silent --show-error --connect-timeout 10 --max-time 30 "$manifest_url")" \
+        || fail "$channel_name is niet bereikbaar na publicatie."
+
+    EXPECTED_VERSION_CODE="$next_code" \
+    EXPECTED_VERSION_NAME="$next_name" \
+    REMOTE_MANIFEST="$manifest" \
+    node --input-type=module <<'NODE'
 const expectedCode = Number(process.env.EXPECTED_VERSION_CODE);
 const expectedName = process.env.EXPECTED_VERSION_NAME;
 let manifest;
@@ -92,17 +123,21 @@ let manifest;
 try {
   manifest = JSON.parse(process.env.REMOTE_MANIFEST);
 } catch {
-  console.error('FOUT: .171 retourneerde geen geldige version.json.');
+  console.error('FOUT: updatekanaal retourneerde geen geldige version.json.');
   process.exit(1);
 }
 
 if (manifest.versionCode !== expectedCode || manifest.versionName !== expectedName) {
   console.error(
-    `FOUT: .171 serveert ${manifest.versionName ?? '?'} (${manifest.versionCode ?? '?'}) ` +
+    `FOUT: updatekanaal serveert ${manifest.versionName ?? '?'} (${manifest.versionCode ?? '?'}) ` +
     `in plaats van ${expectedName} (${expectedCode}).`
   );
   process.exit(1);
 }
 NODE
+}
+
+verify_manifest "GitHub Releases" "$GITHUB_MANIFEST_URL"
+verify_manifest ".171" "$UPDATE_MANIFEST_URL"
 
 echo "Deploy voltooid: GitHub en .171 publiceren NexusTVGuide $next_name ($next_code)."
